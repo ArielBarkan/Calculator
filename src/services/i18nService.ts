@@ -1,6 +1,9 @@
+// Modules imports
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import HttpBackend, { HttpBackendOptions } from "i18next-http-backend";
+
+// Custom imports
 import { SUPPORTED_LANGUAGES } from "../constants";
 
 declare module "i18next" {

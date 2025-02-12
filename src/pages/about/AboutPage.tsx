@@ -1,3 +1,4 @@
+// Modules imports
 import { useTranslation } from "react-i18next";
 
 // Custom imports
