@@ -1,7 +1,7 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import HttpBackend, { HttpBackendOptions } from "i18next-http-backend";
-import { DEFAULT_REACT_APP_LOCALES_URL, SUPPORTED_LANGUAGES } from "../constants";
+import { SUPPORTED_LANGUAGES } from "../constants";
 
 declare module "i18next" {
     interface CustomTypeOptions {
@@ -16,8 +16,7 @@ i18n.use(HttpBackend)
     .init<HttpBackendOptions>({
         ns: ["common"], // add namespaces when we need to split our translation to several scopes
         defaultNS: "common",
-        debug: import.meta.env.VITE_REACT_APP_I18N_DEBUG_MODE === "true",
-        //debug: true,
+        debug: import.meta.env.VITE_I18N_DEBUG_MODE === "true",
         lng: SUPPORTED_LANGUAGES[0].locale,
         fallbackLng: SUPPORTED_LANGUAGES[0].locale,
         load: "currentOnly",
@@ -26,7 +25,7 @@ i18n.use(HttpBackend)
         },
         returnNull: false,
         backend: {
-            loadPath: `${import.meta.env.VITE_REACT_APP_LOCALES_URL ? import.meta.env.VITE_REACT_APP_LOCALES_URL : DEFAULT_REACT_APP_LOCALES_URL}/{{lng}}/{{ns}}.json`
+            loadPath: `${import.meta.env.VITE_LOCALES_URL}/{{lng}}/{{ns}}.json`
         }
     });
 

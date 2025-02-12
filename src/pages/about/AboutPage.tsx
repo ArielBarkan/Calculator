@@ -5,7 +5,7 @@ const AboutPage = () => {
     const { t: translate } = useTranslation("common");
     return (
         <p>
-            {translate("Notifications")}
+            {translate("pages.about.title")}
         </p>
     );
 };

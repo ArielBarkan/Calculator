@@ -7,7 +7,8 @@ import "./services/i18nService";
 
 
 const App: React.FC = () => {
-    ChangeLanguage("en-US");
+    // ChangeLanguage("en-US");
+    ChangeLanguage("he-IL");
     return <AppRoutes />;
 };
 
