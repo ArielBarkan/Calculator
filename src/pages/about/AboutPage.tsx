@@ -1,8 +1,7 @@
 // Modules imports
 import { useTranslation } from "react-i18next";
+import { Button } from "../../components/button";
 
-// Custom imports
-import { ChangeLanguage } from "../../services";
 
 const AboutPage = () => {
     const { t: translate } = useTranslation("common");
@@ -11,9 +10,9 @@ const AboutPage = () => {
     return (
         <p>
             {translate("pages.about.title")}
-            <br />
-            <button onClick={() => ChangeLanguage("he-IL")}>Hebrew</button>
-            <button onClick={() => ChangeLanguage("en-US")}>English</button>
+
+            <Button>Hello</Button>
+
         </p>
     );
 };

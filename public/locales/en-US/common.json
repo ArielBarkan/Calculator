@@ -2,6 +2,16 @@
   "pages": {
     "about": {
       "title": "About"
+    },
+    "settings": {
+      "title": "Settings"
+    }
+  },
+  "header": {
+    "linkLabels": {
+      "main": "Main",
+      "about": "About",
+      "settings": "settings"
     }
   }
 }

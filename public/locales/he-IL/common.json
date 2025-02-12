@@ -2,6 +2,16 @@
   "pages": {
     "about": {
       "title": "אודות"
+    },
+    "settings": {
+      "title": "הגדרות"
+    }
+  },
+  "header": {
+    "linkLabels": {
+      "main": "ראשי",
+      "about": "אודות",
+      "settings": "הגדרות"
     }
   }
 }
