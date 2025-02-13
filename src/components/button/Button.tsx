@@ -7,8 +7,8 @@ import styled from "styled-components";
 
 
 const Button = styled.button`
-    color: ${({ theme }) => theme.colors.buttons.primary.color};
-    background: ${({ theme }) => theme.colors.buttons.primary.backgroundColor};
+    color: ${({ theme }) => theme.buttons.primary.color};
+    background: ${({ theme }) => theme.buttons.primary.backgroundColor};
 `;
 
 export { Button };
