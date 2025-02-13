@@ -1,7 +1,8 @@
+// Modules imports
 import i18n from "i18next";
 
 //Custom imports
-import { LanguageType } from "../types";
+import { languageType } from "../types";
 import { SUPPORTED_LANGUAGES } from "../constants";
 
 /**
@@ -10,14 +11,16 @@ import { SUPPORTED_LANGUAGES } from "../constants";
  * This function change the UI language + body direction + body lang attribute
  */
 const ChangeLanguage = async (locale: string) => {
-    const selectedLanguage: LanguageType = getSelectedLanguageByLocale(locale);
+    const selectedLanguage: languageType = getSelectedLanguageByLocale(locale);
+    console.log({ selectedLanguage });
     await i18n.changeLanguage(selectedLanguage.locale);
     document.body.lang = selectedLanguage.locale;
     document.body.dir = selectedLanguage.direction;
 };
 
-const getSelectedLanguageByLocale = (locale: string): LanguageType => {
-    return SUPPORTED_LANGUAGES.find((lang: LanguageType) => lang.locale === locale) || SUPPORTED_LANGUAGES[0];
+const getSelectedLanguageByLocale = (locale: string): languageType => {
+    return SUPPORTED_LANGUAGES.find((lang: languageType) => lang.locale === locale) || SUPPORTED_LANGUAGES[0];
 };
+
 
 export { ChangeLanguage };

@@ -1,7 +1,7 @@
 // Custom imports
-import { LanguageType } from "../types";
+import { languageType } from "../types";
 
-const SUPPORTED_LANGUAGES: LanguageType[] = [
+const SUPPORTED_LANGUAGES: languageType[] = [
     {
         locale: "he-IL",
         direction: "rtl",

@@ -1,7 +1,7 @@
-type LanguageType = {
+type languageType = {
     locale: string;
     direction: string;
     name: string;
 };
 
-export { LanguageType };
+export { languageType };

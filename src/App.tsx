@@ -5,15 +5,18 @@ import React from "react";
 
 // Custom imports
 import AppRoutes from "./routes/AppRoutes";
+import { ChangeLanguage } from "./services";
 import "./services/i18nService";
 import { ThemeProviderWrapper } from "./context/ThemeContext";
 import { Header } from "./components/header/Header";
+import { useUserLanguage } from "./hooks";
 
 const App: React.FC = () => {
 
-    // TODO: implement the "ChangeLanguage()" by the selected language in the settings page (TBD save in cookie)
-    // TODO: implement the Theme by the selected theme in the settings page (TBD save in cookie)
-
+    const language = useUserLanguage();
+    // ChangeLanguage("en-US");
+    ChangeLanguage(language);
+    console.log(language);
 
     return (
         <ThemeProviderWrapper>

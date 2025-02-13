@@ -12,14 +12,14 @@ const SettingsPage = () => {
     const { theme, toggleTheme } = useTheme();
 
     return (
-        <p>
+        <>
             {translate("pages.settings.title")}
             <br />
             <h1>Current Theme: {theme}</h1>
             <Button onClick={toggleTheme}>Toggle Theme{theme}</Button>
             <Button onClick={() => ChangeLanguage("he-IL")}>Hebrew</Button>
             <Button onClick={() => ChangeLanguage("en-US")}>English</Button>
-        </p>
+        </>
     );
 };
 
