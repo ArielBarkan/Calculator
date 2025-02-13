@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Header: React.FC = () => {
     const { t: translate } = useTranslation("common");
-    // TODO: ADD "SHARE" BUTTON
+    // TODO: ADD "SHARE" BUTTON PLEASE
     return (
         <nav>
             <Link to="/">{translate("header.linkLabels.main")}</Link>
