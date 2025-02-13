@@ -1,6 +1,7 @@
 const lightTheme = {
     body: {
-        bgColor: "#FFFFFF"
+        bgColor: "#FFFFFF",
+        fontColor: "#000000"
     },
     buttons: {
         primary: {
@@ -12,7 +13,8 @@ const lightTheme = {
 
 const darkTheme = {
     body: {
-        bgColor: "#000000"
+        bgColor: "#000000",
+        fontColor: "#ffffff"
     },
     buttons: {
         primary: {
@@ -22,5 +24,29 @@ const darkTheme = {
     }
 
 };
+
+const currencies = [
+    {
+        name: "Israeli new shekel",
+        Symbol: "₪",
+        ISO: "ILS"
+    },
+    {
+        name: "Euro",
+        Symbol: "€",
+        ISO: "EUR"
+    },
+    {
+        name: "Argentine peso",
+        Symbol: "$",
+        ISO: "ARS"
+    },
+    {
+        name: "United States dollar",
+        Symbol: "$",
+        ISO: "USD"
+    }
+];
+
 
 export { lightTheme, darkTheme };

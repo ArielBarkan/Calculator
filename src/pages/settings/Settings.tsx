@@ -17,6 +17,7 @@ const SettingsPage = () => {
             <br />
             <h1>Current Theme: {theme}</h1>
             <Button onClick={toggleTheme}>Toggle Theme{theme}</Button>
+            <br />
             <Button onClick={() => ChangeLanguage("he-IL")}>Hebrew</Button>
             <Button onClick={() => ChangeLanguage("en-US")}>English</Button>
         </>

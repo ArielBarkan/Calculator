@@ -10,6 +10,7 @@ import "./services/i18nService";
 import { ThemeProviderWrapper } from "./context/ThemeContext";
 import { Header } from "./components/header/Header";
 import { useUserLanguage } from "./hooks";
+import { GlobalStyles } from "./theme/GlobalStyles";
 
 const App: React.FC = () => {
 
@@ -20,6 +21,7 @@ const App: React.FC = () => {
 
     return (
         <ThemeProviderWrapper>
+            <GlobalStyles />
             <Header />
             <AppRoutes />
         </ThemeProviderWrapper>
