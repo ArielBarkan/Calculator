@@ -6,7 +6,7 @@ const GlobalStyles = createGlobalStyle`
         border: 1px solid ${({ theme }) => theme.body.fontColor};
         border-radius: 15px;
         margin: auto;
-        height: 90vh;
+        height: 99vh;
         padding: 0;
         background-color: ${({ theme }) => theme.body.bgColor};
         color: ${({ theme }) => theme.body.fontColor};
