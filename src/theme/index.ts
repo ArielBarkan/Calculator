@@ -13,7 +13,7 @@ const lightTheme = {
 
 const darkTheme = {
     body: {
-        bgColor: "#000000",
+        bgColor: "#5a5555",
         fontColor: "#ffffff"
     },
     buttons: {
@@ -24,29 +24,5 @@ const darkTheme = {
     }
 
 };
-
-const currencies = [
-    {
-        name: "Israeli new shekel",
-        Symbol: "₪",
-        ISO: "ILS"
-    },
-    {
-        name: "Euro",
-        Symbol: "€",
-        ISO: "EUR"
-    },
-    {
-        name: "Argentine peso",
-        Symbol: "$",
-        ISO: "ARS"
-    },
-    {
-        name: "United States dollar",
-        Symbol: "$",
-        ISO: "USD"
-    }
-];
-
 
 export { lightTheme, darkTheme };

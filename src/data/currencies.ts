@@ -1,4 +1,9 @@
-const allCurrencies = [
+// Custom imports
+import { currencyType } from "../types";
+
+// TODO: decide which currencies to display
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const allCurrencies: currencyType[] = [
     { name: "Afghan Afghani", symbol: "؋", ISO: "AFN" },
     { name: "Albanian Lek", symbol: "L", ISO: "ALL" },
     { name: "Algerian Dinar", symbol: "د.ج", ISO: "DZD" },
@@ -147,25 +152,25 @@ const allCurrencies = [
     { name: "Yemeni Rial", symbol: "﷼", ISO: "YER" },
     { name: "Zambian Kwacha", symbol: "ZK", ISO: "ZMW" }
 ];
-const currencies = [
-    { name: "Argentine peso", Symbol: "$", ISO: "ARS" },
-    { name: "Australian dollar", Symbol: "$", ISO: "AUD" },
-    { name: "Brazilian real", Symbol: "R$", ISO: "BRL" },
-    { name: "British pound", Symbol: "£", ISO: "GBP" },
-    { name: "Canadian dollar", Symbol: "$", ISO: "CAD" },
-    { name: "Chinese yuan", Symbol: "¥", ISO: "CNY" },
-    { name: "Euro", Symbol: "€", ISO: "EUR" },
-    { name: "Indian rupee", Symbol: "₹", ISO: "INR" },
-    { name: "Israeli new shekel", Symbol: "₪", ISO: "ILS" },
-    { name: "Japanese yen", Symbol: "¥", ISO: "JPY" },
-    { name: "Mexican peso", Symbol: "$", ISO: "MXN" },
-    { name: "Russian ruble", Symbol: "₽", ISO: "RUB" },
-    { name: "South African rand", Symbol: "R", ISO: "ZAR" },
-    { name: "South Korean won", Symbol: "₩", ISO: "KRW" },
-    { name: "Swiss franc", Symbol: "CHF", ISO: "CHF" },
-    { name: "Turkish lira", Symbol: "₺", ISO: "TRY" },
-    { name: "United States dollar", Symbol: "$", ISO: "USD" }
+const currenciesArray: currencyType[] = [
+    { name: "Argentine peso", symbol: "$", ISO: "ARS" },
+    { name: "Australian dollar", symbol: "$", ISO: "AUD" },
+    { name: "Brazilian real", symbol: "R$", ISO: "BRL" },
+    { name: "British pound", symbol: "£", ISO: "GBP" },
+    { name: "Canadian dollar", symbol: "$", ISO: "CAD" },
+    { name: "Chinese yuan", symbol: "¥", ISO: "CNY" },
+    { name: "Euro", symbol: "€", ISO: "EUR" },
+    { name: "Indian rupee", symbol: "₹", ISO: "INR" },
+    { name: "Israeli new shekel", symbol: "₪", ISO: "ILS" },
+    { name: "Japanese yen", symbol: "¥", ISO: "JPY" },
+    { name: "Mexican peso", symbol: "$", ISO: "MXN" },
+    { name: "Russian ruble", symbol: "₽", ISO: "RUB" },
+    { name: "South African rand", symbol: "R", ISO: "ZAR" },
+    { name: "South Korean won", symbol: "₩", ISO: "KRW" },
+    { name: "Swiss franc", symbol: "CHF", ISO: "CHF" },
+    { name: "Turkish lira", symbol: "₺", ISO: "TRY" },
+    { name: "United States dollar", symbol: "$", ISO: "USD" }
 ];
 
 
-export { currencies };
+export { currenciesArray };

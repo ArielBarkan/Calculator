@@ -4,4 +4,15 @@ type languageType = {
     name: string;
 };
 
-export { languageType };
+type currencyType = {
+    name: string,
+    symbol: string,
+    ISO: string
+};
+
+type selectType = {
+    value: string,
+    label: string,
+    color?: string
+}
+export { languageType, currencyType, selectType };

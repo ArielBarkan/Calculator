@@ -1,1 +1,1 @@
-export { currencies } from "./currencies";
+export { currenciesArray } from "./currencies";
