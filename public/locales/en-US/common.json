@@ -1,4 +1,11 @@
 {
+  "header": {
+    "linkLabels": {
+      "about": "About",
+      "main": "Main",
+      "settings": "Settings"
+    }
+  },
   "pages": {
     "about": {
       "title": "About"
@@ -7,16 +14,9 @@
       "title": "Settings"
     }
   },
-  "header": {
-    "linkLabels": {
-      "main": "Main",
-      "about": "About",
-      "settings": "Settings"
-    }
-  },
   "share": {
-    "title": "App for easily find cheapest product on shelf ",
+    "label": "Share app",
     "text": "I found this cool app, check it out:",
-    "label": "Share app"
+    "title": "App for easily find cheapest product on shelf "
   }
 }
