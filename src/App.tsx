@@ -10,12 +10,12 @@ import "./services/i18nService";
 import { ThemeProviderWrapper } from "./context/ThemeContext";
 import { Header } from "./components/header/Header";
 import { GlobalStyles } from "./theme/GlobalStyles";
-import { getSelectedLanguage } from "./services/localStorageService";
+import { localStorageGetSelectedLanguage } from "./services/localStorageService";
 
 const App: React.FC = () => {
 
 
-    ChangeLanguage(getSelectedLanguage());
+    ChangeLanguage(localStorageGetSelectedLanguage());
 
 
     return (

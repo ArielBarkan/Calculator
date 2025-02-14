@@ -7,7 +7,7 @@ import { ThemeProvider } from "styled-components";
 // Custom imports
 import { THEME_ENUMS } from "../enums";
 import { lightTheme, darkTheme } from "../theme";
-import { updateSelectedTheme, getSelectedTheme } from "../services/localStorageService";
+import { localStorageUpdateSelectedTheme, localStorageGetSelectedTheme } from "../services/localStorageService";
 
 interface ThemeContextType {
     theme: THEME_ENUMS;
@@ -17,14 +17,14 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProviderWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-    const [theme, setTheme] = useState<THEME_ENUMS>(getSelectedTheme());
+    const [theme, setTheme] = useState<THEME_ENUMS>(localStorageGetSelectedTheme());
 
     const toggleTheme = () => {
         setTheme((prev) => (prev === THEME_ENUMS.light ? THEME_ENUMS.dark : THEME_ENUMS.light));
     };
 
     useEffect(() => {
-        updateSelectedTheme(theme);
+        localStorageUpdateSelectedTheme(theme);
     }, [theme]);
 
     return (
