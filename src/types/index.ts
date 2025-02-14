@@ -7,12 +7,12 @@ type languageType = {
 type currencyType = {
     name: string,
     symbol: string,
-    ISO: string
+    ISO: string,
+    flag: string,
 };
 
 type selectType = {
     value: string,
-    label: string,
-    color?: string
+    label: string
 }
 export { languageType, currencyType, selectType };

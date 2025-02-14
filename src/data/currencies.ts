@@ -2,8 +2,7 @@
 import { currencyType } from "../types";
 
 // TODO: decide which currencies to display
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const allCurrencies: currencyType[] = [
+/*const allCurrencies: currencyType[] = [
     { name: "Afghan Afghani", symbol: "؋", ISO: "AFN" },
     { name: "Albanian Lek", symbol: "L", ISO: "ALL" },
     { name: "Algerian Dinar", symbol: "د.ج", ISO: "DZD" },
@@ -151,25 +150,25 @@ const allCurrencies: currencyType[] = [
     { name: "West African CFA franc", symbol: "Fr", ISO: "XOF" },
     { name: "Yemeni Rial", symbol: "﷼", ISO: "YER" },
     { name: "Zambian Kwacha", symbol: "ZK", ISO: "ZMW" }
-];
+];*/
 const currenciesArray: currencyType[] = [
-    { name: "Argentine peso", symbol: "$", ISO: "ARS" },
-    { name: "Australian dollar", symbol: "$", ISO: "AUD" },
-    { name: "Brazilian real", symbol: "R$", ISO: "BRL" },
-    { name: "British pound", symbol: "£", ISO: "GBP" },
-    { name: "Canadian dollar", symbol: "$", ISO: "CAD" },
-    { name: "Chinese yuan", symbol: "¥", ISO: "CNY" },
-    { name: "Euro", symbol: "€", ISO: "EUR" },
-    { name: "Indian rupee", symbol: "₹", ISO: "INR" },
-    { name: "Israeli new shekel", symbol: "₪", ISO: "ILS" },
-    { name: "Japanese yen", symbol: "¥", ISO: "JPY" },
-    { name: "Mexican peso", symbol: "$", ISO: "MXN" },
-    { name: "Russian ruble", symbol: "₽", ISO: "RUB" },
-    { name: "South African rand", symbol: "R", ISO: "ZAR" },
-    { name: "South Korean won", symbol: "₩", ISO: "KRW" },
-    { name: "Swiss franc", symbol: "CHF", ISO: "CHF" },
-    { name: "Turkish lira", symbol: "₺", ISO: "TRY" },
-    { name: "United States dollar", symbol: "$", ISO: "USD" }
+    { name: "Argentine peso", symbol: "$", ISO: "ARS", flag: "🇦🇷" },
+    { name: "Australian dollar", symbol: "$", ISO: "AUD", flag: "🇦🇺" },
+    { name: "Brazilian real", symbol: "R$", ISO: "BRL", flag: "🇧🇷" },
+    { name: "British pound", symbol: "£", ISO: "GBP", flag: "🇬🇧" },
+    { name: "Canadian dollar", symbol: "$", ISO: "CAD", flag: "🇨🇦" },
+    { name: "Chinese yuan", symbol: "¥", ISO: "CNY", flag: "🇨🇳" },
+    { name: "Euro", symbol: "€", ISO: "EUR", flag: "🇪🇺" },
+    { name: "Indian rupee", symbol: "₹", ISO: "INR", flag: "🇮🇳" },
+    { name: "Israeli new shekel", symbol: "₪", ISO: "ILS", flag: "🇮🇱" },
+    { name: "Japanese yen", symbol: "¥", ISO: "JPY", flag: "🇯🇵" },
+    { name: "Mexican peso", symbol: "$", ISO: "MXN", flag: "🇲🇽" },
+    { name: "Russian ruble", symbol: "₽", ISO: "RUB", flag: "🇷🇺" },
+    { name: "South African rand", symbol: "R", ISO: "ZAR", flag: "🇿🇦" },
+    { name: "South Korean won", symbol: "₩", ISO: "KRW", flag: "🇰🇷" },
+    { name: "Swiss franc", symbol: "CHF", ISO: "CHF", flag: "🇨🇭" },
+    { name: "Turkish lira", symbol: "₺", ISO: "TRY", flag: "🇹🇷" },
+    { name: "United States dollar", symbol: "$", ISO: "USD", flag: "🇺🇸" }
 ];
 
 
