@@ -1,5 +1,6 @@
 enum LANGUAGES_ENUMS {
     "en-US" = "en-US",
+    "es" = "es",
     "he-IL" = "he-IL"
 }
 

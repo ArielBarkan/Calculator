@@ -10,6 +10,9 @@
     "about": {
       "title": "Acerca de"
     },
+    "calculator": {
+      "title": "Calculador"
+    },
     "settings": {
       "title": "Configuración"
     }

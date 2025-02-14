@@ -23,8 +23,10 @@ const SettingsPage = () => {
             <br />
             <Button onClick={toggleTheme}>Toggle Theme ({theme})</Button>
             <br />
-            <Button onClick={() => ChangeLanguage("he-IL")}>Hebrew</Button>
             <Button onClick={() => ChangeLanguage("en-US")}>English</Button>
+            <Button onClick={() => ChangeLanguage("es")}>Spanish</Button>
+            <Button onClick={() => ChangeLanguage("he-IL")}>Hebrew</Button>
+
 
             <br />
             <SelectComponent options={currenciesOptions} />

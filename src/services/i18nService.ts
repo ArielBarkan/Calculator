@@ -14,17 +14,16 @@ declare module "i18next" {
 
 i18n.use(HttpBackend)
     .use(initReactI18next)
-    // init i18next
     // for all options read: https://www.i18next.com/overview/configuration-options
     .init<HttpBackendOptions>({
-        ns: ["common"], // add namespaces when we need to split our translation to several scopes
+        ns: ["common"],
         defaultNS: "common",
         debug: import.meta.env.VITE_I18N_DEBUG_MODE === "true",
         lng: SUPPORTED_LANGUAGES[0].locale,
         fallbackLng: SUPPORTED_LANGUAGES[0].locale,
         load: "currentOnly",
         interpolation: {
-            escapeValue: false // not needed for react as it escapes by default
+            escapeValue: false
         },
         returnNull: false,
         backend: {

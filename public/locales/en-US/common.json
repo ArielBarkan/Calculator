@@ -10,6 +10,9 @@
     "about": {
       "title": "About"
     },
+    "calculator": {
+      "title": "Calculator"
+    },
     "settings": {
       "title": "Settings"
     }
