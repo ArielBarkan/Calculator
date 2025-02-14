@@ -6,7 +6,7 @@ const ToggleSwitch = (props: ToggleSwitchProps) => {
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         console.log(e.target.checked);
-        props.returnFunction(e.target.checked);
+        props.returnFunction();
     };
     return (
         <SwitchWrapper>
