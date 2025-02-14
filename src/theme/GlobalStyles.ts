@@ -11,7 +11,7 @@ const GlobalStyles = createGlobalStyle`
         background-color: ${({ theme }) => theme.body.bgColor};
         color: ${({ theme }) => theme.body.fontColor};
         font-family: 'Rubik', sans-serif;
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 `;
 
