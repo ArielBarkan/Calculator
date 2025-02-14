@@ -11,7 +11,6 @@ const GlobalStyles = createGlobalStyle`
         background-color: ${({ theme }) => theme.body.bgColor};
         color: ${({ theme }) => theme.body.fontColor};
         font-family: 'Rubik', sans-serif;
-        transition: all 0.5s ease-in-out;
     }
 `;
 
