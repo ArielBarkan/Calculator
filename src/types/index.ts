@@ -15,4 +15,9 @@ type selectType = {
     value: string,
     label: string
 }
-export { languageType, currencyType, selectType };
+
+type ToggleSwitchProps = {
+    checked: boolean;
+    returnFunction: () => void;
+};
+export { languageType, currencyType, selectType, ToggleSwitchProps };

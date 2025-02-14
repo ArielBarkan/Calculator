@@ -14,6 +14,7 @@
       "title": "Calculador"
     },
     "settings": {
+      "setDarkMode": "Modo oscuro",
       "title": "Configuración"
     }
   },

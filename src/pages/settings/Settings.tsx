@@ -9,6 +9,8 @@ import { SelectComponent } from "../../components/select";
 import { convertCurrenciesToSelect } from "../../utils";
 import { selectType } from "../../types";
 import { currenciesArray } from "../../data";
+import { ToggleSwitch } from "../../components/toggleSwitch";
+import { THEME_ENUMS } from "../../enums";
 
 
 const SettingsPage = () => {
@@ -16,6 +18,10 @@ const SettingsPage = () => {
     const { theme, toggleTheme } = useTheme();
 
     const currenciesOptions: selectType[] = convertCurrenciesToSelect(currenciesArray);
+
+    const handleChangeTheme = () => {
+        toggleTheme();
+    };
 
     return (
         <>
@@ -26,10 +32,10 @@ const SettingsPage = () => {
             <Button onClick={() => ChangeLanguage("en-US")}>English</Button>
             <Button onClick={() => ChangeLanguage("es")}>Spanish</Button>
             <Button onClick={() => ChangeLanguage("he-IL")}>Hebrew</Button>
-
-
             <br />
-            <SelectComponent options={currenciesOptions} />
+            <ToggleSwitch checked={theme === THEME_ENUMS.dark} returnFunction={handleChangeTheme} />
+            <br />
+            {translate("common:pages.settings.setDarkMode")} <SelectComponent options={currenciesOptions} />
 
         </>
     );
