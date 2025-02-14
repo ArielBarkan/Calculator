@@ -11,6 +11,7 @@ import { selectType } from "../../types";
 import { currenciesArray } from "../../data";
 import { ToggleSwitch } from "../../components/toggleSwitch";
 import { THEME_ENUMS } from "../../enums";
+import { Row } from "./SettingWrappers";
 
 
 const SettingsPage = () => {
@@ -27,15 +28,17 @@ const SettingsPage = () => {
         <>
             <h1> {translate("pages.settings.title")} </h1>
             <br />
-            <Button onClick={toggleTheme}>Toggle Theme ({theme})</Button>
-            <br />
+
             <Button onClick={() => ChangeLanguage("en-US")}>English</Button>
             <Button onClick={() => ChangeLanguage("es")}>Spanish</Button>
             <Button onClick={() => ChangeLanguage("he-IL")}>Hebrew</Button>
             <br />
-            <ToggleSwitch checked={theme === THEME_ENUMS.dark} returnFunction={handleChangeTheme} />
-            <br />
-            {translate("common:pages.settings.setDarkMode")} <SelectComponent options={currenciesOptions} />
+
+
+            <Row>  {translate("common:pages.settings.setDarkMode")}
+                <ToggleSwitch checked={theme === THEME_ENUMS.dark} returnFunction={handleChangeTheme} />
+            </Row>
+            <SelectComponent options={currenciesOptions} />
 
         </>
     );
