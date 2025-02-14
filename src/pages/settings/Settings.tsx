@@ -19,7 +19,7 @@ const SettingsPage = () => {
 
     return (
         <>
-            {translate("pages.settings.title")}
+            <h1> {translate("pages.settings.title")} </h1>
             <br />
             <Button onClick={toggleTheme}>Toggle Theme ({theme})</Button>
             <br />
