@@ -4,15 +4,13 @@ import i18n from "i18next";
 //Custom imports
 import { languageType } from "../types";
 import { SUPPORTED_LANGUAGES } from "../constants";
+import { updateSelectedLanguage } from "./localStorageService";
+import { LANGUAGES_ENUMS } from "../enums";
 
-/**
- *
- * @param locale
- * This function change the UI language + body direction + body lang attribute
- */
+
 const ChangeLanguage = async (locale: string) => {
     const selectedLanguage: languageType = getSelectedLanguageByLocale(locale);
-    console.log({ selectedLanguage });
+    updateSelectedLanguage(selectedLanguage.locale as LANGUAGES_ENUMS);
     await i18n.changeLanguage(selectedLanguage.locale);
     document.body.lang = selectedLanguage.locale;
     document.body.dir = selectedLanguage.direction;

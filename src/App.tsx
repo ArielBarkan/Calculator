@@ -2,22 +2,21 @@
 import React from "react";
 
 // Modules imports
+import AppRoutes from "./routes/AppRoutes";
 
 // Custom imports
-import AppRoutes from "./routes/AppRoutes";
 import { ChangeLanguage } from "./services";
 import "./services/i18nService";
 import { ThemeProviderWrapper } from "./context/ThemeContext";
 import { Header } from "./components/header/Header";
-import { useUserLanguage } from "./hooks";
 import { GlobalStyles } from "./theme/GlobalStyles";
+import { getSelectedLanguage } from "./services/localStorageService";
 
 const App: React.FC = () => {
 
-    const language = useUserLanguage();
-    // ChangeLanguage("en-US");
-    ChangeLanguage(language);
-    console.log(language);
+
+    ChangeLanguage(getSelectedLanguage());
+
 
     return (
         <ThemeProviderWrapper>
