@@ -1,0 +1,22 @@
+{
+  "header": {
+    "linkLabels": {
+      "about": "Acerca de",
+      "main": "Inicio",
+      "settings": "Configuración"
+    }
+  },
+  "pages": {
+    "about": {
+      "title": "Acerca de"
+    },
+    "settings": {
+      "title": "Configuración"
+    }
+  },
+  "share": {
+    "label": "Compartir aplicación",
+    "text": "Encontré esta increíble aplicación, échale un vistazo:",
+    "title": "Aplicación para encontrar fácilmente el producto más barato en la estantería"
+  }
+}
