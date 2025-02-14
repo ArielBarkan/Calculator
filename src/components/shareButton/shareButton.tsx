@@ -1,28 +1,35 @@
-import React from "react";
+// React imports
+import React, { useState, useEffect } from "react";
 
+// Modules imports
+import { useTranslation } from "react-i18next";
+// Custom imports
 const ShareButton: React.FC = () => {
+    const { t: translate } = useTranslation("common");
+    const [isShareSupported, setIsShareSupported] = useState(false);
+
+    useEffect(() => {
+        setIsShareSupported(!!navigator.share); // Check if the Web Share API is supported
+    }, []);
+
     const shareApp = async () => {
-        if (navigator.share) {
-            try {
-                await navigator.share({
-                    title: "Check out this awesome app!",
-                    text: "I found this cool app, check it out:",
-                    url: window.location.href // Uses the current page URL
-                });
-                console.log("Successfully shared!");
-            } catch (error) {
-                console.error("Error sharing:", error);
-            }
-        } else {
-            alert("Sharing not supported on this device.");
+        try {
+            await navigator.share({
+                title: translate("share.title"),
+                text: translate("share.text"),
+                url: import.meta.env.VITE_URL_TO_SHARE
+            });
+            console.log("Successfully shared!");
+        } catch (error) {
+            console.error("Error sharing:", error);
         }
     };
 
     return (
-        <button onClick={shareApp}>
-            Share App
-        </button>
+        isShareSupported && (
+            <button onClick={shareApp}>{translate("share.label")}</button>
+        )
     );
 };
-export { ShareButton };
 
+export { ShareButton };

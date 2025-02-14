@@ -13,5 +13,10 @@
       "about": "About",
       "settings": "Settings"
     }
+  },
+  "share": {
+    "title": "App for easily find cheapest product on shelf ",
+    "text": "I found this cool app, check it out:",
+    "label": "Share app"
   }
 }
