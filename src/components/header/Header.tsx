@@ -1,6 +1,7 @@
 // Modules imports
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import { ShareButton } from "../shareButton";
 
 
 const Header: React.FC = () => {
@@ -17,7 +18,8 @@ const Header: React.FC = () => {
             |
 
             <Link to="/settings">{translate("header.linkLabels.settings")}</Link>
-
+            |
+            <ShareButton />
         </nav>
     );
 };
