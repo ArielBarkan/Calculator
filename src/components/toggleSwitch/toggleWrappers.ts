@@ -4,8 +4,8 @@ import styled from "styled-components";
 const SwitchWrapper = styled.label`
     position: relative;
     display: inline-block;
-    width: 60px;
-    height: 34px;
+    width: 40px;
+    height: 20px;
 `;
 
 const HiddenCheckbox = styled.input.attrs({ type: "checkbox" })`
@@ -22,7 +22,7 @@ const HiddenCheckbox = styled.input.attrs({ type: "checkbox" })`
     }
 
     &:checked + span:before {
-        transform: translateX(26px);
+        transform: translateX(20px);
     }
 `;
 
@@ -40,10 +40,10 @@ const Slider = styled.span`
     &:before {
         position: absolute;
         content: "";
-        height: 26px;
-        width: 26px;
-        left: 4px;
-        bottom: 4px;
+        height: 18px;
+        width: 18px;
+        left: 1px;
+        bottom: 1px;
         background-color: white;
         transition: 0.4s;
         border-radius: 50%;
