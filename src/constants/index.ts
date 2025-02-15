@@ -5,17 +5,20 @@ const SUPPORTED_LANGUAGES: languageType[] = [
     {
         locale: "en-US",
         direction: "ltr",
-        name: "English"
+        name: "English",
+        flag: "GB"
     },
     {
         locale: "es",
         direction: "ltr",
-        name: "Spanish"
+        name: "Español",
+        flag: "ES"
     },
     {
         locale: "he-IL",
         direction: "rtl",
-        name: "Hebrew"
+        name: "עברית",
+        flag: "IL"
     }
 ];
 

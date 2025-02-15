@@ -4,6 +4,7 @@ type languageType = {
     locale: string;
     direction: string;
     name: string;
+    flag: string;
 };
 
 type currencyType = {
