@@ -17,7 +17,6 @@ const SUPPORTED_LANGUAGES: languageType[] = [
         direction: "rtl",
         name: "Hebrew"
     }
-
 ];
 
 export {

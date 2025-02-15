@@ -14,7 +14,9 @@
       "title": "מחשב"
     },
     "settings": {
+      "setCurrency": "מטבע מקומי",
       "setDarkMode": "מצב כהה",
+      "setLanguage": "שפה",
       "title": "הגדרות"
     }
   },

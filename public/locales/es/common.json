@@ -14,7 +14,9 @@
       "title": "Calculador"
     },
     "settings": {
+      "setCurrency": "Moneda local",
       "setDarkMode": "Modo oscuro",
+      "setLanguage": "Idioma",
       "title": "Configuración"
     }
   },

@@ -1,3 +1,5 @@
+import { SUPPORTED_LANGUAGES } from "../constants";
+
 type languageType = {
     locale: string;
     direction: string;
@@ -15,9 +17,12 @@ type selectType = {
     value: string,
     label: string
 }
-
 type ToggleSwitchProps = {
     checked: boolean;
     returnFunction: () => void;
 };
-export { languageType, currencyType, selectType, ToggleSwitchProps };
+
+
+type LocaleType = (typeof SUPPORTED_LANGUAGES)[number]["locale"];
+
+export { languageType, currencyType, selectType, ToggleSwitchProps, LocaleType };

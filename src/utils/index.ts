@@ -1,1 +1,1 @@
-export { convertCurrenciesToSelect } from "./selectUtils";
+export { convertCurrenciesToSelect, convertLanguagesToSelect } from "./selectUtils";

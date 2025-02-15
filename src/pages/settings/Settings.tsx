@@ -6,12 +6,14 @@ import { ChangeLanguage } from "../../services";
 import { Button } from "../../components/button";
 import { useTheme } from "../../context/ThemeContext";
 import { SelectComponent } from "../../components/select";
-import { convertCurrenciesToSelect } from "../../utils";
-import { selectType } from "../../types";
+import { convertCurrenciesToSelect, convertLanguagesToSelect } from "../../utils";
+import { LocaleType, selectType } from "../../types";
 import { currenciesArray } from "../../data";
 import { ToggleSwitch } from "../../components/toggleSwitch";
 import { THEME_ENUMS } from "../../enums";
 import { Row } from "./SettingWrappers";
+import { SUPPORTED_LANGUAGES } from "../../constants";
+import { localStorageGetSelectedLanguage } from "../../services/localStorageService";
 
 
 const SettingsPage = () => {
@@ -19,26 +21,39 @@ const SettingsPage = () => {
     const { theme, toggleTheme } = useTheme();
 
     const currenciesOptions: selectType[] = convertCurrenciesToSelect(currenciesArray);
+    const languageOptions: selectType[] = convertLanguagesToSelect(SUPPORTED_LANGUAGES);
 
     const handleChangeTheme = () => {
         toggleTheme();
     };
 
+    const handleChangeLanguage = (newLocale: string) => {
+        ChangeLanguage(newLocale);
+    };
+
+    const handleChangeCurrency = (newCurrency: string) => {
+        console.log(newCurrency);
+        // TODO : set globally
+    };
+
     return (
         <>
             <h1> {translate("pages.settings.title")} </h1>
-            <br />
 
-            <Button onClick={() => ChangeLanguage("en-US")}>English</Button>
-            <Button onClick={() => ChangeLanguage("es")}>Spanish</Button>
-            <Button onClick={() => ChangeLanguage("he-IL")}>Hebrew</Button>
-            <br />
-
-
-            <Row>  {translate("common:pages.settings.setDarkMode")}
+            <Row>
+                {translate("pages.settings.setDarkMode")}
                 <ToggleSwitch checked={theme === THEME_ENUMS.dark} returnFunction={handleChangeTheme} />
             </Row>
-            <SelectComponent options={currenciesOptions} />
+            <Row>
+                {translate("common:pages.settings.setLanguage")}
+                <SelectComponent options={languageOptions} returnFunction={handleChangeLanguage}
+                                 currentValue={localStorageGetSelectedLanguage()} />
+            </Row>
+            <Row>
+                {translate("common:pages.settings.setCurrency")}
+                <SelectComponent options={currenciesOptions} returnFunction={handleChangeCurrency} />
+            </Row>
+
 
         </>
     );

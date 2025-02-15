@@ -1,12 +1,13 @@
-import { LANGUAGES_ENUMS, THEME_ENUMS } from "../enums";
+import { THEME_ENUMS } from "../enums";
+import { LocaleType } from "../types";
 
 
-const localStorageUpdateSelectedLanguage = (language: LANGUAGES_ENUMS) => {
+const localStorageUpdateSelectedLanguage = (language: LocaleType) => {
     localStorage.setItem("language", language);
 };
 
-const localStorageGetSelectedLanguage = (): LANGUAGES_ENUMS => {
-    return (localStorage.getItem("language") || import.meta.env.VITE_DEFAULT_LANGUAGE) as LANGUAGES_ENUMS;
+const localStorageGetSelectedLanguage = (): LocaleType => {
+    return (localStorage.getItem("language") || import.meta.env.VITE_DEFAULT_LANGUAGE) as LocaleType;
 };
 
 const localStorageUpdateSelectedTheme = (theme: THEME_ENUMS) => {
