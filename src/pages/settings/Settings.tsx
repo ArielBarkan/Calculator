@@ -3,11 +3,10 @@ import { useTranslation } from "react-i18next";
 
 // Custom imports
 import { ChangeLanguage } from "../../services";
-import { Button } from "../../components/button";
 import { useTheme } from "../../context/ThemeContext";
 import { SelectComponent } from "../../components/select";
 import { convertCurrenciesToSelect, convertLanguagesToSelect } from "../../utils";
-import { LocaleType, selectType } from "../../types";
+import { selectType } from "../../types";
 import { currenciesArray } from "../../data";
 import { ToggleSwitch } from "../../components/toggleSwitch";
 import { THEME_ENUMS } from "../../enums";
@@ -47,11 +46,13 @@ const SettingsPage = () => {
             <Row>
                 {translate("common:pages.settings.setLanguage")}
                 <SelectComponent options={languageOptions} returnFunction={handleChangeLanguage}
-                                 currentValue={localStorageGetSelectedLanguage()} />
+                                 currentValue={localStorageGetSelectedLanguage()}
+                />
             </Row>
             <Row>
                 {translate("common:pages.settings.setCurrency")}
-                <SelectComponent options={currenciesOptions} returnFunction={handleChangeCurrency} />
+                <SelectComponent options={currenciesOptions} returnFunction={handleChangeCurrency}
+                />
             </Row>
 
 

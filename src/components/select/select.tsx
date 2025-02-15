@@ -8,6 +8,7 @@ type selectComponentProps = {
     options: selectType[]
     returnFunction?: (selectedValue: string) => void;
     currentValue?: string;
+    isSearchable?: boolean;
 }
 const SelectComponent = (props: selectComponentProps) => {
 
@@ -25,7 +26,7 @@ const SelectComponent = (props: selectComponentProps) => {
     return (
         <Select
             options={props.options}
-            isSearchable={true}
+            isSearchable={!!props.isSearchable}
             onChange={returnToParent}
             defaultValue={getCurrentSelectedOption()}
         />
