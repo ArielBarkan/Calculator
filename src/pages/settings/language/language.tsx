@@ -5,8 +5,7 @@ import Flag from "react-world-flags";
 import { Row } from "../SettingWrappers";
 import { supportedLanguages } from "../../../data";
 import { ChangeLanguage } from "../../../services";
-import { Link } from "react-router-dom";
-import { IconBack } from "../../../styles";
+import { TitleWithBack } from "../../../components/titleWithBack";
 
 const Language = () => {
     const { t: translate } = useTranslation("common");
@@ -18,10 +17,7 @@ const Language = () => {
 
     return (
         <>
-            <Row>
-                {translate("common:pages.settings.setLanguage")}
-                <Link to="/settings"><IconBack /></Link>
-            </Row>
+            <TitleWithBack title={translate("common:pages.settings.setLanguage")} linkTo={"/settings"} />
             {supportedLanguages.map(language => (
                 <Row onClick={() => handleChangeLanguage(language.locale)}>
                     <p>{language.name}</p>

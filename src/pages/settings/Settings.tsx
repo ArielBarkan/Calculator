@@ -9,6 +9,7 @@ import { Row } from "./SettingWrappers";
 
 import { Link } from "react-router-dom";
 import { IconNext } from "../../styles";
+import { TitleWithBack } from "../../components/titleWithBack";
 
 
 const SettingsPage = () => {
@@ -23,7 +24,8 @@ const SettingsPage = () => {
 
     return (
         <>
-            <h1> {translate("pages.settings.title")} </h1>
+
+            <TitleWithBack title={translate("pages.settings.title")} linkTo={"/"} />
 
             <Row>
                 {translate("pages.settings.setDarkMode")}

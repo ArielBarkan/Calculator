@@ -7,8 +7,7 @@ import { SelectComponent } from "../../../components/select";
 import { selectType } from "../../../types";
 import { convertCurrenciesToSelect } from "../../../utils";
 import { currenciesArray } from "../../../data";
-import { Link } from "react-router-dom";
-import { IconBack } from "../../../styles";
+import { TitleWithBack } from "../../../components/titleWithBack";
 
 const Currency = () => {
     const { t: translate } = useTranslation("common");
@@ -23,10 +22,7 @@ const Currency = () => {
     return (
 
         <>
-            <Row>
-                {translate("common:pages.settings.setLanguage")}
-                <Link to="/settings"><IconBack /></Link>
-            </Row>
+            <TitleWithBack title={translate("common:pages.settings.setCurrency")} linkTo={"/settings"} />
             <Row>
                 {translate("common:pages.settings.setCurrency")}
                 <SelectComponent options={currenciesOptions} returnFunction={handleChangeCurrency}

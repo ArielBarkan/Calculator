@@ -35,10 +35,24 @@ type ThemedIconProps = {
     size?: number;
 }
 
+type TitleWithBackProps = {
+    title: string;
+    linkTo: string;
+}
+
 // Extracts the "locale" property from each object in the `supportedLanguages` array
 // This ensures `LocaleType` is always updated when `supportedLanguages` changes
 // Equivalent to: type LocaleType = "en-US" | "es" | "he-IL" (auto-generated)
 type LocaleType = (typeof supportedLanguages)[number]["locale"];
 
 
-export { languageType, currencyType, selectType, ToggleSwitchProps, LocaleType, IconProps, ThemedIconProps };
+export {
+    languageType,
+    currencyType,
+    selectType,
+    ToggleSwitchProps,
+    LocaleType,
+    IconProps,
+    ThemedIconProps,
+    TitleWithBackProps
+};

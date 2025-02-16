@@ -7,7 +7,7 @@ const GlobalStyles = createGlobalStyle`
         border-radius: 15px;
         margin: auto;
         height: 99vh;
-        padding: 0;
+        padding: 1rem;
         background-color: ${({ theme }) => theme.body.bgColor};
         color: ${({ theme }) => theme.body.fontColor};
         font-family: 'Rubik', sans-serif;
