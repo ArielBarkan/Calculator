@@ -8,7 +8,7 @@ const ThemedIcon: React.FC<ThemedIconProps> = ({ icon: Icon, color, size = 24 })
     const resolvedSize = size || `${size}px` || "20px";
 
 
-    return <Icon color={resolvedColor} size={resolvedSize} />;
+    return <Icon color={resolvedColor} size={resolvedSize} className="flippable-icon" />;
 };
 
 export { ThemedIcon };
