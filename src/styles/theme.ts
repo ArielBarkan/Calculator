@@ -11,8 +11,13 @@ const lightTheme = {
     },
     icons: {
         iconDefaultColor: "#000000"
+    },
+    SelectableRow: {
+        selectedBorder: "#FFFFFF",
+        selectedBackground: "#797676",
+        activeBackground: "#888888"
     }
-};
+} as const;
 
 const darkTheme = {
     body: {
@@ -27,7 +32,12 @@ const darkTheme = {
     },
     icons: {
         iconDefaultColor: "#ffffff"
+    },
+    SelectableRow: {
+        selectedBorder: "#FFFFFF",
+        selectedBackground: "#797676",
+        activeBackground: "#888888"
     }
-};
+} as const;
 
 export { lightTheme, darkTheme };
