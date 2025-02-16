@@ -1,5 +1,6 @@
 // Modules imports
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 // Custom imports
 import { useTheme } from "../../context/ThemeContext";
@@ -7,7 +8,6 @@ import { ToggleSwitch } from "../../components/toggleSwitch";
 import { THEME_ENUMS } from "../../enums";
 import { Row } from "./SettingWrappers";
 
-import { Link } from "react-router-dom";
 import { IconNext } from "../../styles";
 import { TitleWithBack } from "../../components/titleWithBack";
 
@@ -15,6 +15,7 @@ import { TitleWithBack } from "../../components/titleWithBack";
 const SettingsPage = () => {
     const { t: translate } = useTranslation("common");
     const { theme, toggleTheme } = useTheme();
+    const navigate = useNavigate();
 
 
     const handleChangeTheme = () => {
@@ -31,13 +32,13 @@ const SettingsPage = () => {
                 {translate("pages.settings.setDarkMode")}
                 <ToggleSwitch checked={theme === THEME_ENUMS.dark} returnFunction={handleChangeTheme} />
             </Row>
-            <Row>
+            <Row onClick={() => navigate("/settings/language")}>
                 {translate("Language")}
-                <Link to="/settings/language"><IconNext /></Link>
+                <IconNext />
             </Row>
-            <Row>
+            <Row onClick={() => navigate("/settings/currency")}>
                 {translate("common:pages.settings.setCurrency")}
-                <Link to="/settings/currency"><IconNext /></Link>
+                <IconNext />
             </Row>
 
         </>

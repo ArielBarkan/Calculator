@@ -7,6 +7,12 @@ const Row = styled.div<{ selected?: boolean }>`
     justify-content: space-between;
     border: 1px solid ${({ selected }) => selected ? "black" : "transparent"};
     border-radius: 15px;
+    background-color: inherit;
+    transition: background-color 0.1s ease-in-out;
+
+    &:active {
+        background-color: #888888;
+    }
 `;
 
 export { Row };
