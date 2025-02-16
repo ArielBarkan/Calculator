@@ -8,6 +8,9 @@ const lightTheme = {
             backgroundColor: "#ffffff",
             color: "#000000"
         }
+    },
+    icons: {
+        iconDefaultColor: "#000000"
     }
 };
 
@@ -21,8 +24,10 @@ const darkTheme = {
             backgroundColor: "#384cae",
             color: "#e3b863"
         }
+    },
+    icons: {
+        iconDefaultColor: "#ffffff"
     }
-
 };
 
 export { lightTheme, darkTheme };

@@ -6,6 +6,7 @@ import { Row } from "../SettingWrappers";
 import { SUPPORTED_LANGUAGES } from "../../../constants";
 import { ChangeLanguage } from "../../../services";
 import { Link } from "react-router-dom";
+import { IconBack } from "../../../styles";
 
 const Language = () => {
     const { t: translate } = useTranslation("common");
@@ -19,7 +20,7 @@ const Language = () => {
         <>
             <Row>
                 {translate("common:pages.settings.setLanguage")}
-                <Link to="/settings">Back</Link>
+                <Link to="/settings"><IconBack /></Link>
             </Row>
             {SUPPORTED_LANGUAGES.map(language => (
                 <Row onClick={() => handleChangeLanguage(language.locale)}>

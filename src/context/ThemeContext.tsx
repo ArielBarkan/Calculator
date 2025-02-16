@@ -6,7 +6,7 @@ import { ThemeProvider } from "styled-components";
 
 // Custom imports
 import { THEME_ENUMS } from "../enums";
-import { lightTheme, darkTheme } from "../theme";
+import { lightTheme, darkTheme } from "../styles";
 import { localStorageUpdateSelectedTheme, localStorageGetSelectedTheme } from "../services/localStorageService";
 
 interface ThemeContextType {

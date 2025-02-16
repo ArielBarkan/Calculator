@@ -1,4 +1,5 @@
 import { SUPPORTED_LANGUAGES } from "../constants";
+import { IconType } from "react-icons";
 
 type languageType = {
     locale: string;
@@ -23,7 +24,17 @@ type ToggleSwitchProps = {
     returnFunction: () => void;
 };
 
+type IconProps = {
+    color?: string;
+    size?: number;
+};
+
+type ThemedIconProps = {
+    icon: IconType;
+    color?: string;
+    size?: number;
+}
 
 type LocaleType = (typeof SUPPORTED_LANGUAGES)[number]["locale"];
 
-export { languageType, currencyType, selectType, ToggleSwitchProps, LocaleType };
+export { languageType, currencyType, selectType, ToggleSwitchProps, LocaleType, IconProps, ThemedIconProps };

@@ -8,6 +8,7 @@ import { THEME_ENUMS } from "../../enums";
 import { Row } from "./SettingWrappers";
 
 import { Link } from "react-router-dom";
+import { IconNext } from "../../styles";
 
 
 const SettingsPage = () => {
@@ -18,7 +19,7 @@ const SettingsPage = () => {
     const handleChangeTheme = () => {
         toggleTheme();
     };
-    
+
 
     return (
         <>
@@ -30,11 +31,11 @@ const SettingsPage = () => {
             </Row>
             <Row>
                 {translate("Language")}
-                <Link to="/settings/language">go</Link>
+                <Link to="/settings/language"><IconNext /></Link>
             </Row>
             <Row>
                 {translate("common:pages.settings.setCurrency")}
-                <Link to="/settings/currency">go</Link>
+                <Link to="/settings/currency"><IconNext /></Link>
             </Row>
 
         </>

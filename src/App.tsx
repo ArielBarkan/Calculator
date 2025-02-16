@@ -9,7 +9,7 @@ import { ChangeLanguage } from "./services";
 import "./services/i18nService";
 import { ThemeProviderWrapper } from "./context/ThemeContext";
 import { Header } from "./components/header/Header";
-import { GlobalStyles } from "./theme/GlobalStyles";
+import { GlobalStyles } from "./styles";
 import { localStorageGetSelectedLanguage } from "./services/localStorageService";
 
 const App: React.FC = () => {
