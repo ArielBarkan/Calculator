@@ -20,6 +20,7 @@ const Language = () => {
     return (
         <>
             <TitleWithBack title={translate("common:pages.settings.setLanguage")} linkTo={"/settings"} />
+            
             {supportedLanguages.map((language, index: number) => (
                 <Row onClick={() => handleChangeLanguage(language.locale)}
                      selected={currentLanguage === language?.locale} key={index}>
