@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
     body {
-        max-width: 100vw;
+        max-width: 95vw;
         border: 1px solid ${({ theme }) => theme.body.fontColor};
         border-radius: 15px;
         margin: auto;
