@@ -6,10 +6,12 @@ import { Row } from "../SettingWrappers";
 import { supportedLanguages } from "../../../data";
 import { ChangeLanguage } from "../../../services";
 import { TitleWithBack } from "../../../components/titleWithBack";
+import { localStorageGetSelectedLanguage } from "../../../services/localStorageService";
+import { LocaleType } from "../../../types";
 
 const Language = () => {
     const { t: translate } = useTranslation("common");
-
+    const currentLanguage: LocaleType = localStorageGetSelectedLanguage();
 
     const handleChangeLanguage = (newLocale: string) => {
         ChangeLanguage(newLocale);
@@ -19,7 +21,8 @@ const Language = () => {
         <>
             <TitleWithBack title={translate("common:pages.settings.setLanguage")} linkTo={"/settings"} />
             {supportedLanguages.map(language => (
-                <Row onClick={() => handleChangeLanguage(language.locale)}>
+                <Row onClick={() => handleChangeLanguage(language.locale)}
+                     selected={currentLanguage === language.locale}>
                     <p>{language.name}</p>
                     <Flag code={language.flag} width={27} />
                 </Row>
