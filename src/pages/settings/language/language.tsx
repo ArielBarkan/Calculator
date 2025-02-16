@@ -24,7 +24,7 @@ const Language = () => {
                 <Row onClick={() => handleChangeLanguage(language.locale)}
                      selected={currentLanguage === language?.locale} key={index}>
                     <p>{language.name}</p>
-                    <Flag code={language.flag} width={27} />
+                    <Flag code={language.flag} width={50} />
                 </Row>
 
             ))}
