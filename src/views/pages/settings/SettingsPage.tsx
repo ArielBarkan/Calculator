@@ -32,7 +32,9 @@ const SettingsPage = () => {
 
             <Row onClick={() => handleChangeTheme()}>
                 {translate("pages.settings.setDarkMode")}
-                <ToggleSwitch checked={theme === THEME_ENUMS.dark} returnFunction={handleChangeTheme} />
+                <ToggleSwitch checked={theme === THEME_ENUMS.dark} returnFunction={() => {
+
+                }} />
             </Row>
             <Row onClick={() => navigate("/settings/language")}>
                 {translate("Language")}
