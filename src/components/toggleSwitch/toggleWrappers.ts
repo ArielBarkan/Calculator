@@ -8,7 +8,10 @@ const SwitchWrapper = styled.label`
     height: 20px;
 `;
 
-const HiddenCheckbox = styled.input.attrs({ type: "checkbox" })`
+const HiddenCheckbox = styled.input.attrs((props) => ({
+    type: "checkbox",
+    id: props.id || "notProvided"
+}))`
     opacity: 0;
     width: 0;
     height: 0;

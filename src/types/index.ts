@@ -23,6 +23,7 @@ type selectType = {
 type ToggleSwitchProps = {
     checked: boolean;
     returnFunction: () => void;
+    id?: string
 };
 
 type IconProps = {

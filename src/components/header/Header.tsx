@@ -9,15 +9,15 @@ const Header: React.FC = () => {
     // TODO: ADD "SHARE" BUTTON PLEASE
     return (
         <nav>
-            <Link to="/">{translate("header.linkLabels.main")}</Link>
+            <Link to="/">{translate("common:header.linkLabels.main")}</Link>
 
             |
 
-            <Link to="/about">{translate("header.linkLabels.about")}</Link>
+            <Link to="/about">{translate("common:header.linkLabels.about")}</Link>
 
             |
 
-            <Link to="/settings">{translate("header.linkLabels.settings")}</Link>
+            <Link to="/settings">{translate("common:header.linkLabels.settings")}</Link>
             |
             <ShareButton />
         </nav>

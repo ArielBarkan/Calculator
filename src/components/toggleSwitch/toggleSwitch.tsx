@@ -10,7 +10,7 @@ const ToggleSwitch = (props: ToggleSwitchProps) => {
     };
     return (
         <SwitchWrapper>
-            <HiddenCheckbox checked={props.checked} onChange={handleInputChange} />
+            <HiddenCheckbox checked={props.checked} onChange={handleInputChange} id={props?.id} />
             <Slider />
         </SwitchWrapper>
     );

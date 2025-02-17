@@ -1,4 +1,10 @@
 {
+  "components": {
+    "toggleSwitch": {
+      "off": "לא פעיל",
+      "on": "פעיל"
+    }
+  },
   "header": {
     "linkLabels": {
       "about": "אודות",

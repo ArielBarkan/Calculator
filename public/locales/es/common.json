@@ -1,4 +1,10 @@
 {
+  "components": {
+    "toggleSwitch": {
+      "off": "Desactivado",
+      "on": "Activado"
+    }
+  },
   "header": {
     "linkLabels": {
       "about": "Acerca de",

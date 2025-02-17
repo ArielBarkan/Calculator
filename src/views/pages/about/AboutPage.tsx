@@ -9,7 +9,7 @@ const AboutPage = () => {
 
     return (
         <p>
-            {translate("pages.about.title")}
+            {translate("common:pages.about.title")}
 
             <Button>Hello</Button>
 

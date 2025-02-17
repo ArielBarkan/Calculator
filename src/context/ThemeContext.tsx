@@ -1,5 +1,5 @@
 // React imports
-import React, { createContext, useState, useContext, useEffect } from "react";
+import React, { createContext, useState, useContext } from "react";
 
 // Modules imports
 import { ThemeProvider } from "styled-components";
@@ -11,7 +11,7 @@ import { localStorageUpdateSelectedTheme, localStorageGetSelectedTheme } from ".
 
 interface ThemeContextType {
     theme: THEME_ENUMS;
-    toggleTheme: () => void;
+    toggleTheme: () => THEME_ENUMS;
 }
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
@@ -19,13 +19,13 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 export const ThemeProviderWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const [theme, setTheme] = useState<THEME_ENUMS>(localStorageGetSelectedTheme());
 
-    const toggleTheme = () => {
-        setTheme((prev) => (prev === THEME_ENUMS.light ? THEME_ENUMS.dark : THEME_ENUMS.light));
+    const toggleTheme = (): THEME_ENUMS => {
+        const newTheme: THEME_ENUMS = theme === THEME_ENUMS.light ? THEME_ENUMS.dark : THEME_ENUMS.light;
+        setTheme(newTheme);
+        localStorageUpdateSelectedTheme(theme);
+        return newTheme;
     };
 
-    useEffect(() => {
-        localStorageUpdateSelectedTheme(theme);
-    }, [theme]);
 
     return (
         <ThemeContext.Provider value={{ theme, toggleTheme }}>

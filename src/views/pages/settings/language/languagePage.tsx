@@ -16,6 +16,7 @@ const LanguagePage = () => {
 
     const handleChangeLanguage = async (newLocale: string) => {
 
+        if (newLocale === currentLanguage) return;
         const success = await ChangeLanguage(newLocale);
 
         if (success) {
