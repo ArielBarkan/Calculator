@@ -1,9 +1,9 @@
 import React, { Suspense, lazy } from "react";
 import { Routes, Route } from "react-router-dom";
-import { HamburgerMenu } from "../components";
 
 
 // Lazy loading the app pages
+const Layout = lazy(() => import("../components/layout/layout"));
 const CalculatorPage = lazy(() => import("../views/pages/calculator/CalculatorPage"));
 const AboutPage = lazy(() => import("../views/pages/about/AboutPage"));
 const SettingsPage = lazy(() => import("../views/pages/settings/SettingsPage"));
@@ -14,14 +14,15 @@ const Currency = lazy(() => import("../views/pages/settings/currency/currencyPag
 const AppRoutes: React.FC = () => {
     return (
         <Suspense fallback={<p>Loading...</p>}>
-            <HamburgerMenu />
             <Routes>
-                <Route path="/" element={<CalculatorPage />} />
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="/settings" element={<SettingsPage />} />
-                <Route path="/settings/language" element={<Language />} />
-                <Route path="/settings/currency" element={<Currency />} />
-                <Route path="*" element={<p>404</p>} />
+                <Route path="/" element={<Layout />}>
+                    <Route index element={<CalculatorPage />} />
+                    <Route path="/about" element={<AboutPage />} />
+                    <Route path="/settings" element={<SettingsPage />} />
+                    <Route path="/settings/language" element={<Language />} />
+                    <Route path="/settings/currency" element={<Currency />} />
+                    <Route path="*" element={<p>404</p>} />
+                </Route>
             </Routes>
         </Suspense>
     );

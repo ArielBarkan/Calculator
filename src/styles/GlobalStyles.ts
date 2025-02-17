@@ -4,7 +4,6 @@ const GlobalStyles = createGlobalStyle`
     body {
         max-width: 90vw;
         margin: auto;
-        height: 99vh;
         padding: 1rem;
         background-color: ${({ theme }) => theme.body.bgColor};
         color: ${({ theme }) => theme.body.fontColor};
