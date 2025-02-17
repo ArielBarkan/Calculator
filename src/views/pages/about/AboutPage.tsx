@@ -1,6 +1,6 @@
 // Modules imports
 import { useTranslation } from "react-i18next";
-import { Button } from "../../components/button";
+import { Button } from "../../../components/button";
 
 
 const AboutPage = () => {
@@ -17,4 +17,4 @@ const AboutPage = () => {
     );
 };
 
-export { AboutPage };
+export default AboutPage;

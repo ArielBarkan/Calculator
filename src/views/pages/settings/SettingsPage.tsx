@@ -3,13 +3,13 @@ import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 // Custom imports
-import { useTheme } from "../../context/ThemeContext";
-import { ToggleSwitch } from "../../components/toggleSwitch";
-import { THEME_ENUMS } from "../../enums";
+import { useTheme } from "../../../context/ThemeContext";
+import { ToggleSwitch } from "../../../components/toggleSwitch";
+import { THEME_ENUMS } from "../../../enums";
 import { Row } from "./SettingWrappers";
 
-import { IconNext } from "../../styles";
-import { TitleWithBack } from "../../components/titleWithBack";
+import { IconNext } from "../../../styles";
+import { TitleWithBack } from "../../../components/titleWithBack";
 
 
 const SettingsPage = () => {
@@ -45,4 +45,4 @@ const SettingsPage = () => {
     );
 };
 
-export { SettingsPage };
+export default SettingsPage;

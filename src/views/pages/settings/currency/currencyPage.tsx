@@ -3,23 +3,23 @@ import { useTranslation } from "react-i18next";
 
 // Custom imports
 import { Row, ScrollableContainer } from "../SettingWrappers";
-import { CurrencyType, currencyType } from "../../../types";
+import { CurrencyType, currencyType } from "../../../../types";
 
-import { currenciesArray } from "../../../data";
-import { TitleWithBack } from "../../../components/titleWithBack";
+import { currenciesArray } from "../../../../data";
+import { TitleWithBack } from "../../../../components/titleWithBack";
 
 import {
     localStorageGetSelectedCurrency, localStorageUpdateSelectedCurrency
 
-} from "../../../services/localStorageService";
+} from "../../../../services/localStorageService";
 
 
 import Flag from "react-world-flags";
 import { useState } from "react";
 import { IconsGroup } from "./currencyWrappers";
-import { InternationalFlag } from "../../../assets";
+import { InternationalFlag } from "../../../../assets";
 
-const Currency = () => {
+const CurrencyPage = () => {
     const { t: translate } = useTranslation("common");
 
     const [currentCurrency, setCurrentCurrency] = useState<CurrencyType>(localStorageGetSelectedCurrency());
@@ -54,4 +54,4 @@ const Currency = () => {
     );
 };
 
-export { Currency };
+export default CurrencyPage;

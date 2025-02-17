@@ -3,13 +3,13 @@ import { useTranslation } from "react-i18next";
 import Flag from "react-world-flags";
 // Custom imports
 import { Row } from "../SettingWrappers";
-import { supportedLanguages } from "../../../data";
-import { ChangeLanguage } from "../../../services";
-import { TitleWithBack } from "../../../components/titleWithBack";
-import { localStorageGetSelectedLanguage } from "../../../services/localStorageService";
-import { LocaleType } from "../../../types";
+import { supportedLanguages } from "../../../../data";
+import { ChangeLanguage } from "../../../../services";
+import { TitleWithBack } from "../../../../components/titleWithBack";
+import { localStorageGetSelectedLanguage } from "../../../../services/localStorageService";
+import { LocaleType } from "../../../../types";
 
-const Language = () => {
+const LanguagePage = () => {
     const { t: translate } = useTranslation("common");
     const currentLanguage: LocaleType = localStorageGetSelectedLanguage();
 
@@ -20,7 +20,7 @@ const Language = () => {
     return (
         <>
             <TitleWithBack title={translate("common:pages.settings.setLanguage")} linkTo={"/settings"} />
-            
+
             {supportedLanguages.map((language, index: number) => (
                 <Row onClick={() => handleChangeLanguage(language.locale)}
                      selected={currentLanguage === language?.locale} key={index}>
@@ -35,4 +35,4 @@ const Language = () => {
     );
 };
 
-export { Language };
+export default LanguagePage;

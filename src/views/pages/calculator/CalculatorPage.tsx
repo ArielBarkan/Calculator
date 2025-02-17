@@ -13,4 +13,4 @@ const CalculatorPage = () => {
     );
 };
 
-export { CalculatorPage };
+export default CalculatorPage;
