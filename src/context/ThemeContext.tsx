@@ -1,5 +1,5 @@
 // React imports
-import React, { createContext, useState, useContext } from "react";
+import React, { createContext, useState, useContext, useEffect } from "react";
 
 // Modules imports
 import { ThemeProvider } from "styled-components";
@@ -11,6 +11,7 @@ import { localStorageUpdateSelectedTheme, localStorageGetSelectedTheme } from ".
 
 interface ThemeContextType {
     theme: THEME_ENUMS;
+    direction: "ltr" | "rtl";
     toggleTheme: () => THEME_ENUMS;
 }
 
@@ -18,18 +19,34 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProviderWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const [theme, setTheme] = useState<THEME_ENUMS>(localStorageGetSelectedTheme());
+    const [direction, setDirection] = useState<"ltr" | "rtl">(document.body.dir as "ltr" | "rtl");
+
+    // ✅ Detect changes in `document.body.dir`
+    useEffect(() => {
+        const observer = new MutationObserver(() => {
+            setDirection(document.body.dir as "ltr" | "rtl");
+        });
+
+        observer.observe(document.body, { attributes: true, attributeFilter: ["dir"] });
+
+        return () => observer.disconnect();
+    }, []);
 
     const toggleTheme = (): THEME_ENUMS => {
         const newTheme: THEME_ENUMS = theme === THEME_ENUMS.light ? THEME_ENUMS.dark : THEME_ENUMS.light;
         setTheme(newTheme);
-        localStorageUpdateSelectedTheme(theme);
+        localStorageUpdateSelectedTheme(newTheme);
         return newTheme;
     };
 
+    const appliedTheme = {
+        ...(theme === THEME_ENUMS.light ? lightTheme : darkTheme),
+        direction // ✅ Inject direction into the theme
+    };
 
     return (
-        <ThemeContext.Provider value={{ theme, toggleTheme }}>
-            <ThemeProvider theme={theme === THEME_ENUMS.light ? lightTheme : darkTheme}>{children}</ThemeProvider>
+        <ThemeContext.Provider value={{ theme, direction, toggleTheme }}>
+            <ThemeProvider theme={appliedTheme}>{children}</ThemeProvider>
         </ThemeContext.Provider>
     );
 };
@@ -41,4 +58,3 @@ export const useTheme = () => {
     }
     return context;
 };
-

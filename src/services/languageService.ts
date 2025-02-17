@@ -12,7 +12,7 @@ const ChangeLanguage = async (locale: LocaleType): Promise<boolean> => {
         const selectedLanguage: languageType = getSelectedLanguageByLocale(locale);
         localStorageUpdateSelectedLanguage(selectedLanguage.locale as LocaleType);
 
-        await i18n.changeLanguage(selectedLanguage.locale); // ✅ Wait for language change
+        await i18n.changeLanguage(selectedLanguage.locale);
 
         document.body.lang = selectedLanguage.locale;
         document.body.dir = selectedLanguage.direction;
