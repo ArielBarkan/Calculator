@@ -7,12 +7,21 @@ import { supportedLanguages } from "../data";
 import { localStorageUpdateSelectedLanguage } from "./localStorageService";
 
 
-const ChangeLanguage = async (locale: LocaleType) => {
-    const selectedLanguage: languageType = getSelectedLanguageByLocale(locale);
-    localStorageUpdateSelectedLanguage(selectedLanguage.locale as LocaleType);
-    await i18n.changeLanguage(selectedLanguage.locale);
-    document.body.lang = selectedLanguage.locale;
-    document.body.dir = selectedLanguage.direction;
+const ChangeLanguage = async (locale: LocaleType): Promise<boolean> => {
+    try {
+        const selectedLanguage: languageType = getSelectedLanguageByLocale(locale);
+        localStorageUpdateSelectedLanguage(selectedLanguage.locale as LocaleType);
+
+        await i18n.changeLanguage(selectedLanguage.locale); // ✅ Wait for language change
+
+        document.body.lang = selectedLanguage.locale;
+        document.body.dir = selectedLanguage.direction;
+
+        return true;
+    } catch (error) {
+        console.error("Error changing language:", error);
+        return false;
+    }
 };
 
 const getSelectedLanguageByLocale = (locale: string): languageType => {

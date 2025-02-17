@@ -11,6 +11,8 @@ import { ThemeProviderWrapper } from "./context/ThemeContext";
 import { Header } from "./components/header/Header";
 import { GlobalStyles } from "./styles";
 import { localStorageGetSelectedLanguage } from "./services/localStorageService";
+import { ToastContainer } from "react-toastify";
+import { NotifyCustom } from "./components/toast/toast";
 
 const App: React.FC = () => {
 
@@ -21,6 +23,8 @@ const App: React.FC = () => {
     return (
         <ThemeProviderWrapper>
             <GlobalStyles />
+            <ToastContainer />
+            <NotifyCustom />
             <Header />
             <AppRoutes />
         </ThemeProviderWrapper>

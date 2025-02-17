@@ -15,8 +15,13 @@
     },
     "settings": {
       "setCurrency": "מטבע מקומי",
+      "setCurrencySuccess": "המטבע עודכן",
       "setDarkMode": "מצב כהה",
       "setLanguage": "שפה",
+      "setLanguageFailed": "עדכון השפה נכשל",
+      "setLanguageSuccess": "שפה עודכנה",
+      "setThemeFailed": "עדכון העיצוב נכשל",
+      "setThemeSuccess": "ערכת הנושא עודכנה",
       "title": "הגדרות"
     }
   },

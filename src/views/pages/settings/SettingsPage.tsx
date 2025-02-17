@@ -10,6 +10,7 @@ import { Row } from "./SettingWrappers";
 
 import { IconNext } from "../../../styles";
 import { TitleWithBack } from "../../../components/titleWithBack";
+import { NotifySuccess } from "../../../components/toast/toast";
 
 
 const SettingsPage = () => {
@@ -20,6 +21,7 @@ const SettingsPage = () => {
 
     const handleChangeTheme = () => {
         toggleTheme();
+        NotifySuccess(translate("common:pages.settings.setThemeSuccess"));
     };
 
 

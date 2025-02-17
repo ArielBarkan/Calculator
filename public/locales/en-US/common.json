@@ -15,8 +15,13 @@
     },
     "settings": {
       "setCurrency": "Local currency",
+      "setCurrencySuccess": "Currency updated",
       "setDarkMode": "Dark mode",
       "setLanguage": "Language",
+      "setLanguageFailed": "Failed to update language",
+      "setLanguageSuccess": "Language updated",
+      "setThemeFailed": "Failed to update theme",
+      "setThemeSuccess": "Theme updated",
       "title": "Settings"
     }
   },

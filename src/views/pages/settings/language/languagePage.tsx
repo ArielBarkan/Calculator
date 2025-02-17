@@ -8,13 +8,21 @@ import { ChangeLanguage } from "../../../../services";
 import { TitleWithBack } from "../../../../components/titleWithBack";
 import { localStorageGetSelectedLanguage } from "../../../../services/localStorageService";
 import { LocaleType } from "../../../../types";
+import { NotifySuccess, NotifyWarning } from "../../../../components/toast/toast";
 
 const LanguagePage = () => {
     const { t: translate } = useTranslation("common");
     const currentLanguage: LocaleType = localStorageGetSelectedLanguage();
 
-    const handleChangeLanguage = (newLocale: string) => {
-        ChangeLanguage(newLocale);
+    const handleChangeLanguage = async (newLocale: string) => {
+
+        const success = await ChangeLanguage(newLocale);
+
+        if (success) {
+            NotifySuccess(translate("common:pages.settings.setLanguageSuccess"));
+        } else {
+            NotifyWarning(translate("common:pages.settings.setLanguageFailed"));
+        }
     };
 
     return (

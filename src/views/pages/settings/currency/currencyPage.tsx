@@ -18,6 +18,7 @@ import Flag from "react-world-flags";
 import { useState } from "react";
 import { IconsGroup } from "./currencyWrappers";
 import { InternationalFlag } from "../../../../assets";
+import { NotifySuccess } from "../../../../components/toast/toast";
 
 const CurrencyPage = () => {
     const { t: translate } = useTranslation("common");
@@ -27,7 +28,10 @@ const CurrencyPage = () => {
     const handleChangeCurrency = (newCurrency: string) => {
         localStorageUpdateSelectedCurrency(newCurrency);
         setCurrentCurrency(localStorageGetSelectedCurrency());
+        NotifySuccess(translate("common:pages.settings.setCurrencySuccess"));
     };
+
+
     return (
 
         <>
