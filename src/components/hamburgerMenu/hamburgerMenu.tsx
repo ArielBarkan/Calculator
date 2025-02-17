@@ -1,10 +1,13 @@
 import { useEffect, useRef, useState } from "react";
+import { useLocation } from "react-router-dom";
+
 import { Navbar, MenuIcon, Menu, CloseIcon, MenuItem } from "./hamburgerMenuWrappers";
-import { FiMenu, FiX } from "react-icons/fi";
-import { useLocation } from "react-router-dom"; // Import hamburger & close icons
+
+
+import { IconHamburger, IconClose } from "../../styles"; // Import hamburger & close icons
 
 const HamburgerMenu = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
+    const [menuOpen, setMenuOpen] = useState<boolean>(false);
     const menuRef = useRef<HTMLDivElement | null>(null);
     const location = useLocation(); // ✅ Detects route changes
 
@@ -29,14 +32,21 @@ const HamburgerMenu = () => {
     return (
         <>
             <Navbar>
-                <MenuIcon onClick={() => setMenuOpen(true)}>
-                    <FiMenu />
-                </MenuIcon>
+
+                {menuOpen ?
+                    <MenuIcon onClick={() => setMenuOpen(false)}>
+                        <IconClose />
+                    </MenuIcon>
+                    :
+                    <MenuIcon onClick={() => setMenuOpen(true)}>
+                        <IconHamburger />
+                    </MenuIcon>
+                }
             </Navbar>
 
             <Menu ref={menuRef} open={menuOpen}>
                 <CloseIcon onClick={() => setMenuOpen(false)}>
-                    <FiX />
+                    <IconClose />
                 </CloseIcon>
                 <MenuItem to="/settings">⚙️ Settings</MenuItem>
                 <MenuItem to="/about">ℹ️ About</MenuItem>
