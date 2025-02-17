@@ -45,7 +45,7 @@ type TitleWithBackProps = {
 // This ensures `LocaleType` is always updated when `supportedLanguages` changes
 // Equivalent to: type LocaleType = "en-US" | "es" | "he-IL" (auto-generated)
 type LocaleType = (typeof supportedLanguages)[number]["locale"];
-type CurrencyType = (typeof currenciesArray)[number]["symbol"];
+type CurrencyType = (typeof currenciesArray)[number]["ISO"];
 
 type CurrencyIconImageProps = {
     iconISO: string,

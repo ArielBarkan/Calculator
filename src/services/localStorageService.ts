@@ -23,7 +23,7 @@ const localStorageUpdateSelectedCurrency = (currency: CurrencyType) => {
 };
 
 const localStorageGetSelectedCurrency = (): CurrencyType => {
-    return (localStorage.getItem("currency") || import.meta.env.VITE_DEFAULT_CURRENCY) as CurrencyType;
+    return (localStorage.getItem("currency") || import.meta.env.VITE_DEFAULT_CURRENCY_ISO) as CurrencyType;
 };
 
 
