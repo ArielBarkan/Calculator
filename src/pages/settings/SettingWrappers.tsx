@@ -15,4 +15,11 @@ const Row = styled.div<{ selected?: boolean }>`
     }
 `;
 
-export { Row };
+
+const ScrollableContainer = styled.div`
+    /*    border: 1px solid pink;
+        max-height: 70vh;
+        overflow: auto;*/
+
+`;
+export { Row, ScrollableContainer };

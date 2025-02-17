@@ -12,7 +12,7 @@ const CurrencyIconImage = styled.img.attrs<CurrencyIconImageProps>(({ iconISO, a
     alt: alt || "Currency Icon"
 }))`
 
-    height: ${({ height }) => height ? height + "px" : "50px"};
+    height: ${({ height }) => height ? height + "px" : "40px"};
 `;
 
 export { CurrencyIconImage };

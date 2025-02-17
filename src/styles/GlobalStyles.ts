@@ -3,8 +3,6 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyles = createGlobalStyle`
     body {
         max-width: 90vw;
-        border: 1px solid ${({ theme }) => theme.body.fontColor};
-        border-radius: 15px;
         margin: auto;
         height: 99vh;
         padding: 1rem;
