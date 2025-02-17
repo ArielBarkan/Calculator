@@ -17,6 +17,7 @@ import {
 import Flag from "react-world-flags";
 import { useState } from "react";
 import { IconsGroup } from "./currencyWrappers";
+import { InternationalFlag } from "../../../assets";
 
 const Currency = () => {
     const { t: translate } = useTranslation("common");
@@ -38,7 +39,9 @@ const Currency = () => {
 
 
                         <IconsGroup>
-                            <Flag code={currency.flag} width={50} />
+                            <Flag code={currency.flag} width={50}
+                                  fallback={<img alt={"generic"}
+                                                 src={InternationalFlag} width="50px" />} />
                             <p> {currency.localName}</p>
                         </IconsGroup>
                         <p>{currency.symbol}</p>

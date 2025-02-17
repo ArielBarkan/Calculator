@@ -2,6 +2,7 @@
 import { currencyType } from "../types";
 
 const currenciesArray: currencyType[] = [
+    { englishName: "Generic", localName: "Generic", symbol: "¤", ISO: "GEN", flag: "GEN" },
     { englishName: "Argentine peso", localName: "Peso argentino", symbol: "$", ISO: "ARS", flag: "AR" },
     { englishName: "Australian dollar", localName: "Australian Dollar", symbol: "$", ISO: "AUD", flag: "AU" },
     { englishName: "Brazilian real", localName: "Real brasileiro", symbol: "R$", ISO: "BRL", flag: "BR" },

@@ -28,7 +28,7 @@ const SettingsPage = () => {
 
             <TitleWithBack title={translate("pages.settings.title")} linkTo={"/"} />
 
-            <Row>
+            <Row onClick={() => handleChangeTheme()}>
                 {translate("pages.settings.setDarkMode")}
                 <ToggleSwitch checked={theme === THEME_ENUMS.dark} returnFunction={handleChangeTheme} />
             </Row>
