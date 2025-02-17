@@ -1,5 +1,5 @@
 import { THEME_ENUMS } from "../enums";
-import { LocaleType } from "../types";
+import { CurrencyType, LocaleType } from "../types";
 
 
 const localStorageUpdateSelectedLanguage = (language: LocaleType) => {
@@ -18,9 +18,20 @@ const localStorageGetSelectedTheme = (): THEME_ENUMS => {
     return (localStorage.getItem("theme") || import.meta.env.VITE_DEFAULT_THEME) as THEME_ENUMS;
 };
 
+const localStorageUpdateSelectedCurrency = (currency: CurrencyType) => {
+    localStorage.setItem("currency", currency);
+};
+
+const localStorageGetSelectedCurrency = (): CurrencyType => {
+    return (localStorage.getItem("currency") || import.meta.env.VITE_DEFAULT_CURRENCY) as CurrencyType;
+};
+
+
 export {
     localStorageUpdateSelectedLanguage,
     localStorageGetSelectedLanguage,
     localStorageUpdateSelectedTheme,
-    localStorageGetSelectedTheme
+    localStorageGetSelectedTheme,
+    localStorageUpdateSelectedCurrency,
+    localStorageGetSelectedCurrency
 };

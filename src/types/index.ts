@@ -1,4 +1,4 @@
-import { supportedLanguages } from "../data";
+import { currenciesArray, supportedLanguages } from "../data";
 import { IconType } from "react-icons";
 
 type languageType = {
@@ -9,7 +9,8 @@ type languageType = {
 };
 
 type currencyType = {
-    name: string,
+    englishName: string,
+    localName: string,
     symbol: string,
     ISO: string,
     flag: string,
@@ -44,7 +45,14 @@ type TitleWithBackProps = {
 // This ensures `LocaleType` is always updated when `supportedLanguages` changes
 // Equivalent to: type LocaleType = "en-US" | "es" | "he-IL" (auto-generated)
 type LocaleType = (typeof supportedLanguages)[number]["locale"];
+type CurrencyType = (typeof currenciesArray)[number]["symbol"];
 
+type CurrencyIconImageProps = {
+    iconISO: string,
+    width?: number,
+    height?: number,
+    alt?: string,
+}
 
 export {
     languageType,
@@ -52,7 +60,9 @@ export {
     selectType,
     ToggleSwitchProps,
     LocaleType,
+    CurrencyType,
     IconProps,
     ThemedIconProps,
-    TitleWithBackProps
+    TitleWithBackProps,
+    CurrencyIconImageProps
 };
