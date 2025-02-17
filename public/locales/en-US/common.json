@@ -20,7 +20,7 @@
       "title": "Calculator"
     },
     "settings": {
-      "setCurrency": "Local currency",
+      "setCurrency": "Currency",
       "setCurrencySuccess": "Currency updated",
       "setDarkMode": "Dark mode",
       "setLanguage": "Language",

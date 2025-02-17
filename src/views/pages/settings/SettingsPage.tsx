@@ -10,11 +10,11 @@ import { Row, DoubleLineWrapper, TopLine, BottomLine } from "./SettingWrappers";
 
 import { IconNext } from "../../../styles";
 import { TitleWithBack } from "../../../components/titleWithBack";
-import { NotifySuccess } from "../../../components/toast/toast";
+import { NotifySuccess, NotifyWarning } from "../../../components/toast/toast";
 
 import { getSelectedLanguageByLocale } from "../../../utils";
 import {
-    localStorageGetSelectedCurrency, localStorageGetSelectedTheme
+    localStorageGetSelectedCurrency
 
 } from "../../../services/localStorageService";
 import { useState } from "react";
@@ -22,15 +22,21 @@ import { useState } from "react";
 
 const SettingsPage = () => {
     const { t: translate } = useTranslation("common");
-    const { toggleTheme } = useTheme();
+    const { theme, toggleTheme } = useTheme();
     const navigate = useNavigate();
 
-    const [selectedTheme, setSelectedTheme] = useState<THEME_ENUMS>(localStorageGetSelectedTheme());
+    const [selectedTheme, setSelectedTheme] = useState<THEME_ENUMS>(theme);
 
 
     const handleChangeTheme = () => {
-        setSelectedTheme(toggleTheme());
-        NotifySuccess(translate("common:pages.settings.setThemeSuccess"));
+        const newTheme = toggleTheme();
+        if (newTheme !== selectedTheme) {
+            setSelectedTheme(newTheme);
+            NotifySuccess(translate("common:pages.settings.setThemeSuccess"));
+        } else {
+            NotifyWarning(translate("common:pages.settings.setThemeFailed"));
+        }
+
     };
 
     const isDarkMode = (): boolean => {

@@ -30,6 +30,7 @@ const TopLine = styled.span`
 `;
 const BottomLine = styled.span`
     font-size: 1rem;
+    padding: 0.5rem;
 `;
 
 

@@ -20,7 +20,7 @@
       "title": "מחשב"
     },
     "settings": {
-      "setCurrency": "מטבע מקומי",
+      "setCurrency": "מטבע",
       "setCurrencySuccess": "המטבע עודכן",
       "setDarkMode": "מצב כהה",
       "setLanguage": "שפה",
