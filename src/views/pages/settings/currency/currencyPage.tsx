@@ -2,7 +2,7 @@
 import { useTranslation } from "react-i18next";
 
 // Custom imports
-import { Row, ScrollableContainer } from "../SettingWrappers";
+import { Row } from "../SettingWrappers";
 import { CurrencyType, currencyType } from "../../../../types";
 
 import { currenciesArray } from "../../../../data";
@@ -36,24 +36,21 @@ const CurrencyPage = () => {
 
         <>
             <TitleWithBack title={translate("common:pages.settings.setCurrency")} linkTo={"/settings"} />
-            <ScrollableContainer>
-                {currenciesArray.map((currency: currencyType, index: number) => (
-                    <Row onClick={() => handleChangeCurrency(currency.ISO)}
-                         selected={currentCurrency === currency.ISO} key={index}>
+            {currenciesArray.map((currency: currencyType, index: number) => (
+                <Row onClick={() => handleChangeCurrency(currency.ISO)}
+                     selected={currentCurrency === currency.ISO} key={index}>
 
 
-                        <IconsGroup>
-                            <Flag code={currency.flag} width={50}
-                                  fallback={<img alt={"generic"}
-                                                 src={InternationalFlag} width="50px" />} />
-                            <p> {currency.localName}</p>
-                        </IconsGroup>
-                        <p>{currency.symbol}</p>
-                    </Row>
+                    <IconsGroup>
+                        <Flag code={currency.flag} width={50}
+                              fallback={<img alt={"generic"}
+                                             src={InternationalFlag} width="50px" />} />
+                        <p> {currency.localName}</p>
+                    </IconsGroup>
+                    <p>{currency.symbol}</p>
+                </Row>
 
-                ))}
-
-            </ScrollableContainer>
+            ))}
         </>
     );
 };

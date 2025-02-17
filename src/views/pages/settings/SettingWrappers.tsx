@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const Row = styled.div<{ selected?: boolean }>`
     padding: 1rem 2rem;
+    margin: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -15,11 +16,17 @@ const Row = styled.div<{ selected?: boolean }>`
     }
 `;
 
-
-const ScrollableContainer = styled.div`
-    /*    border: 1px solid pink;
-        max-height: 70vh;
-        overflow: auto;*/
-
+const DoubleLineWrapper = styled.span`
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 `;
-export { Row, ScrollableContainer };
+
+const TopLine = styled.span`
+`;
+const BottomLine = styled.span`
+    font-size: 1rem;
+`;
+
+
+export { Row, DoubleLineWrapper, TopLine, BottomLine };

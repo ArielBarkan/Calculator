@@ -6,11 +6,17 @@ import { useNavigate } from "react-router-dom";
 import { useTheme } from "../../../context/ThemeContext";
 import { ToggleSwitch } from "../../../components/toggleSwitch";
 import { THEME_ENUMS } from "../../../enums";
-import { Row } from "./SettingWrappers";
+import { Row, DoubleLineWrapper, TopLine, BottomLine } from "./SettingWrappers";
 
 import { IconNext } from "../../../styles";
 import { TitleWithBack } from "../../../components/titleWithBack";
 import { NotifySuccess } from "../../../components/toast/toast";
+
+import { getSelectedLanguageByLocale } from "../../../utils";
+import {
+    localStorageGetSelectedCurrency
+
+} from "../../../services/localStorageService";
 
 
 const SettingsPage = () => {
@@ -27,7 +33,6 @@ const SettingsPage = () => {
 
     return (
         <>
-
             <TitleWithBack title={translate("pages.settings.title")} linkTo={"/"} />
 
             <Row onClick={() => handleChangeTheme()}>
@@ -37,11 +42,17 @@ const SettingsPage = () => {
                 }} />
             </Row>
             <Row onClick={() => navigate("/settings/language")}>
-                {translate("Language")}
+                <DoubleLineWrapper>
+                    <TopLine>   {translate("common:pages.settings.setLanguage")}</TopLine>
+                    <BottomLine>{getSelectedLanguageByLocale().name}</BottomLine>
+                </DoubleLineWrapper>
                 <IconNext />
             </Row>
             <Row onClick={() => navigate("/settings/currency")}>
-                {translate("common:pages.settings.setCurrency")}
+                <DoubleLineWrapper>
+                    <TopLine>{translate("common:pages.settings.setCurrency")}</TopLine>
+                    <BottomLine>{localStorageGetSelectedCurrency()}</BottomLine>
+                </DoubleLineWrapper>
                 <IconNext />
             </Row>
 
