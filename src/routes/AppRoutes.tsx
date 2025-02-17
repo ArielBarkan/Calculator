@@ -1,9 +1,8 @@
 import React, { Suspense, lazy } from "react";
 import { Routes, Route } from "react-router-dom";
 
-// Custom imports
-//import { CalculatorPage, AboutPage, SettingsPage, LanguagePage, CurrencyPage } from "../pages";
 
+// Lazy loading the app pages
 const CalculatorPage = lazy(() => import("../views/pages/calculator/CalculatorPage"));
 const AboutPage = lazy(() => import("../views/pages/about/AboutPage"));
 const SettingsPage = lazy(() => import("../views/pages/settings/SettingsPage"));
