@@ -8,7 +8,7 @@ const AboutPage = () => {
 
 
     return (
-        <p>
+        <p style={{ paddingTop: "5rem" }}>
             {translate("common:pages.about.title")}
 
             <Button>Hello</Button>
