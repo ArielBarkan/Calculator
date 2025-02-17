@@ -13,9 +13,10 @@ import {
 
 } from "../../../services/localStorageService";
 
-import { CurrencyIcon } from "../../../components/currencyIcon";
+
 import Flag from "react-world-flags";
 import { useState } from "react";
+import { IconsGroup } from "./currencyWrappers";
 
 const Currency = () => {
     const { t: translate } = useTranslation("common");
@@ -34,10 +35,13 @@ const Currency = () => {
                 {currenciesArray.map((currency: currencyType, index: number) => (
                     <Row onClick={() => handleChangeCurrency(currency.ISO)}
                          selected={currentCurrency === currency.ISO} key={index}>
-                        <Flag code={currency.flag} width={50} />
-                        <p>{currency.localName}</p>
-                        <CurrencyIcon iconISO={currency.ISO} />
 
+
+                        <IconsGroup>
+                            <Flag code={currency.flag} width={50} />
+                            <p> {currency.localName}</p>
+                        </IconsGroup>
+                        <p>{currency.symbol}</p>
                     </Row>
 
                 ))}

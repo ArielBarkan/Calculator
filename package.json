@@ -11,7 +11,6 @@
     "format:all": "prettier --write src/ package.json tsconfig.json --config .prettierrc"
   },
   "dependencies": {
-    "currency-icons": "^1.0.14",
     "dotenv": "^16.4.7",
     "i18next": "^24.2.2",
     "i18next-http-backend": "^3.0.2",
