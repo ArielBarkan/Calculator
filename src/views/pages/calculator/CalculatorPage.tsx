@@ -7,7 +7,7 @@ const CalculatorPage = () => {
 
 
     return (
-        <p>
+        <p style={{ padding: "5rem 0 0" }}>
             {translate("pages.calculator.title")}
         </p>
     );
