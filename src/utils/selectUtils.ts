@@ -3,7 +3,7 @@ import { currencyType, languageType, selectType } from "../types";
 const convertCurrenciesToSelect = (currencies: currencyType[]): selectType[] => {
     return currencies.map((currency: currencyType) => {
         return {
-            label: `${currency.name}-${currency.symbol}`,
+            label: `${currency.englishName}-${currency.symbol}`,
             value: currency.symbol
         };
     });
