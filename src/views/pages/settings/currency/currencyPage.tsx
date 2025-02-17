@@ -38,6 +38,7 @@ const CurrencyPage = () => {
 
         <>
             <TitleWithBack title={translate("common:pages.settings.setCurrency")} linkTo={"/settings"} />
+
             {currenciesArray.map((currency: currencyType, index: number) => (
                 <Row onClick={() => handleChangeCurrency(currency.ISO)}
                      selected={currentCurrency === currency.ISO} key={index}>
@@ -51,6 +52,7 @@ const CurrencyPage = () => {
                 </Row>
 
             ))}
+
         </>
     );
 };

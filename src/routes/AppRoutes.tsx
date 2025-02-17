@@ -1,5 +1,6 @@
 import React, { Suspense, lazy } from "react";
 import { Routes, Route } from "react-router-dom";
+import { HamburgerMenu } from "../components";
 
 
 // Lazy loading the app pages
@@ -13,6 +14,7 @@ const Currency = lazy(() => import("../views/pages/settings/currency/currencyPag
 const AppRoutes: React.FC = () => {
     return (
         <Suspense fallback={<p>Loading...</p>}>
+            <HamburgerMenu />
             <Routes>
                 <Route path="/" element={<CalculatorPage />} />
                 <Route path="/about" element={<AboutPage />} />

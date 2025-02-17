@@ -8,7 +8,7 @@ import styled from "styled-components";
 const TitleWithBackWrapper = styled.div`
     display: flex;
     align-items: flex-start;
-    padding: 1.5rem 0;
+    padding: 5rem 0 0;
 `;
 
 const Back = styled.div`
