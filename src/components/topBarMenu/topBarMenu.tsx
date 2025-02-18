@@ -4,15 +4,15 @@ import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 // Custom imports
 import { IconSettings } from "../../styles";
-import { Navbar, MenuIcon } from "./topBarMenuWrappers";
+import { Navbar } from "./topBarMenuWrappers";
+import { UnstyledButton } from "../buttonUnstyled";
 
 const TopBarMenu = () => {
     const location = useLocation();
     const navigate = useNavigate();
 
     const settingBaseRoute: string = "/settings";
-
-    // TODO : complete the isSelected for displaing the icon as "selected" if the user is in "/settings" route
+    
     const [isSelected, setIsSelected] = useState<boolean>(false);
 
     useEffect(() => {
@@ -23,9 +23,9 @@ const TopBarMenu = () => {
 
     return (
         <Navbar>
-            <MenuIcon onClick={() => navigate(settingBaseRoute)}>
+            <UnstyledButton onClick={() => navigate(settingBaseRoute)} selected={isSelected}>
                 <IconSettings size={30} />
-            </MenuIcon>
+            </UnstyledButton>
         </Navbar>
     );
 };

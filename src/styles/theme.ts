@@ -12,7 +12,7 @@ const lightTheme = {
     icons: {
         iconDefaultColor: "#000000"
     },
-    SelectableRow: {
+    SelectableElement: {
         selectedBorder: "#FFFFFF",
         selectedBackground: "#797676",
         activeBackground: "#888888"
@@ -33,7 +33,7 @@ const darkTheme = {
     icons: {
         iconDefaultColor: "#ffffff"
     },
-    SelectableRow: {
+    SelectableElement: {
         selectedBorder: "#FFFFFF",
         selectedBackground: "#797676",
         activeBackground: "#888888"

@@ -15,11 +15,5 @@ const Navbar = styled.nav`
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 `;
 
-const MenuIcon = styled.div`
-    font-size: 2rem;
-    cursor: pointer;
-    padding-inline-start: 20px;
-`;
 
-
-export { Navbar, MenuIcon } ;
+export { Navbar } ;
