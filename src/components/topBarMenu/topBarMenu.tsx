@@ -20,9 +20,7 @@ const TopBarMenu = () => {
     const [isSelected, setIsSelected] = useState<boolean>(false);
 
     useEffect(() => {
-        console.log(location.pathname);
         setIsSelected(location.pathname.startsWith(settingBaseRoute));
-
     }, [location.pathname]);
 
     // share start

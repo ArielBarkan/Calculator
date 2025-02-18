@@ -1,22 +1,32 @@
 // React imports
-import React from "react";
+import React, { useEffect } from "react";
 
 // Modules imports
-import AppRoutes from "./routes/AppRoutes";
+import { useLocation } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 
 // Custom imports
+import AppRoutes from "./routes/AppRoutes";
 import { ChangeLanguage } from "./services";
 import "./services/i18nService";
 import { ThemeProviderWrapper } from "./context/ThemeContext";
-
 import { GlobalStyles } from "./styles";
 import { localStorageGetSelectedLanguage } from "./services/localStorageService";
-import { ToastContainer } from "react-toastify";
 import { NotifyCustom } from "./components/toast/toast";
+import { initGA, trackPageView } from "./utils/analytics";
 
 
 const App: React.FC = () => {
     ChangeLanguage(localStorageGetSelectedLanguage());
+    const location = useLocation();
+
+    useEffect(() => {
+        initGA(); // Initialize GA on app load
+    }, []);
+
+    useEffect(() => {
+        trackPageView(location.pathname); // Track page view when route changes
+    }, [location]);
 
     return (
         <ThemeProviderWrapper>
