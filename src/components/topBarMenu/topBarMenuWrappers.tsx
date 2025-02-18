@@ -8,14 +8,14 @@ const Navbar = styled.nav`
     width: 100%;
     background: ${({ theme }) => theme.body.bgColor};
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     box-shadow: 0 4px 10px ${({ theme }) => theme.BoxElement.shadowColor};
     padding-inline-start: 20px;
     height: 50px;
 
     > button {
-        margin: 0 30px;
+        margin: 0 1rem;
     }
 `;
 

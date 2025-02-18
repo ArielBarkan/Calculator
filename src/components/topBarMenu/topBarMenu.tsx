@@ -12,7 +12,7 @@ const TopBarMenu = () => {
     const navigate = useNavigate();
 
     const settingBaseRoute: string = "/settings";
-    
+
     const [isSelected, setIsSelected] = useState<boolean>(false);
 
     useEffect(() => {
