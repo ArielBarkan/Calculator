@@ -1,4 +1,8 @@
 const lightTheme = {
+    generic: {
+        foreground: "#000000",
+        background: "#FFFFFF"
+    },
     body: {
         bgColor: "#FFFFFF",
         fontColor: "#000000"
@@ -23,6 +27,10 @@ const lightTheme = {
 } as const;
 
 const darkTheme = {
+    generic: {
+        foreground: "#FFFFFF",
+        background: "#000000"
+    },
     body: {
         bgColor: "#5a5555",
         fontColor: "#ffffff"
