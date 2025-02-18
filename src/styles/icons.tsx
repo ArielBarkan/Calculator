@@ -1,6 +1,6 @@
 // Modules imports
 // https://react-icons.github.io/react-icons/
-import { MdNavigateNext, MdKeyboardBackspace, MdOutlineSettings } from "react-icons/md";
+import { MdNavigateNext, MdKeyboardBackspace, MdOutlineSettings, MdShare } from "react-icons/md";
 
 
 // Custom imports
@@ -13,6 +13,8 @@ const IconBack = (props: IconProps) => <ThemedIcon icon={MdKeyboardBackspace} co
                                                    size={props?.size} />;
 const IconSettings = (props: IconProps) => <ThemedIcon icon={MdOutlineSettings} color={props?.color}
                                                        size={props?.size} />;
+const IconShare = (props: IconProps) => <ThemedIcon icon={MdShare} color={props?.color}
+                                                    size={props?.size} />;
 
 
-export { IconNext, IconBack, IconSettings };
+export { IconNext, IconBack, IconSettings, IconShare };

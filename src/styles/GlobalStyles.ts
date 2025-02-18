@@ -2,7 +2,6 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
     body {
-        max-width: 90vw;
         margin: auto;
         padding: 1rem;
         background-color: ${({ theme }) => theme.body.bgColor};
