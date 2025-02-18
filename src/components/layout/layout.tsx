@@ -2,12 +2,12 @@ import React from "react";
 import { LayoutWrapper, MainContent } from "./layoutWrappers";
 import { Outlet } from "react-router-dom";
 
-import { HamburgerMenu } from "../hamburgerMenu";
+import { TopBarMenu } from "../topBarMenu";
 
 const Layout = () => {
     return (
         <LayoutWrapper>
-            <HamburgerMenu />
+            <TopBarMenu />
             <MainContent>
                 <Outlet />
             </MainContent>

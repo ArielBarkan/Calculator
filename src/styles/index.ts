@@ -1,3 +1,3 @@
 export { lightTheme, darkTheme } from "./theme";
 export { GlobalStyles } from "./GlobalStyles";
-export { IconNext, IconBack, IconHamburger, IconClose } from "./icons";
+export { IconNext, IconBack, IconSettings } from "./icons";
