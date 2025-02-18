@@ -13,7 +13,7 @@ import { ThemeProviderWrapper } from "./context/ThemeContext";
 import { GlobalStyles } from "./styles";
 import { localStorageGetSelectedLanguage } from "./services/localStorageService";
 import { NotifyCustom } from "./components/toast/toast";
-import { initGA, trackPageView } from "./utils/analytics";
+import { GOOGLE_ANALYTICS } from "./utils/analytics";
 
 
 const App: React.FC = () => {
@@ -21,11 +21,11 @@ const App: React.FC = () => {
     const location = useLocation();
 
     useEffect(() => {
-        initGA(); // Initialize GA on app load
+        GOOGLE_ANALYTICS.initGA();
     }, []);
 
     useEffect(() => {
-        trackPageView(location.pathname); // Track page view when route changes
+        GOOGLE_ANALYTICS.trackPageView(location.pathname);
     }, [location]);
 
     return (

@@ -8,6 +8,7 @@ import { useTranslation } from "react-i18next";
 import { IconSettings, IconShare } from "../../styles";
 import { Navbar } from "./topBarMenuWrappers";
 import { UnstyledButton } from "../buttonUnstyled";
+import { GOOGLE_ANALYTICS } from "../../utils/analytics";
 
 const TopBarMenu = () => {
     const { t: translate } = useTranslation("common");
@@ -38,10 +39,10 @@ const TopBarMenu = () => {
                 text: translate("share.text"),
                 url: import.meta.env.VITE_URL_TO_SHARE
             });
-            // TODO: add analytics
+            GOOGLE_ANALYTICS.trackEvent("User", "Share", "success");
             console.log("Successfully shared!");
         } catch (error) {
-            // TODO: add analytics
+            GOOGLE_ANALYTICS.trackEvent("User", "Share", "failed");
             console.error("Error sharing:", error);
         }
     };
