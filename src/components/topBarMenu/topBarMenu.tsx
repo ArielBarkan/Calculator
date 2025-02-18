@@ -11,17 +11,14 @@ const TopBarMenu = () => {
     const navigate = useNavigate();
 
     const settingBaseRoute: string = "/settings";
-    const checkIfSelected = (): boolean => {
-        return location.pathname.startsWith(settingBaseRoute);
-    };
-    // TODO : complete the isSelected for displaing the icon as "selected" if the user is in "/settings" route
-    const [isSelected, setIsSelected] = useState<boolean>(checkIfSelected);
 
+    // TODO : complete the isSelected for displaing the icon as "selected" if the user is in "/settings" route
+    const [isSelected, setIsSelected] = useState<boolean>(false);
 
     useEffect(() => {
-        if (location.pathname.startsWith(settingBaseRoute)) {
-            setIsSelected(true);
-        }
+        console.log(location.pathname);
+        setIsSelected(location.pathname.startsWith(settingBaseRoute));
+
     }, [location.pathname]);
 
     return (
