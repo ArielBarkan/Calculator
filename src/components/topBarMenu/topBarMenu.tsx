@@ -53,11 +53,11 @@ const TopBarMenu = () => {
     return (
         <Navbar>
             <UnstyledButton onClick={() => navigate(settingBaseRoute)} selected={isSelected}>
-                <IconSettings size={30} />
+                <IconSettings size={30} rtlIgnore={true} />
             </UnstyledButton>
             {isShareSupported && (
                 <UnstyledButton onClick={handleShareApp}>
-                    <IconShare size={30} />
+                    <IconShare size={30} rtlIgnore={true} />
                 </UnstyledButton>)}
         </Navbar>
     );

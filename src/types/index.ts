@@ -29,12 +29,14 @@ type ToggleSwitchProps = {
 type IconProps = {
     color?: string;
     size?: number;
+    rtlIgnore?: boolean;
 };
 
 type ThemedIconProps = {
     icon: IconType;
     color?: string;
     size?: number;
+    rtlIgnore?: boolean;
 }
 
 type TitleWithBackProps = {
