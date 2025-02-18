@@ -16,6 +16,9 @@ const lightTheme = {
         selectedBorder: "#FFFFFF",
         selectedBackground: "#797676",
         activeBackground: "#888888"
+    },
+    BoxElement: {
+        shadowColor: "#bebebe"
     }
 } as const;
 
@@ -37,6 +40,9 @@ const darkTheme = {
         selectedBorder: "#FFFFFF",
         selectedBackground: "#797676",
         activeBackground: "#888888"
+    },
+    BoxElement: {
+        shadowColor: "#464242"
     }
 } as const;
 
