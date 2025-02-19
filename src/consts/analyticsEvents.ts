@@ -6,11 +6,11 @@ const GA_EVENTS = {
     } as const,
 
     ACTIONS: {
-        CLICK_BUTTON: "Clicked Button",
-        TOGGLE_THEME: "Toggled Theme",
-        CHANGE_LANGUAGE: "Changed Language",
-        CHANGE_CURRENCY: "Change Currency",
-        SHARE_APPLICATION: "Shared Application"
+        CLICK_BUTTON: "Custom - Clicked Button",
+        TOGGLE_THEME: "Custom - Toggled Theme",
+        CHANGE_LANGUAGE: "Custom - Changed Language",
+        CHANGE_CURRENCY: "Custom - Change Currency",
+        SHARE_APPLICATION: "Custom - Shared Application"
     } as const,
 
     LABELS: {
