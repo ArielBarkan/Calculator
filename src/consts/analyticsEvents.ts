@@ -1,3 +1,5 @@
+const Custom_Prefix = "Custom - ";
+
 const GA_EVENTS = {
     CATEGORIES: {
         USER_ACTIONS: "User Actions",
@@ -6,11 +8,11 @@ const GA_EVENTS = {
     } as const,
 
     ACTIONS: {
-        CLICK_BUTTON: "Custom - Clicked Button",
-        TOGGLE_THEME: "Custom - Toggled Theme",
-        CHANGE_LANGUAGE: "Custom - Changed Language",
-        CHANGE_CURRENCY: "Custom - Change Currency",
-        SHARE_APPLICATION: "Custom - Shared Application"
+        CLICK_BUTTON: `${Custom_Prefix}Clicked Button`,
+        TOGGLE_THEME: `${Custom_Prefix}Toggled Theme`,
+        CHANGE_LANGUAGE: `${Custom_Prefix}Changed Language`,
+        CHANGE_CURRENCY: `${Custom_Prefix}Change Currency`,
+        SHARE_APPLICATION: `${Custom_Prefix}Shared Application`
     } as const,
 
     LABELS: {
