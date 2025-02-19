@@ -4,7 +4,7 @@ import { initReactI18next } from "react-i18next";
 import HttpBackend, { HttpBackendOptions } from "i18next-http-backend";
 
 // Custom imports
-import { supportedLanguages } from "../data";
+import { SUPPORTED_LANGUAGES } from "../consts";
 
 declare module "i18next" {
     interface CustomTypeOptions {
@@ -19,8 +19,8 @@ i18n.use(HttpBackend)
         ns: ["common"],
         defaultNS: "common",
         debug: import.meta.env.VITE_I18N_DEBUG_MODE === "true",
-        lng: supportedLanguages[0].locale,
-        fallbackLng: supportedLanguages[0].locale,
+        lng: SUPPORTED_LANGUAGES[0].locale,
+        fallbackLng: SUPPORTED_LANGUAGES[0].locale,
         load: "currentOnly",
         interpolation: {
             escapeValue: false

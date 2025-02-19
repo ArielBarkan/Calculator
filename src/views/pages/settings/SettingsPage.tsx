@@ -18,6 +18,8 @@ import {
 
 } from "../../../services/localStorageService";
 import { useState } from "react";
+import { GOOGLE_ANALYTICS } from "../../../utils/analytics";
+import { GA_EVENTS } from "../../../consts";
 
 
 const SettingsPage = () => {
@@ -33,8 +35,10 @@ const SettingsPage = () => {
         if (newTheme !== selectedTheme) {
             setSelectedTheme(newTheme);
             NotifySuccess(translate("common:pages.settings.setThemeSuccess"));
+            GOOGLE_ANALYTICS.trackEvent(GA_EVENTS.CATEGORIES.USER_ACTIONS, GA_EVENTS.ACTIONS.TOGGLE_THEME, newTheme);
         } else {
             NotifyWarning(translate("common:pages.settings.setThemeFailed"));
+            GOOGLE_ANALYTICS.trackError(GA_EVENTS.CATEGORIES.USER_ACTIONS, GA_EVENTS.ACTIONS.TOGGLE_THEME, newTheme);
         }
 
     };

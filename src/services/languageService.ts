@@ -3,7 +3,7 @@ import i18n from "i18next";
 
 //Custom imports
 import { languageType, LocaleType } from "../types";
-import { supportedLanguages } from "../data";
+import { SUPPORTED_LANGUAGES } from "../consts";
 import { localStorageUpdateSelectedLanguage } from "./localStorageService";
 
 
@@ -25,7 +25,7 @@ const ChangeLanguage = async (locale: LocaleType): Promise<boolean> => {
 };
 
 const getSelectedLanguageByLocale = (locale: string): languageType => {
-    return supportedLanguages.find((lang: languageType) => lang.locale === locale) || supportedLanguages[0];
+    return SUPPORTED_LANGUAGES.find((lang: languageType) => lang.locale === locale) || SUPPORTED_LANGUAGES[0];
 };
 
 

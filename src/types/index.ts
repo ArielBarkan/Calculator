@@ -1,4 +1,4 @@
-import { currenciesArray, supportedLanguages } from "../data";
+import { SUPPORTED_CURRENCIES, SUPPORTED_LANGUAGES } from "../consts";
 import { IconType } from "react-icons";
 
 type languageType = {
@@ -47,8 +47,8 @@ type TitleWithBackProps = {
 // Extracts the "locale" property from each object in the `supportedLanguages` array
 // This ensures `LocaleType` is always updated when `supportedLanguages` changes
 // Equivalent to: type LocaleType = "en-US" | "es" | "he-IL" (auto-generated)
-type LocaleType = (typeof supportedLanguages)[number]["locale"];
-type CurrencyType = (typeof currenciesArray)[number]["ISO"];
+type LocaleType = (typeof SUPPORTED_LANGUAGES)[number]["locale"];
+type CurrencyType = (typeof SUPPORTED_CURRENCIES)[number]["ISO"];
 
 type CurrencyIconImageProps = {
     iconISO: string,

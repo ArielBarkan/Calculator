@@ -1,7 +1,7 @@
 // Custom imports
 import { currencyType } from "../types";
 
-const currenciesArray: currencyType[] = [
+const SUPPORTED_CURRENCIES: currencyType[] = [
     { englishName: "Generic", localName: "Generic", symbol: "¤", ISO: "GEN", flag: "GEN" },
     { englishName: "Argentine peso", localName: "Peso argentino", symbol: "$", ISO: "ARS", flag: "AR" },
     { englishName: "Australian dollar", localName: "Australian Dollar", symbol: "$", ISO: "AUD", flag: "AU" },
@@ -29,4 +29,4 @@ const currenciesArray: currencyType[] = [
 ];
 
 
-export { currenciesArray };
+export { SUPPORTED_CURRENCIES };

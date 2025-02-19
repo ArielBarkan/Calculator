@@ -1,7 +1,7 @@
 // Custom imports
 import { languageType } from "../types";
 
-const supportedLanguages: languageType[] = [
+const SUPPORTED_LANGUAGES: languageType[] = [
     {
         locale: "en-US",
         direction: "ltr",
@@ -23,5 +23,5 @@ const supportedLanguages: languageType[] = [
 ];
 
 export {
-    supportedLanguages
+    SUPPORTED_LANGUAGES
 };

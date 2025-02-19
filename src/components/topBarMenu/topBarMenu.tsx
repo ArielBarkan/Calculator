@@ -9,6 +9,7 @@ import { IconSettings, IconShare } from "../../styles";
 import { Navbar } from "./topBarMenuWrappers";
 import { UnstyledButton } from "../buttonUnstyled";
 import { GOOGLE_ANALYTICS } from "../../utils/analytics";
+import { GA_EVENTS } from "../../consts";
 
 const TopBarMenu = () => {
     const { t: translate } = useTranslation("common");
@@ -39,11 +40,9 @@ const TopBarMenu = () => {
                 text: translate("share.text"),
                 url: import.meta.env.VITE_URL_TO_SHARE
             });
-            GOOGLE_ANALYTICS.trackEvent("User", "Share", "success");
-            console.log("Successfully shared!");
+            GOOGLE_ANALYTICS.trackEvent(GA_EVENTS.CATEGORIES.USER_ACTIONS, GA_EVENTS.ACTIONS.SHARE_APPLICATION, "success");
         } catch (error) {
-            GOOGLE_ANALYTICS.trackEvent("User", "Share", "failed");
-            console.error("Error sharing:", error);
+            GOOGLE_ANALYTICS.trackError(GA_EVENTS.CATEGORIES.USER_ACTIONS, GA_EVENTS.ACTIONS.SHARE_APPLICATION, JSON.stringify(error));
         }
     };
 
