@@ -12,6 +12,23 @@
       "settings": "הגדרות"
     }
   },
+  "meta": {
+    "about": {
+      "title": "אודות"
+    },
+    "currency": {
+      "title": "מטבע"
+    },
+    "home": {
+      "title": "דף הבית"
+    },
+    "language": {
+      "title": "שפה"
+    },
+    "settings": {
+      "title": "הגדרות"
+    }
+  },
   "pages": {
     "about": {
       "title": "אודות"

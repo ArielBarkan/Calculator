@@ -12,6 +12,23 @@
       "settings": "Config"
     }
   },
+  "meta": {
+    "about": {
+      "title": "Acerca de"
+    },
+    "currency": {
+      "title": "Moneda"
+    },
+    "home": {
+      "title": "Página de inicio"
+    },
+    "language": {
+      "title": "Idioma"
+    },
+    "settings": {
+      "title": "Configuración"
+    }
+  },
   "pages": {
     "about": {
       "title": "Acerca de"

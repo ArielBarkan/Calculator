@@ -12,6 +12,23 @@
       "settings": "Settings"
     }
   },
+  "meta": {
+    "about": {
+      "title": "About"
+    },
+    "currency": {
+      "title": "Currency"
+    },
+    "home": {
+      "title": "Home Page"
+    },
+    "language": {
+      "title": "Language"
+    },
+    "settings": {
+      "title": "Settings"
+    }
+  },
   "pages": {
     "about": {
       "title": "About"
