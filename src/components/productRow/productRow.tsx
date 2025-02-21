@@ -1,12 +1,12 @@
 import { ProductRowContainer } from "./productRowWrappers";
-import { InputComp } from "../inputText";
+import { NumberInput } from "../numberInput";
 
 
 const ProductRow = () => {
 
     return (
         <ProductRowContainer>
-            <InputComp />
+            <NumberInput />
         </ProductRowContainer>
     );
 };

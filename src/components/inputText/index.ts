@@ -1,1 +1,0 @@
-export { InputComp } from "./input";
