@@ -35,7 +35,7 @@ const NumericKeyboard = () => {
                 ))}
                 <NumericKeyButton onClick={handleClear}>C</NumericKeyButton>
                 <NumericKeyButton onClick={() => handleClick("0")}>0</NumericKeyButton>
-                <NumericKeyButton onClick={() => handleClick(".")}>.</NumericKeyButton> {/* ✅ Added decimal point */}
+                <NumericKeyButton onClick={() => handleClick(".")}>.</NumericKeyButton>
                 <NumericKeyButton onClick={handleBackspace}>⌫</NumericKeyButton>
             </NumericKeyboardWrapper>
         </>

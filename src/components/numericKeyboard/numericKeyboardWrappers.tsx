@@ -4,7 +4,7 @@ import styled from "styled-components";
 const NumericKeyboardWrapper = styled.div`
     direction: ltr;
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* ✅ Adjusted for extra keys */
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     max-width: 250px;
     margin: auto;
