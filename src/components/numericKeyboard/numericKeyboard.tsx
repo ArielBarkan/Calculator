@@ -35,12 +35,12 @@ const NumericKeyboard = () => {
 
     const handleClick = (num: string) => {
         setValue((prev) => {
-            // ✅ Prevent multiple decimal points
+            // Prevent multiple decimal points
             if (num === "." && prev.includes(".")) return prev;
 
-            // ✅ Prevent starting with a decimal point (".")
+            // Prevent starting with a decimal point (".")
             if (num === "." && prev === "") return prev;
-
+            
             return prev + num;
         });
     };
