@@ -8,13 +8,14 @@ import { UnstyledButton } from "../buttonUnstyled";
 
 type ProductRowProps = {
     listOrder: number,
+    productCount: number
     id: number;
     deleteFunction: (rowId: number) => void;
 };
 
 const ProductRow = (props: ProductRowProps) => {
 
-    const { listOrder, id, deleteFunction } = props;
+    const { listOrder, productCount, id, deleteFunction } = props;
 
 
     return (
@@ -27,9 +28,12 @@ const ProductRow = (props: ProductRowProps) => {
                 {listOrder + 1}
                 <NumericInput />
                 <NumericInput />
-                <UnstyledButton onClick={() => deleteFunction(id)}>
-                    <IconDelete size={30} />
-                </UnstyledButton>
+                {productCount > 1 && (
+                    <UnstyledButton onClick={() => deleteFunction(id)}>
+                        <IconDelete size={30} />
+                    </UnstyledButton>
+                )}
+
             </ProductRowContainer>
         </motion.div>
     );
