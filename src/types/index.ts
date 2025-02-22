@@ -50,11 +50,12 @@ type TitleWithBackProps = {
 type LocaleType = (typeof SUPPORTED_LANGUAGES)[number]["locale"];
 type CurrencyType = (typeof SUPPORTED_CURRENCIES)[number]["ISO"];
 
-type CurrencyIconImageProps = {
-    iconISO: string,
-    width?: number,
-    height?: number,
-    alt?: string,
+
+type ProductListProps = {
+    quantity: number;
+    price: number;
+    unifiedPrice: number;
+    rank: number;
 }
 
 export {
@@ -67,5 +68,5 @@ export {
     IconProps,
     ThemedIconProps,
     TitleWithBackProps,
-    CurrencyIconImageProps
+    ProductListProps
 };

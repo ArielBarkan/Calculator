@@ -1,13 +1,13 @@
 import { ProductRowContainer } from "./productRowWrappers";
-import { NumberInput } from "../numberInput";
+import { NumericInput } from "../numberInput";
 
 
 const ProductRow = () => {
 
     return (
         <ProductRowContainer>
-            <NumberInput />
-            <NumberInput />
+            <NumericInput />
+            <NumericInput />
         </ProductRowContainer>
     );
 };
