@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const KeyboardWrapper = styled.div`
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     max-width: 200px;
     margin: auto;
