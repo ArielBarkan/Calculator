@@ -2,6 +2,7 @@
 import { useTranslation } from "react-i18next";
 import { ProductRow } from "../../../components/productRow";
 import { useState } from "react";
+import { NumericKeyboard } from "../../../components/numericKeyboard";
 
 
 const CalculatorPage = () => {
@@ -15,6 +16,7 @@ const CalculatorPage = () => {
     return (
         <p style={{ padding: "5rem 0 0" }}>
             {translate("pages.calculator.title")}
+            <NumericKeyboard />
             {Array.from({ length: maxRows }).map((_, index) => (
                 <ProductRow key={index} />
             ))}
