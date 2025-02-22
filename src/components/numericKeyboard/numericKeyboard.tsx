@@ -3,9 +3,9 @@ import styled from "styled-components";
 
 const KeyboardWrapper = styled.div`
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr); /* ✅ Adjusted for extra keys */
     gap: 10px;
-    max-width: 200px;
+    max-width: 250px;
     margin: auto;
 `;
 
@@ -33,6 +33,8 @@ const NumericKeyboard = () => {
     const [value, setValue] = useState<string>("");
 
     const handleClick = (num: string) => {
+        // ✅ Prevent multiple decimal points
+        if (num === "." && value.includes(".")) return;
         setValue((prev) => prev + num);
     };
 
@@ -53,6 +55,7 @@ const NumericKeyboard = () => {
                 ))}
                 <Button onClick={handleClear}>C</Button>
                 <Button onClick={() => handleClick("0")}>0</Button>
+                <Button onClick={() => handleClick(".")}>.</Button> {/* ✅ Added decimal point */}
                 <Button onClick={handleBackspace}>⌫</Button>
             </KeyboardWrapper>
         </div>
@@ -60,3 +63,8 @@ const NumericKeyboard = () => {
 };
 
 export { NumericKeyboard };
+
+
+///  {["1", "2", "3", "4", "5", "6", "7", "8", "9"].map((num) => (
+//                     <Button key={num} onClick={() => handleClick(num)}>{num}</Button>
+//                 ))}
