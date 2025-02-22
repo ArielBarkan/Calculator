@@ -7,20 +7,18 @@ import { CustomButton } from "../../../components/customButton";
 const CalculatorPage = () => {
     const { t: translate } = useTranslation("common");
 
-    const initialRows: number = 1;
-    const maxRows: number = 5;
+    const initialRows: number = Number(import.meta.env.VITE_INITIAL_ROWS);
+    const maxRows: number = Number(import.meta.env.VITE_MAX_ROWS);
 
-    // Ensure each row has a unique ID
-    const generateId = () => Date.now() + Math.random();
 
     // Initialize state with unique objects
     const [productsList, setProductsList] = useState<ProductListType[]>(
-        Array.from({ length: initialRows }, () => ({ id: generateId() }))
+        Array.from({ length: initialRows }, () => ({ id: 1 }))
     );
 
     const handleAddProduct = () => {
         if (productsList.length < maxRows) {
-            setProductsList([...productsList, { id: generateId() }]);
+            setProductsList([...productsList, { id: productsList.length + 1 }]);
         }
     };
 
@@ -32,8 +30,8 @@ const CalculatorPage = () => {
         <div style={{ padding: "5rem 0 0" }}>
             <p>{translate("pages.calculator.title")}</p>
 
-            {productsList.map((product) => (
-                <ProductRow key={product.id} id={product.id} deleteFunction={handleRemoveProduct} />
+            {productsList.map((product: ProductListType, index: number) => (
+                <ProductRow key={product.id} listOrder={index} id={product.id} deleteFunction={handleRemoveProduct} />
             ))}
 
             <CustomButton onClick={handleAddProduct} id="addProduct">

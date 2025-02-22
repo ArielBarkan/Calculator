@@ -4,13 +4,16 @@ import { IconDelete } from "../../styles";
 import { UnstyledButton } from "../buttonUnstyled";
 
 type ProductRowProps = {
+    listOrder: number,
     id: number;
     deleteFunction: (rowId: number) => void;
 };
 
-const ProductRow = ({ id, deleteFunction }: ProductRowProps) => {
+const ProductRow = (props: ProductRowProps) => {
+    const { listOrder, id, deleteFunction } = props;
     return (
         <ProductRowContainer>
+            {listOrder + 1}
             <NumericInput />
             <NumericInput />
             <UnstyledButton onClick={() => deleteFunction(id)}>
