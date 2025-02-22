@@ -2,6 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 
 const KeyboardWrapper = styled.div`
+    direction: ltr;
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* ✅ Adjusted for extra keys */
     gap: 10px;
