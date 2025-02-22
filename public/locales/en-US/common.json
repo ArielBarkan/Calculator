@@ -34,6 +34,9 @@
       "title": "About"
     },
     "calculator": {
+      "button": {
+        "addProduct": "Add a new product to compare"
+      },
       "title": "Calculator"
     },
     "settings": {

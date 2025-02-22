@@ -1,6 +1,6 @@
 // Modules imports
 import { useTranslation } from "react-i18next";
-import { Button } from "../../../components/button";
+import { CustomButton } from "../../../components/customButton";
 
 
 const AboutPage = () => {
@@ -11,7 +11,7 @@ const AboutPage = () => {
         <p style={{ padding: "5rem 0 0" }}>
             {translate("common:pages.about.title")}
 
-            <Button>Hello</Button>
+            <CustomButton>Hello</CustomButton>
 
         </p>
     );

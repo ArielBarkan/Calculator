@@ -51,11 +51,11 @@ type LocaleType = (typeof SUPPORTED_LANGUAGES)[number]["locale"];
 type CurrencyType = (typeof SUPPORTED_CURRENCIES)[number]["ISO"];
 
 
-type ProductListProps = {
-    quantity: number;
-    price: number;
-    unifiedPrice: number;
-    rank: number;
+type ProductListType = {
+    quantity?: number;
+    price?: number;
+    unifiedPrice?: number;
+    rank?: number;
 }
 
 export {
@@ -68,5 +68,5 @@ export {
     IconProps,
     ThemedIconProps,
     TitleWithBackProps,
-    ProductListProps
+    ProductListType
 };
