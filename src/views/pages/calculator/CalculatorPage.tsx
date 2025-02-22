@@ -11,16 +11,16 @@ const CalculatorPage = () => {
 
     const initialRows: number = Number(import.meta.env.VITE_INITIAL_ROWS);
     const maxRows: number = Number(import.meta.env.VITE_MAX_ROWS);
-
+    const generateId = () => Date.now() + Math.random();
 
     // Initialize state with unique objects
     const [productsList, setProductsList] = useState<ProductListType[]>(
-        Array.from({ length: initialRows }, () => ({ id: 1 }))
+        Array.from({ length: initialRows }, () => ({ id: generateId() }))
     );
 
     const handleAddProduct = () => {
         if (productsList.length < maxRows) {
-            setProductsList([...productsList, { id: productsList.length + 1 }]);
+            setProductsList([...productsList, { id: generateId() }]);
         }
     };
 
