@@ -7,6 +7,7 @@ const ProductRow = () => {
     return (
         <ProductRowContainer>
             <NumberInput />
+            <NumberInput />
         </ProductRowContainer>
     );
 };
