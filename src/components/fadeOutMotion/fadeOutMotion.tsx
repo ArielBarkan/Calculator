@@ -12,8 +12,12 @@ import { ReactNode } from "react";
 //     transition: { duration: 1 }
 const pageVariants = {
     initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0, transition: { duration: 0.3 } },
-    exit: { opacity: 0, x: -1000, transition: { duration: 0.3 } }
+    animate: { opacity: 1, y: 0 },
+    exit: {
+        opacity: 0,
+        x: (-Math.abs(window.screen.width))
+    },
+    transition: { duration: 0.3 }
 };
 
 type PageWrapperProps = {

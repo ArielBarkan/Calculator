@@ -37,6 +37,7 @@ const CalculatorPage = () => {
                                 deleteFunction={handleRemoveProduct} productCount={productsList.length} />
                 ))}
             </AnimatePresence>
+            
             <CustomButton onClick={handleAddProduct} id="addProduct">
                 + {translate("pages.calculator.button.addProduct")}
             </CustomButton>
