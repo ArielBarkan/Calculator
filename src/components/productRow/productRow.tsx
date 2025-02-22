@@ -1,9 +1,8 @@
-import { motion } from "framer-motion";
-
 import { ProductRowContainer } from "./productRowWrappers";
 import { NumericInput } from "../numberInput";
 import { IconDelete } from "../../styles";
 import { UnstyledButton } from "../buttonUnstyled";
+import { FadeOutMotion } from "../fadeOutMotion";
 
 
 type ProductRowProps = {
@@ -19,11 +18,7 @@ const ProductRow = (props: ProductRowProps) => {
 
 
     return (
-        <motion.div
-            initial={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0, margin: 0, padding: 0 }}
-            transition={{ duration: 0.3 }}
-        >
+        <FadeOutMotion>
             <ProductRowContainer>
                 {listOrder + 1}
                 <NumericInput />
@@ -35,7 +30,8 @@ const ProductRow = (props: ProductRowProps) => {
                 )}
 
             </ProductRowContainer>
-        </motion.div>
+
+        </FadeOutMotion>
     );
 };
 

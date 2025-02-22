@@ -1,0 +1,1 @@
+export { FadeOutMotion } from "./fadeOutMotion";
