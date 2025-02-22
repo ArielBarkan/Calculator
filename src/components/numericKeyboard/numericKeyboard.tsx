@@ -27,7 +27,7 @@ const NumericKeyboard = () => {
     };
 
     return (
-        <div>
+        <>
             <TemporaryInputDisplay type="text" value={value} readOnly />
             <NumericKeyboardWrapper>
                 {["1", "2", "3", "4", "5", "6", "7", "8", "9"].map((num) => (
@@ -38,7 +38,7 @@ const NumericKeyboard = () => {
                 <NumericKeyButton onClick={() => handleClick(".")}>.</NumericKeyButton> {/* ✅ Added decimal point */}
                 <NumericKeyButton onClick={handleBackspace}>⌫</NumericKeyButton>
             </NumericKeyboardWrapper>
-        </div>
+        </>
     );
 };
 
