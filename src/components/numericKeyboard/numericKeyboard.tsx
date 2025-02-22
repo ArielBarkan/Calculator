@@ -1,34 +1,6 @@
 import { useState } from "react";
-import styled from "styled-components";
 
-const KeyboardWrapper = styled.div`
-    direction: ltr;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* ✅ Adjusted for extra keys */
-    gap: 10px;
-    max-width: 250px;
-    margin: auto;
-`;
-
-const Button = styled.button`
-    padding: 15px;
-    font-size: 20px;
-    cursor: pointer;
-    border: none;
-    background-color: #f0f0f0;
-
-    &:hover {
-        background-color: #dcdcdc;
-    }
-`;
-
-const InputDisplay = styled.input`
-    width: 100%;
-    padding: 10px;
-    font-size: 20px;
-    text-align: center;
-    margin-bottom: 10px;
-`;
+import { NumericKeyboardWrapper, NumericKeyButton, TemporaryInputDisplay } from "./numericKeyboardWrappers";
 
 const NumericKeyboard = () => {
     const [value, setValue] = useState<string>("");
@@ -40,7 +12,7 @@ const NumericKeyboard = () => {
 
             // Prevent starting with a decimal point (".")
             if (num === "." && prev === "") return prev;
-            
+
             return prev + num;
         });
     };
@@ -56,23 +28,18 @@ const NumericKeyboard = () => {
 
     return (
         <div>
-            <InputDisplay type="text" value={value} readOnly />
-            <KeyboardWrapper>
+            <TemporaryInputDisplay type="text" value={value} readOnly />
+            <NumericKeyboardWrapper>
                 {["1", "2", "3", "4", "5", "6", "7", "8", "9"].map((num) => (
-                    <Button key={num} onClick={() => handleClick(num)}>{num}</Button>
+                    <NumericKeyButton key={num} onClick={() => handleClick(num)}>{num}</NumericKeyButton>
                 ))}
-                <Button onClick={handleClear}>C</Button>
-                <Button onClick={() => handleClick("0")}>0</Button>
-                <Button onClick={() => handleClick(".")}>.</Button> {/* ✅ Added decimal point */}
-                <Button onClick={handleBackspace}>⌫</Button>
-            </KeyboardWrapper>
+                <NumericKeyButton onClick={handleClear}>C</NumericKeyButton>
+                <NumericKeyButton onClick={() => handleClick("0")}>0</NumericKeyButton>
+                <NumericKeyButton onClick={() => handleClick(".")}>.</NumericKeyButton> {/* ✅ Added decimal point */}
+                <NumericKeyButton onClick={handleBackspace}>⌫</NumericKeyButton>
+            </NumericKeyboardWrapper>
         </div>
     );
 };
 
 export { NumericKeyboard };
-
-
-///  {["1", "2", "3", "4", "5", "6", "7", "8", "9"].map((num) => (
-//                     <Button key={num} onClick={() => handleClick(num)}>{num}</Button>
-//                 ))}
