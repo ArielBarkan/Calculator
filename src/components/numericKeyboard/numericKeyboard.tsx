@@ -33,10 +33,17 @@ const NumericKeyboard = () => {
     const [value, setValue] = useState<string>("");
 
     const handleClick = (num: string) => {
-        // ✅ Prevent multiple decimal points
-        if (num === "." && value.includes(".")) return;
-        setValue((prev) => prev + num);
+        setValue((prev) => {
+            // ✅ Prevent multiple decimal points
+            if (num === "." && prev.includes(".")) return prev;
+
+            // ✅ Prevent starting with a decimal point (".")
+            if (num === "." && prev === "") return prev;
+
+            return prev + num;
+        });
     };
+
 
     const handleBackspace = () => {
         setValue((prev) => prev.slice(0, -1));
