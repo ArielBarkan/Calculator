@@ -1,4 +1,3 @@
-// Modules imports
 import { useTranslation } from "react-i18next";
 import { ProductRow } from "../../../components/productRow";
 import { useState } from "react";
@@ -11,22 +10,30 @@ const CalculatorPage = () => {
     const initialRows: number = 1;
     const maxRows: number = 5;
 
-    const [rowsCount, setRowsCount] = useState<number>(initialRows);
-    const [productsList, setProductsList] = useState<ProductListType[]>(Array(initialRows).fill({}));
+    // Ensure each row has a unique ID
+    const generateId = () => Date.now() + Math.random();
+
+    // Initialize state with unique objects
+    const [productsList, setProductsList] = useState<ProductListType[]>(
+        Array.from({ length: initialRows }, () => ({ id: generateId() }))
+    );
 
     const handleAddProduct = () => {
-        if (rowsCount < maxRows) {  // Fix condition
-            setProductsList([...productsList, {}]);
-            setRowsCount(rowsCount + 1);
+        if (productsList.length < maxRows) {
+            setProductsList([...productsList, { id: generateId() }]);
         }
+    };
+
+    const handleRemoveProduct = (rowId: number) => {
+        setProductsList((prevProducts) => prevProducts.filter((product) => product.id !== rowId));
     };
 
     return (
         <div style={{ padding: "5rem 0 0" }}>
             <p>{translate("pages.calculator.title")}</p>
 
-            {productsList.map((product: ProductListType, index: number) => (
-                <ProductRow key={index} />
+            {productsList.map((product) => (
+                <ProductRow key={product.id} id={product.id} deleteFunction={handleRemoveProduct} />
             ))}
 
             <CustomButton onClick={handleAddProduct} id="addProduct">

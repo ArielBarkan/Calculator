@@ -52,6 +52,7 @@ type CurrencyType = (typeof SUPPORTED_CURRENCIES)[number]["ISO"];
 
 
 type ProductListType = {
+    id: number;
     quantity?: number;
     price?: number;
     unifiedPrice?: number;
