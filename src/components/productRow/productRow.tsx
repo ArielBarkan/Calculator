@@ -1,8 +1,10 @@
+import { motion } from "framer-motion";
+
 import { ProductRowContainer } from "./productRowWrappers";
 import { NumericInput } from "../numberInput";
 import { IconDelete } from "../../styles";
 import { UnstyledButton } from "../buttonUnstyled";
-import { useState } from "react";
+
 
 type ProductRowProps = {
     listOrder: number,
@@ -11,26 +13,25 @@ type ProductRowProps = {
 };
 
 const ProductRow = (props: ProductRowProps) => {
-    const [isFading, setIsFading] = useState(false);
 
     const { listOrder, id, deleteFunction } = props;
 
-    const handleRemoveRow = () => {
-        setIsFading(true); // Start fade-out animation
-        setTimeout(() => {
-            deleteFunction(id); // Remove row after animation completes
-        }, 300); // Match CSS transition duration
-    };
 
     return (
-        <ProductRowContainer className={isFading ? "fade-out" : ""}>
-            {listOrder + 1}
-            <NumericInput />
-            <NumericInput />
-            <UnstyledButton onClick={handleRemoveRow}>
-                <IconDelete size={30} />
-            </UnstyledButton>
-        </ProductRowContainer>
+        <motion.div
+            initial={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0, margin: 0, padding: 0 }}
+            transition={{ duration: 0.3 }}
+        >
+            <ProductRowContainer>
+                {listOrder + 1}
+                <NumericInput />
+                <NumericInput />
+                <UnstyledButton onClick={() => deleteFunction(id)}>
+                    <IconDelete size={30} />
+                </UnstyledButton>
+            </ProductRowContainer>
+        </motion.div>
     );
 };
 

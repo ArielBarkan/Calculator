@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "dotenv": "^16.4.7",
+    "framer-motion": "^12.4.7",
     "i18next": "^24.2.2",
     "i18next-http-backend": "^3.0.2",
     "react": "^19.0.0",

@@ -1,4 +1,6 @@
 import { useTranslation } from "react-i18next";
+import { AnimatePresence } from "framer-motion";
+
 import { ProductRow } from "../../../components/productRow";
 import { useState } from "react";
 import { ProductListType } from "../../../types";
@@ -29,11 +31,12 @@ const CalculatorPage = () => {
     return (
         <div style={{ padding: "5rem 0 0" }}>
             <p>{translate("pages.calculator.title")}</p>
-
-            {productsList.map((product: ProductListType, index: number) => (
-                <ProductRow key={product.id} listOrder={index} id={product.id} deleteFunction={handleRemoveProduct} />
-            ))}
-
+            <AnimatePresence>
+                {productsList.map((product: ProductListType, index: number) => (
+                    <ProductRow key={product.id} listOrder={index} id={product.id}
+                                deleteFunction={handleRemoveProduct} />
+                ))}
+            </AnimatePresence>
             <CustomButton onClick={handleAddProduct} id="addProduct">
                 + {translate("pages.calculator.button.addProduct")}
             </CustomButton>
