@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 const LayoutWrapper = styled.div`
     margin: auto;
-    max-width: var(--max-width);
-    min-height: calc(100vh - var(--navbar-height));
+    /* max-width: var(--max-width);
+     min-height: calc(100vh - var(--navbar-height));*/
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
+    //border: 1px solid black;
 
 `;
 
