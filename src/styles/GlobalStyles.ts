@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyles = createGlobalStyle`
     body {
         margin: auto;
-        padding: 1rem;
+        padding: 1rem .5rem;
         background-color: ${({ theme }) => theme.body.bgColor};
         color: ${({ theme }) => theme.body.fontColor};
         font-family: 'Rubik', sans-serif;

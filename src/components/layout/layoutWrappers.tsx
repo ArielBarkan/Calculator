@@ -7,7 +7,6 @@ const LayoutWrapper = styled.div`
 
 const MainContent = styled.main`
     flex-grow: 1; // Ensures the content expands properly
-    padding: 20px;
 `;
 
 export { LayoutWrapper, MainContent };
