@@ -35,14 +35,12 @@ const ProductRow = (props: ProductRowProps) => {
                 {listOrder + 1}
                 <NumericInput blurFunction={handleBlur} focusFunction={handleFocus} />
                 <NumericInput blurFunction={handleBlur} focusFunction={handleFocus} />
-
+                <RankDisplay {...{ rank }} dimension={30}></RankDisplay>
                 {productCount > 1 && (
                     <UnstyledButton onClick={() => deleteFunction(id)}>
                         <IconDelete size={30} />
                     </UnstyledButton>
                 )}
-
-                <RankDisplay {...{ rank }} dimension={30}></RankDisplay>
 
 
             </ProductRowContainer>
