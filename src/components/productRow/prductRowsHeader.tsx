@@ -17,10 +17,7 @@ const ProductRowsHeader = (props: Partial<ProductRowProps>) => {
             <ProductRowsTitle>{translate("common:pages.calculator.header.unifiedPrice")}</ProductRowsTitle>
             <ProductRowsTitle>{translate("common:pages.calculator.header.rank")}</ProductRowsTitle>
             {productCount! > 1 && (
-                <ProductRowsTitle>{
-                    // translate("common:pages.calculator.header.delete")
-                }
-                </ProductRowsTitle>
+                <ProductRowsTitle />
             )}
 
         </ProductRowContainer>

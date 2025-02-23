@@ -31,13 +31,16 @@ const CalculatorPage = () => {
     return (
         <div style={{ padding: "5rem 0 0" }}>
             <p>{translate("pages.calculator.title")}</p>
-            <ProductRowsHeader productCount={productsList.length} />
-            <AnimatePresence>
-                {productsList.map((product: ProductListType, index: number) => (
-                    <ProductRow key={product.id} listOrder={index} id={product.id}
-                                deleteFunction={handleRemoveProduct} productCount={productsList.length} rank={index} />
-                ))}
-            </AnimatePresence>
+            <div style={{ display: "grid", width: "100%" }}>
+                <ProductRowsHeader productCount={productsList.length} />
+                <AnimatePresence>
+                    {productsList.map((product: ProductListType, index: number) => (
+                        <ProductRow key={product.id} listOrder={index} id={product.id}
+                                    deleteFunction={handleRemoveProduct} productCount={productsList.length}
+                                    rank={index} />
+                    ))}
+                </AnimatePresence>
+            </div>
             <CustomButton onClick={handleAddProduct} id="addProduct">
                 + {translate("pages.calculator.button.addProduct")}
             </CustomButton>
