@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { AnimatePresence } from "framer-motion";
 
-import { ProductRow } from "../../../components/productRow";
+import { ProductRow, ProductRowsHeader } from "../../../components/productRow";
 import { useState } from "react";
 import { ProductListType } from "../../../types";
 import { CustomButton } from "../../../components/customButton";
@@ -31,6 +31,7 @@ const CalculatorPage = () => {
     return (
         <div style={{ padding: "5rem 0 0" }}>
             <p>{translate("pages.calculator.title")}</p>
+            <ProductRowsHeader productCount={productsList.length} />
             <AnimatePresence>
                 {productsList.map((product: ProductListType, index: number) => (
                     <ProductRow key={product.id} listOrder={index} id={product.id}

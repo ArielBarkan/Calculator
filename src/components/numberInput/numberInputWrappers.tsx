@@ -1,12 +1,16 @@
 import styled from "styled-components";
 
-const NumberInputStyled = styled.input.attrs({
+const MAX_CHAR_WIDTH = 10; // Adjust this based on font size
+const PADDING = 20; // Total left & right padding
+
+const NumberInputStyled = styled.input.attrs(({ maxLength = 7 }) => ({
     type: "text",
     inputMode: "numeric",
     pattern: "[0-9]*",
-    placeholder: "Enter a number"
-})`
-    //width: 100%;
+    placeholder: "",
+    maxLength
+}))<{ maxLength: number }>`
+    width: ${({ maxLength }) => `${maxLength * MAX_CHAR_WIDTH + PADDING}px`};
     padding: 10px;
     font-size: 18px;
     border: 1px solid #ccc;
@@ -14,7 +18,6 @@ const NumberInputStyled = styled.input.attrs({
     background: #d2d0d0;
 
     &:focus {
-        //  border: 1px solid #c44646;
         background: #FFF;
     }
 `;

@@ -33,16 +33,15 @@ const ProductRow = (props: ProductRowProps) => {
         <FadeOutMotion>
             <ProductRowContainer {...{ selected }}>
                 {listOrder + 1}
-                <NumericInput blurFunction={handleBlur} focusFunction={handleFocus} />
-                <NumericInput blurFunction={handleBlur} focusFunction={handleFocus} />
+                <NumericInput maxLength={7} blurFunction={handleBlur} focusFunction={handleFocus} />
+                <NumericInput maxLength={5} blurFunction={handleBlur} focusFunction={handleFocus} />
+                <p>58.555</p>
                 <RankDisplay {...{ rank }} dimension={30}></RankDisplay>
                 {productCount > 1 && (
                     <UnstyledButton onClick={() => deleteFunction(id)}>
                         <IconDelete size={30} />
                     </UnstyledButton>
                 )}
-
-
             </ProductRowContainer>
 
         </FadeOutMotion>

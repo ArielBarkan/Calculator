@@ -37,6 +37,13 @@
       "button": {
         "addProduct": "Añade un nuevo producto para comparar"
       },
+      "header": {
+        "delete": "Borrar",
+        "price": "Precio",
+        "quantity": "Cuantidad",
+        "rank": "Clasificación",
+        "unifiedPrice": "Precio por"
+      },
       "title": "Calculador"
     },
     "settings": {

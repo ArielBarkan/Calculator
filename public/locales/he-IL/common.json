@@ -37,6 +37,13 @@
       "button": {
         "addProduct": "הוסף מוצר חדש להשוואה"
       },
+      "header": {
+        "delete": "למחוק",
+        "price": "מחיר",
+        "quantity": "כמות",
+        "rank": "דירוג",
+        "unifiedPrice": "מחיר ל"
+      },
       "title": "מחשב"
     },
     "settings": {
