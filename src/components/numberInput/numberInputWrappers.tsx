@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const MAX_CHAR_WIDTH = 10; // Adjust this based on font size
-const PADDING = 20; // Total left & right padding
+const PADDING = 15; // Total left & right padding
 
 const NumberInputStyled = styled.input.attrs(({ maxLength = 7 }) => ({
     type: "text",

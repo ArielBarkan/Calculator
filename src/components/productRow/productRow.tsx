@@ -29,10 +29,10 @@ const ProductRow = (props: ProductRowProps) => {
     const handleBlur = () => {
         setSelected(false);
     };
+
     return (
         <FadeOutMotion>
             <ProductRowContainer {...{ selected }}>
-                {listOrder + 1}
                 <NumericInput maxLength={7} blurFunction={handleBlur} focusFunction={handleFocus} />
                 <NumericInput maxLength={5} blurFunction={handleBlur} focusFunction={handleFocus} />
                 <p>58.555</p>

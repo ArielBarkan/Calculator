@@ -12,7 +12,6 @@ const ProductRowsHeader = (props: Partial<ProductRowProps>) => {
 
     return (
         <ProductRowContainer>
-            <ProductRowsTitle>1</ProductRowsTitle>
             <ProductRowsTitle>{translate("common:pages.calculator.header.price")}</ProductRowsTitle>
             <ProductRowsTitle>{translate("common:pages.calculator.header.quantity")}</ProductRowsTitle>
             <ProductRowsTitle>{translate("common:pages.calculator.header.unifiedPrice")}</ProductRowsTitle>
