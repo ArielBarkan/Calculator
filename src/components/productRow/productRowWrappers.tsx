@@ -16,6 +16,10 @@ const ProductRowContainer = styled.span<{ selected?: boolean }>`
 
 const ProductRowsTitle = styled.p`
     font-weight: bold;
+    display: inline-block;
+    transform: rotate(-45deg); /* Adjust angle as needed */
+    white-space: nowrap; /* Prevents text from breaking */
+    max-width: fit-content;
 
 `;
 export { ProductRowContainer, ProductRowsTitle };
