@@ -16,7 +16,7 @@ const RankWrapper = styled.span<{ color: string; dimension: number }>`
 `;
 
 const Rank = styled.p`
-    font-size: 1.2rem;
+  
     font-weight: bold;
     color: black;
     margin: 0;
