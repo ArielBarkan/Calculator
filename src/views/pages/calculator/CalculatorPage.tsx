@@ -34,10 +34,9 @@ const CalculatorPage = () => {
             <AnimatePresence>
                 {productsList.map((product: ProductListType, index: number) => (
                     <ProductRow key={product.id} listOrder={index} id={product.id}
-                                deleteFunction={handleRemoveProduct} productCount={productsList.length} />
+                                deleteFunction={handleRemoveProduct} productCount={productsList.length} rank={index} />
                 ))}
             </AnimatePresence>
-            
             <CustomButton onClick={handleAddProduct} id="addProduct">
                 + {translate("pages.calculator.button.addProduct")}
             </CustomButton>

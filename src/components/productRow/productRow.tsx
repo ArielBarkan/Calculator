@@ -3,18 +3,23 @@ import { NumericInput } from "../numberInput";
 import { IconDelete } from "../../styles";
 import { UnstyledButton } from "../buttonUnstyled";
 import { FadeOutMotion } from "../fadeOutMotion";
+import { Medal } from "../medal";
 
 
-type ProductRowProps = {
+export type ProductRowProps = {
     listOrder: number,
     productCount: number
     id: number;
     deleteFunction: (rowId: number) => void;
+    quantity?: number;
+    price?: number;
+    unifiedPrice?: number;
+    rank: number;
 };
 
 const ProductRow = (props: ProductRowProps) => {
 
-    const { listOrder, productCount, id, deleteFunction } = props;
+    const { listOrder, productCount, id, deleteFunction, rank } = props;
 
 
     return (
@@ -29,6 +34,9 @@ const ProductRow = (props: ProductRowProps) => {
                     </UnstyledButton>
                 )}
 
+                <UnstyledButton>
+                    <Medal rank={rank} size={50} />
+                </UnstyledButton>
             </ProductRowContainer>
 
         </FadeOutMotion>

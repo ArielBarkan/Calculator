@@ -57,6 +57,7 @@ type ProductListType = {
     price?: number;
     unifiedPrice?: number;
     rank?: number;
+
 }
 
 export {
