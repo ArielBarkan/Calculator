@@ -6,11 +6,17 @@ const NumberInputStyled = styled.input.attrs({
     pattern: "[0-9]*",
     placeholder: "Enter a number"
 })`
-    width: 100%;
+    //width: 100%;
     padding: 10px;
     font-size: 18px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    background: #d2d0d0;
+
+    &:focus {
+        //  border: 1px solid #c44646;
+        background: #FFF;
+    }
 `;
 
 export { NumberInputStyled };
