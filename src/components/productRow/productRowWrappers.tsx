@@ -17,8 +17,8 @@ const ProductRowContainer = styled.span<{ selected?: boolean }>`
 const ProductRowsTitle = styled.p`
     font-weight: bold;
     display: inline-block;
-    transform: rotate(-45deg); /* Adjust angle as needed */
-    white-space: nowrap; /* Prevents text from breaking */
+    transform: rotate(${({ theme }) => theme.direction === "rtl" ? "-45deg" : "45deg"}); /* Adjust angle as needed */
+    white-space: nowrap;
     max-width: fit-content;
 
 `;
