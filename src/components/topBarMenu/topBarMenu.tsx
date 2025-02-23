@@ -25,7 +25,7 @@ const TopBarMenu = () => {
         setIsSelected(location.pathname.startsWith(settingBaseRoute));
     }, [location.pathname]);
 
-    // share start
+
     const [isShareSupported, setIsShareSupported] = useState(false);
 
     useEffect(() => {
@@ -46,7 +46,6 @@ const TopBarMenu = () => {
         }
     };
 
-    // share end
 
     return (
         <Navbar>
