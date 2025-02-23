@@ -5,8 +5,7 @@ import {
     MdKeyboardBackspace,
     MdOutlineSettings,
     MdShare,
-    MdOutlineDeleteForever,
-    MdOutlineCircle
+    MdOutlineDeleteForever
 } from "react-icons/md";
 
 // Custom imports
@@ -24,9 +23,6 @@ const IconShare = (props: IconProps) => <ThemedIcon icon={MdShare} color={props?
 const IconDelete = (props: IconProps) => <ThemedIcon icon={MdOutlineDeleteForever} color={props?.color}
                                                      rtlIgnore={props?.rtlIgnore}
                                                      size={props?.size} />;
-const IconCircle = (props: IconProps) => <ThemedIcon icon={MdOutlineCircle} color={props?.color}
-                                                     rtlIgnore={props?.rtlIgnore}
-                                                     size={props?.size} />;
 
 
-export { IconNext, IconBack, IconSettings, IconShare, IconDelete, IconCircle };
+export { IconNext, IconBack, IconSettings, IconShare, IconDelete };

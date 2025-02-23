@@ -3,7 +3,8 @@ import { NumericInput } from "../numberInput";
 import { IconDelete } from "../../styles";
 import { UnstyledButton } from "../buttonUnstyled";
 import { FadeOutMotion } from "../fadeOutMotion";
-import { Medal } from "../medal";
+import { RankDisplay } from "../rankDisplay";
+import { useState } from "react";
 
 
 export type ProductRowProps = {
@@ -20,23 +21,30 @@ export type ProductRowProps = {
 const ProductRow = (props: ProductRowProps) => {
 
     const { listOrder, productCount, id, deleteFunction, rank } = props;
+    const [selected, setSelected] = useState<boolean>(false);
 
-
+    const handleFocus = () => {
+        setSelected(true);
+    };
+    const handleBlur = () => {
+        setSelected(false);
+    };
     return (
         <FadeOutMotion>
-            <ProductRowContainer>
+            <ProductRowContainer {...{ selected }}>
                 {listOrder + 1}
-                <NumericInput />
-                <NumericInput />
+                <NumericInput blurFunction={handleBlur} focusFunction={handleFocus} />
+                <NumericInput blurFunction={handleBlur} focusFunction={handleFocus} />
+
                 {productCount > 1 && (
                     <UnstyledButton onClick={() => deleteFunction(id)}>
                         <IconDelete size={30} />
                     </UnstyledButton>
                 )}
 
-                <UnstyledButton>
-                    <Medal rank={rank} size={50} />
-                </UnstyledButton>
+                <RankDisplay {...{ rank }} dimension={30}></RankDisplay>
+
+
             </ProductRowContainer>
 
         </FadeOutMotion>
