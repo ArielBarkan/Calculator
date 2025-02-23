@@ -5,9 +5,10 @@ const ProductRowContainer = styled.span<{ selected?: boolean }>`
     flex-direction: row;
     gap: 10px; /* Adds space between elements */
     justify-content: flex-start; /* Align items without stretching */
-    padding: 0.5rem 0;
+    padding: 0.5rem;
     border: 1px solid ${({ selected, theme }) => selected ? theme.SelectableElement.selectedBorder : "transparent"};
     border-radius: 15px;
+    align-items: center;
 `;
 
 export { ProductRowContainer };
