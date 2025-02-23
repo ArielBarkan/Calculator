@@ -15,8 +15,6 @@ const ProductRowContainer = styled.span<{ selected?: boolean }>`
 `;
 
 const ProductRowsTitle = styled.p`
-    width: fit-content;
-    border: 1px solid black;
     font-weight: bold;
 
 `;
