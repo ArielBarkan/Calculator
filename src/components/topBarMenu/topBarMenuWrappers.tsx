@@ -11,7 +11,7 @@ const Navbar = styled.nav`
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 4px 10px ${({ theme }) => theme.BoxElement.shadowColor};
-    height: 50px;
+    height: var(--navbar-height);
 
     button {
         margin: 0 1rem;

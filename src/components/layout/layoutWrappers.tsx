@@ -1,17 +1,20 @@
 import styled from "styled-components";
 
 const LayoutWrapper = styled.div`
+    margin: auto;
+    max-width: var(--max-width);
+    min-height: calc(100vh - var(--navbar-height));
     display: flex;
     flex-direction: column;
     border: 1px solid black;
-    min-height: calc(100vh - 50px); /* Makes sure it always fills the viewport */
+
 `;
 
 const MainContent = styled.main`
-    flex-grow: 1; /* Takes up remaining space */
-    //display: flex; /* Enables better centering if needed */
-    //  justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    flex-grow: 1;
+    align-items: center;
 `;
 
 export { LayoutWrapper, MainContent };
+//       --navbar-height: 50px;
+//         --max-width: 600px;
