@@ -28,7 +28,8 @@ const Medal = (props: MedalType) => {
                     strokeWidth="3" />
 
             {/* Place Number */}
-            <text x="50%" y="57%" fontSize="25" fill="black" textAnchor="middle" fontWeight="bold">
+            <text x="50%" y="65%" fontSize="40" fill="black" textAnchor="middle"
+                  fontWeight="bold">
                 {rank}
             </text>
         </svg>
