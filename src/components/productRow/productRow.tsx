@@ -33,8 +33,8 @@ const ProductRow = (props: ProductRowProps) => {
     return (
         <FadeOutMotion>
             <ProductRowContainer {...{ selected }}>
-                <NumericInput maxLength={7} blurFunction={handleBlur} focusFunction={handleFocus} />
                 <NumericInput maxLength={5} blurFunction={handleBlur} focusFunction={handleFocus} />
+                <NumericInput maxLength={4} blurFunction={handleBlur} focusFunction={handleFocus} />
                 <p>58.555</p>
                 <RankDisplay {...{ rank }} dimension={30}></RankDisplay>
                 {productCount > 1 && (
