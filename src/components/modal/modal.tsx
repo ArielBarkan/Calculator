@@ -24,7 +24,7 @@ const CustomModal: React.FC<ModalProps> = ({ isOpen, onClose, title, children, c
         >
             {title && <Title>{title}</Title>}
             <Content>{children}</Content>
-            <CloseButton onClick={onClose}>{closeButtonText}</CloseButton>
+            {/*   <CloseButton onClick={onClose}>{closeButtonText}</CloseButton>*/}
         </StyledModal>
     );
 };

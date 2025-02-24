@@ -5,7 +5,7 @@ import { AnimatePresence } from "framer-motion";
 import { ProductRow, ProductRowsHeader } from "../../../components/productRow";
 
 import { ProductListType } from "../../../types";
-import { CustomButton, CustomModal } from "../../../components";
+import { CustomButton, CustomModal, SegmentedControl } from "../../../components";
 
 
 const CalculatorPage = () => {
@@ -52,7 +52,7 @@ const CalculatorPage = () => {
                 </CustomButton>
             </div>
             <CustomModal isOpen={isModalOpen} onClose={() => setModalOpen(false)} title="Example Modal">
-                <p>This is a reusable modal component!</p>
+                <span onClick={() => setModalOpen(false)}><SegmentedControl /></span>
             </CustomModal>
         </>
     );
