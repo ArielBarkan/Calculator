@@ -1,11 +1,12 @@
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { AnimatePresence } from "framer-motion";
 
 import { ProductRow, ProductRowsHeader } from "../../../components/productRow";
-import { useState } from "react";
+
 import { ProductListType } from "../../../types";
-import { CustomButton } from "../../../components/customButton";
-import { SegmentedControl } from "../../../components/segmentedControl";
+import { CustomButton, CustomModal } from "../../../components";
+
 
 const CalculatorPage = () => {
     const { t: translate } = useTranslation("common");
@@ -13,7 +14,7 @@ const CalculatorPage = () => {
     const initialRows: number = Number(import.meta.env.VITE_INITIAL_ROWS);
     const maxRows: number = Number(import.meta.env.VITE_MAX_ROWS);
     const generateId = () => Date.now() + Math.random();
-
+    const [isModalOpen, setModalOpen] = useState(false);
     // Initialize state with unique objects
     const [productsList, setProductsList] = useState<ProductListType[]>(
         Array.from({ length: initialRows }, () => ({ id: generateId() }))
@@ -30,24 +31,30 @@ const CalculatorPage = () => {
     };
 
     return (
-        <div style={{ padding: "5rem 0 0" }}>
-            <p>{translate("pages.calculator.title")}</p>
-
-            <span style={{ width: "300px", display: "block" }}>  <SegmentedControl /></span>
-            <div style={{ display: "grid", width: "100%" }}>
-                <ProductRowsHeader productCount={productsList.length} />
-                <AnimatePresence>
-                    {productsList.map((product: ProductListType, index: number) => (
-                        <ProductRow key={product.id} listOrder={index} id={product.id}
-                                    deleteFunction={handleRemoveProduct} productCount={productsList.length}
-                                    rank={index} />
-                    ))}
-                </AnimatePresence>
+        <>
+            <div style={{ padding: "5rem 0 0" }}>
+                <p>{translate("pages.calculator.title")}</p>
+                <p>
+                    <button onClick={() => setModalOpen(true)}>Open Modal</button>
+                </p>
+                <div style={{ display: "grid", width: "100%" }}>
+                    <ProductRowsHeader productCount={productsList.length} />
+                    <AnimatePresence>
+                        {productsList.map((product: ProductListType, index: number) => (
+                            <ProductRow key={product.id} listOrder={index} id={product.id}
+                                        deleteFunction={handleRemoveProduct} productCount={productsList.length}
+                                        rank={index} />
+                        ))}
+                    </AnimatePresence>
+                </div>
+                <CustomButton onClick={handleAddProduct} id="addProduct">
+                    + {translate("pages.calculator.button.addProduct")}
+                </CustomButton>
             </div>
-            <CustomButton onClick={handleAddProduct} id="addProduct">
-                + {translate("pages.calculator.button.addProduct")}
-            </CustomButton>
-        </div>
+            <CustomModal isOpen={isModalOpen} onClose={() => setModalOpen(false)} title="Example Modal">
+                <p>This is a reusable modal component!</p>
+            </CustomModal>
+        </>
     );
 };
 
