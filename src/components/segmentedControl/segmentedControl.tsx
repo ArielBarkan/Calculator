@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { IconShare } from "../../styles";
+
 
 const SegmentedControl = () => {
     const [selected, setSelected] = useState("weight");
@@ -19,7 +19,7 @@ const SegmentedControl = () => {
                         cursor: "pointer"
                     }}
                 >
-                    {option.charAt(0).toUpperCase() + option.slice(1)} <IconShare size={30} rtlIgnore={true} />
+                    {option.charAt(0).toUpperCase() + option.slice(1)}
                 </button>
             ))}
         </div>

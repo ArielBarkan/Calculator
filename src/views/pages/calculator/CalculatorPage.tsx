@@ -5,6 +5,7 @@ import { ProductRow, ProductRowsHeader } from "../../../components/productRow";
 import { useState } from "react";
 import { ProductListType } from "../../../types";
 import { CustomButton } from "../../../components/customButton";
+import { SegmentedControl } from "../../../components/segmentedControl";
 
 const CalculatorPage = () => {
     const { t: translate } = useTranslation("common");
@@ -31,6 +32,8 @@ const CalculatorPage = () => {
     return (
         <div style={{ padding: "5rem 0 0" }}>
             <p>{translate("pages.calculator.title")}</p>
+
+            <span style={{ width: "300px", display: "block" }}>  <SegmentedControl /></span>
             <div style={{ display: "grid", width: "100%" }}>
                 <ProductRowsHeader productCount={productsList.length} />
                 <AnimatePresence>
