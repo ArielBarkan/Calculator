@@ -44,6 +44,9 @@
         "rank": "דירוג",
         "unifiedPrice": "מחיר ל"
       },
+      "modal": {
+        "title": "בחרי יחידת השוואה"
+      },
       "title": "מחשב"
     },
     "settings": {

@@ -44,6 +44,9 @@
         "rank": "Clasificación",
         "unifiedPrice": "Precio por"
       },
+      "modal": {
+        "title": "Elige una unidad de comparación"
+      },
       "title": "Calculador"
     },
     "settings": {

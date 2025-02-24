@@ -44,6 +44,9 @@
         "rank": "Rank",
         "unifiedPrice": "Price per"
       },
+      "modal": {
+        "title": "Choose a comparison unit"
+      },
       "title": "Calculator"
     },
     "settings": {

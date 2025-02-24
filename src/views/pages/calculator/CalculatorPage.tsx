@@ -5,7 +5,7 @@ import { AnimatePresence } from "framer-motion";
 import { ProductRow, ProductRowsHeader } from "../../../components/productRow";
 
 import { ProductListType } from "../../../types";
-import { CustomButton, CustomModal, SegmentedControl } from "../../../components";
+import { CustomButton } from "../../../components";
 
 
 const CalculatorPage = () => {
@@ -14,7 +14,7 @@ const CalculatorPage = () => {
     const initialRows: number = Number(import.meta.env.VITE_INITIAL_ROWS);
     const maxRows: number = Number(import.meta.env.VITE_MAX_ROWS);
     const generateId = () => Date.now() + Math.random();
-    const [isModalOpen, setModalOpen] = useState(false);
+
     // Initialize state with unique objects
     const [productsList, setProductsList] = useState<ProductListType[]>(
         Array.from({ length: initialRows }, () => ({ id: generateId() }))
@@ -31,30 +31,22 @@ const CalculatorPage = () => {
     };
 
     return (
-        <>
-            <div style={{ padding: "5rem 0 0" }}>
-                <p>{translate("pages.calculator.title")}</p>
-                <p>
-                    <button onClick={() => setModalOpen(true)}>Open Modal</button>
-                </p>
-                <div style={{ display: "grid", width: "100%" }}>
-                    <ProductRowsHeader productCount={productsList.length} />
-                    <AnimatePresence>
-                        {productsList.map((product: ProductListType, index: number) => (
-                            <ProductRow key={product.id} listOrder={index} id={product.id}
-                                        deleteFunction={handleRemoveProduct} productCount={productsList.length}
-                                        rank={index} />
-                        ))}
-                    </AnimatePresence>
-                </div>
-                <CustomButton onClick={handleAddProduct} id="addProduct">
-                    + {translate("pages.calculator.button.addProduct")}
-                </CustomButton>
+        <div style={{ padding: "5rem 0 0" }}>
+            <p>{translate("pages.calculator.title")}</p>
+            <div style={{ display: "grid", width: "100%" }}>
+                <ProductRowsHeader productCount={productsList.length} />
+                <AnimatePresence>
+                    {productsList.map((product: ProductListType, index: number) => (
+                        <ProductRow key={product.id} listOrder={index} id={product.id}
+                                    deleteFunction={handleRemoveProduct} productCount={productsList.length}
+                                    rank={index} />
+                    ))}
+                </AnimatePresence>
             </div>
-            <CustomModal isOpen={isModalOpen} onClose={() => setModalOpen(false)} title="Example Modal">
-                <span onClick={() => setModalOpen(false)}><SegmentedControl /></span>
-            </CustomModal>
-        </>
+            <CustomButton onClick={handleAddProduct} id="addProduct">
+                + {translate("pages.calculator.button.addProduct")}
+            </CustomButton>
+        </div>
     );
 };
 

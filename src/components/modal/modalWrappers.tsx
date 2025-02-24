@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Modal from "react-modal";
 
 const StyledModal = styled(Modal)`
-    background: white;
+    background-color: ${({ theme }) => theme.body.bgColor};
     max-width: 400px;
     padding: 20px;
     margin: auto;
