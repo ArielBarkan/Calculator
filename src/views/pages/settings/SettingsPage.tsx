@@ -5,12 +5,10 @@ import { useNavigate } from "react-router-dom";
 
 // Custom imports
 import { useTheme } from "../../../context/theme.context";
-import { ToggleSwitch } from "../../../components/toggleSwitch";
+import { ToggleSwitch, TitleWithBack, NotifySuccess, NotifyWarning } from "../../../components";
 import { THEME_ENUMS } from "../../../enums";
 import { Row, DoubleLineWrapper, TopLine, BottomLine } from "./settings.wrappers";
 import { IconNext } from "../../../styles";
-import { TitleWithBack } from "../../../components/titleWithBack";
-import { NotifySuccess, NotifyWarning } from "../../../components/toast";
 import { getSelectedLanguageByLocale } from "../../../utils";
 import { localStorageGetSelectedCurrency } from "../../../services";
 import { GOOGLE_ANALYTICS } from "../../../utils/analytics.util";

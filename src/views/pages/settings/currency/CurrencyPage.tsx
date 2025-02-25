@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import { Row } from "../settings.wrappers";
 import { CurrencyType, currencyType } from "../../../../types";
 import { GA_EVENTS, SUPPORTED_CURRENCIES } from "../../../../consts";
-import { TitleWithBack } from "../../../../components/titleWithBack";
+import { TitleWithBack, NotifySuccess } from "../../../../components";
 import {
     localStorageGetSelectedCurrency, localStorageUpdateSelectedCurrency
 
@@ -14,7 +14,6 @@ import {
 import Flag from "react-world-flags";
 import { IconsGroup } from "./currency.wrappers";
 import { InternationalFlag } from "../../../../assets";
-import { NotifySuccess } from "../../../../components/toast";
 import { GOOGLE_ANALYTICS } from "../../../../utils/analytics.util";
 
 

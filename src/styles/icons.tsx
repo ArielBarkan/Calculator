@@ -10,7 +10,7 @@ import {
 
 
 import { IconProps } from "../types";
-import { ThemedIcon } from "../components/themedIcon/ThemedIcon";
+import { ThemedIcon } from "../components";
 
 const IconNext = (props: IconProps) => <ThemedIcon icon={MdNavigateNext} color={props?.color} size={props?.size}
                                                    rtlIgnore={props?.rtlIgnore} />;

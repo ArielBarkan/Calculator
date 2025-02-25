@@ -4,9 +4,8 @@ import { useTranslation } from "react-i18next";
 import { AnimatePresence } from "framer-motion";
 
 // Custom imports
-import { ProductRow, ProductRowsHeader } from "../../../components/productRow";
+import { ProductRow, ProductRowsHeader, CustomButton } from "../../../components";
 import { ProductListType } from "../../../types";
-import { CustomButton } from "../../../components";
 import { getRandomNumber } from "../../../utils";
 
 

@@ -6,10 +6,9 @@ import Flag from "react-world-flags";
 import { Row } from "../settings.wrappers";
 import { GA_EVENTS, SUPPORTED_LANGUAGES } from "../../../../consts";
 import { ChangeLanguage } from "../../../../services";
-import { TitleWithBack } from "../../../../components/titleWithBack";
+import { TitleWithBack, NotifySuccess, NotifyWarning } from "../../../../components";
 import { localStorageGetSelectedLanguage } from "../../../../services";
 import { LocaleType } from "../../../../types";
-import { NotifySuccess, NotifyWarning } from "../../../../components/toast";
 import { GOOGLE_ANALYTICS } from "../../../../utils/analytics.util";
 
 
