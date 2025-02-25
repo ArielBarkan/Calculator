@@ -1,32 +1,50 @@
+const commonColors = {
+    rank: {
+        goldMedal: {
+            bgColor: "#FFD700"
+        },
+        silverMedal: {
+            bgColor: "#C0C0C0"
+        },
+        bronzeMedal: {
+            bgColor: "#CD7F32"
+        }
+    }
+
+};
+
 const lightTheme = {
+    ...commonColors,
     generic: {
         foreground: "#000000",
         background: "#FFFFFF"
     },
     body: {
-        bgColor: "#FFFFFF",
+        bgColor: "#EAEAEA",
         fontColor: "#000000"
     },
     buttons: {
         primary: {
-            backgroundColor: "#ffffff",
-            color: "#000000"
+            backgroundColor: "#384cae",
+            color: "#e3b863"
         }
     },
     icons: {
         iconDefaultColor: "#000000"
     },
     SelectableElement: {
-        selectedBorder: "#FFFFFF",
-        selectedBackground: "#797676",
-        activeBackground: "#888888"
+        selectedBorder: "#000000",
+        selectedBackground: "#E0E0E0",
+        activeBackground: "#D0D0D0"
     },
     BoxElement: {
-        shadowColor: "#bebebe"
+        shadowColor: "#B0B0B0"
     }
 } as const;
 
+
 const darkTheme = {
+    ...commonColors,
     generic: {
         foreground: "#FFFFFF",
         background: "#000000"

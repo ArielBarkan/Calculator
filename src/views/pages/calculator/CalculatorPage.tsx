@@ -6,6 +6,7 @@ import { ProductRow, ProductRowsHeader } from "../../../components/productRow";
 
 import { ProductListType } from "../../../types";
 import { CustomButton } from "../../../components";
+import { getRandomNumber } from "../../../utils";
 
 
 const CalculatorPage = () => {
@@ -39,7 +40,7 @@ const CalculatorPage = () => {
                     {productsList.map((product: ProductListType, index: number) => (
                         <ProductRow key={product.id} listOrder={index} id={product.id}
                                     deleteFunction={handleRemoveProduct} productCount={productsList.length}
-                                    rank={index} />
+                                    rank={getRandomNumber(1, 5)} />
                     ))}
                 </AnimatePresence>
             </div>

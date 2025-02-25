@@ -2,7 +2,7 @@ import { ProductRowContainer } from "./productRowWrappers";
 import { NumericInput } from "../numberInput";
 import { IconDelete } from "../../styles";
 import { UnstyledButton } from "../buttonUnstyled";
-import { FadeOutMotion } from "../fadeOutMotion";
+import { FadeOutMotion } from "../animatedComps";
 import { RankDisplay } from "../rankDisplay";
 import { useState } from "react";
 
@@ -19,7 +19,7 @@ export type ProductRowProps = {
 };
 
 const ProductRow = (props: ProductRowProps) => {
-
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { listOrder, productCount, id, deleteFunction, rank } = props;
     const [selected, setSelected] = useState<boolean>(false);
 
