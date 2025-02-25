@@ -1,1 +1,0 @@
-export { FadeInText } from "./fadeInText";

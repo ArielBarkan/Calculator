@@ -2,7 +2,7 @@ import { ProductRowContainer } from "./productRowWrappers";
 import { NumericInput } from "../numberInput";
 import { IconDelete } from "../../styles";
 import { UnstyledButton } from "../buttonUnstyled";
-import { FadeOutMotion } from "../animatedComps";
+import { FadeOutMotion } from "../animations";
 import { RankDisplay } from "../rankDisplay";
 import { useState } from "react";
 

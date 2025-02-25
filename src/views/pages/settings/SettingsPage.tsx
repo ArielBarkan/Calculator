@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 // Custom imports
-import { useTheme } from "../../../context/ThemeContext";
+import { useTheme } from "../../../context/theme.context";
 import { ToggleSwitch } from "../../../components/toggleSwitch";
 import { THEME_ENUMS } from "../../../enums";
 import { Row, DoubleLineWrapper, TopLine, BottomLine } from "./SettingWrappers";
@@ -16,9 +16,9 @@ import { getSelectedLanguageByLocale } from "../../../utils";
 import {
     localStorageGetSelectedCurrency
 
-} from "../../../services/localStorageService";
+} from "../../../services";
 import { useState } from "react";
-import { GOOGLE_ANALYTICS } from "../../../utils/analytics";
+import { GOOGLE_ANALYTICS } from "../../../utils/analytics.util";
 import { GA_EVENTS } from "../../../consts";
 
 

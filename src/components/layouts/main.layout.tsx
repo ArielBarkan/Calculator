@@ -1,10 +1,10 @@
 import React from "react";
-import { LayoutWrapper, MainContent } from "./layoutWrappers";
+import { LayoutWrapper, MainContent } from "./layout.wrappers";
 import { Outlet } from "react-router-dom";
 
 import { TopBarMenu } from "../topBarMenu";
 
-const Layout = () => {
+const MainLayout = () => {
     return (
         <LayoutWrapper>
             <TopBarMenu />
@@ -15,4 +15,4 @@ const Layout = () => {
     );
 };
 
-export default Layout;
+export default MainLayout;

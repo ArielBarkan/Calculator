@@ -1,3 +1,3 @@
-export { SUPPORTED_CURRENCIES } from "./currencies";
-export { SUPPORTED_LANGUAGES } from "./languages";
-export { GA_EVENTS } from "./analyticsEvents";
+export { SUPPORTED_CURRENCIES } from "./currencies.const";
+export { SUPPORTED_LANGUAGES } from "./languages.const";
+export { GA_EVENTS } from "./analyticsEvents.const";

@@ -1,4 +1,4 @@
-export { ChangeLanguage } from "./languageService";
+export { ChangeLanguage } from "./language.service";
 
 export {
     localStorageUpdateSelectedLanguage,
@@ -9,4 +9,4 @@ export {
     localStorageGetSelectedCurrency,
     localStorageUpdateSelectedMeasurement,
     localStorageGetSelectedMeasurement
-} from "./localStorageService";
+} from "./localStorage.service";

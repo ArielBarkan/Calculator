@@ -19,7 +19,7 @@ import { useState } from "react";
 import { IconsGroup } from "./currencyWrappers";
 import { InternationalFlag } from "../../../../assets";
 import { NotifySuccess } from "../../../../components/toast/toast";
-import { GOOGLE_ANALYTICS } from "../../../../utils/analytics";
+import { GOOGLE_ANALYTICS } from "../../../../utils/analytics.util";
 
 const CurrencyPage = () => {
     const { t: translate } = useTranslation("common");

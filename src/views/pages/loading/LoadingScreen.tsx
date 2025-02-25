@@ -1,7 +1,7 @@
 import { LoadingWrapper, Spinner } from "./loadingPageWrappers";
 
 
-const LoadingPage = () => {
+const LoadingScreen = () => {
     return (
         <LoadingWrapper>
             <Spinner />
@@ -9,4 +9,4 @@ const LoadingPage = () => {
     );
 };
 
-export default LoadingPage;
+export default LoadingScreen;

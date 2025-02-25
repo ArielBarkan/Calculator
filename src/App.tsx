@@ -6,14 +6,14 @@ import { useLocation } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 
 // Custom imports
-import AppRoutes from "./routes/AppRoutes";
+import AppRoutes from "./routes/app.routes";
 import { ChangeLanguage } from "./services";
-import "./services/i18nService";
-import { ThemeProviderWrapper } from "./context/ThemeContext";
+import "./services/i18n.service";
+import { ThemeProviderWrapper } from "./context/theme.context";
 import { GlobalStyles } from "./styles";
 import { localStorageGetSelectedLanguage } from "./services";
 import { NotifyCustom } from "./components/toast/toast";
-import { GOOGLE_ANALYTICS } from "./utils/analytics";
+import { GOOGLE_ANALYTICS } from "./utils/analytics.util";
 
 
 const App: React.FC = () => {

@@ -3,8 +3,8 @@ import { Routes, Route } from "react-router-dom";
 
 
 // Lazy loading the app pages
-const Layout = lazy(() => import("../components/layout/layout"));
-const LoadingPage = lazy(() => import("../views/pages/loading/loadingPage"));
+const MainLayout = lazy(() => import("../components/layouts/main.layout"));
+const LoadingPage = lazy(() => import("../views/pages/loading/LoadingScreen"));
 const CalculatorPage = lazy(() => import("../views/pages/calculator/CalculatorPage"));
 const AboutPage = lazy(() => import("../views/pages/about/AboutPage"));
 const SettingsPage = lazy(() => import("../views/pages/settings/SettingsPage"));
@@ -16,7 +16,7 @@ const AppRoutes: React.FC = () => {
     return (
         <Suspense fallback={<LoadingPage />}>
             <Routes>
-                <Route path="/" element={<Layout />}>
+                <Route path="/" element={<MainLayout />}>
                     <Route index element={<CalculatorPage />} />
                     <Route path="/about" element={<AboutPage />} />
                     <Route path="/settings" element={<SettingsPage />} />

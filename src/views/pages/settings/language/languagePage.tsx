@@ -9,7 +9,7 @@ import { TitleWithBack } from "../../../../components/titleWithBack";
 import { localStorageGetSelectedLanguage } from "../../../../services";
 import { LocaleType } from "../../../../types";
 import { NotifySuccess, NotifyWarning } from "../../../../components/toast/toast";
-import { GOOGLE_ANALYTICS } from "../../../../utils/analytics";
+import { GOOGLE_ANALYTICS } from "../../../../utils/analytics.util";
 
 const LanguagePage = () => {
     const { t: translate } = useTranslation("common");

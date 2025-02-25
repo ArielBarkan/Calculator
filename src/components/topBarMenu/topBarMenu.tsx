@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 import { IconSettings, IconShare } from "../../styles";
 import { Navbar } from "./topBarMenuWrappers";
 import { UnstyledButton } from "../buttonUnstyled";
-import { GOOGLE_ANALYTICS } from "../../utils/analytics";
+import { GOOGLE_ANALYTICS } from "../../utils/analytics.util";
 import { GA_EVENTS } from "../../consts";
 
 const TopBarMenu = () => {

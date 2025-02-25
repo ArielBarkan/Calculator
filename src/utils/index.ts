@@ -1,3 +1,3 @@
-export { convertCurrenciesToSelect, convertLanguagesToSelect } from "./selectUtils";
-export { getSelectedLanguageByLocale } from "./languageUtils";
-export { getRandomNumber } from "./numbers.utils";
+export { convertCurrenciesToSelect, convertLanguagesToSelect } from "./select.util";
+export { getSelectedLanguageByLocale } from "./language.util";
+export { getRandomNumber } from "./numbers.util";

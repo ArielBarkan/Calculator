@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useTheme } from "styled-components";
 
 import { RankWrapper, Rank } from "./rankDisplayWrappers";
-import { FadeInText } from "../animatedComps";
+import { FadeInText } from "../animations";
 
 
 export type RankDisplayProps = {
