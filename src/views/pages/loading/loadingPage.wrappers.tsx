@@ -1,3 +1,4 @@
+// React and modules imports
 import styled, { keyframes } from "styled-components";
 
 

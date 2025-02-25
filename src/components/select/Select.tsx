@@ -1,16 +1,11 @@
-// Modules imports
+// React and modules imports
 import Select from "react-select";
-import { selectType } from "../../types";
 
 // Custom imports
+import { SelectComponentProps, selectType } from "../../types";
 
-type selectComponentProps = {
-    options: selectType[]
-    returnFunction?: (selectedValue: string) => void;
-    currentValue?: string;
-    isSearchable?: boolean;
-}
-const SelectComponent = (props: selectComponentProps) => {
+
+const SelectComponent = (props: SelectComponentProps) => {
 
     const returnToParent = (selectedOption: selectType | null) => {
         if (selectedOption && props.returnFunction) {

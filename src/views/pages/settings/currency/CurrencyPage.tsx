@@ -1,25 +1,22 @@
-// Modules imports
+// React and modules imports
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 // Custom imports
 import { Row } from "../settings.wrappers";
 import { CurrencyType, currencyType } from "../../../../types";
-
 import { GA_EVENTS, SUPPORTED_CURRENCIES } from "../../../../consts";
 import { TitleWithBack } from "../../../../components/titleWithBack";
-
 import {
     localStorageGetSelectedCurrency, localStorageUpdateSelectedCurrency
 
 } from "../../../../services";
-
-
 import Flag from "react-world-flags";
-import { useState } from "react";
 import { IconsGroup } from "./currency.wrappers";
 import { InternationalFlag } from "../../../../assets";
-import { NotifySuccess } from "../../../../components/toast/toast";
+import { NotifySuccess } from "../../../../components/toast";
 import { GOOGLE_ANALYTICS } from "../../../../utils/analytics.util";
+
 
 const CurrencyPage = () => {
     const { t: translate } = useTranslation("common");

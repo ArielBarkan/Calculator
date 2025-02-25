@@ -1,4 +1,7 @@
+// React and modules imports
 import { useState } from "react";
+
+// Custom imports
 import { NumberInputStyled } from "./numericInput.wrappers";
 import { InputCompProps } from "../../types";
 

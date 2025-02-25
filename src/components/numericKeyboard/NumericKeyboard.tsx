@@ -1,6 +1,9 @@
+// React and modules imports
 import { useState } from "react";
 
+// Custom imports
 import { NumericKeyboardWrapper, NumericKeyButton, TemporaryInputDisplay } from "./numericKeyboard.wrappers";
+
 
 const NumericKeyboard = () => {
     const [value, setValue] = useState<string>("");

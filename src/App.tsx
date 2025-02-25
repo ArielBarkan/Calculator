@@ -10,7 +10,7 @@ import "./services/i18n.service";
 import { ThemeProviderWrapper } from "./context/theme.context";
 import { GlobalStyles } from "./styles";
 import { localStorageGetSelectedLanguage } from "./services";
-import { NotifyCustom } from "./components/toast/toast";
+import { NotifyCustom } from "./components/toast";
 import { GOOGLE_ANALYTICS } from "./utils/analytics.util";
 
 

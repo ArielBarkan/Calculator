@@ -1,15 +1,16 @@
+// React and modules imports
+import { useEffect, useState } from "react";
 import { useTranslation, Trans } from "react-i18next";
 
+// Custom imports
 import { ProductRowContainer, ProductRowsTitle } from "./productRow.wrappers";
-import { ProductRowProps } from "./ProductRow";
 import { CustomModal, UnstyledButton } from "../";
-
-import { useEffect, useState } from "react";
 import { SwitchMeasurement } from "../switchMeasurement";
 import { MEASUREMENT_ENUMS } from "../../enums";
 import { localStorageGetSelectedMeasurement } from "../../services";
+import { ProductRowProps } from "../../types";
 
-//
+
 const ProductRowsHeader = (props: Partial<ProductRowProps>) => {
 
 

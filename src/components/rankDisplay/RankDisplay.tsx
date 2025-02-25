@@ -1,6 +1,8 @@
+// React and modules imports
 import { useEffect, useState } from "react";
 import { useTheme } from "styled-components";
 
+// Custom imports
 import { RankWrapper, Rank } from "./rankDisplay.wrappers";
 import { FadeInText } from "../animations";
 import { RankDisplayProps } from "../../types";

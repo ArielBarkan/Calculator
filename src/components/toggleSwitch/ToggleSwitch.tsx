@@ -1,3 +1,4 @@
+// Custom imports
 import { SwitchWrapper, HiddenCheckbox, Slider } from "./toggleSwitch.wrappers";
 import { ToggleSwitchProps } from "../../types";
 

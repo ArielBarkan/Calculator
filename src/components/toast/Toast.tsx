@@ -1,3 +1,4 @@
+// React and modules imports
 import { Bounce, toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 

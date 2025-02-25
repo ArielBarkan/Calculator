@@ -1,8 +1,5 @@
-// React imports
-
-// Modules imports
+// React and modules imports
 import styled from "styled-components";
-// Custom imports
 
 
 const TitleWithBackWrapper = styled.div`

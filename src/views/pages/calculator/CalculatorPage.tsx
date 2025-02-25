@@ -1,9 +1,10 @@
+// React and modules imports
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { AnimatePresence } from "framer-motion";
 
+// Custom imports
 import { ProductRow, ProductRowsHeader } from "../../../components/productRow";
-
 import { ProductListType } from "../../../types";
 import { CustomButton } from "../../../components";
 import { getRandomNumber } from "../../../utils";

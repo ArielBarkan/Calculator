@@ -1,10 +1,13 @@
+// React and modules imports
+import { useState } from "react";
+
+// Custom imports
 import { ProductRowContainer } from "./productRow.wrappers";
 import { NumericInput } from "../numberInput";
 import { IconDelete } from "../../styles";
 import { UnstyledButton } from "../buttonUnstyled";
 import { SlideOutMotion } from "../animations";
 import { RankDisplay } from "../rankDisplay";
-import { useState } from "react";
 import { ProductRowProps } from "../../types";
 
 

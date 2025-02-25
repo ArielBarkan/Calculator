@@ -114,6 +114,13 @@ type SwitchMeasurementProps = {
     returnFunction: (measurement: MEASUREMENT_ENUMS) => void;
 }
 
+type SelectComponentProps = {
+    options: selectType[]
+    returnFunction?: (selectedValue: string) => void;
+    currentValue?: string;
+    isSearchable?: boolean;
+}
+
 export {
     languageType,
     currencyType,
@@ -132,5 +139,6 @@ export {
     InputCompProps,
     ProductRowProps,
     RankDisplayProps,
-    SwitchMeasurementProps
+    SwitchMeasurementProps,
+    SelectComponentProps
 };

@@ -1,3 +1,4 @@
+// React and modules imports
 import styled from "styled-components";
 
 const Row = styled.div<{ selected?: boolean, disabled?: boolean }>`

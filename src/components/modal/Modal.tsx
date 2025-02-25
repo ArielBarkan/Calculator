@@ -1,8 +1,11 @@
+// React and modules imports
 import React from "react";
 import Modal from "react-modal";
 
+// Custom imports
 import { StyledModal, Title, Content, CloseButton } from "./modal.wrappers";
 import { ModalProps } from "../../types";
+
 
 Modal.setAppElement("#root"); // Ensure accessibility
 

@@ -1,4 +1,4 @@
-// Modules imports
+// React and modules imports
 import { Link } from "react-router-dom";
 
 // Custom imports

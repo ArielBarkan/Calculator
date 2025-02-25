@@ -1,6 +1,8 @@
+// React and modules imports
 import { motion } from "framer-motion";
-import { PageWrapperProps } from "../../../types";
 
+// Custom imports
+import { PageWrapperProps } from "../../../types";
 
 const pageVariants = {
     initial: { opacity: 0, y: 20 },

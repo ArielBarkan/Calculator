@@ -1,4 +1,8 @@
+// React and modules imports
+import React from "react";
 import { useTheme } from "styled-components";
+
+// Custom imports
 import { ThemedIconProps } from "../../types";
 
 

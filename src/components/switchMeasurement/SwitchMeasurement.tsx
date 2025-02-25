@@ -1,5 +1,7 @@
+// React and modules imports
 import { useTranslation } from "react-i18next";
 
+// Custom imports
 import { localStorageGetSelectedMeasurement, localStorageUpdateSelectedMeasurement } from "../../services";
 import { MeasurementItemContainer } from "./switchMeasurement.wrappers";
 import { MEASUREMENT_ENUMS } from "../../enums";

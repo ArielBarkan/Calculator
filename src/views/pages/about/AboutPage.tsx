@@ -1,6 +1,8 @@
-// Modules imports
+// React and modules imports
 import { useTranslation } from "react-i18next";
-import { CustomButton } from "../../../components/customButton";
+
+// Custom imports
+import { CustomButton } from "../../../components";
 
 
 const AboutPage = () => {

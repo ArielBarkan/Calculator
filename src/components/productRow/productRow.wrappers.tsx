@@ -1,3 +1,4 @@
+// React and modules imports
 import styled from "styled-components";
 
 const ProductRowContainer = styled.span<{ selected?: boolean }>`

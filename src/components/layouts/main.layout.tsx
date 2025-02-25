@@ -1,8 +1,11 @@
+// React and modules imports
 import React from "react";
-import { LayoutWrapper, MainContent } from "./layout.wrappers";
 import { Outlet } from "react-router-dom";
 
+// Custom imports
+import { LayoutWrapper, MainContent } from "./layout.wrappers";
 import { TopBarMenu } from "../topBarMenu";
+
 
 const MainLayout = () => {
     return (

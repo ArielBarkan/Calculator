@@ -1,4 +1,5 @@
-// Modules imports
+// React and modules imports
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
@@ -7,17 +8,11 @@ import { useTheme } from "../../../context/theme.context";
 import { ToggleSwitch } from "../../../components/toggleSwitch";
 import { THEME_ENUMS } from "../../../enums";
 import { Row, DoubleLineWrapper, TopLine, BottomLine } from "./settings.wrappers";
-
 import { IconNext } from "../../../styles";
 import { TitleWithBack } from "../../../components/titleWithBack";
-import { NotifySuccess, NotifyWarning } from "../../../components/toast/toast";
-
+import { NotifySuccess, NotifyWarning } from "../../../components/toast";
 import { getSelectedLanguageByLocale } from "../../../utils";
-import {
-    localStorageGetSelectedCurrency
-
-} from "../../../services";
-import { useState } from "react";
+import { localStorageGetSelectedCurrency } from "../../../services";
 import { GOOGLE_ANALYTICS } from "../../../utils/analytics.util";
 import { GA_EVENTS } from "../../../consts";
 

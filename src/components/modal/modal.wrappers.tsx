@@ -1,5 +1,7 @@
+// React and modules imports
 import styled from "styled-components";
 import Modal from "react-modal";
+
 
 const StyledModal = styled(Modal)`
     background-color: ${({ theme }) => theme.body.bgColor};
