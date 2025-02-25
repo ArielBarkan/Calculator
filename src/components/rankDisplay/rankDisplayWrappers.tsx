@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-const RankWrapper = styled.span<{ color: string; dimension: number }>`
+const RankWrapper = styled.span<{ color: string; $dimension: number }>`
     background-color: ${({ color }) => color};
-    width: ${({ dimension }) => `${dimension}px`};
-    height: ${({ dimension }) => `${dimension}px`};
-    min-width: ${({ dimension }) => `${dimension}px`};
+    width: ${({ $dimension }) => `${$dimension}px`};
+    height: ${({ $dimension }) => `${$dimension}px`};
+    min-width: ${({ $dimension }) => `${$dimension}px`};
 
     /* Center content */
     display: flex;
@@ -16,7 +16,7 @@ const RankWrapper = styled.span<{ color: string; dimension: number }>`
 `;
 
 const Rank = styled.p`
-  
+
     font-weight: bold;
     color: black;
     margin: 0;

@@ -23,7 +23,7 @@ const RankDisplay = (props: RankDisplayProps) => {
     }
 
     return (
-        <RankWrapper {...{ color }} dimension={dimension}>
+        <RankWrapper {...{ color }} $dimension={dimension}>
             <Rank>{rank}</Rank>
         </RankWrapper>
     );
