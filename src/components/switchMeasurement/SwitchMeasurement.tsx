@@ -3,11 +3,9 @@ import { useTranslation } from "react-i18next";
 import { localStorageGetSelectedMeasurement, localStorageUpdateSelectedMeasurement } from "../../services";
 import { MeasurementItemContainer } from "./switchMeasurementWrappers";
 import { MEASUREMENT_ENUMS } from "../../enums";
+import { SwitchMeasurementProps } from "../../types";
 
-type SwitchMeasurementProps = {
-    returnFunction: (measurement: MEASUREMENT_ENUMS) => void;
 
-}
 const SwitchMeasurement = (props: SwitchMeasurementProps) => {
 
 

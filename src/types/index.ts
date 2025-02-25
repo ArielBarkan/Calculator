@@ -3,7 +3,8 @@ import { IconType } from "react-icons";
 
 // Custom imports
 import { SUPPORTED_CURRENCIES, SUPPORTED_LANGUAGES } from "../consts";
-import { THEME_ENUMS } from "../enums";
+import { MEASUREMENT_ENUMS, THEME_ENUMS } from "../enums";
+import React, { ReactNode } from "react";
 
 type languageType = {
     locale: string;
@@ -75,6 +76,44 @@ type ThemeContextType = {
     toggleTheme: () => THEME_ENUMS;
 }
 
+type PageWrapperProps = {
+    children: ReactNode;
+};
+
+type ModalProps = {
+    isOpen: boolean;
+    onClose: () => void;
+    title?: string;
+    children: React.ReactNode;
+    closeButtonText?: string;
+};
+
+type InputCompProps = {
+    maxLength: number;
+    focusFunction: () => void;
+    blurFunction: () => void;
+};
+
+type ProductRowProps = {
+    listOrder: number,
+    productCount: number
+    id: number;
+    deleteFunction: (rowId: number) => void;
+    quantity?: number;
+    price?: number;
+    unifiedPrice?: number;
+    rank: number;
+};
+
+type RankDisplayProps = {
+    rank: number;
+    dimension: number
+}
+
+type SwitchMeasurementProps = {
+    returnFunction: (measurement: MEASUREMENT_ENUMS) => void;
+}
+
 export {
     languageType,
     currencyType,
@@ -87,5 +126,11 @@ export {
     TitleWithBackProps,
     ProductListType,
     FadeInTextProps,
-    ThemeContextType
+    ThemeContextType,
+    PageWrapperProps,
+    ModalProps,
+    InputCompProps,
+    ProductRowProps,
+    RankDisplayProps,
+    SwitchMeasurementProps
 };

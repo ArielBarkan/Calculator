@@ -3,12 +3,9 @@ import { useTheme } from "styled-components";
 
 import { RankWrapper, Rank } from "./rankDisplayWrappers";
 import { FadeInText } from "../animations";
+import { RankDisplayProps } from "../../types";
 
 
-export type RankDisplayProps = {
-    rank: number;
-    dimension: number
-}
 const RankDisplay = (props: RankDisplayProps) => {
     const { rank, dimension } = props;
     const [isVisible, setIsVisible] = useState(false);

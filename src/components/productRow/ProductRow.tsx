@@ -5,18 +5,8 @@ import { UnstyledButton } from "../buttonUnstyled";
 import { SlideOutMotion } from "../animations";
 import { RankDisplay } from "../rankDisplay";
 import { useState } from "react";
+import { ProductRowProps } from "../../types";
 
-
-export type ProductRowProps = {
-    listOrder: number,
-    productCount: number
-    id: number;
-    deleteFunction: (rowId: number) => void;
-    quantity?: number;
-    price?: number;
-    unifiedPrice?: number;
-    rank: number;
-};
 
 const ProductRow = (props: ProductRowProps) => {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars

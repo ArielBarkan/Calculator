@@ -1,11 +1,8 @@
 import { useState } from "react";
 import { NumberInputStyled } from "./numberInputWrappers";
+import { InputCompProps } from "../../types";
 
-export type InputCompProps = {
-    maxLength: number;
-    focusFunction: () => void;
-    blurFunction: () => void;
-}
+
 const NumericInput = (props: InputCompProps) => {
     const { maxLength, focusFunction, blurFunction } = props;
     const [value, setValue] = useState<string>("");

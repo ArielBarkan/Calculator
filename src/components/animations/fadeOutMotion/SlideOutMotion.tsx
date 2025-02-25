@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ReactNode } from "react";
+import { PageWrapperProps } from "../../../types";
 
 
 const pageVariants = {
@@ -12,9 +12,6 @@ const pageVariants = {
     transition: { duration: 0.3 }
 };
 
-type PageWrapperProps = {
-    children: ReactNode;
-};
 
 const SlideOutMotion = ({ children }: PageWrapperProps) => {
     return (
