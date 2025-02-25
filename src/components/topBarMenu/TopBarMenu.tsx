@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 
 // Custom imports
 import { IconSettings, IconShare } from "../../styles";
-import { Navbar } from "./topBarMenuWrappers";
+import { Navbar } from "./topBarMenu.wrappers";
 import { UnstyledButton } from "../buttonUnstyled";
 import { GOOGLE_ANALYTICS } from "../../utils/analytics.util";
 import { GA_EVENTS } from "../../consts";

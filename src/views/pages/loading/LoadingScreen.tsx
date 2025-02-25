@@ -1,4 +1,4 @@
-import { LoadingWrapper, Spinner } from "./loadingPageWrappers";
+import { LoadingWrapper, Spinner } from "./loadingPage.wrappers";
 
 
 const LoadingScreen = () => {

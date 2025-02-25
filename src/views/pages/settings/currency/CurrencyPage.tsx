@@ -2,7 +2,7 @@
 import { useTranslation } from "react-i18next";
 
 // Custom imports
-import { Row } from "../SettingWrappers";
+import { Row } from "../settings.wrappers";
 import { CurrencyType, currencyType } from "../../../../types";
 
 import { GA_EVENTS, SUPPORTED_CURRENCIES } from "../../../../consts";
@@ -16,7 +16,7 @@ import {
 
 import Flag from "react-world-flags";
 import { useState } from "react";
-import { IconsGroup } from "./currencyWrappers";
+import { IconsGroup } from "./currency.wrappers";
 import { InternationalFlag } from "../../../../assets";
 import { NotifySuccess } from "../../../../components/toast/toast";
 import { GOOGLE_ANALYTICS } from "../../../../utils/analytics.util";

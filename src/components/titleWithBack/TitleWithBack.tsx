@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 
 // Custom imports
-import { TitleWithBackWrapper, Title, Back } from "./titleWithBackWrappers";
+import { TitleWithBackWrapper, Title, Back } from "./titleWithBack.wrappers";
 import { IconBack } from "../../styles";
 import { TitleWithBackProps } from "../../types";
 

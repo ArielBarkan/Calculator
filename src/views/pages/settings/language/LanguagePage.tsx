@@ -2,7 +2,7 @@
 import { useTranslation } from "react-i18next";
 import Flag from "react-world-flags";
 // Custom imports
-import { Row } from "../SettingWrappers";
+import { Row } from "../settings.wrappers";
 import { GA_EVENTS, SUPPORTED_LANGUAGES } from "../../../../consts";
 import { ChangeLanguage } from "../../../../services";
 import { TitleWithBack } from "../../../../components/titleWithBack";

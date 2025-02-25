@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { useTheme } from "../../../context/theme.context";
 import { ToggleSwitch } from "../../../components/toggleSwitch";
 import { THEME_ENUMS } from "../../../enums";
-import { Row, DoubleLineWrapper, TopLine, BottomLine } from "./SettingWrappers";
+import { Row, DoubleLineWrapper, TopLine, BottomLine } from "./settings.wrappers";
 
 import { IconNext } from "../../../styles";
 import { TitleWithBack } from "../../../components/titleWithBack";
