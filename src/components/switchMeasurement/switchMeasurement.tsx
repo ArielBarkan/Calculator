@@ -30,7 +30,7 @@ const SwitchMeasurement = (props: SwitchMeasurementProps) => {
             }}
                                       selected={selectedMeasurement === MEASUREMENT_ENUMS.weight}
             >
-                {translate("common:pages.calculator.measurement.weight")}
+                {translate("common:pages.calculator.measurement.weight.name")}
             </MeasurementItemContainer>
 
 
@@ -39,7 +39,7 @@ const SwitchMeasurement = (props: SwitchMeasurementProps) => {
             }}
                                       selected={selectedMeasurement === MEASUREMENT_ENUMS.liquid}
             >
-                {translate("common:pages.calculator.measurement.liquid")}
+                {translate("common:pages.calculator.measurement.liquid.name")}
             </MeasurementItemContainer>
 
 
@@ -48,7 +48,7 @@ const SwitchMeasurement = (props: SwitchMeasurementProps) => {
             }}
                                       selected={selectedMeasurement === MEASUREMENT_ENUMS.quantity}
             >
-                {translate("common:pages.calculator.measurement.quantity")}
+                {translate("common:pages.calculator.measurement.quantity.name")}
             </MeasurementItemContainer>
 </span>
 

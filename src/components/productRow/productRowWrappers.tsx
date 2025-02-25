@@ -6,19 +6,24 @@ const ProductRowContainer = styled.span<{ selected?: boolean }>`
     align-items: center;
     gap: 10px;
     padding: 10px;
-    border-bottom: 1px solid ${({
-                                    selected,
-                                    theme
-                                }) => selected ? theme.SelectableElement.selectedBorder : "black"};
-    border-top: 1px solid ${({ selected, theme }) => selected ? theme.SelectableElement.selectedBorder : "black"};
-
+    background-color: ${({
+                             selected,
+                             theme
+                         }) => selected ? theme.SelectableElement.activeBackground : "inherit"};;
 `;
 
-const ProductRowsTitle = styled.p`
+const ProductRowsTitle = styled.span`
     font-weight: bold;
-    display: inline-block;
-        // transform: rotate(${({ theme }) => theme.direction === "rtl" ? "-45deg" : "45deg"}); /* Adjust angle as needed */
     white-space: nowrap;
     max-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    text-align: center;
+
+    p {
+        padding: 0;
+        margin: 0;
+    }
 `;
 export { ProductRowContainer, ProductRowsTitle };

@@ -39,15 +39,27 @@
       },
       "header": {
         "delete": "למחוק",
-        "price": "מחיר",
+        "price": "מחיר<br/>המוצר",
         "quantity": "כמות",
-        "rank": "דירוג",
+        "rank": "דירוג<br/>מחיר",
         "unifiedPrice": "מחיר ל"
       },
       "measurement": {
-        "liquid": "נוזלים",
-        "quantity": "כמות",
-        "weight": "משקל"
+        "liquid": {
+          "name": "נוזלים",
+          "shortUnit": "100מ\"ל",
+          "unit": "מיליליטר"
+        },
+        "quantity": {
+          "name": "כמות",
+          "shortUnit": "1יח'",
+          "unit": "יחידות"
+        },
+        "weight": {
+          "name": "משקל",
+          "shortUnit": "100גר' ",
+          "unit": "גרמים"
+        }
       },
       "modal": {
         "title": "בחרי יחידת השוואה"

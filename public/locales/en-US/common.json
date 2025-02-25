@@ -45,9 +45,21 @@
         "unifiedPrice": "Price per"
       },
       "measurement": {
-        "liquid": "Liquid",
-        "quantity": "Quantity",
-        "weight": "Weight"
+        "liquid": {
+          "name": "Liquids",
+          "shortUnit": "100ml",
+          "unit": "Milliliters"
+        },
+        "quantity": {
+          "name": "Quantity",
+          "shortUnit": "1pc",
+          "unit": "Units"
+        },
+        "weight": {
+          "name": "Weight",
+          "shortUnit": "100g",
+          "unit": "Grams"
+        }
       },
       "modal": {
         "title": "Choose a comparison unit"
