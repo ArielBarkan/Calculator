@@ -7,13 +7,13 @@ type FadeInTextProps = {
 
 const FadeInText: React.FC<FadeInTextProps> = ({ children, isVisible }) => {
     return (
-        <motion.p
+        <motion.span
             initial={{ opacity: .1 }}
             animate={{ opacity: isVisible ? 1 : 0 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
         >
             {children}
-        </motion.p>
+        </motion.span>
     );
 };
 
