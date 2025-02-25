@@ -1,4 +1,4 @@
-import { ProductRowContainer } from "./productRowWrappers";
+import { ProductRowContainer } from "./productRow.wrappers";
 import { NumericInput } from "../numberInput";
 import { IconDelete } from "../../styles";
 import { UnstyledButton } from "../buttonUnstyled";

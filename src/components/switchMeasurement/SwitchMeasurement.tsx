@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 
 import { localStorageGetSelectedMeasurement, localStorageUpdateSelectedMeasurement } from "../../services";
-import { MeasurementItemContainer } from "./switchMeasurementWrappers";
+import { MeasurementItemContainer } from "./switchMeasurement.wrappers";
 import { MEASUREMENT_ENUMS } from "../../enums";
 import { SwitchMeasurementProps } from "../../types";
 

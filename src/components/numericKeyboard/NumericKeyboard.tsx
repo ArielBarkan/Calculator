@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { NumericKeyboardWrapper, NumericKeyButton, TemporaryInputDisplay } from "./numericKeyboardWrappers";
+import { NumericKeyboardWrapper, NumericKeyButton, TemporaryInputDisplay } from "./numericKeyboard.wrappers";
 
 const NumericKeyboard = () => {
     const [value, setValue] = useState<string>("");

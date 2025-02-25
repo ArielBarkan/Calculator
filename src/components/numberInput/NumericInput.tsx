@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NumberInputStyled } from "./numberInputWrappers";
+import { NumberInputStyled } from "./numericInput.wrappers";
 import { InputCompProps } from "../../types";
 
 

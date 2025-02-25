@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useTheme } from "styled-components";
 
-import { RankWrapper, Rank } from "./rankDisplayWrappers";
+import { RankWrapper, Rank } from "./rankDisplay.wrappers";
 import { FadeInText } from "../animations";
 import { RankDisplayProps } from "../../types";
 

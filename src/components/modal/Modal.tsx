@@ -1,7 +1,7 @@
 import React from "react";
 import Modal from "react-modal";
 
-import { StyledModal, Title, Content, CloseButton } from "./modalWrappers";
+import { StyledModal, Title, Content, CloseButton } from "./modal.wrappers";
 import { ModalProps } from "../../types";
 
 Modal.setAppElement("#root"); // Ensure accessibility
