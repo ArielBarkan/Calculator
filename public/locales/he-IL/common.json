@@ -42,7 +42,7 @@
         "price": "מחיר",
         "quantity": "כמות",
         "rank": "דירוג",
-        "unifiedPrice": "מחיר ל"
+        "unifiedPrice": "מחיר <br/> ל"
       },
       "measurement": {
         "liquid": "נוזלים",

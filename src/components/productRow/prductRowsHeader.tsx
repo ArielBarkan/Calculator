@@ -1,4 +1,4 @@
-import { useTranslation } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
 
 import { ProductRowContainer, ProductRowsTitle } from "./productRowWrappers";
 import { ProductRowProps } from "./productRow";
@@ -42,14 +42,17 @@ const ProductRowsHeader = (props: Partial<ProductRowProps>) => {
         setMeasurementLabel(label);
 
     }, [translate, selectedMeasurement]);
-    
+    //<p dangerouslySetInnerHTML={{ __html: t("welcome") }} />
+
     return (
         <>
             <ProductRowContainer>
                 <ProductRowsTitle>{translate("common:pages.calculator.header.price")}</ProductRowsTitle>
                 <ProductRowsTitle><UnstyledButton
                     onClick={() => setModalOpen(true)}>{measurementLabel}&#9660;</UnstyledButton></ProductRowsTitle>
-                <ProductRowsTitle>{translate("common:pages.calculator.header.unifiedPrice")}</ProductRowsTitle>
+                <ProductRowsTitle>
+                    <Trans i18nKey="common:pages.calculator.header.unifiedPrice" /> 100גרם
+                </ProductRowsTitle>
                 <ProductRowsTitle>{translate("common:pages.calculator.header.rank")}</ProductRowsTitle>
                 {productCount! > 1 && (
                     <ProductRowsTitle />
