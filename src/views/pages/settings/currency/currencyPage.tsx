@@ -11,7 +11,7 @@ import { TitleWithBack } from "../../../../components/titleWithBack";
 import {
     localStorageGetSelectedCurrency, localStorageUpdateSelectedCurrency
 
-} from "../../../../services/localStorageService";
+} from "../../../../services";
 
 
 import Flag from "react-world-flags";

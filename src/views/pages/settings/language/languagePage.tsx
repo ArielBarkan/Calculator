@@ -6,7 +6,7 @@ import { Row } from "../SettingWrappers";
 import { GA_EVENTS, SUPPORTED_LANGUAGES } from "../../../../consts";
 import { ChangeLanguage } from "../../../../services";
 import { TitleWithBack } from "../../../../components/titleWithBack";
-import { localStorageGetSelectedLanguage } from "../../../../services/localStorageService";
+import { localStorageGetSelectedLanguage } from "../../../../services";
 import { LocaleType } from "../../../../types";
 import { NotifySuccess, NotifyWarning } from "../../../../components/toast/toast";
 import { GOOGLE_ANALYTICS } from "../../../../utils/analytics";

@@ -1,6 +1,6 @@
 import { languageType, LocaleType } from "../types";
 import { SUPPORTED_LANGUAGES } from "../consts";
-import { localStorageGetSelectedLanguage } from "../services/localStorageService";
+import { localStorageGetSelectedLanguage } from "../services";
 
 
 const getSelectedLanguageByLocale = (): languageType => {

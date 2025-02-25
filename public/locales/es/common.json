@@ -44,6 +44,11 @@
         "rank": "Clasificación",
         "unifiedPrice": "Precio por"
       },
+      "measurement": {
+        "liquid": "Liquidos",
+        "quantity": "Cantidad",
+        "weight": "Peso"
+      },
       "modal": {
         "title": "Elige una unidad de comparación"
       },

@@ -7,7 +7,7 @@ import { ThemeProvider } from "styled-components";
 // Custom imports
 import { THEME_ENUMS } from "../enums";
 import { lightTheme, darkTheme } from "../styles";
-import { localStorageUpdateSelectedTheme, localStorageGetSelectedTheme } from "../services/localStorageService";
+import { localStorageUpdateSelectedTheme, localStorageGetSelectedTheme } from "../services";
 
 interface ThemeContextType {
     theme: THEME_ENUMS;
@@ -51,6 +51,7 @@ export const ThemeProviderWrapper: React.FC<{ children: React.ReactNode }> = ({ 
     );
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useTheme = () => {
     const context = useContext(ThemeContext);
     if (!context) {

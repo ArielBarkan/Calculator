@@ -44,6 +44,11 @@
         "rank": "Rank",
         "unifiedPrice": "Price per"
       },
+      "measurement": {
+        "liquid": "Liquid",
+        "quantity": "Quantity",
+        "weight": "Weight"
+      },
       "modal": {
         "title": "Choose a comparison unit"
       },

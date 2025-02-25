@@ -44,6 +44,11 @@
         "rank": "דירוג",
         "unifiedPrice": "מחיר ל"
       },
+      "measurement": {
+        "liquid": "נוזלים",
+        "quantity": "כמות",
+        "weight": "משקל"
+      },
       "modal": {
         "title": "בחרי יחידת השוואה"
       },

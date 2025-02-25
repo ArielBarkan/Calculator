@@ -1,4 +1,4 @@
-import { THEME_ENUMS } from "../enums";
+import { MEASUREMENT_ENUMS, THEME_ENUMS } from "../enums";
 import { CurrencyType, LocaleType } from "../types";
 
 
@@ -26,6 +26,14 @@ const localStorageGetSelectedCurrency = (): CurrencyType => {
     return (localStorage.getItem("currency") || import.meta.env.VITE_DEFAULT_CURRENCY_ISO) as CurrencyType;
 };
 
+const localStorageUpdateSelectedMeasurement = (measurement: MEASUREMENT_ENUMS) => {
+    localStorage.setItem("measurement", measurement);
+};
+
+const localStorageGetSelectedMeasurement = (): MEASUREMENT_ENUMS => {
+    return (localStorage.getItem("measurement") || import.meta.env.VITE_DEFAULT_MEASUREMENT) as MEASUREMENT_ENUMS;
+};
+
 
 export {
     localStorageUpdateSelectedLanguage,
@@ -33,5 +41,7 @@ export {
     localStorageUpdateSelectedTheme,
     localStorageGetSelectedTheme,
     localStorageUpdateSelectedCurrency,
-    localStorageGetSelectedCurrency
+    localStorageGetSelectedCurrency,
+    localStorageUpdateSelectedMeasurement,
+    localStorageGetSelectedMeasurement
 };
