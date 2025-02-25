@@ -1,2 +1,2 @@
-export { FadeOutMotion } from "./fadeOutMotion";
+export { SlideOutMotion } from "./fadeOutMotion";
 export { FadeInText } from "./fadeInText";

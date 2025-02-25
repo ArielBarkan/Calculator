@@ -1,1 +1,1 @@
-export { NumericKeyboard } from "./numericKeyboard";
+export { NumericKeyboard } from "./NumericKeyboard";

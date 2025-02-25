@@ -1,3 +1,4 @@
+// Custom imports
 import { languageType, LocaleType } from "../types";
 import { SUPPORTED_LANGUAGES } from "../consts";
 import { localStorageGetSelectedLanguage } from "../services";

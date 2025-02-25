@@ -1,4 +1,6 @@
+// React and modules imports
 import { useEffect, useState } from "react";
+
 
 const useUserLanguage = () => {
     const [language, setLanguage] = useState<string>("");

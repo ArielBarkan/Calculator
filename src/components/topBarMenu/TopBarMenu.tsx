@@ -1,6 +1,5 @@
-// React imports
+// React and modules imports
 import { useEffect, useState } from "react";
-// Modules imports
 import { useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
@@ -10,6 +9,7 @@ import { Navbar } from "./topBarMenuWrappers";
 import { UnstyledButton } from "../buttonUnstyled";
 import { GOOGLE_ANALYTICS } from "../../utils/analytics.util";
 import { GA_EVENTS } from "../../consts";
+
 
 const TopBarMenu = () => {
     const { t: translate } = useTranslation("common");

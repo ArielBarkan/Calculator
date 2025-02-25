@@ -1,7 +1,7 @@
 import { useTranslation, Trans } from "react-i18next";
 
 import { ProductRowContainer, ProductRowsTitle } from "./productRowWrappers";
-import { ProductRowProps } from "./productRow";
+import { ProductRowProps } from "./ProductRow";
 import { CustomModal, UnstyledButton } from "../";
 
 import { useEffect, useState } from "react";

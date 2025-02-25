@@ -1,4 +1,4 @@
-import { SwitchWrapper, HiddenCheckbox, Slider } from "./toggleWrappers";
+import { SwitchWrapper, HiddenCheckbox, Slider } from "./toggleSwitchWrappers";
 import { ToggleSwitchProps } from "../../types";
 
 

@@ -1,9 +1,9 @@
+// React and modules imports
+import React from "react";
 import { motion } from "framer-motion";
 
-type FadeInTextProps = {
-    children: React.ReactNode;
-    isVisible: boolean;
-};
+// Custom imports
+import { FadeInTextProps } from "../../../types";
 
 const FadeInText: React.FC<FadeInTextProps> = ({ children, isVisible }) => {
     return (

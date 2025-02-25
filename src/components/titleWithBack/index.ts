@@ -1,1 +1,1 @@
-export { TitleWithBack } from "./titleWithBack";
+export { TitleWithBack } from "./TitleWithBack";

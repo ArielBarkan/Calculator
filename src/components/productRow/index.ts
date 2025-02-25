@@ -1,2 +1,2 @@
-export { ProductRow } from "./productRow";
-export { ProductRowsHeader } from "./prductRowsHeader";
+export { ProductRow } from "./ProductRow";
+export { ProductRowsHeader } from "./ProductRowsHeader";

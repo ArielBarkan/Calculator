@@ -1,1 +1,1 @@
-export { SwitchMeasurement } from "./switchMeasurement";
+export { SwitchMeasurement } from "./SwitchMeasurement";

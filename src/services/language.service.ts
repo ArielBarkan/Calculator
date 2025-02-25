@@ -1,7 +1,7 @@
-// Modules imports
+// React and modules imports
 import i18n from "i18next";
 
-//Custom imports
+// Custom imports
 import { languageType, LocaleType } from "../types";
 import { SUPPORTED_LANGUAGES } from "../consts";
 import { localStorageUpdateSelectedLanguage } from "./";

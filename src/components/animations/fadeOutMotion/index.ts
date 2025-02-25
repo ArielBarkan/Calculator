@@ -1,1 +1,1 @@
-export { FadeOutMotion } from "./fadeOutMotion";
+export { SlideOutMotion } from "./SlideOutMotion";

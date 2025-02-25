@@ -1,1 +1,1 @@
-export { RankDisplay } from "./rankDisplay";
+export { RankDisplay } from "./RankDisplay";

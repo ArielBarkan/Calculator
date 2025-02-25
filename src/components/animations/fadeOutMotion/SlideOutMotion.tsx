@@ -16,7 +16,7 @@ type PageWrapperProps = {
     children: ReactNode;
 };
 
-const FadeOutMotion = ({ children }: PageWrapperProps) => {
+const SlideOutMotion = ({ children }: PageWrapperProps) => {
     return (
         <motion.div
             variants={pageVariants}
@@ -29,4 +29,4 @@ const FadeOutMotion = ({ children }: PageWrapperProps) => {
     );
 };
 
-export { FadeOutMotion };
+export { SlideOutMotion };

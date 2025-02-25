@@ -1,4 +1,4 @@
-// Modules imports
+// React and modules imports
 // https://react-icons.github.io/react-icons/
 import {
     MdNavigateNext,
@@ -8,9 +8,9 @@ import {
     MdOutlineDeleteForever
 } from "react-icons/md";
 
-// Custom imports
+
 import { IconProps } from "../types";
-import { ThemedIcon } from "../components/themedIcon/themedIcon";
+import { ThemedIcon } from "../components/themedIcon/ThemedIcon";
 
 const IconNext = (props: IconProps) => <ThemedIcon icon={MdNavigateNext} color={props?.color} size={props?.size}
                                                    rtlIgnore={props?.rtlIgnore} />;

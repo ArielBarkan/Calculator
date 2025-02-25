@@ -2,7 +2,7 @@ import { ProductRowContainer } from "./productRowWrappers";
 import { NumericInput } from "../numberInput";
 import { IconDelete } from "../../styles";
 import { UnstyledButton } from "../buttonUnstyled";
-import { FadeOutMotion } from "../animations";
+import { SlideOutMotion } from "../animations";
 import { RankDisplay } from "../rankDisplay";
 import { useState } from "react";
 
@@ -31,7 +31,7 @@ const ProductRow = (props: ProductRowProps) => {
     };
 
     return (
-        <FadeOutMotion>
+        <SlideOutMotion>
             <ProductRowContainer {...{ selected }}>
                 <NumericInput maxLength={5} blurFunction={handleBlur} focusFunction={handleFocus} />
                 <NumericInput maxLength={4} blurFunction={handleBlur} focusFunction={handleFocus} />
@@ -44,7 +44,7 @@ const ProductRow = (props: ProductRowProps) => {
                 )}
             </ProductRowContainer>
 
-        </FadeOutMotion>
+        </SlideOutMotion>
     );
 };
 

@@ -1,5 +1,9 @@
-import { SUPPORTED_CURRENCIES, SUPPORTED_LANGUAGES } from "../consts";
+// React and modules imports
 import { IconType } from "react-icons";
+
+// Custom imports
+import { SUPPORTED_CURRENCIES, SUPPORTED_LANGUAGES } from "../consts";
+import { THEME_ENUMS } from "../enums";
 
 type languageType = {
     locale: string;
@@ -60,6 +64,17 @@ type ProductListType = {
 
 }
 
+type FadeInTextProps = {
+    children: React.ReactNode;
+    isVisible: boolean;
+};
+
+type ThemeContextType = {
+    theme: THEME_ENUMS;
+    direction: "ltr" | "rtl";
+    toggleTheme: () => THEME_ENUMS;
+}
+
 export {
     languageType,
     currencyType,
@@ -70,5 +85,7 @@ export {
     IconProps,
     ThemedIconProps,
     TitleWithBackProps,
-    ProductListType
+    ProductListType,
+    FadeInTextProps,
+    ThemeContextType
 };

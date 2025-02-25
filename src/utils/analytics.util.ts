@@ -1,6 +1,8 @@
+// React and modules imports
 import ReactGA from "react-ga4";
 
 const GA_TRACKING_ID = import.meta.env.VITE_GOOGLE_ANALYTICS_TRACKING_ID;
+
 
 const GOOGLE_ANALYTICS = {
     isGAInitialized: false, // ✅ Ensures events are only sent after GA is ready

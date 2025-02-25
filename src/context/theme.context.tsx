@@ -1,19 +1,12 @@
-// React imports
+// React and modules imports
 import React, { createContext, useState, useContext, useEffect } from "react";
-
-// Modules imports
 import { ThemeProvider } from "styled-components";
-
 // Custom imports
 import { THEME_ENUMS } from "../enums";
 import { lightTheme, darkTheme } from "../styles";
 import { localStorageUpdateSelectedTheme, localStorageGetSelectedTheme } from "../services";
+import { ThemeContextType } from "../types";
 
-interface ThemeContextType {
-    theme: THEME_ENUMS;
-    direction: "ltr" | "rtl";
-    toggleTheme: () => THEME_ENUMS;
-}
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 

@@ -1,7 +1,5 @@
-// React imports
+// React and modules imports
 import React, { useEffect } from "react";
-
-// Modules imports
 import { useLocation } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 
