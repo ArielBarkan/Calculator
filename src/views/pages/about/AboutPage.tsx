@@ -13,8 +13,6 @@ const AboutPage = () => {
         <>
             <PageHeader title={translate("common:pages.about.title")}
                         subTitle={translate("common:pages.about.subTitle")} linkTo={"/"} />
-
-
         </>
     );
 };
