@@ -2,7 +2,7 @@
 import { useTranslation } from "react-i18next";
 
 // Custom imports
-import { CustomButton } from "../../../components";
+import { PageHeader } from "../../../components";
 
 
 const AboutPage = () => {
@@ -10,12 +10,12 @@ const AboutPage = () => {
 
 
     return (
-        <p style={{ padding: "5rem 0 0" }}>
-            {translate("common:pages.about.title")}
+        <>
+            <PageHeader title={translate("common:pages.about.title")}
+                        subTitle={translate("common:pages.about.subTitle")} linkTo={"/"} />
 
-            <CustomButton>Hello</CustomButton>
 
-        </p>
+        </>
     );
 };
 

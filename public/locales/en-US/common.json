@@ -31,6 +31,7 @@
   },
   "pages": {
     "about": {
+      "subTitle": "Learn more about this app and how it helps you compare prices effectively",
       "title": "About"
     },
     "calculator": {

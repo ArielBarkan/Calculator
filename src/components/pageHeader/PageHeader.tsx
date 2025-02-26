@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 
 // Custom imports
-import { PageTitleWrapper, TitleRow, Title, SubTitle, Back } from "./pageHeader.wrappers";
+import { PageHeaderWrapper, TitleRow, Title, SubTitle, Back } from "./pageHeader.wrappers";
 import { IconBack } from "../../styles";
 import { PageHeaderProps } from "../../types";
 
@@ -10,7 +10,7 @@ const PageHeader = (props: PageHeaderProps) => {
     const { title, subTitle, linkTo } = props;
 
     return (
-        <PageTitleWrapper>
+        <PageHeaderWrapper>
             <TitleRow>
                 {linkTo && (
                     <Back>
@@ -19,8 +19,8 @@ const PageHeader = (props: PageHeaderProps) => {
                 )}
                 <Title>{title}</Title>
             </TitleRow>
-            <SubTitle>{subTitle}</SubTitle>
-        </PageTitleWrapper>
+            <SubTitle alignStart={!linkTo}>{subTitle}</SubTitle>
+        </PageHeaderWrapper>
     );
 };
 
