@@ -23,6 +23,7 @@ const App: React.FC = () => {
     }, []);
 
     useEffect(() => {
+        document.title = `CalcPrice - ${location.pathname.replaceAll("/", ">")}`;
         GOOGLE_ANALYTICS.trackPageView(location.pathname);
     }, [location]);
 
