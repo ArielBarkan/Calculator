@@ -1,6 +1,6 @@
 // Custom imports
 import { MEASUREMENT_ENUMS, THEME_ENUMS } from "../enums";
-import { CurrencyType, LocaleType } from "../types";
+import { CurrencyISOType, LocaleType } from "../types";
 
 
 const localStorageUpdateSelectedLanguage = (language: LocaleType) => {
@@ -19,12 +19,12 @@ const localStorageGetSelectedTheme = (): THEME_ENUMS => {
     return (localStorage.getItem("theme") || import.meta.env.VITE_DEFAULT_THEME) as THEME_ENUMS;
 };
 
-const localStorageUpdateSelectedCurrency = (currency: CurrencyType) => {
+const localStorageUpdateSelectedCurrency = (currency: CurrencyISOType) => {
     localStorage.setItem("currency", currency);
 };
 
-const localStorageGetSelectedCurrency = (): CurrencyType => {
-    return (localStorage.getItem("currency") || import.meta.env.VITE_DEFAULT_CURRENCY_ISO) as CurrencyType;
+const localStorageGetSelectedCurrency = (): CurrencyISOType => {
+    return (localStorage.getItem("currency") || import.meta.env.VITE_DEFAULT_CURRENCY_ISO) as CurrencyISOType;
 };
 
 const localStorageUpdateSelectedMeasurement = (measurement: MEASUREMENT_ENUMS) => {

@@ -54,14 +54,15 @@ type PageHeaderProps = {
 // This ensures `LocaleType` is always updated when `supportedLanguages` changes
 // Equivalent to: type LocaleType = "en-US" | "es" | "he-IL" (auto-generated)
 type LocaleType = (typeof SUPPORTED_LANGUAGES)[number]["locale"];
-type CurrencyType = (typeof SUPPORTED_CURRENCIES)[number]["ISO"];
+type CurrencyISOType = (typeof SUPPORTED_CURRENCIES)[number]["ISO"];
+type CurrencySymbolType = (typeof SUPPORTED_CURRENCIES)[number]["symbol"];
 
 
 type ProductListType = {
     id: number;
     quantity?: number;
     price?: number;
-    unifiedPrice?: number;
+    unifiedPrice?: string;
     rank?: number;
 
 }
@@ -136,7 +137,8 @@ export {
     selectType,
     ToggleSwitchProps,
     LocaleType,
-    CurrencyType,
+    CurrencyISOType,
+    CurrencySymbolType,
     IconProps,
     ThemedIconProps,
     PageHeaderProps,

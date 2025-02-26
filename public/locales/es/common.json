@@ -49,16 +49,19 @@
         "liquid": {
           "name": "Líquidos",
           "shortUnit": "100ml",
+          "tableHeader": "Volumen<br/>mililitros",
           "unit": "Mililitros"
         },
         "quantity": {
           "name": "Cantidad",
           "shortUnit": "1ud",
+          "tableHeader": "Cant.<br/>unidades",
           "unit": "Unidades"
         },
         "weight": {
           "name": "Peso",
           "shortUnit": "100g",
+          "tableHeader": "Peso<br/>en gramos",
           "unit": "Gramos"
         }
       },

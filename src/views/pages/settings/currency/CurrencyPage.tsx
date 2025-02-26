@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 
 // Custom imports
 import { Row } from "../settings.wrappers";
-import { CurrencyType, currencyType } from "../../../../types";
+import { CurrencyISOType, currencyType } from "../../../../types";
 import { GA_EVENTS, SUPPORTED_CURRENCIES } from "../../../../consts";
 import { PageHeader, NotifySuccess } from "../../../../components";
 import {
@@ -20,7 +20,7 @@ import { GOOGLE_ANALYTICS } from "../../../../utils/analytics.util";
 const CurrencyPage = () => {
     const { t: translate } = useTranslation("common");
 
-    const [currentCurrency, setCurrentCurrency] = useState<CurrencyType>(localStorageGetSelectedCurrency());
+    const [currentCurrency, setCurrentCurrency] = useState<CurrencyISOType>(localStorageGetSelectedCurrency());
 
     const handleChangeCurrency = (newCurrency: string) => {
 

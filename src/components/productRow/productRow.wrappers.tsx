@@ -20,7 +20,7 @@ const ProductRowsTitle = styled.span`
     display: flex;
     flex-direction: column;
     margin: 0;
-    text-align: center;
+    text-align: justify-all;
 
     p {
         padding: 0;

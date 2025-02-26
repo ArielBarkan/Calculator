@@ -1,12 +1,12 @@
 // React and modules imports
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { AnimatePresence } from "framer-motion";
 
 // Custom imports
 import { ProductRow, ProductRowsHeader, IconButton, PageHeader } from "../../../components";
 import { ProductListType } from "../../../types";
-import { getRandomNumber } from "../../../utils";
+import { getCurrencySymbolByISO, getRandomNumber } from "../../../utils";
 import { IconAdd } from "../../../styles";
 
 
@@ -16,6 +16,8 @@ const CalculatorPage = () => {
     const initialRows: number = Number(import.meta.env.VITE_INITIAL_ROWS);
     const maxRows: number = Number(import.meta.env.VITE_MAX_ROWS);
     const generateId = () => Date.now() + Math.random();
+
+    const currencySymbol = getCurrencySymbolByISO();
 
     // Initialize state with unique objects
     const [productsList, setProductsList] = useState<ProductListType[]>(
@@ -32,6 +34,9 @@ const CalculatorPage = () => {
         setProductsList((prevProducts) => prevProducts.filter((product) => product.id !== rowId));
     };
 
+    useEffect(() => {
+        console.log(productsList);
+    }, [productsList]);
     const productsToAddLeft: number = (maxRows - productsList.length);
     return (
         <>

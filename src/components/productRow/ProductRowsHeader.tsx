@@ -32,16 +32,17 @@ const ProductRowsHeader = (props: Partial<ProductRowProps>) => {
         switch (selectedMeasurement) {
             case MEASUREMENT_ENUMS.weight:
             default:
-                label = translate("common:pages.calculator.measurement.weight.name");
+                label = translate("common:pages.calculator.measurement.weight.tableHeader");
                 labelPricePer = translate("common:pages.calculator.measurement.weight.shortUnit");
                 break;
             case MEASUREMENT_ENUMS.liquid:
-                label = translate("common:pages.calculator.measurement.liquid.name");
+                label = translate("common:pages.calculator.measurement.liquid.tableHeader");
                 labelPricePer = translate("common:pages.calculator.measurement.liquid.shortUnit");
                 break;
             case MEASUREMENT_ENUMS.quantity:
-                label = translate("common:pages.calculator.measurement.quantity.name");
+                label = translate("common:pages.calculator.measurement.quantity.tableHeader");
                 labelPricePer = translate("common:pages.calculator.measurement.quantity.shortUnit");
+
                 break;
         }
         setMeasurementUnit(labelPricePer);
@@ -54,8 +55,13 @@ const ProductRowsHeader = (props: Partial<ProductRowProps>) => {
         <>
             <ProductRowContainer>
                 <ProductRowsTitle><Trans i18nKey={"common:pages.calculator.header.price"} /></ProductRowsTitle>
-                <ProductRowsTitle><UnstyledButton
-                    onClick={() => setModalOpen(true)}>{measurementLabel}&#9660;</UnstyledButton></ProductRowsTitle>
+                <ProductRowsTitle>
+                    {/*TODO: display this column header in a flexbox */}
+                    <UnstyledButton
+                        onClick={() => setModalOpen(true)}>
+                        {<Trans i18nKey={measurementLabel} />}&#9660;
+                    </UnstyledButton>
+                </ProductRowsTitle>
                 <ProductRowsTitle>
                     <p>{translate("common:pages.calculator.header.unifiedPrice")}</p>
                     <p>{measurementUnit}</p>

@@ -9,6 +9,7 @@ import { UnstyledButton } from "../buttonUnstyled";
 import { SlideOutMotion } from "../animations";
 import { RankDisplay } from "../rankDisplay";
 import { ProductRowProps } from "../../types";
+import { PricePerDisplay } from "../pricePerDisplay";
 
 
 const ProductRow = (props: ProductRowProps) => {
@@ -28,7 +29,7 @@ const ProductRow = (props: ProductRowProps) => {
             <ProductRowContainer {...{ selected }}>
                 <NumericInput maxLength={5} blurFunction={handleBlur} focusFunction={handleFocus} />
                 <NumericInput maxLength={4} blurFunction={handleBlur} focusFunction={handleFocus} />
-                <p>58.555</p>
+                <PricePerDisplay priceUnified={2} />
                 <RankDisplay {...{ rank }} dimension={30}></RankDisplay>
                 {productCount > 1 && (
                     <UnstyledButton onClick={() => deleteFunction(id)}>
