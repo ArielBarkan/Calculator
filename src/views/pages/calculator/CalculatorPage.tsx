@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { AnimatePresence } from "framer-motion";
 
 // Custom imports
-import { ProductRow, ProductRowsHeader, CustomButton } from "../../../components";
+import { ProductRow, ProductRowsHeader, CustomButton, PageHeader } from "../../../components";
 import { ProductListType } from "../../../types";
 import { getRandomNumber } from "../../../utils";
 
@@ -32,8 +32,10 @@ const CalculatorPage = () => {
     };
 
     return (
-        <div style={{ padding: "5rem 0 0" }}>
-            <p>{translate("pages.calculator.title")}</p>
+        <>
+            <PageHeader title={translate("common:pages.calculator.title")}
+                        subTitle={translate("common:pages.calculator.subTitle")} />
+
             <div style={{ display: "grid", width: "100%" }}>
                 <ProductRowsHeader productCount={productsList.length} />
                 <AnimatePresence>
@@ -47,7 +49,7 @@ const CalculatorPage = () => {
             <CustomButton onClick={handleAddProduct} id="addProduct">
                 + {translate("pages.calculator.button.addProduct")}
             </CustomButton>
-        </div>
+        </>
     );
 };
 

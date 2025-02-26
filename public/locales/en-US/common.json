@@ -64,9 +64,16 @@
       "modal": {
         "title": "Choose a comparison unit"
       },
+      "subTitle": "Compare product prices by weight, volume, or quantity and find the best deal",
       "title": "Calculator"
     },
     "settings": {
+      "currency": {
+        "subTitle": "Select the currency used in the application"
+      },
+      "language": {
+        "subTitle": "Choose your preferred display language"
+      },
       "setCurrency": "Currency",
       "setCurrencySuccess": "Currency updated",
       "setDarkMode": "Dark mode",
@@ -75,6 +82,7 @@
       "setLanguageSuccess": "Language updated",
       "setThemeFailed": "Failed to update theme",
       "setThemeSuccess": "Theme updated",
+      "subTitle": "Customize your experience: Change the theme, currency, and language",
       "title": "Settings"
     }
   },

@@ -44,9 +44,10 @@ type ThemedIconProps = {
     rtlIgnore?: boolean;
 }
 
-type TitleWithBackProps = {
+type PageHeaderProps = {
     title: string;
-    linkTo: string;
+    subTitle: string;
+    linkTo?: string;
 }
 
 // Extracts the "locale" property from each object in the `supportedLanguages` array
@@ -130,7 +131,7 @@ export {
     CurrencyType,
     IconProps,
     ThemedIconProps,
-    TitleWithBackProps,
+    PageHeaderProps,
     ProductListType,
     FadeInTextProps,
     ThemeContextType,

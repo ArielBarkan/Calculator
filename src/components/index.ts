@@ -11,6 +11,6 @@ export { RankDisplay } from "./rankDisplay";
 export { SelectComponent } from "./select";
 export { SwitchMeasurement } from "./switchMeasurement";
 export { ThemedIcon } from "./themedIcon";
-export { TitleWithBack } from "./titleWithBack";
+export { PageHeader } from "./pageHeader";
 export { NotifySuccess, NotifyWarning, NotifyCustom } from "./toast";
 export { ToggleSwitch } from "./toggleSwitch";

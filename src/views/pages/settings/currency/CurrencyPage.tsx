@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import { Row } from "../settings.wrappers";
 import { CurrencyType, currencyType } from "../../../../types";
 import { GA_EVENTS, SUPPORTED_CURRENCIES } from "../../../../consts";
-import { TitleWithBack, NotifySuccess } from "../../../../components";
+import { PageHeader, NotifySuccess } from "../../../../components";
 import {
     localStorageGetSelectedCurrency, localStorageUpdateSelectedCurrency
 
@@ -35,7 +35,8 @@ const CurrencyPage = () => {
     return (
 
         <>
-            <TitleWithBack title={translate("common:pages.settings.setCurrency")} linkTo={"/settings"} />
+            <PageHeader title={translate("common:pages.settings.setCurrency")}
+                        subTitle={translate("common:pages.settings.currency.subTitle")} linkTo={"/settings"} />
 
             {SUPPORTED_CURRENCIES.map((currency: currencyType, index: number) => (
                 <Row onClick={() => handleChangeCurrency(currency.ISO)}

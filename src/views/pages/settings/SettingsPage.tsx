@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 // Custom imports
 import { useTheme } from "../../../context/theme.context";
-import { ToggleSwitch, TitleWithBack, NotifySuccess, NotifyWarning } from "../../../components";
+import { ToggleSwitch, PageHeader, NotifySuccess, NotifyWarning } from "../../../components";
 import { THEME_ENUMS } from "../../../enums";
 import { Row, DoubleLineWrapper, TopLine, BottomLine } from "./settings.wrappers";
 import { IconNext } from "../../../styles";
@@ -42,7 +42,8 @@ const SettingsPage = () => {
 
     return (
         <>
-            <TitleWithBack title={translate("common:pages.settings.title")} linkTo={"/"} />
+            <PageHeader title={translate("common:pages.settings.title")}
+                        subTitle={translate("common:pages.settings.subTitle")} linkTo={"/"} />
 
             <Row disabled={true}>
                 <DoubleLineWrapper>

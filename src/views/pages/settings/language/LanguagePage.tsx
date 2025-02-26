@@ -6,7 +6,7 @@ import Flag from "react-world-flags";
 import { Row } from "../settings.wrappers";
 import { GA_EVENTS, SUPPORTED_LANGUAGES } from "../../../../consts";
 import { ChangeLanguage } from "../../../../services";
-import { TitleWithBack, NotifySuccess, NotifyWarning } from "../../../../components";
+import { PageHeader, NotifySuccess, NotifyWarning } from "../../../../components";
 import { localStorageGetSelectedLanguage } from "../../../../services";
 import { LocaleType } from "../../../../types";
 import { GOOGLE_ANALYTICS } from "../../../../utils/analytics.util";
@@ -32,7 +32,9 @@ const LanguagePage = () => {
 
     return (
         <>
-            <TitleWithBack title={translate("common:pages.settings.setLanguage")} linkTo={"/settings"} />
+            <PageHeader title={translate("common:pages.settings.setLanguage")}
+                        subTitle={translate("common:pages.settings.language.subTitle")}
+                        linkTo={"/settings"} />
 
             {SUPPORTED_LANGUAGES.map((language, index: number) => (
                 <Row onClick={() => handleChangeLanguage(language.locale)}

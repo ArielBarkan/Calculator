@@ -64,9 +64,16 @@
       "modal": {
         "title": "בחרי יחידת השוואה"
       },
+      "subTitle": "השווה מחירי מוצרים לפי משקל, נפח או כמות ומצא את העסקה הטובה ביותר",
       "title": "מחשב"
     },
     "settings": {
+      "currency": {
+        "subTitle": "בחר את המטבע שבו נעשה שימוש באפליקציה"
+      },
+      "language": {
+        "subTitle": "בחר/י את שפת התצוגה המועדפת עליך"
+      },
       "setCurrency": "מטבע",
       "setCurrencySuccess": "המטבע עודכן",
       "setDarkMode": "מצב כהה",
@@ -75,6 +82,7 @@
       "setLanguageSuccess": "שפה עודכנה",
       "setThemeFailed": "עדכון העיצוב נכשל",
       "setThemeSuccess": "ערכת הנושא עודכנה",
+      "subTitle": "התאם אישית את החוויה שלך: שנה את ערכת הנושא, המטבע והשפה",
       "title": "הגדרות"
     }
   },

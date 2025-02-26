@@ -64,9 +64,16 @@
       "modal": {
         "title": "Elige una unidad de comparación"
       },
+      "subTitle": "Compara los precios de los productos por peso, volumen o cantidad y encuentra la mejor oferta",
       "title": "Calculador"
     },
     "settings": {
+      "currency": {
+        "subTitle": "Selecciona la moneda utilizada en la aplicación"
+      },
+      "language": {
+        "subTitle": "Elige tu idioma de visualización preferido"
+      },
       "setCurrency": "Moneda",
       "setCurrencySuccess": "Moneda actualizada",
       "setDarkMode": "Modo oscuro",
@@ -75,6 +82,7 @@
       "setLanguageSuccess": "Idioma actualizado",
       "setThemeFailed": "No se pudo actualizar el tema",
       "setThemeSuccess": "Tema actualizado",
+      "subTitle": "Personaliza tu experiencia: Cambia el tema, la moneda y el idioma",
       "title": "Configuración"
     }
   },
