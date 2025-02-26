@@ -36,7 +36,7 @@
     },
     "calculator": {
       "button": {
-        "addProduct": "הוסף מוצר חדש להשוואה"
+        "addProduct": "הוסף מוצר חדש להשוואה  ({{left}} עוד)"
       },
       "header": {
         "delete": "למחוק",

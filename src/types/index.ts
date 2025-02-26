@@ -122,6 +122,14 @@ type SelectComponentProps = {
     isSearchable?: boolean;
 }
 
+type IconButtonProps = {
+    label: string;
+    icon: React.ReactNode;
+    disabled: boolean;
+    returnFunction: () => void;
+};
+
+
 export {
     languageType,
     currencyType,
@@ -141,5 +149,6 @@ export {
     ProductRowProps,
     RankDisplayProps,
     SwitchMeasurementProps,
-    SelectComponentProps
+    SelectComponentProps,
+    IconButtonProps
 };

@@ -4,9 +4,10 @@ import { useTranslation } from "react-i18next";
 import { AnimatePresence } from "framer-motion";
 
 // Custom imports
-import { ProductRow, ProductRowsHeader, CustomButton, PageHeader } from "../../../components";
+import { ProductRow, ProductRowsHeader, IconButton, PageHeader } from "../../../components";
 import { ProductListType } from "../../../types";
 import { getRandomNumber } from "../../../utils";
+import { IconAdd } from "../../../styles";
 
 
 const CalculatorPage = () => {
@@ -31,6 +32,7 @@ const CalculatorPage = () => {
         setProductsList((prevProducts) => prevProducts.filter((product) => product.id !== rowId));
     };
 
+    const productsToAddLeft: number = (maxRows - productsList.length);
     return (
         <>
             <PageHeader title={translate("common:pages.calculator.title")}
@@ -46,9 +48,14 @@ const CalculatorPage = () => {
                     ))}
                 </AnimatePresence>
             </div>
-            <CustomButton onClick={handleAddProduct} id="addProduct">
-                + {translate("pages.calculator.button.addProduct")}
-            </CustomButton>
+            <IconButton
+                label={translate("common:pages.calculator.button.addProduct", { left: productsToAddLeft })}
+                returnFunction={handleAddProduct}
+                icon={<IconAdd size={30} color={"white"} />}
+                disabled={productsToAddLeft === 0}
+
+            />
+
         </>
     );
 };

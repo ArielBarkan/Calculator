@@ -36,7 +36,7 @@
     },
     "calculator": {
       "button": {
-        "addProduct": "Añade un nuevo producto para comparar"
+        "addProduct": "Añade un nuevo producto para comparar ({{left}} mas)"
       },
       "header": {
         "delete": "Borrar",

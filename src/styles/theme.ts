@@ -26,7 +26,7 @@ const lightTheme = {
     buttons: {
         primary: {
             backgroundColor: "#384cae",
-            color: "#e3b863"
+            color: "#000000"
         }
     },
     icons: {

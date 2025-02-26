@@ -27,9 +27,9 @@ const Title = styled.h1`
     //background-color: green;
 `;
 
-const SubTitle = styled.p<{ alignStart: boolean }>`
+const SubTitle = styled.p<{ $alignStart: boolean }>`
     margin: 0;
-    margin-inline-start: ${({ alignStart }) => (alignStart) ? "0" : "2rem"};
+    margin-inline-start: ${({ $alignStart }) => ($alignStart) ? "0" : "2rem"};
     width: 100%; /* Ensures it takes full width */
 
 `;

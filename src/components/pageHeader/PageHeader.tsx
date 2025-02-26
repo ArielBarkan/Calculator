@@ -19,7 +19,7 @@ const PageHeader = (props: PageHeaderProps) => {
                 )}
                 <Title>{title}</Title>
             </TitleRow>
-            <SubTitle alignStart={!linkTo}>{subTitle}</SubTitle>
+            <SubTitle $alignStart={!linkTo}>{subTitle}</SubTitle>
         </PageHeaderWrapper>
     );
 };
