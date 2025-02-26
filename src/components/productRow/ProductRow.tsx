@@ -29,7 +29,7 @@ const ProductRow = (props: ProductRowProps) => {
             <ProductRowContainer {...{ selected }}>
                 <NumericInput maxLength={5} blurFunction={handleBlur} focusFunction={handleFocus} />
                 <NumericInput maxLength={4} blurFunction={handleBlur} focusFunction={handleFocus} />
-                <PricePerDisplay priceUnified={2} />
+                <PricePerDisplay priceUnified={"2$"} />
                 <RankDisplay {...{ rank }} dimension={30}></RankDisplay>
                 {productCount > 1 && (
                     <UnstyledButton onClick={() => deleteFunction(id)}>
