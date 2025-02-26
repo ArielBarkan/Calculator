@@ -6,10 +6,9 @@ import {
     MdOutlineSettings,
     MdShare,
     MdOutlineDeleteForever,
-    MdAdd
+    MdAdd,
+    MdArrowDropDown
 } from "react-icons/md";
-
-
 import { IconProps } from "../types";
 import { ThemedIcon } from "../components";
 
@@ -27,6 +26,9 @@ const IconDelete = (props: IconProps) => <ThemedIcon icon={MdOutlineDeleteForeve
 const IconAdd = (props: IconProps) => <ThemedIcon icon={MdAdd} color={props?.color}
                                                   rtlIgnore={props?.rtlIgnore}
                                                   size={props?.size} />;
+const IconServices = (props: IconProps) => <ThemedIcon icon={MdArrowDropDown} color={props?.color}
+                                                       rtlIgnore={props?.rtlIgnore}
+                                                       size={props?.size} />;
 
 
-export { IconNext, IconBack, IconSettings, IconShare, IconDelete, IconAdd };
+export { IconNext, IconBack, IconSettings, IconShare, IconDelete, IconAdd, IconServices };

@@ -9,6 +9,7 @@ import { SwitchMeasurement } from "../switchMeasurement";
 import { MEASUREMENT_ENUMS } from "../../enums";
 import { localStorageGetSelectedMeasurement } from "../../services";
 import { ProductRowProps } from "../../types";
+import { IconServices } from "../../styles";
 
 
 const ProductRowsHeader = (props: Partial<ProductRowProps>) => {
@@ -59,7 +60,7 @@ const ProductRowsHeader = (props: Partial<ProductRowProps>) => {
                     {/*TODO: display this column header in a flexbox */}
                     <UnstyledButton
                         onClick={() => setModalOpen(true)}>
-                        {<Trans i18nKey={measurementLabel} />}&#9660;
+                        {<Trans i18nKey={measurementLabel} />}<IconServices size={25} />
                     </UnstyledButton>
                 </ProductRowsTitle>
                 <ProductRowsTitle>

@@ -40,9 +40,9 @@
       },
       "header": {
         "delete": "Delete",
-        "price": "Price",
+        "price": "Product<br/>price",
         "quantity": "Quantity",
-        "rank": "Rank",
+        "rank": "Price<br/>ranking",
         "unifiedPrice": "Price per"
       },
       "measurement": {

@@ -40,9 +40,9 @@
       },
       "header": {
         "delete": "Borrar",
-        "price": "Precio",
+        "price": "Precio<br/>prod.",
         "quantity": "Cuantidad",
-        "rank": "Clasificación",
+        "rank": "Rank.<br/>precios",
         "unifiedPrice": "Precio x"
       },
       "measurement": {
