@@ -47,18 +47,27 @@
       },
       "measurement": {
         "liquid": {
+          "modal": {
+            "explanation": "Ingresa el volumen en mililitros"
+          },
           "name": "Líquidos",
           "shortUnit": "100ml",
           "tableHeader": "Volumen<br/>mililitros",
           "unit": "Mililitros"
         },
         "quantity": {
+          "modal": {
+            "explanation": "Ingresa la cantidad en unidades"
+          },
           "name": "Cantidad",
           "shortUnit": "1ud",
           "tableHeader": "Cant.<br/>unidades",
           "unit": "Unidades"
         },
         "weight": {
+          "modal": {
+            "explanation": "Ingresa el peso en gramos"
+          },
           "name": "Peso",
           "shortUnit": "100g",
           "tableHeader": "Peso<br/>en gramos",

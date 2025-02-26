@@ -7,7 +7,10 @@ import {
     MdShare,
     MdOutlineDeleteForever,
     MdAdd,
-    MdArrowDropDown
+    MdArrowDropDown,
+    MdBalance,
+    MdOutlineWaterDrop,
+    MdFilter4
 } from "react-icons/md";
 import { IconProps } from "../types";
 import { ThemedIcon } from "../components";
@@ -30,5 +33,28 @@ const IconServices = (props: IconProps) => <ThemedIcon icon={MdArrowDropDown} co
                                                        rtlIgnore={props?.rtlIgnore}
                                                        size={props?.size} />;
 
+const IconWeight = (props: IconProps) => <ThemedIcon icon={MdBalance} color={props?.color}
+                                                     rtlIgnore={props?.rtlIgnore}
+                                                     size={props?.size} />;
 
-export { IconNext, IconBack, IconSettings, IconShare, IconDelete, IconAdd, IconServices };
+const IconLiquid = (props: IconProps) => <ThemedIcon icon={MdOutlineWaterDrop} color={props?.color}
+                                                     rtlIgnore={props?.rtlIgnore}
+                                                     size={props?.size} />;
+
+const IconQuantity = (props: IconProps) => <ThemedIcon icon={MdFilter4} color={props?.color}
+                                                       rtlIgnore={props?.rtlIgnore}
+                                                       size={props?.size} />;
+
+
+export {
+    IconNext,
+    IconBack,
+    IconSettings,
+    IconShare,
+    IconDelete,
+    IconAdd,
+    IconServices,
+    IconWeight,
+    IconLiquid,
+    IconQuantity
+};

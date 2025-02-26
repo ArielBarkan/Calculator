@@ -72,8 +72,14 @@ const ProductRowsHeader = (props: Partial<ProductRowProps>) => {
                     <ProductRowsTitle />
                 )}
             </ProductRowContainer>
-            <CustomModal isOpen={isModalOpen} onClose={() => setModalOpen(false)}
-                         title={translate("common:pages.calculator.modal.title")}>
+            <CustomModal isOpen={isModalOpen}
+                         onClose={() => setModalOpen(false)}
+                         title={translate("common:pages.calculator.modal.title")}
+                         width="90%" // ✅ Set custom width
+                         height="200px" // ✅ Set custom height
+                         position="top" // ✅ Position modal on the right
+
+            >
                 <span onClick={() => setModalOpen(false)}>
                     <SwitchMeasurement returnFunction={handleChangeMeasurement} />
                 </span>

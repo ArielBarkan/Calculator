@@ -47,18 +47,27 @@
       },
       "measurement": {
         "liquid": {
+          "modal": {
+            "explanation": "הזן נפח במיליליטרים"
+          },
           "name": "נוזלים",
           "shortUnit": "100מ\"ל",
           "tableHeader": "נפח<br/>מיליליטרים",
           "unit": "מיליליטר"
         },
         "quantity": {
+          "modal": {
+            "explanation": "הזן כמות ביחידות"
+          },
           "name": "כמות",
           "shortUnit": "1יח'",
           "tableHeader": "כמות<br/>יחידות",
           "unit": "יחידות"
         },
         "weight": {
+          "modal": {
+            "explanation": "הזן משקל בגרמים"
+          },
           "name": "משקל",
           "shortUnit": "100גר' ",
           "tableHeader": "משקל<br/>ב גרמים",

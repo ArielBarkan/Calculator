@@ -86,8 +86,11 @@ type ModalProps = {
     isOpen: boolean;
     onClose: () => void;
     title?: string;
-    children: React.ReactNode;
     closeButtonText?: string;
+    children: React.ReactNode;
+    width?: string;
+    height?: string;
+    position?: "center" | "top" | "bottom" | "left" | "right";
 };
 
 type InputCompProps = {

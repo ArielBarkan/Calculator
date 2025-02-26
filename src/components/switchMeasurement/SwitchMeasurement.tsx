@@ -3,9 +3,15 @@ import { useTranslation } from "react-i18next";
 
 // Custom imports
 import { localStorageGetSelectedMeasurement, localStorageUpdateSelectedMeasurement } from "../../services";
-import { MeasurementItemContainer } from "./switchMeasurement.wrappers";
+import {
+    MeasurementWrapper,
+    MeasurementItemContainer,
+    MeasurementTitle,
+    MeasurementExplanation
+} from "./switchMeasurement.wrappers";
 import { MEASUREMENT_ENUMS } from "../../enums";
 import { SwitchMeasurementProps } from "../../types";
+import { IconWeight, IconLiquid, IconQuantity } from "../../styles";
 
 
 const SwitchMeasurement = (props: SwitchMeasurementProps) => {
@@ -24,33 +30,39 @@ const SwitchMeasurement = (props: SwitchMeasurementProps) => {
     return (
         <>
 
-<span style={{ display: "flex", flexDirection: "row", gap: 5 }}>
-            <MeasurementItemContainer onClick={() => {
-                handleChangeMeasurement(MEASUREMENT_ENUMS.weight);
-            }}
-                                      selected={selectedMeasurement === MEASUREMENT_ENUMS.weight}
-            >
-                {translate("common:pages.calculator.measurement.weight.name")}
-            </MeasurementItemContainer>
+            <MeasurementWrapper>
+                <MeasurementItemContainer onClick={() => {
+                    handleChangeMeasurement(MEASUREMENT_ENUMS.weight);
+                }}
+                                          selected={selectedMeasurement === MEASUREMENT_ENUMS.weight}
+                >
+                    <MeasurementTitle>{translate("common:pages.calculator.measurement.weight.name")}</MeasurementTitle>
+                    <IconWeight />
+                    <MeasurementExplanation>{translate("common:pages.calculator.measurement.weight.modal.explanation")}</MeasurementExplanation>
+                </MeasurementItemContainer>
 
 
-            <MeasurementItemContainer onClick={() => {
-                handleChangeMeasurement(MEASUREMENT_ENUMS.liquid);
-            }}
-                                      selected={selectedMeasurement === MEASUREMENT_ENUMS.liquid}
-            >
-                {translate("common:pages.calculator.measurement.liquid.name")}
-            </MeasurementItemContainer>
+                <MeasurementItemContainer onClick={() => {
+                    handleChangeMeasurement(MEASUREMENT_ENUMS.liquid);
+                }}
+                                          selected={selectedMeasurement === MEASUREMENT_ENUMS.liquid}
+                >
+                    <MeasurementTitle>{translate("common:pages.calculator.measurement.liquid.name")}</MeasurementTitle>
+                    <IconLiquid />
+                    <MeasurementExplanation>{translate("common:pages.calculator.measurement.liquid.modal.explanation")}</MeasurementExplanation>
+                </MeasurementItemContainer>
 
 
-            <MeasurementItemContainer onClick={() => {
-                handleChangeMeasurement(MEASUREMENT_ENUMS.quantity);
-            }}
-                                      selected={selectedMeasurement === MEASUREMENT_ENUMS.quantity}
-            >
-                {translate("common:pages.calculator.measurement.quantity.name")}
-            </MeasurementItemContainer>
-</span>
+                <MeasurementItemContainer onClick={() => {
+                    handleChangeMeasurement(MEASUREMENT_ENUMS.quantity);
+                }}
+                                          selected={selectedMeasurement === MEASUREMENT_ENUMS.quantity}
+                >
+                    <MeasurementTitle>{translate("common:pages.calculator.measurement.quantity.name")}</MeasurementTitle>
+                    <IconQuantity />
+                    <MeasurementExplanation>{translate("common:pages.calculator.measurement.quantity.modal.explanation")}</MeasurementExplanation>
+                </MeasurementItemContainer>
+            </MeasurementWrapper>
 
         </>
 
