@@ -6,7 +6,7 @@ import { AnimatePresence } from "framer-motion";
 // Custom imports
 import { ProductRow, ProductRowsHeader, IconButton, PageHeader } from "../../../components";
 import { ProductListType, UpdateProductRowProps } from "../../../types";
-import { getCurrencySymbolByISO } from "../../../utils";
+import { CalculateStats, getCurrencySymbolByISO } from "../../../utils";
 import { IconAdd, IconRestart } from "../../../styles";
 import { ButtonsLineContainer } from "./calculatorPage.wrappers";
 
@@ -30,6 +30,7 @@ const CalculatorPage = () => {
         }
     };
     const handleResetPage = () => {
+        CalculateStats(productsList);
         setProductsList(initialProductsList);
     };
 

@@ -9,6 +9,7 @@ const GA_EVENTS = {
 
     ACTIONS: {
         CLICK_BUTTON: `${Custom_Prefix}Clicked Button`,
+        CALCULATOR_USAGE: `${Custom_Prefix}Calculator Usage`,
         TOGGLE_THEME: `${Custom_Prefix}Toggled Theme`,
         CHANGE_LANGUAGE: `${Custom_Prefix}Changed Language`,
         CHANGE_CURRENCY: `${Custom_Prefix}Change Currency`,

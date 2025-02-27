@@ -1,6 +1,10 @@
 // React and modules imports
 import ReactGA from "react-ga4";
 
+// Custom imports
+import { GA_EVENTS } from "../consts";
+import { localStorageGetSelectedCurrency } from "../services";
+
 const GA_TRACKING_ID = import.meta.env.VITE_GOOGLE_ANALYTICS_TRACKING_ID;
 
 
@@ -36,7 +40,26 @@ const GOOGLE_ANALYTICS = {
             ReactGA.event({ action, category: `${action}_ERROR`, label });
             //console.log(`[Google Analytics] Error: ${category} - ${action} ${label ? `(${label})` : ""}`);
         }
+    },
+    sendProductStatsToGA: (stats: {
+        priceDifference: number;
+        percentageDifference: number;
+        totalPrice: number;
+        productCount: number
+    }) => {
+        if (GOOGLE_ANALYTICS.isGAInitialized) {
+            ReactGA.gtag(GA_EVENTS.CATEGORIES.USER_ACTIONS, GA_EVENTS.ACTIONS.CALCULATOR_USAGE, {
+                user_currency_ISO: localStorageGetSelectedCurrency(),
+                price_difference: stats.priceDifference,
+                percentage_difference: stats.percentageDifference,
+                total_price: stats.totalPrice,
+                product_count: stats.productCount,
+                non_interaction: true // Ensures it doesn't affect bounce rate
+            });
+            console.log("[Google Analytics] event : calculated_product_stats");
+        }
     }
+
 };
 
 export { GOOGLE_ANALYTICS };
