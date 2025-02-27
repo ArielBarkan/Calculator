@@ -75,7 +75,7 @@ const ProductRowsHeader = (props: Partial<ProductRowProps>) => {
             <CustomModal isOpen={isModalOpen}
                          onClose={() => setModalOpen(false)}
                          title={translate("common:pages.calculator.modal.title")}
-                         width="90%" // ✅ Set custom width
+                         width="85%" // ✅ Set custom width
                          height="200px" // ✅ Set custom height
                          position="top" // ✅ Position modal on the right
 
