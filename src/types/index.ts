@@ -85,7 +85,7 @@ type ModalProps = {
 };
 
 type NumericInputProps = {
-    value: number;
+    value?: number;
     maxLength: number;
     focusFunction: () => void;
     blurFunction: () => void;
@@ -94,11 +94,10 @@ type NumericInputProps = {
 
 type ProductListType = {
     id: number;
-    quantity: number;
-    price: number;
-    unifiedPrice?: string;
+    quantity?: number;
+    price?: number;
+    unifiedPrice?: number;
     rank?: number;
-
 }
 
 type UpdateProductRowProps = {
@@ -114,15 +113,15 @@ type ProductRowProps = {
     id: number;
     returnFunction: (props: UpdateProductRowProps) => void;
     deleteFunction: (rowId: number) => void;
-    quantity: number;
-    price: number;
+    quantity?: number;
+    price?: number;
     unifiedPrice?: number;
-    rank: number;
+    rank?: number;
 };
 
 
 type RankDisplayProps = {
-    rank: number;
+    rank?: number;
     dimension: number
 }
 

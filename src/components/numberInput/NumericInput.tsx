@@ -7,7 +7,7 @@ import { NumericInputProps } from "../../types";
 
 
 const NumericInput = (props: NumericInputProps) => {
-    const { maxLength, focusFunction, blurFunction, returnFunction, value: displayValue } = props;
+    const { maxLength, focusFunction, blurFunction, returnFunction, value: displayValue = 0 } = props;
     const [value, setValue] = useState<number>(displayValue);
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const inputValue = event.target.value;

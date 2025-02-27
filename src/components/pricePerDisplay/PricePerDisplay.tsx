@@ -1,5 +1,5 @@
 type pricePerDisplayProps = {
-    priceUnified: string
+    priceUnified?: number
 }
 
 

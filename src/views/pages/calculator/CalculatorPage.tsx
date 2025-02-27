@@ -21,12 +21,12 @@ const CalculatorPage = () => {
 
     // Initialize state with unique objects
     const [productsList, setProductsList] = useState<ProductListType[]>(
-        Array.from({ length: initialRows }, () => ({ id: generateId(), price: 0, quantity: 0 }))
+        Array.from({ length: initialRows }, () => ({ id: generateId() }))
     );
 
     const handleAddProduct = () => {
         if (productsList.length < maxRows) {
-            setProductsList([...productsList, { id: generateId(), price: 0, quantity: 0 }]);
+            setProductsList([...productsList, { id: generateId() }]);
         }
     };
 
@@ -34,18 +34,66 @@ const CalculatorPage = () => {
         setProductsList((prevProducts) => prevProducts.filter((product) => product.id !== rowId));
     };
 
+
     const handleProductUpdate = (props: UpdateProductRowProps) => {
         const { id, keyToUpdate, updatedValue } = props;
-        setProductsList((prevProducts) =>
-            prevProducts.map((product) =>
-                product.id === id ? { ...product, [keyToUpdate]: updatedValue } : product
-            )
-        );
+        console.log(id, keyToUpdate, updatedValue);
+        setProductsList((prevProducts) => {
+            // ✅ Update the product with the new value
+            const updatedProducts = prevProducts.map((product) => {
+                if (product.id === id) {
+                    const updatedProduct = { ...product, [keyToUpdate]: updatedValue };
 
+
+                    // ✅ If both price and quantity exist, calculate unifiedPrice
+                    if (updatedProduct.price && updatedProduct.quantity) {
+                        updatedProduct.unifiedPrice = Number((updatedProduct.price / updatedProduct.quantity).toFixed(4));
+                    } else {
+                        delete updatedProduct.unifiedPrice;
+                        delete updatedProduct.rank;
+                    }
+
+                    return updatedProduct;
+                }
+                return product;
+            });
+
+            // ✅ Sort products by `unifiedPrice` (lowest first)
+            const sortedProducts = [...updatedProducts]
+                .filter((p) => p.unifiedPrice !== undefined) // Ignore products without unifiedPrice
+                .sort((a, b) => a.unifiedPrice! - b.unifiedPrice!);
+
+            // ✅ Assign ranks correctly
+            let currentRank = 1;
+            let previousUnifiedPrice: number | undefined;
+
+            const rankedProducts = updatedProducts.map((product) => {
+                const sortedIndex = sortedProducts.findIndex((p) => p.id === product.id);
+
+                if (sortedIndex !== -1) {
+                    const sortedProduct = sortedProducts[sortedIndex];
+
+                    // ✅ If the `unifiedPrice` is different, increase rank
+                    if (previousUnifiedPrice !== sortedProduct.unifiedPrice) {
+                        currentRank = sortedIndex + 1; // Rank is 1-based, so we use index + 1
+                        previousUnifiedPrice = sortedProduct.unifiedPrice;
+                    }
+                    console.log({ sortedProduct });
+                    if (sortedProduct.quantity === 0) {
+                        currentRank = 0;
+                    }
+
+                    return { ...product, rank: currentRank };
+                }
+
+                return product;
+            });
+
+            return rankedProducts;
+        });
     };
-    useEffect(() => {
-        console.log(productsList);
-    }, [productsList]);
+
+
     const productsToAddLeft: number = (maxRows - productsList.length);
     return (
         <>
@@ -59,10 +107,11 @@ const CalculatorPage = () => {
                         <ProductRow key={product.id} listOrder={index} id={product.id}
                                     price={product.price}
                                     quantity={product.quantity}
+                                    unifiedPrice={product.unifiedPrice}
                                     deleteFunction={handleRemoveProduct}
                                     returnFunction={handleProductUpdate}
                                     productCount={productsList.length}
-                                    rank={getRandomNumber(1, 5)} />
+                                    rank={product.rank} />
                     ))}
                 </AnimatePresence>
             </div>
