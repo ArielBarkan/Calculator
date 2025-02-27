@@ -15,6 +15,12 @@ const SUPPORTED_LANGUAGES: languageType[] = [
         flag: "ES"
     },
     {
+        locale: "fr-FR",
+        direction: "ltr",
+        name: "Français",
+        flag: "FR"
+    },
+    {
         locale: "he-IL",
         direction: "rtl",
         name: "עברית",

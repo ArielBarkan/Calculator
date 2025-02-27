@@ -1,0 +1,108 @@
+{
+  "components": {
+    "toggleSwitch": {
+      "off": "Inactif",
+      "on": "Actif"
+    }
+  },
+  "header": {
+    "linkLabels": {
+      "about": "À propos",
+      "main": "Accueil",
+      "settings": "Paramètres"
+    }
+  },
+  "meta": {
+    "about": {
+      "title": "À propos"
+    },
+    "currency": {
+      "title": "Devise"
+    },
+    "home": {
+      "title": "Page d'accueil"
+    },
+    "language": {
+      "title": "Langue"
+    },
+    "settings": {
+      "title": "Paramètres"
+    }
+  },
+  "pages": {
+    "about": {
+      "subTitle": "En savoir plus sur cette application et comment elle vous aide à comparer les prix efficacement",
+      "title": "À propos"
+    },
+    "calculator": {
+      "button": {
+        "addProduct": "Ajouter une ligne de produit ({{left}} restantes)",
+        "reset": "Réinitialiser"
+      },
+      "header": {
+        "delete": "Supprimer",
+        "price": "Prix du<br/>produit",
+        "quantity": "Quantité",
+        "rank": "Classement<br/>des prix",
+        "unifiedPrice": "Prix par"
+      },
+      "measurement": {
+        "liquid": {
+          "modal": {
+            "explanation": "Entrez le volume en millilitres"
+          },
+          "name": "Liquides",
+          "shortUnit": "100ml",
+          "tableHeader": "Volume<br/>millilitres",
+          "unit": "Millilitres"
+        },
+        "quantity": {
+          "modal": {
+            "explanation": "Entrez la quantité en unités"
+          },
+          "name": "Quantité",
+          "shortUnit": "1pc",
+          "tableHeader": "Qté<br/>unités",
+          "unit": "Unités"
+        },
+        "weight": {
+          "modal": {
+            "explanation": "Entrez le poids en grammes"
+          },
+          "name": "Poids",
+          "shortUnit": "100g",
+          "tableHeader": "Poids<br/>en grammes",
+          "unit": "Grammes"
+        }
+      },
+      "modal": {
+        "title": "Choisissez une unité de comparaison"
+      },
+      "subTitle": "Comparez les prix des produits par poids, volume ou quantité et trouvez la meilleure offre",
+      "title": "Calculateur"
+    },
+    "settings": {
+      "currency": {
+        "subTitle": "Sélectionnez la devise utilisée dans l'application"
+      },
+      "language": {
+        "subTitle": "Choisissez votre langue d'affichage préférée"
+      },
+      "setCurrency": "Devise",
+      "setCurrencySuccess": "Devise mise à jour",
+      "setDarkMode": "Mode sombre",
+      "setLanguage": "Langue",
+      "setLanguageFailed": "Échec de la mise à jour de la langue",
+      "setLanguageSuccess": "Langue mise à jour",
+      "setThemeFailed": "Échec de la mise à jour du thème",
+      "setThemeSuccess": "Thème mis à jour",
+      "subTitle": "Personnalisez votre expérience : changez le thème, la devise et la langue",
+      "title": "Paramètres"
+    }
+  },
+  "share": {
+    "label": "Partager",
+    "text": "J'ai trouvé cette application géniale, regardez :",
+    "title": "Application pour trouver facilement le produit le moins cher en rayon"
+  }
+}
