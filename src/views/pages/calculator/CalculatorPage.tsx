@@ -1,13 +1,14 @@
 // React and modules imports
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { AnimatePresence } from "framer-motion";
 
 // Custom imports
 import { ProductRow, ProductRowsHeader, IconButton, PageHeader } from "../../../components";
 import { ProductListType, UpdateProductRowProps } from "../../../types";
-import { getCurrencySymbolByISO, getRandomNumber } from "../../../utils";
-import { IconAdd } from "../../../styles";
+import { getCurrencySymbolByISO } from "../../../utils";
+import { IconAdd, IconRestart } from "../../../styles";
+import { ButtonsLineContainer } from "./calculatorPage.wrappers";
 
 
 const CalculatorPage = () => {
@@ -19,21 +20,22 @@ const CalculatorPage = () => {
 
     const currencySymbol = getCurrencySymbolByISO();
 
+    const initialProductsList: ProductListType[] = Array.from({ length: initialRows }, () => ({ id: generateId() }));
     // Initialize state with unique objects
-    const [productsList, setProductsList] = useState<ProductListType[]>(
-        Array.from({ length: initialRows }, () => ({ id: generateId() }))
-    );
+    const [productsList, setProductsList] = useState<ProductListType[]>(initialProductsList);
 
     const handleAddProduct = () => {
         if (productsList.length < maxRows) {
             setProductsList([...productsList, { id: generateId() }]);
         }
     };
+    const handleResetPage = () => {
+        setProductsList(initialProductsList);
+    };
 
     const handleRemoveProduct = (rowId: number) => {
         setProductsList((prevProducts) => prevProducts.filter((product) => product.id !== rowId));
     };
-
 
     const handleProductUpdate = (props: UpdateProductRowProps) => {
         const { id, keyToUpdate, updatedValue } = props;
@@ -78,10 +80,7 @@ const CalculatorPage = () => {
                         currentRank = sortedIndex + 1; // Rank is 1-based, so we use index + 1
                         previousUnifiedPrice = sortedProduct.unifiedPrice;
                     }
-                    console.log({ sortedProduct });
-                    if (sortedProduct.quantity === 0) {
-                        currentRank = 0;
-                    }
+
 
                     return { ...product, rank: currentRank };
                 }
@@ -115,14 +114,21 @@ const CalculatorPage = () => {
                     ))}
                 </AnimatePresence>
             </div>
-            <IconButton
-                label={translate("common:pages.calculator.button.addProduct", { left: productsToAddLeft })}
-                returnFunction={handleAddProduct}
-                icon={<IconAdd size={30} color={"white"} />}
-                disabled={productsToAddLeft === 0}
+            <ButtonsLineContainer>
+                <IconButton
+                    label={translate("common:pages.calculator.button.addProduct", { left: productsToAddLeft })}
+                    returnFunction={handleAddProduct}
+                    icon={<IconAdd size={30} color={"white"} />}
+                    disabled={productsToAddLeft === 0}
 
-            />
-
+                />
+                <IconButton
+                    label={translate("common:pages.calculator.button.reset")}
+                    returnFunction={handleResetPage}
+                    icon={<IconRestart size={30} color={"white"} />}
+                    disabled={false}
+                />
+            </ButtonsLineContainer>
         </>
     );
 };

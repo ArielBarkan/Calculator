@@ -36,7 +36,8 @@
     },
     "calculator": {
       "button": {
-        "addProduct": "הוסף מוצר חדש להשוואה  ({{left}} עוד)"
+        "addProduct": "הוסף שורת מוצר  ({{left}} עוד)",
+        "reset": "איפוס"
       },
       "header": {
         "delete": "למחוק",
