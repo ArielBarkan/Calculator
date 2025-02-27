@@ -5,7 +5,7 @@ import { AnimatePresence } from "framer-motion";
 
 // Custom imports
 import { ProductRow, ProductRowsHeader, IconButton, PageHeader } from "../../../components";
-import { ProductListType } from "../../../types";
+import { ProductListType, UpdateProductRowProps } from "../../../types";
 import { getCurrencySymbolByISO, getRandomNumber } from "../../../utils";
 import { IconAdd } from "../../../styles";
 
@@ -21,12 +21,12 @@ const CalculatorPage = () => {
 
     // Initialize state with unique objects
     const [productsList, setProductsList] = useState<ProductListType[]>(
-        Array.from({ length: initialRows }, () => ({ id: generateId() }))
+        Array.from({ length: initialRows }, () => ({ id: generateId(), price: 0, quantity: 0 }))
     );
 
     const handleAddProduct = () => {
         if (productsList.length < maxRows) {
-            setProductsList([...productsList, { id: generateId() }]);
+            setProductsList([...productsList, { id: generateId(), price: 0, quantity: 0 }]);
         }
     };
 
@@ -34,6 +34,15 @@ const CalculatorPage = () => {
         setProductsList((prevProducts) => prevProducts.filter((product) => product.id !== rowId));
     };
 
+    const handleProductUpdate = (props: UpdateProductRowProps) => {
+        const { id, keyToUpdate, updatedValue } = props;
+        setProductsList((prevProducts) =>
+            prevProducts.map((product) =>
+                product.id === id ? { ...product, [keyToUpdate]: updatedValue } : product
+            )
+        );
+
+    };
     useEffect(() => {
         console.log(productsList);
     }, [productsList]);
@@ -48,7 +57,11 @@ const CalculatorPage = () => {
                 <AnimatePresence>
                     {productsList.map((product: ProductListType, index: number) => (
                         <ProductRow key={product.id} listOrder={index} id={product.id}
-                                    deleteFunction={handleRemoveProduct} productCount={productsList.length}
+                                    price={product.price}
+                                    quantity={product.quantity}
+                                    deleteFunction={handleRemoveProduct}
+                                    returnFunction={handleProductUpdate}
+                                    productCount={productsList.length}
                                     rank={getRandomNumber(1, 5)} />
                     ))}
                 </AnimatePresence>

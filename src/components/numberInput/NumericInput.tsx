@@ -1,25 +1,32 @@
 // React and modules imports
-import { useState } from "react";
+import React, { useState } from "react";
 
 // Custom imports
 import { NumberInputStyled } from "./numericInput.wrappers";
-import { InputCompProps } from "../../types";
+import { NumericInputProps } from "../../types";
 
 
-const NumericInput = (props: InputCompProps) => {
-    const { maxLength, focusFunction, blurFunction } = props;
-    const [value, setValue] = useState<string>("");
+const NumericInput = (props: NumericInputProps) => {
+    const { maxLength, focusFunction, blurFunction, returnFunction, value: displayValue } = props;
+    const [value, setValue] = useState<number>(displayValue);
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const inputValue = event.target.value;
 
-        // ✅ Allow only numbers and one decimal point
+        // Allow only numbers and one decimal point
         if (/^\d*\.?\d*$/.test(inputValue)) {
+            const numericValue = inputValue === "" ? 0 : parseFloat(inputValue); // ✅ Convert to number, keep empty string
 
-            setValue(inputValue);
+
+            returnFunction(numericValue); // ✅ Send 0 when empty, otherwise parseFloat value
+
+
+            setValue(numericValue); // ✅ Keep input empty visually instead of forcing "0"
         }
     };
 
-    return (<NumberInputStyled {...{ maxLength }} value={value} onChange={handleChange} onFocus={focusFunction}
+
+    return (<NumberInputStyled {...{ maxLength }} value={(value !== 0 ? value : "")} onChange={handleChange}
+                               onFocus={focusFunction}
                                onBlur={blurFunction} />);
 
 };

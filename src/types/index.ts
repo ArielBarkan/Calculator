@@ -58,15 +58,6 @@ type CurrencyISOType = (typeof SUPPORTED_CURRENCIES)[number]["ISO"];
 type CurrencySymbolType = (typeof SUPPORTED_CURRENCIES)[number]["symbol"];
 
 
-type ProductListType = {
-    id: number;
-    quantity?: number;
-    price?: number;
-    unifiedPrice?: string;
-    rank?: number;
-
-}
-
 type FadeInTextProps = {
     children: React.ReactNode;
     isVisible: boolean;
@@ -93,22 +84,42 @@ type ModalProps = {
     position?: "center" | "top" | "bottom" | "left" | "right";
 };
 
-type InputCompProps = {
+type NumericInputProps = {
+    value: number;
     maxLength: number;
     focusFunction: () => void;
     blurFunction: () => void;
+    returnFunction: (val: number) => void;
 };
+
+type ProductListType = {
+    id: number;
+    quantity: number;
+    price: number;
+    unifiedPrice?: string;
+    rank?: number;
+
+}
+
+type UpdateProductRowProps = {
+    id: number,
+    keyToUpdate: keyof ProductListType
+    updatedValue: number
+}
+
 
 type ProductRowProps = {
     listOrder: number,
     productCount: number
     id: number;
+    returnFunction: (props: UpdateProductRowProps) => void;
     deleteFunction: (rowId: number) => void;
-    quantity?: number;
-    price?: number;
+    quantity: number;
+    price: number;
     unifiedPrice?: number;
     rank: number;
 };
+
 
 type RankDisplayProps = {
     rank: number;
@@ -150,7 +161,8 @@ export {
     ThemeContextType,
     PageWrapperProps,
     ModalProps,
-    InputCompProps,
+    NumericInputProps,
+    UpdateProductRowProps,
     ProductRowProps,
     RankDisplayProps,
     SwitchMeasurementProps,
