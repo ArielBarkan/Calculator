@@ -56,7 +56,7 @@ const GOOGLE_ANALYTICS = {
                 product_count: stats.productCount,
                 non_interaction: true // Ensures it doesn't affect bounce rate
             });
-            console.log("[Google Analytics] event : calculated_product_stats");
+            // console.log("[Google Analytics] event : calculated_product_stats");
         }
     }
 
