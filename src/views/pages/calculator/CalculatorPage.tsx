@@ -35,6 +35,7 @@ const CalculatorPage = () => {
 
     const handleRemoveProduct = (rowId: number) => {
         setProductsList((prevProducts) => prevProducts.filter((product) => product.id !== rowId));
+        handleProductUpdate(({ id: 0, keyToUpdate: "price", updatedValue: 0 }));
     };
 
     const handleProductUpdate = (props: UpdateProductRowProps) => {
