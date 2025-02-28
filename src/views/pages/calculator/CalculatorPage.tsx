@@ -43,13 +43,12 @@ const CalculatorPage = () => {
         const { id, keyToUpdate, updatedValue } = props;
         console.log(id, keyToUpdate, updatedValue);
         setProductsList((prevProducts) => {
-            // ✅ Update the product with the new value
+            //  Update the product with the new value
             const updatedProducts = prevProducts.map((product) => {
                 if (product.id === id) {
                     const updatedProduct = { ...product, [keyToUpdate]: updatedValue };
 
 
-                    // ✅ If both price and quantity exist, calculate unifiedPrice
                     if (updatedProduct.price && updatedProduct.quantity) {
                         updatedProduct.unifiedPrice = Math.ceil((updatedProduct.price / updatedProduct.quantity) * 100 * 100) / 100;
                     } else {
@@ -62,12 +61,12 @@ const CalculatorPage = () => {
                 return product;
             });
 
-            // ✅ Sort products by `unifiedPrice` (lowest first)
+
             const sortedProducts = [...updatedProducts]
                 .filter((p) => p.unifiedPrice !== undefined) // Ignore products without unifiedPrice
                 .sort((a, b) => a.unifiedPrice! - b.unifiedPrice!);
 
-            // ✅ Assign ranks correctly
+
             let currentRank = 1;
             let previousUnifiedPrice: number | undefined;
 
@@ -77,7 +76,7 @@ const CalculatorPage = () => {
                 if (sortedIndex !== -1) {
                     const sortedProduct = sortedProducts[sortedIndex];
 
-                    // ✅ If the `unifiedPrice` is different, increase rank
+
                     if (previousUnifiedPrice !== sortedProduct.unifiedPrice) {
                         currentRank = sortedIndex + 1; // Rank is 1-based, so we use index + 1
                         previousUnifiedPrice = sortedProduct.unifiedPrice;
