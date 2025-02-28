@@ -51,7 +51,7 @@ const CalculatorPage = () => {
 
                     // ✅ If both price and quantity exist, calculate unifiedPrice
                     if (updatedProduct.price && updatedProduct.quantity) {
-                        updatedProduct.unifiedPrice = Number((updatedProduct.price / updatedProduct.quantity).toFixed(4));
+                        updatedProduct.unifiedPrice = Math.ceil((updatedProduct.price / updatedProduct.quantity) * 100 * 100) / 100;
                     } else {
                         delete updatedProduct.unifiedPrice;
                         delete updatedProduct.rank;
