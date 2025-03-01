@@ -49,11 +49,13 @@ const CloseButton = styled.button`
     margin-left: auto;
     margin-right: auto;
     display: block;
+
+    &:hover {
+        background-color: ${({ theme }) => theme.buttons.primary.activeBackgroundColor};
+    }
 }
 
-&:hover {
-    background-color: ${({ theme }) => theme.buttons.primary.activeBackgroundColor};
-}
+
 `;
 
 
