@@ -140,7 +140,7 @@ type SelectComponentProps = {
 type IconButtonProps = {
     label: string;
     icon: React.ReactNode;
-    disabled: boolean;
+    disabled?: boolean;
     returnFunction: () => void;
 };
 

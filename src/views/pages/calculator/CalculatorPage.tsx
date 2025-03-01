@@ -57,7 +57,7 @@ const CalculatorPage = () => {
                             returnFunction={handleAddProduct} icon={<IconAdd size={30} color={"white"} />}
                             disabled={productsToAddLeft === 0} />
                 <IconButton label={translate("common:pages.calculator.button.reset")} returnFunction={handleResetPage}
-                            icon={<IconRestart size={30} color={"white"} />} disabled={false} />
+                            icon={<IconRestart size={30} color={"white"} />} />
             </ButtonsLineContainer>
         </>
     );
