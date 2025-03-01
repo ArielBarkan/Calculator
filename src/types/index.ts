@@ -113,6 +113,7 @@ type ProductRowProps = {
     id: number;
     returnFunction: (props: UpdateProductRowProps) => void;
     deleteFunction: (rowId: number) => void;
+    updateCurrency?: () => void;
     quantity?: number;
     price?: number;
     unifiedPrice?: number;

@@ -15,7 +15,7 @@ import { IconServices } from "../../styles";
 const ProductRowsHeader = (props: Partial<ProductRowProps>) => {
 
 
-    const { productCount } = props;
+    const { productCount, updateCurrency } = props;
     const { t: translate } = useTranslation("common");
     const [selectedMeasurement, setSelectedMeasurement] = useState<MEASUREMENT_ENUMS>(localStorageGetSelectedMeasurement());
     const [measurementUnit, setMeasurementUnit] = useState<string>("גרם");
@@ -24,6 +24,10 @@ const ProductRowsHeader = (props: Partial<ProductRowProps>) => {
 
     const handleChangeMeasurement = (measurement: MEASUREMENT_ENUMS) => {
         setSelectedMeasurement(measurement);
+        if (updateCurrency) {
+            console.log("1 update currency in header");
+            updateCurrency();
+        }
     };
 
 
