@@ -71,7 +71,7 @@ const CalculatorPage = () => {
                     isOpen={isFirstVisit}
                     title={translate("common:firstTimeModal.title")}
                     width="80%" // Set custom width
-                    height="60%" // Set custom height
+                    height="80%" // Set custom height
                     position="top" // Position modal on the right
                     onClose={() => {
                         setIsFirstVisit(false);
