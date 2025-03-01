@@ -6,9 +6,11 @@ import { AnimatePresence } from "framer-motion";
 // Custom imports
 import { ProductRow, ProductRowsHeader, IconButton, PageHeader } from "../../../components";
 import { ProductListType, UpdateProductRowProps } from "../../../types";
-import { CalculateStats, getCurrencySymbolByISO } from "../../../utils";
+import { CalculateStats } from "../../../utils";
 import { IconAdd, IconRestart } from "../../../styles";
 import { ButtonsLineContainer } from "./calculatorPage.wrappers";
+import { localStorageGetSelectedMeasurement } from "../../../services";
+import { MEASUREMENT_ENUMS } from "../../../enums";
 
 
 const CalculatorPage = () => {
@@ -18,7 +20,6 @@ const CalculatorPage = () => {
     const maxRows: number = Number(import.meta.env.VITE_MAX_ROWS);
     const generateId = () => Date.now() + Math.random();
 
-    const currencySymbol = getCurrencySymbolByISO();
 
     const initialProductsList: ProductListType[] = Array.from({ length: initialRows }, () => ({ id: generateId() }));
     // Initialize state with unique objects
@@ -39,6 +40,10 @@ const CalculatorPage = () => {
         handleProductUpdate(({ id: 0, keyToUpdate: "price", updatedValue: 0 }));
     };
 
+    const handleUpdateCurrency = () => {
+        handleProductUpdate(({ id: 0, keyToUpdate: "price", updatedValue: 0 }));
+    };
+
     const handleProductUpdate = (props: UpdateProductRowProps) => {
         const { id, keyToUpdate, updatedValue } = props;
         console.log(id, keyToUpdate, updatedValue);
@@ -50,7 +55,20 @@ const CalculatorPage = () => {
 
 
                     if (updatedProduct.price && updatedProduct.quantity) {
-                        updatedProduct.unifiedPrice = Math.ceil((updatedProduct.price / updatedProduct.quantity) * 100 * 100) / 100;
+                        const selectedMeasurement: MEASUREMENT_ENUMS = localStorageGetSelectedMeasurement();
+                        switch (selectedMeasurement) {
+                            case MEASUREMENT_ENUMS.quantity:
+                                updatedProduct.unifiedPrice = Math.ceil((updatedProduct.price / updatedProduct.quantity));
+                                break;
+                            case MEASUREMENT_ENUMS.liquid:
+                            case MEASUREMENT_ENUMS.weight:
+                            default:
+                                updatedProduct.unifiedPrice = Math.ceil((updatedProduct.price / updatedProduct.quantity) * 100 * 100) / 100;
+                                break;
+
+                        }
+
+
                     } else {
                         delete updatedProduct.unifiedPrice;
                         delete updatedProduct.rank;
@@ -101,7 +119,7 @@ const CalculatorPage = () => {
                         subTitle={translate("common:pages.calculator.subTitle")} />
 
             <div style={{ display: "grid", width: "100%" }}>
-                <ProductRowsHeader productCount={productsList.length} />
+                <ProductRowsHeader productCount={productsList.length} returnFunction={handleUpdateCurrency} />
                 <AnimatePresence>
                     {productsList.map((product: ProductListType, index: number) => (
                         <ProductRow key={product.id} listOrder={index} id={product.id}

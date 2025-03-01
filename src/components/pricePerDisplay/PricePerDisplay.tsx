@@ -1,3 +1,5 @@
+import { getCurrencySymbolByISO } from "../../utils";
+
 type pricePerDisplayProps = {
     priceUnified?: number
 }
@@ -6,9 +8,11 @@ type pricePerDisplayProps = {
 const PricePerDisplay = (props: pricePerDisplayProps) => {
 
     const { priceUnified } = props;
+    const currencySymbol = getCurrencySymbolByISO();
+    const displayPrice = priceUnified ? `${priceUnified}${currencySymbol}` : "";
 
 
-    return (<p>{priceUnified}</p>);
+    return (<p>{displayPrice}</p>);
 
 };
 

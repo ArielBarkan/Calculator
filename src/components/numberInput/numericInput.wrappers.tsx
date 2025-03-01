@@ -8,7 +8,6 @@ const PADDING = 15; // Total left & right padding
 const NumberInputStyled = styled.input.attrs(({ maxLength = 7 }) => ({
     type: "text",
     inputMode: "numeric",
-    pattern: "[0-9]*",
     placeholder: "",
     maxLength
 }))<{ maxLength: number }>`

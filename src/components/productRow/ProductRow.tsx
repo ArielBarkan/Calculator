@@ -34,7 +34,7 @@ const ProductRow = (props: ProductRowProps) => {
     return (
         <SlideOutMotion>
             <ProductRowContainer {...{ selected }}>
-                <NumericInput maxLength={5} blurFunction={handleBlur} focusFunction={handleFocus}
+                <NumericInput maxLength={4} blurFunction={handleBlur} focusFunction={handleFocus}
                               returnFunction={handlePriceUpdated} value={price} />
                 <NumericInput maxLength={4} blurFunction={handleBlur} focusFunction={handleFocus}
                               returnFunction={handleAmountUpdated} value={quantity} />
