@@ -17,6 +17,7 @@ type currencyType = {
     englishName: string,
     localName: string,
     symbol: string,
+    enabled: boolean,
     ISO: string,
     flag: string,
 };

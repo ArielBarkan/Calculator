@@ -38,19 +38,20 @@ const CurrencyPage = () => {
             <PageHeader title={translate("common:pages.settings.setCurrency")}
                         subTitle={translate("common:pages.settings.currency.subTitle")} linkTo={"/settings"} />
 
-            {SUPPORTED_CURRENCIES.map((currency: currencyType, index: number) => (
-                <Row onClick={() => handleChangeCurrency(currency.ISO)}
-                     selected={currentCurrency === currency.ISO} key={index}>
-                    <IconsGroup>
-                        <Flag code={currency.flag} width={50}
-                              fallback={<img alt={"generic"}
-                                             src={InternationalFlag} width="50px" />} />
-                        <p> {currency.localName}</p>
-                    </IconsGroup>
-                    <p>{currency.symbol}</p>
-                </Row>
+            {SUPPORTED_CURRENCIES
+                .filter((currency: currencyType) => currency.enabled) // ✅ Only keep enabled currencies
+                .map((currency: currencyType, index: number) => (
+                    <Row onClick={() => handleChangeCurrency(currency.ISO)}
+                         selected={currentCurrency === currency.ISO} key={index}>
+                        <IconsGroup>
+                            <Flag code={currency.flag} width={50}
+                                  fallback={<img alt="generic" src={InternationalFlag} width="50px" />} />
+                            <p>{currency.localName}</p>
+                        </IconsGroup>
+                        <p>{currency.symbol}</p>
+                    </Row>
+                ))}
 
-            ))}
 
         </>
     );
