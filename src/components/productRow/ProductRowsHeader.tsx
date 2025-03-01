@@ -1,7 +1,7 @@
 // React and modules imports
 import { useEffect, useState } from "react";
 import { useTranslation, Trans } from "react-i18next";
-
+import { useTheme } from "styled-components";
 // Custom imports
 import { ProductRowContainer, ProductRowsTitle } from "./productRow.wrappers";
 import { CustomModal, UnstyledButton } from "../";
@@ -21,7 +21,7 @@ const ProductRowsHeader = (props: Partial<ProductRowProps>) => {
     const [measurementUnit, setMeasurementUnit] = useState<string>("גרם");
     const [isModalOpen, setModalOpen] = useState(false);
     const [measurementLabel, setMeasurementLabel] = useState<string>("Measurement");
-
+    const theme = useTheme();
     const handleChangeMeasurement = (measurement: MEASUREMENT_ENUMS) => {
         setSelectedMeasurement(measurement);
         if (updateCurrency) {
@@ -63,7 +63,8 @@ const ProductRowsHeader = (props: Partial<ProductRowProps>) => {
                     {/*TODO: display this column header in a flexbox */}
                     <UnstyledButton
                         onClick={() => setModalOpen(true)}>
-                        {<Trans i18nKey={measurementLabel} />}<IconServices size={25} color={"yellow"} />
+                        {<Trans i18nKey={measurementLabel} />}<IconServices size={25}
+                                                                            color={theme.buttons.primary.backgroundColor} />
                     </UnstyledButton>
                 </ProductRowsTitle>
                 <ProductRowsTitle>
