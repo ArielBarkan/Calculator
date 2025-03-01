@@ -1,0 +1,131 @@
+{
+  "components": {
+    "toggleSwitch": {
+      "off": "Inativo",
+      "on": "Ativo"
+    }
+  },
+  "header": {
+    "linkLabels": {
+      "about": "Sobre",
+      "main": "Início",
+      "settings": "Configurações"
+    }
+  },
+  "meta": {
+    "about": {
+      "title": "Sobre"
+    },
+    "currency": {
+      "title": "Moeda"
+    },
+    "home": {
+      "title": "Página Inicial"
+    },
+    "language": {
+      "title": "Idioma"
+    },
+    "settings": {
+      "title": "Configurações"
+    }
+  },
+  "pages": {
+    "about": {
+      "subTitle": "Saiba mais sobre este aplicativo e como ele ajuda você a comparar preços de forma eficaz",
+      "title": "Sobre"
+    },
+    "calculator": {
+      "button": {
+        "addProduct": "Adicionar linha de produto ({{left}} restante)",
+        "reset": "Redefinir"
+      },
+      "header": {
+        "delete": "Excluir",
+        "price": "Preço<br/>do produto",
+        "quantity": "Quantidade",
+        "rank": "Classificação<br/>de preço",
+        "unifiedPrice": "Preço por"
+      },
+      "measurement": {
+        "liquid": {
+          "modal": {
+            "explanation": "Insira o volume em mililitros"
+          },
+          "name": "Líquidos",
+          "shortUnit": "100ml",
+          "tableHeader": "Volume<br/>em mililitros",
+          "unit": "Mililitros"
+        },
+        "quantity": {
+          "modal": {
+            "explanation": "Insira a quantidade em unidades"
+          },
+          "name": "Quantidade",
+          "shortUnit": "1 un.",
+          "tableHeader": "Qtd.<br/>unidades",
+          "unit": "Unidades"
+        },
+        "weight": {
+          "modal": {
+            "explanation": "Insira o peso em gramas"
+          },
+          "name": "Peso",
+          "shortUnit": "100g",
+          "tableHeader": "Peso<br/>em gramas",
+          "unit": "Gramas"
+        }
+      },
+      "modal": {
+        "title": "Escolha uma unidade de comparação"
+      },
+      "subTitle": "Compare preços de produtos por peso, volume ou quantidade e encontre a melhor oferta",
+      "title": "Calculadora"
+    },
+    "settings": {
+      "currency": {
+        "subTitle": "Selecione a moeda utilizada no aplicativo"
+      },
+      "language": {
+        "subTitle": "Escolha seu idioma de exibição preferido"
+      },
+      "setCurrency": "Moeda",
+      "setCurrencySuccess": "Moeda atualizada",
+      "setDarkMode": "Modo escuro",
+      "setLanguage": "Idioma",
+      "setLanguageFailed": "Falha ao atualizar o idioma",
+      "setLanguageSuccess": "Idioma atualizado",
+      "setThemeFailed": "Falha ao atualizar o tema",
+      "setThemeSuccess": "Tema atualizado",
+      "subTitle": "Personalize sua experiência: altere o tema, a moeda e o idioma",
+      "title": "Configurações"
+    }
+  },
+  "share": {
+    "label": "Compartilhar",
+    "text": "Encontrei este aplicativo incrível, confira:",
+    "title": "Aplicativo para encontrar o produto mais barato na prateleira com facilidade"
+  },
+  "firstTimeModal": {
+    "title": "Compare com inteligência, compre com economia – Como o CalcPrice ajuda você a economizar",
+    "item1": {
+      "title": "Comparação Inteligente e Simples",
+      "description": "Chega de adivinhar qual tamanho de embalagem é o melhor negócio. O aplicativo calcula o preço por 100g/ml/unidade para que você possa ver claramente qual é o mais econômico."
+    },
+    "item2": {
+      "title": "Economize Dinheiro",
+      "description": "Preços confusos? Com o CalcPrice, você pode escolher a opção mais barata e evitar embalagens enganosas."
+    },
+    "item3": {
+      "title": "Adequado para Todos os Produtos",
+      "description": "Cereais, queijos, bebidas, produtos de limpeza, shampoo – qualquer coisa vendida por peso, volume ou unidade."
+    },
+    "item4": {
+      "title": "Rápido e Fácil de Usar",
+      "description": "Sem necessidade de calculadoras ou contas complicadas. Basta inserir os dados e obter uma resposta instantânea."
+    },
+    "item5": {
+      "title": "Classificação Inteligente",
+      "description": "Além de ver o preço por 100g/ml/unidade, você pode compará-lo com outros produtos inseridos para saber se realmente é um bom negócio."
+    }
+  }
+}
