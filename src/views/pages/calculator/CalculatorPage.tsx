@@ -1,6 +1,8 @@
-// CalculatorPage.tsx
+// React and modules imports
 import { useTranslation } from "react-i18next";
 import { AnimatePresence } from "framer-motion";
+
+// Custom imports
 import { ProductRow, ProductRowsHeader, IconButton, PageHeader } from "../../../components";
 import { IconAdd, IconRestart } from "../../../styles";
 import { ButtonsLineContainer } from "./calculatorPage.wrappers";
