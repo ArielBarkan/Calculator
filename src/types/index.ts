@@ -93,7 +93,7 @@ type NumericInputProps = {
 };
 
 type ProductListType = {
-    id: number;
+    id: string;
     quantity?: number;
     price?: number;
     unifiedPrice?: number;
@@ -101,7 +101,7 @@ type ProductListType = {
 }
 
 type UpdateProductRowProps = {
-    id: number,
+    id: string,
     keyToUpdate: keyof ProductListType
     updatedValue: number
 }
@@ -110,9 +110,9 @@ type UpdateProductRowProps = {
 type ProductRowProps = {
     listOrder: number,
     productCount: number
-    id: number;
+    id: string;
     returnFunction: (props: UpdateProductRowProps) => void;
-    deleteFunction: (rowId: number) => void;
+    deleteFunction: (rowId: string) => void;
     updateCurrency?: () => void;
     quantity?: number;
     price?: number;

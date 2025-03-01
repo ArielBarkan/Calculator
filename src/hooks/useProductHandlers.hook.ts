@@ -59,7 +59,7 @@ const useProductHandlers = (initialProductsList: ProductListType[]) => {
     /**
      * Handles removing a product row from the list.
      */
-    const handleRemoveProduct = (rowId: number) => {
+    const handleRemoveProduct = (rowId: string) => {
         setProductsList((prevProducts) => {
             const updatedProducts = prevProducts.filter((product) => product.id !== rowId);
             return sortAndRankProducts(updatedProducts, localStorageGetSelectedMeasurement());
