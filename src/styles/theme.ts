@@ -35,7 +35,7 @@ const lightTheme = {
     SelectableElement: {
         selectedBorder: "#000000",
         selectedBackground: "#E0E0E0",
-        activeBackground: "#D0D0D0"
+        activeBackground: "#b0aeae"
     },
     BoxElement: {
         shadowColor: "#B0B0B0"
