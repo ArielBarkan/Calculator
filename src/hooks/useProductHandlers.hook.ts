@@ -56,12 +56,21 @@ const useProductHandlers = (initialProductsList: ProductListType[]) => {
             return sortAndRankProducts(updatedProducts, selectedMeasurement);
         });
     };
-
+    /**
+     * Handles removing a product row from the list.
+     */
+    const handleRemoveProduct = (rowId: number) => {
+        setProductsList((prevProducts) => {
+            const updatedProducts = prevProducts.filter((product) => product.id !== rowId);
+            return sortAndRankProducts(updatedProducts, localStorageGetSelectedMeasurement());
+        });
+    };
     return {
         productsList,
         setProductsList,
         handleUpdateCurrency,
-        handleProductUpdate
+        handleProductUpdate,
+        handleRemoveProduct
     };
 };
 export { useProductHandlers };

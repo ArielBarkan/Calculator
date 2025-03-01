@@ -58,5 +58,5 @@ const sortAndRankProducts = (products: ProductListType[], measurement: MEASUREME
         return product;
     });
 };
-
-export { calculateUnifiedPrice, sortAndRankProducts };
+const generateId = () => Date.now() + Math.random();
+export { calculateUnifiedPrice, sortAndRankProducts, generateId };

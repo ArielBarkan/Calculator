@@ -5,13 +5,14 @@ import { ProductRow, ProductRowsHeader, IconButton, PageHeader } from "../../../
 import { IconAdd, IconRestart } from "../../../styles";
 import { ButtonsLineContainer } from "./calculatorPage.wrappers";
 import { useProductHandlers } from "../../../hooks";
+import { generateId } from "../../../utils";
 
 const CalculatorPage = () => {
     const { t: translate } = useTranslation("common");
 
     const initialRows: number = Number(import.meta.env.VITE_INITIAL_ROWS);
     const maxRows: number = Number(import.meta.env.VITE_MAX_ROWS);
-    const generateId = () => Date.now() + Math.random();
+
 
     const initialProductsList = Array.from({ length: initialRows }, () => ({ id: generateId() }));
 
@@ -19,7 +20,8 @@ const CalculatorPage = () => {
         productsList,
         setProductsList,
         handleUpdateCurrency,
-        handleProductUpdate
+        handleProductUpdate,
+        handleRemoveProduct
     } = useProductHandlers(initialProductsList);
 
     const handleAddProduct = () => {
@@ -43,11 +45,7 @@ const CalculatorPage = () => {
                 <AnimatePresence>
                     {productsList.map((product, index) => (
                         <ProductRow key={product.id} listOrder={index} {...product}
-                                    deleteFunction={(rowId) => handleProductUpdate({
-                                        id: rowId,
-                                        keyToUpdate: "price",
-                                        updatedValue: 0
-                                    })}
+                                    deleteFunction={handleRemoveProduct}
                                     returnFunction={handleProductUpdate}
                                     productCount={productsList.length} />
                     ))}
