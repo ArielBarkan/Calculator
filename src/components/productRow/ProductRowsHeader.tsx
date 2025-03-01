@@ -25,7 +25,6 @@ const ProductRowsHeader = (props: Partial<ProductRowProps>) => {
     const handleChangeMeasurement = (measurement: MEASUREMENT_ENUMS) => {
         setSelectedMeasurement(measurement);
         if (updateCurrency) {
-            console.log("1 update currency in header");
             updateCurrency();
         }
     };
@@ -64,7 +63,7 @@ const ProductRowsHeader = (props: Partial<ProductRowProps>) => {
                     {/*TODO: display this column header in a flexbox */}
                     <UnstyledButton
                         onClick={() => setModalOpen(true)}>
-                        {<Trans i18nKey={measurementLabel} />}<IconServices size={25} />
+                        {<Trans i18nKey={measurementLabel} />}<IconServices size={25} color={"yellow"} />
                     </UnstyledButton>
                 </ProductRowsTitle>
                 <ProductRowsTitle>
@@ -82,6 +81,7 @@ const ProductRowsHeader = (props: Partial<ProductRowProps>) => {
                          width="85%" // Set custom width
                          height="200px" // Set custom height
                          position="top" // Position modal on the right
+                         closeButtonText={translate("common:pages.calculator.modal.closeButton")}
 
             >
                 <span onClick={() => setModalOpen(false)}>

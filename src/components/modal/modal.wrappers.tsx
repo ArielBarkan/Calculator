@@ -38,17 +38,22 @@ const Content = styled.div`
 `;
 
 const CloseButton = styled.button`
-    margin-top: 10px;
+    align-self: center;
+    margin-top: 5px;
     padding: 8px 16px;
-    background-color: #ff4d4f;
-    color: white;
+    background-color: ${({ theme }) => theme.buttons.primary.backgroundColor};
+    color: ${({ theme }) => theme.buttons.primary.color};
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
 
-    &:hover {
-        background-color: #d9363e;
-    }
+&:hover {
+    background-color: ${({ theme }) => theme.buttons.primary.activeBackgroundColor};
+}
 `;
 
 

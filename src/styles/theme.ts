@@ -26,7 +26,8 @@ const lightTheme = {
     buttons: {
         primary: {
             backgroundColor: "#384cae",
-            color: "#000000"
+            color: "#FFFFFF",
+            activeBackgroundColor: "#5363b6"
         }
     },
     icons: {
@@ -56,7 +57,7 @@ const darkTheme = {
     buttons: {
         primary: {
             backgroundColor: "#384cae",
-            color: "#e3b863"
+            color: "#FFFFFF"
         }
     },
     icons: {

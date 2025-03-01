@@ -76,6 +76,7 @@ const CalculatorPage = () => {
                     onClose={() => {
                         setIsFirstVisit(false);
                     }}
+                    closeButtonText={translate("common:firstTimeModal.closeButton")}
                 >
                     <FirstTimeVisitorModalContent />
                 </CustomModal>

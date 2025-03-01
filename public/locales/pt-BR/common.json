@@ -5,6 +5,30 @@
       "on": "Ativo"
     }
   },
+  "firstTimeModal": {
+    "closeButton": "Entendi, leve-me para o aplicativo",
+    "item1": {
+      "description": "Chega de adivinhar qual tamanho de embalagem é o melhor negócio. O aplicativo calcula o preço por 100g/ml/unidade para que você possa ver claramente qual é o mais econômico.",
+      "title": "Comparação Inteligente e Simples"
+    },
+    "item2": {
+      "description": "Preços confusos? Com o CalcPrice, você pode escolher a opção mais barata e evitar embalagens enganosas.",
+      "title": "Economize Dinheiro"
+    },
+    "item3": {
+      "description": "Cereais, queijos, bebidas, produtos de limpeza, shampoo – qualquer coisa vendida por peso, volume ou unidade.",
+      "title": "Adequado para Todos os Produtos"
+    },
+    "item4": {
+      "description": "Sem necessidade de calculadoras ou contas complicadas. Basta inserir os dados e obter uma resposta instantânea.",
+      "title": "Rápido e Fácil de Usar"
+    },
+    "item5": {
+      "description": "Além de ver o preço por 100g/ml/unidade, você pode compará-lo com outros produtos inseridos para saber se realmente é um bom negócio.",
+      "title": "Classificação Inteligente"
+    },
+    "title": "Compare com inteligência, compre com economia – Como o CalcPrice ajuda você a economizar"
+  },
   "header": {
     "linkLabels": {
       "about": "Sobre",
@@ -36,14 +60,14 @@
     },
     "calculator": {
       "button": {
-        "addProduct": "Adicionar linha de produto ({{left}} restante)",
+        "addProduct": "Add prod. ({{left}} mais)",
         "reset": "Redefinir"
       },
       "header": {
         "delete": "Excluir",
-        "price": "Preço<br/>do produto",
+        "price": "Preço<br/>prod.",
         "quantity": "Quantidade",
-        "rank": "Classificação<br/>de preço",
+        "rank": "Ranking<br/>preço",
         "unifiedPrice": "Preço por"
       },
       "measurement": {
@@ -76,6 +100,7 @@
         }
       },
       "modal": {
+        "closeButton": "Fechar sem alterar a seleção",
         "title": "Escolha uma unidade de comparação"
       },
       "subTitle": "Compare preços de produtos por peso, volume ou quantidade e encontre a melhor oferta",
@@ -104,28 +129,5 @@
     "label": "Compartilhar",
     "text": "Encontrei este aplicativo incrível, confira:",
     "title": "Aplicativo para encontrar o produto mais barato na prateleira com facilidade"
-  },
-  "firstTimeModal": {
-    "title": "Compare com inteligência, compre com economia – Como o CalcPrice ajuda você a economizar",
-    "item1": {
-      "title": "Comparação Inteligente e Simples",
-      "description": "Chega de adivinhar qual tamanho de embalagem é o melhor negócio. O aplicativo calcula o preço por 100g/ml/unidade para que você possa ver claramente qual é o mais econômico."
-    },
-    "item2": {
-      "title": "Economize Dinheiro",
-      "description": "Preços confusos? Com o CalcPrice, você pode escolher a opção mais barata e evitar embalagens enganosas."
-    },
-    "item3": {
-      "title": "Adequado para Todos os Produtos",
-      "description": "Cereais, queijos, bebidas, produtos de limpeza, shampoo – qualquer coisa vendida por peso, volume ou unidade."
-    },
-    "item4": {
-      "title": "Rápido e Fácil de Usar",
-      "description": "Sem necessidade de calculadoras ou contas complicadas. Basta inserir os dados e obter uma resposta instantânea."
-    },
-    "item5": {
-      "title": "Classificação Inteligente",
-      "description": "Além de ver o preço por 100g/ml/unidade, você pode compará-lo com outros produtos inseridos para saber se realmente é um bom negócio."
-    }
   }
 }
