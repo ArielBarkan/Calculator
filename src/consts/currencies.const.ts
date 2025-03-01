@@ -20,14 +20,14 @@ const SUPPORTED_CURRENCIES: currencyType[] = [
         flag: "BR",
         enabled: true
     },
-    { englishName: "British pound", localName: "Pound Sterling", symbol: "£", ISO: "GBP", flag: "GB", enabled: true },
+    { englishName: "British pound", localName: "Pound Sterling", symbol: "£", ISO: "GBP", flag: "GB", enabled: false }, // ❌ UK (Partially Imperial)
     {
         englishName: "Canadian dollar",
         localName: "Canadian Dollar",
         symbol: "$",
         ISO: "CAD",
         flag: "CA",
-        enabled: true
+        enabled: false // Canada (Mixed Metric & Imperial)
     },
     { englishName: "Chinese yuan", localName: "人民币", symbol: "¥", ISO: "CNY", flag: "CN", enabled: true },
     { englishName: "Euro", localName: "Euro", symbol: "€", ISO: "EUR", flag: "EU", enabled: true },
@@ -49,7 +49,7 @@ const SUPPORTED_CURRENCIES: currencyType[] = [
         symbol: "R",
         ISO: "ZAR",
         flag: "ZA",
-        enabled: true
+        enabled: false // South Africa (Mostly Metric, some Imperial remnants)
     },
     { englishName: "South Korean won", localName: "대한민국 원", symbol: "₩", ISO: "KRW", flag: "KR", enabled: true },
     {
@@ -67,9 +67,8 @@ const SUPPORTED_CURRENCIES: currencyType[] = [
         symbol: "$",
         ISO: "USD",
         flag: "US",
-        enabled: false
+        enabled: false // USA (Fully Imperial)
     }
 ];
-
 
 export { SUPPORTED_CURRENCIES };
