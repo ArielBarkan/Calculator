@@ -104,5 +104,28 @@
     "label": "Comp",
     "text": "Encontré esta increíble aplicación, échale un vistazo:",
     "title": "Aplicación para encontrar fácilmente el producto más barato en la estantería"
+  },
+  "firstTimeModal": {
+    "title": "Compara Inteligente, Compra Inteligente – Cómo CalcPrice te Ayuda a Ahorrar",
+    "item1": {
+      "title": "Comparación Inteligente y Sencilla",
+      "description": "No más adivinar qué tamaño de paquete es más conveniente. La aplicación calcula el precio por 100g/ml/unidad para que puedas ver claramente cuál es la opción más económica."
+    },
+    "item2": {
+      "title": "Ahorra Dinero",
+      "description": "¿Precios confusos? Con CalcPrice, puedes elegir la opción más barata y evitar los tamaños de empaque engañosos."
+    },
+    "item3": {
+      "title": "Apto para Todos los Productos",
+      "description": "Cornflakes, queso, bebidas, productos de limpieza, champú – cualquier producto vendido por peso, volumen o unidad."
+    },
+    "item4": {
+      "title": "Rápido y Fácil de Usar",
+      "description": "No necesitas calculadoras ni fórmulas complicadas. Solo ingresa los datos y obtén una respuesta al instante."
+    },
+    "item5": {
+      "title": "Clasificación Inteligente",
+      "description": "No solo verás el precio por 100g/ml/unidad, sino que también podrás compararlo con otros productos ingresados para saber si realmente es una buena oferta."
+    }
   }
 }

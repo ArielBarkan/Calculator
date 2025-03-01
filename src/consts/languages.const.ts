@@ -3,6 +3,12 @@ import { languageType } from "../types";
 
 const SUPPORTED_LANGUAGES: languageType[] = [
     {
+        locale: "he-IL",
+        direction: "rtl",
+        name: "עברית",
+        flag: "IL"
+    },
+    {
         locale: "en-US",
         direction: "ltr",
         name: "English",
@@ -19,12 +25,6 @@ const SUPPORTED_LANGUAGES: languageType[] = [
         direction: "ltr",
         name: "Português",
         flag: "BR"
-    },
-    {
-        locale: "he-IL",
-        direction: "rtl",
-        name: "עברית",
-        flag: "IL"
     }
 ];
 

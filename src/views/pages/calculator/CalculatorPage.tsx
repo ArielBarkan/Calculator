@@ -3,14 +3,18 @@ import { useTranslation } from "react-i18next";
 import { AnimatePresence } from "framer-motion";
 
 // Custom imports
-import { ProductRow, ProductRowsHeader, IconButton, PageHeader } from "../../../components";
+import { ProductRow, ProductRowsHeader, IconButton, PageHeader, CustomModal } from "../../../components";
 import { IconAdd, IconRestart } from "../../../styles";
 import { ButtonsLineContainer } from "./calculatorPage.wrappers";
-import { useProductHandlers } from "../../../hooks";
+import { useFirstTimeVisitor, useProductHandlers } from "../../../hooks";
 import { generateId } from "../../../utils";
+
+import React from "react";
+import { FirstTimeVisitorModalContent } from "../../../components/firstTimeVisitorModalContent";
 
 const CalculatorPage = () => {
     const { t: translate } = useTranslation("common");
+    const { isFirstVisit, setIsFirstVisit } = useFirstTimeVisitor(); // ✅ Detect first-time visitors
 
     const initialRows: number = Number(import.meta.env.VITE_INITIAL_ROWS);
     const maxRows: number = Number(import.meta.env.VITE_MAX_ROWS);
@@ -61,6 +65,21 @@ const CalculatorPage = () => {
                 <IconButton label={translate("common:pages.calculator.button.reset")} returnFunction={handleResetPage}
                             icon={<IconRestart size={30} color={"white"} />} />
             </ButtonsLineContainer>
+
+            {isFirstVisit && (
+                <CustomModal
+                    isOpen={isFirstVisit}
+                    title={translate("common:firstTimeModal.title")}
+                    width="80%" // Set custom width
+                    height="60%" // Set custom height
+                    position="top" // Position modal on the right
+                    onClose={() => {
+                        setIsFirstVisit(false);
+                    }}
+                >
+                    <FirstTimeVisitorModalContent />
+                </CustomModal>
+            )}
         </>
     );
 };

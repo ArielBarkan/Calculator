@@ -104,5 +104,28 @@
     "label": "Share",
     "text": "I found this cool app, check it out:",
     "title": "App for easily find cheapest product on shelf "
+  },
+  "firstTimeModal": {
+    "title": "Compare Smart, Shop Smart – How CalcPrice Helps You Save",
+    "item1": {
+      "title": "Smart and Simple Comparison",
+      "description": "No more guessing which package size is the best deal. The app calculates the price per 100g/ml/unit so you can clearly see what is the most cost-effective."
+    },
+    "item2": {
+      "title": "Save Money",
+      "description": "Confusing prices? With CalcPrice, you can choose the cheapest option and avoid misleading packaging sizes."
+    },
+    "item3": {
+      "title": "Suitable for All Products",
+      "description": "Cornflakes, cheese, drinks, cleaning products, shampoo – anything sold by weight, volume, or unit."
+    },
+    "item4": {
+      "title": "Fast and Easy to Use",
+      "description": "No need for calculators or complicated math. Just enter the data and get an instant answer."
+    },
+    "item5": {
+      "title": "Smart Ranking",
+      "description": "Not only will you see the price per 100g/ml/unit, but you can also compare it to other products entered to know if it's truly a good deal."
+    }
   }
 }

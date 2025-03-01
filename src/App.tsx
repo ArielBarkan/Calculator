@@ -10,13 +10,16 @@ import "./services/i18n.service";
 import { ThemeProviderWrapper } from "./context/theme.context";
 import { GlobalStyles } from "./styles";
 import { localStorageGetSelectedLanguage } from "./services";
-import { NotifyCustom } from "./components";
+
 import { GOOGLE_ANALYTICS } from "./utils/analytics.util";
+import { NotifyCustom } from "./components";
 
 
 const App: React.FC = () => {
     ChangeLanguage(localStorageGetSelectedLanguage());
+
     const location = useLocation();
+
 
     useEffect(() => {
         GOOGLE_ANALYTICS.initGA();
