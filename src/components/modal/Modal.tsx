@@ -31,8 +31,8 @@ const CustomModal: React.FC<ModalProps> = ({
             position={position}
             style={{
                 overlay: {
-                    backgroundColor: "rgba(0, 0, 0, 0.6)", // ✅ Change color directly
-                    backdropFilter: "blur(5px)" // ✅ Optional blur effect
+                    backgroundColor: "rgba(0, 0, 0, 0.6)", // Change color directly
+                    backdropFilter: "blur(5px)" // Optional blur effect
                 }
             }}
         >

@@ -14,7 +14,7 @@ export const ThemeProviderWrapper: React.FC<{ children: React.ReactNode }> = ({ 
     const [theme, setTheme] = useState<THEME_ENUMS>(localStorageGetSelectedTheme());
     const [direction, setDirection] = useState<"ltr" | "rtl">(document.body.dir as "ltr" | "rtl");
 
-    // ✅ Detect changes in `document.body.dir`
+    // Detect changes in `document.body.dir`
     useEffect(() => {
         const observer = new MutationObserver(() => {
             setDirection(document.body.dir as "ltr" | "rtl");
@@ -34,7 +34,7 @@ export const ThemeProviderWrapper: React.FC<{ children: React.ReactNode }> = ({ 
 
     const appliedTheme = {
         ...(theme === THEME_ENUMS.light ? lightTheme : darkTheme),
-        direction // ✅ Inject direction into the theme
+        direction // Inject direction into the theme
     };
 
     return (

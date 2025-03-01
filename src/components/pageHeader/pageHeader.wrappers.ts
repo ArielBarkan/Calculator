@@ -8,7 +8,7 @@ const PageHeaderWrapper = styled.div`
     padding: 2rem 1rem 1rem;
 `;
 
-// ✅ New Wrapper to Align Back and Title Horizontally
+// New Wrapper to Align Back and Title Horizontally
 const TitleRow = styled.div`
     display: flex;
     align-items: center; /* Vertically center Back and Title */

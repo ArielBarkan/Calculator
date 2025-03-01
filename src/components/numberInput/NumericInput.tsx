@@ -1,34 +1,39 @@
-// React and modules imports
 import React, { useState } from "react";
 
 // Custom imports
 import { NumberInputStyled } from "./numericInput.wrappers";
 import { NumericInputProps } from "../../types";
 
-
 const NumericInput = (props: NumericInputProps) => {
     const { maxLength, focusFunction, blurFunction, returnFunction, value: displayValue = 0 } = props;
-    const [value, setValue] = useState<number>(displayValue);
+
+    const [inputValue, setInputValue] = useState<string>(displayValue.toString()); // Store as string
+
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        const inputValue = event.target.value;
+        const newValue = event.target.value;
 
-        // Allow only numbers and one decimal point
-        if (/^\d*\.?\d*$/.test(inputValue)) {
-            const numericValue = inputValue === "" ? 0 : parseFloat(inputValue); // ✅ Convert to number, keep empty string
+        // Allow numbers with one optional decimal point & allow deletion
+        if (/^\d*\.?\d*$/.test(newValue)) {
+            console.log("handlePriceUpdated pass", newValue);
 
+            setInputValue(newValue); // Keep input state as string, allowing full deletion
 
-            returnFunction(numericValue); // ✅ Send 0 when empty, otherwise parseFloat value
+            // Convert to number only when valid and meaningful
+            const numericValue = newValue === "" || newValue === "." ? 0 : parseFloat(newValue);
 
-
-            setValue(numericValue); // ✅ Keep input empty visually instead of forcing "0"
+            returnFunction(numericValue); // Send correct value without interfering with user input
         }
     };
 
-
-    return (<NumberInputStyled {...{ maxLength }} value={(value !== 0 ? value : "")} onChange={handleChange}
-                               onFocus={focusFunction}
-                               onBlur={blurFunction} />);
-
+    return (
+        <NumberInputStyled
+            {...{ maxLength }}
+            value={(inputValue !== "0" ? inputValue : "")}
+            onChange={handleChange}
+            onFocus={focusFunction}
+            onBlur={blurFunction}
+        />
+    );
 };
 
 export { NumericInput };

@@ -7,11 +7,11 @@ const StyledModal = styled(Modal)<{ width?: string; height?: string; position?: 
     padding: 20px;
     border-radius: 10px;
     outline: none;
-    width: ${({ width }) => width || "50%"}; /* ✅ Default width: 50% */
-    height: ${({ height }) => height || "auto"}; /* ✅ Default height: auto */
+    width: ${({ width }) => width || "50%"}; /* Default width: 50% */
+    height: ${({ height }) => height || "auto"}; /* Default height: auto */
     position: absolute;
 
-    /* ✅ Dynamic Positioning */
+    /* Dynamic Positioning */
     ${({ position }) => {
         switch (position) {
             case "top":
