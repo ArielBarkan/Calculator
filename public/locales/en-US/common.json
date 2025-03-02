@@ -1,6 +1,7 @@
 {
   "components": {
     "toggleSwitch": {
+      "off": "Inactive",
       "on": "Active"
     }
   },

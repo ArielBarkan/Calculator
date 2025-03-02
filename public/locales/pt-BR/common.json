@@ -1,6 +1,7 @@
 {
   "components": {
     "toggleSwitch": {
+      "off": "Inativo",
       "on": "Ativo"
     }
   },
