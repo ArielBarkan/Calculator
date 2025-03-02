@@ -9,7 +9,7 @@ const Navbar = styled.nav`
     width: 100%;
     background: ${({ theme }) => theme.body.bgColor};
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     box-shadow: 0 4px 10px ${({ theme }) => theme.BoxElement.shadowColor};
     height: 50px;

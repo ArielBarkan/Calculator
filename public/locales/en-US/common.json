@@ -65,6 +65,10 @@
       "subTitle": "Learn more about this app and how it helps you compare prices effectively",
       "title": "About"
     },
+    "share": {
+      "title": "Share with Friends!",
+      "subTitle": "Show this QR code to a friend so they can compare grocery prices easily too!"
+    },
     "calculator": {
       "button": {
         "addProduct": "Add product row ({{left}} more)",

@@ -11,6 +11,7 @@ const AboutPage = lazy(() => import("../views/pages/about/AboutPage"));
 const SettingsPage = lazy(() => import("../views/pages/settings/SettingsPage"));
 const Language = lazy(() => import("../views/pages/settings/language/LanguagePage"));
 const Currency = lazy(() => import("../views/pages/settings/currency/CurrencyPage"));
+const QRShare = lazy(() => import("../views/pages/shareQR/ShareQRPage"));
 
 
 const AppRoutes: React.FC = () => {
@@ -20,6 +21,7 @@ const AppRoutes: React.FC = () => {
                 <Route path="/" element={<MainLayout />}>
                     <Route index element={<CalculatorPage />} />
                     <Route path="/about" element={<AboutPage />} />
+                    <Route path="/share" element={<QRShare />} />
                     <Route path="/settings" element={<SettingsPage />} />
                     <Route path="/settings/language" element={<Language />} />
                     <Route path="/settings/currency" element={<Currency />} />

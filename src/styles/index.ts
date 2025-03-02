@@ -11,5 +11,7 @@ export {
     IconWeight,
     IconLiquid,
     IconQuantity,
-    IconRestart
+    IconRestart,
+    IconMenu,
+    IconClose
 } from "./icons";

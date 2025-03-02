@@ -65,6 +65,10 @@
       "subTitle": "Saiba mais sobre este aplicativo e como ele ajuda você a comparar preços de forma eficaz",
       "title": "Sobre"
     },
+    "share": {
+      "title": "Compartilhe com amigos!",
+      "subTitle": "Mostre este código QR a um amigo para que ele também possa comparar preços de supermercado facilmente!"
+    },
     "calculator": {
       "button": {
         "addProduct": "Add prod. ({{left}} mais)",

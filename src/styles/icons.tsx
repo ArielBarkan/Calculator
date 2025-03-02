@@ -11,7 +11,9 @@ import {
     MdBalance,
     MdOutlineWaterDrop,
     MdFilter4,
-    MdRestartAlt
+    MdRestartAlt,
+    MdMenu,
+    MdOutlineClose
 } from "react-icons/md";
 import { IconProps } from "../types";
 import { ThemedIcon } from "../components";
@@ -50,6 +52,13 @@ const IconRestart = (props: IconProps) => <ThemedIcon icon={MdRestartAlt} color=
                                                       rtlIgnore={props?.rtlIgnore}
                                                       size={props?.size} />;
 
+const IconMenu = (props: IconProps) => <ThemedIcon icon={MdMenu} color={props?.color}
+                                                   rtlIgnore={props?.rtlIgnore}
+                                                   size={props?.size} />;
+const IconClose = (props: IconProps) => <ThemedIcon icon={MdOutlineClose} color={props?.color}
+                                                    rtlIgnore={props?.rtlIgnore}
+                                                    size={props?.size} />;
+
 
 export {
     IconNext,
@@ -62,5 +71,7 @@ export {
     IconWeight,
     IconLiquid,
     IconQuantity,
-    IconRestart
+    IconRestart,
+    IconMenu,
+    IconClose
 };

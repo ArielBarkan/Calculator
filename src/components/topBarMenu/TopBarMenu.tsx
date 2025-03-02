@@ -4,7 +4,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 // Custom imports
-import { IconSettings, IconShare } from "../../styles";
+import { IconShare } from "../../styles";
 import { Navbar } from "./topBarMenu.wrappers";
 import { UnstyledButton } from "../buttonUnstyled";
 import { GOOGLE_ANALYTICS } from "../../utils/analytics.util";
@@ -13,17 +13,6 @@ import { GA_EVENTS } from "../../consts";
 
 const TopBarMenu = () => {
     const { t: translate } = useTranslation("common");
-
-    const location = useLocation();
-    const navigate = useNavigate();
-
-    const settingBaseRoute: string = "/settings";
-
-    const [isSelected, setIsSelected] = useState<boolean>(false);
-
-    useEffect(() => {
-        setIsSelected(location.pathname.startsWith(settingBaseRoute));
-    }, [location.pathname]);
 
 
     const [isShareSupported, setIsShareSupported] = useState(false);
@@ -49,9 +38,6 @@ const TopBarMenu = () => {
 
     return (
         <Navbar>
-            <UnstyledButton onClick={() => navigate(settingBaseRoute)} selected={isSelected}>
-                <IconSettings size={30} rtlIgnore={true} />
-            </UnstyledButton>
             {isShareSupported && (
                 <UnstyledButton onClick={handleShareApp}>
                     <IconShare size={30} rtlIgnore={true} />

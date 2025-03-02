@@ -65,6 +65,10 @@
       "subTitle": "Descubre más sobre esta aplicación y cómo te ayuda a comparar precios de manera efectiva",
       "title": "Acerca de"
     },
+    "share": {
+      "title": "¡Comparte con tus amigos!",
+      "subTitle": "Muestra este código QR a un amigo para que también pueda comparar precios de comestibles fácilmente."
+    },
     "calculator": {
       "button": {
         "addProduct": "Agregar fila ({{left}} mas)",
