@@ -13,9 +13,8 @@ const MenuContainer = styled.div<{ isOpen: boolean; $isRtl: boolean }>`
     color: white;
     transform: ${({ isOpen, $isRtl }) =>
             isOpen ? "translateX(0)" : $isRtl ? "translateX(100%)" : "translateX(-100%)"};
-    visibility: ${({ isOpen }) =>
-            isOpen ? "visible" : "hidden"};
-    transition: transform 0.3s ease-in-out;
+        //visibility: ${({ isOpen }) => isOpen ? "visible" : "hidden"};
+    transition: transform 0.5s ease-in-out;
     padding: 20px;
     display: flex;
     flex-direction: column;
