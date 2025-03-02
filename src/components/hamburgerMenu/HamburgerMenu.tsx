@@ -68,7 +68,7 @@ const HamburgerMenu = () => {
             <Overlay isOpen={isOpen} onClick={() => setIsOpen(false)} />
 
             {/* Menu Button */}
-            <MenuButton onClick={() => setIsOpen(!isOpen)}>{isOpen ? "☰" : "|||"}</MenuButton>
+            <MenuButton onClick={() => setIsOpen(!isOpen)}>{isOpen ? "|||" : "☰"}</MenuButton>
 
             {/* Menu */}
             <MenuContainer isOpen={isOpen} $isRtl={direction === "rtl"}>
