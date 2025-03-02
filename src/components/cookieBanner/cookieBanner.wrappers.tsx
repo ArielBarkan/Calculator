@@ -6,11 +6,12 @@ const CookieBannerWrapper = styled.div<{ $visible: boolean }>`
     bottom: ${(props) => (props.$visible ? "0" : "-100px")}; /* Show/Hide smoothly */
     left: 0;
     width: 100%;
-    background-color: ${({ theme }) => theme.body.bgColor};
-    color: ${({ theme }) => theme.body.fontColor};
+    background-color: ${({ theme }) => theme.cookieBanner.bgColor};
+    color: ${({ theme }) => theme.cookieBanner.fontColor};
     padding: 12px 20px;
     max-width: fit-content;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
@@ -24,6 +25,7 @@ const CookieText = styled.p`
 
 const ButtonGroup = styled.div`
     display: flex;
+    align-self: flex-end;
     gap: 10px;
 `;
 

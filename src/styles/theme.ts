@@ -23,6 +23,10 @@ const lightTheme = {
         bgColor: "#EAEAEA",
         fontColor: "#000000"
     },
+    cookieBanner: {
+        bgColor: "#d2d0d0",
+        fontColor: "#000000"
+    },
     buttons: {
         primary: {
             backgroundColor: "#384cae",
@@ -52,6 +56,10 @@ const darkTheme = {
     },
     body: {
         bgColor: "#5a5555",
+        fontColor: "#ffffff"
+    },
+    cookieBanner: {
+        bgColor: "#424141",
         fontColor: "#ffffff"
     },
     buttons: {
