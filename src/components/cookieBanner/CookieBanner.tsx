@@ -4,20 +4,22 @@ import { useTranslation } from "react-i18next";
 
 // Custom imports
 import { CookieBannerWrapper, CookieText, ButtonGroup, Button } from "./cookieBanner.wrappers";
+import { localStorageGetCookiesConsent, localStorageUpdateCookiesConsent } from "../../services/localStorage.service";
+import { COOKIES_CONSENT_ENUMS } from "../../enums";
 
 const CookieBanner = () => {
     const { t: translate } = useTranslation("common");
     const [visible, setVisible] = useState(false);
 
     useEffect(() => {
-        const consent = localStorage.getItem("cookieConsent");
+        const consent = localStorageGetCookiesConsent();
         if (!consent) {
             setVisible(true); // Show banner if no consent is stored
         }
     }, []);
 
     const handleConsent = (accepted: boolean) => {
-        localStorage.setItem("cookieConsent", accepted ? "accepted" : "rejected");
+        localStorageUpdateCookiesConsent(accepted ? COOKIES_CONSENT_ENUMS.accepted : COOKIES_CONSENT_ENUMS.rejected);
 
         if (!accepted) {
             window[`ga-disable-${import.meta.env.VITE_GOOGLE_ANALYTICS_TRACKING_ID}`] = true; // Disable GA

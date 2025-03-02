@@ -1,5 +1,5 @@
 // Custom imports
-import { MEASUREMENT_ENUMS, THEME_ENUMS } from "../enums";
+import { COOKIES_CONSENT_ENUMS, MEASUREMENT_ENUMS, THEME_ENUMS } from "../enums";
 import { CurrencyISOType, LocaleType } from "../types";
 
 
@@ -35,12 +35,12 @@ const localStorageGetSelectedMeasurement = (): MEASUREMENT_ENUMS => {
     return (localStorage.getItem("measurement") || import.meta.env.VITE_DEFAULT_MEASUREMENT) as MEASUREMENT_ENUMS;
 };
 
-const localStorageUpdateIsFirstVisit = (isFirstVisit: boolean) => {
-    localStorage.setItem("firstVisit", String(isFirstVisit));
+const localStorageUpdateCookiesConsent = (cookieConsent: COOKIES_CONSENT_ENUMS) => {
+    localStorage.setItem("cookieConsent", cookieConsent);
 };
 
-const localStorageGetIsFirstVisit = (): boolean => {
-    return (localStorage.getItem("firstVisit")) as unknown as boolean;
+const localStorageGetCookiesConsent = (): undefined | COOKIES_CONSENT_ENUMS => {
+    return (localStorage.getItem("cookieConsent")) as COOKIES_CONSENT_ENUMS;
 };
 
 
@@ -53,6 +53,6 @@ export {
     localStorageGetSelectedCurrency,
     localStorageUpdateSelectedMeasurement,
     localStorageGetSelectedMeasurement,
-    localStorageUpdateIsFirstVisit,
-    localStorageGetIsFirstVisit
+    localStorageUpdateCookiesConsent,
+    localStorageGetCookiesConsent
 };

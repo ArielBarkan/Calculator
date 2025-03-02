@@ -9,4 +9,9 @@ enum MEASUREMENT_ENUMS {
     quantity = "quantity",
 }
 
-export { THEME_ENUMS, MEASUREMENT_ENUMS };
+enum COOKIES_CONSENT_ENUMS {
+    accepted = "accepted",
+    rejected = "rejected",
+}
+
+export { THEME_ENUMS, MEASUREMENT_ENUMS, COOKIES_CONSENT_ENUMS };

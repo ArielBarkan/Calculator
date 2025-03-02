@@ -1,16 +1,16 @@
 // hooks/useFirstTimeVisitor.ts
 import { useEffect, useState } from "react";
-import { localStorageGetIsFirstVisit, localStorageUpdateIsFirstVisit } from "../services/localStorage.service";
+import { localStorageGetCookiesConsent, localStorageUpdateCookiesConsent } from "../services/localStorage.service";
 
 const useFirstTimeVisitor = () => {
     const [isFirstVisit, setIsFirstVisit] = useState(false);
 
     useEffect(() => {
-        const hasVisited = localStorageGetIsFirstVisit();
+        const hasVisited = localStorageGetCookiesConsent();
 
         if (!hasVisited) {
             setIsFirstVisit(true);
-            localStorageUpdateIsFirstVisit(true);
+            localStorageUpdateCookiesConsent(true);
         }
     }, []);
 
