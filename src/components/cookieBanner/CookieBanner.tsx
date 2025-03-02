@@ -6,6 +6,8 @@ import { useTranslation } from "react-i18next";
 import { CookieBannerWrapper, CookieText, ButtonGroup, Button } from "./cookieBanner.wrappers";
 import { localStorageGetCookiesConsent, localStorageUpdateCookiesConsent } from "../../services/localStorage.service";
 import { COOKIES_CONSENT_ENUMS } from "../../enums";
+import { GOOGLE_ANALYTICS } from "../../utils/analytics.util";
+import { GA_EVENTS } from "../../consts";
 
 const CookieBanner = () => {
     const { t: translate } = useTranslation("common");
@@ -23,6 +25,10 @@ const CookieBanner = () => {
 
         if (!accepted) {
             window[`ga-disable-${import.meta.env.VITE_GOOGLE_ANALYTICS_TRACKING_ID}`] = true; // Disable GA
+            GOOGLE_ANALYTICS.trackEvent(GA_EVENTS.CATEGORIES.USER_ACTIONS, GA_EVENTS.ACTIONS.COOKIES_CONSENT_REJECT, "success");
+        } else {
+            GOOGLE_ANALYTICS.trackEvent(GA_EVENTS.CATEGORIES.USER_ACTIONS, GA_EVENTS.ACTIONS.COOKIES_CONSENT_ACCEPT, "success");
+
         }
 
         setVisible(false); // Hide banner after choice is made
