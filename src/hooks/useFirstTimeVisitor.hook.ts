@@ -9,8 +9,8 @@ const useFirstTimeVisitor = () => {
         const hasVisited = localStorageGetIsFirstVisit();
 
         if (!hasVisited) {
-            setIsFirstVisit(true); // ✅ First-time visitor detected
-            localStorageUpdateIsFirstVisit(true);// ✅ Mark as visited in LocalStorage
+            setIsFirstVisit(true);
+            localStorageUpdateIsFirstVisit(true);
         }
     }, []);
 
