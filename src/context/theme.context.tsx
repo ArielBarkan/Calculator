@@ -10,7 +10,7 @@ import { ThemeContextType } from "../types";
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
-export const ThemeProviderWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const CustomThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const [theme, setTheme] = useState<THEME_ENUMS>(localStorageGetSelectedTheme());
     const [direction, setDirection] = useState<"ltr" | "rtl">(document.body.dir as "ltr" | "rtl");
 
@@ -48,7 +48,7 @@ export const ThemeProviderWrapper: React.FC<{ children: React.ReactNode }> = ({ 
 export const useTheme = () => {
     const context = useContext(ThemeContext);
     if (!context) {
-        throw new Error("useTheme must be used within a ThemeProviderWrapper");
+        throw new Error("useTheme must be used within a CustomThemeProvider");
     }
     return context;
 };

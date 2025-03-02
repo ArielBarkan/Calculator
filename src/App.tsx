@@ -7,7 +7,7 @@ import { ToastContainer } from "react-toastify";
 import AppRoutes from "./routes/app.routes";
 import { ChangeLanguage } from "./services";
 import "./services/i18n.service";
-import { ThemeProviderWrapper } from "./context/theme.context";
+import { CustomThemeProvider } from "./context/theme.context";
 import { GlobalStyles } from "./styles";
 import { localStorageGetSelectedLanguage } from "./services";
 
@@ -31,12 +31,12 @@ const App: React.FC = () => {
     }, [location]);
 
     return (
-        <ThemeProviderWrapper>
+        <CustomThemeProvider>
             <GlobalStyles />
             <ToastContainer />
             <NotifyCustom />
             <AppRoutes />
-        </ThemeProviderWrapper>
+        </CustomThemeProvider>
     );
 };
 
