@@ -28,7 +28,7 @@ const CookieBanner = () => {
     };
 
     return visible ? (
-        <CookieBannerWrapper visible={visible}>
+        <CookieBannerWrapper $visible={visible}>
             <CookieText>{translate("common:cookieBanner.text")}</CookieText>
             <ButtonGroup>
                 <Button className="accept"

@@ -1,9 +1,9 @@
 // Styled Components for the banner
 import styled from "styled-components";
 
-const CookieBannerWrapper = styled.div<{ visible: boolean }>`
+const CookieBannerWrapper = styled.div<{ $visible: boolean }>`
     position: fixed;
-    bottom: ${(props) => (props.visible ? "0" : "-100px")}; /* Show/Hide smoothly */
+    bottom: ${(props) => (props.$visible ? "0" : "-100px")}; /* Show/Hide smoothly */
     left: 0;
     width: 100%;
     background-color: ${({ theme }) => theme.body.bgColor};
