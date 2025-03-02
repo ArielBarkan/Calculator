@@ -9,6 +9,7 @@ const CookieBannerWrapper = styled.div<{ $visible: boolean }>`
     background-color: ${({ theme }) => theme.body.bgColor};
     color: ${({ theme }) => theme.body.fontColor};
     padding: 12px 20px;
+    max-width: fit-content;
     display: flex;
     justify-content: space-around;
     align-items: center;

@@ -20,7 +20,6 @@ const CookieBanner = () => {
         localStorage.setItem("cookieConsent", accepted ? "accepted" : "rejected");
 
         if (!accepted) {
-
             window[`ga-disable-${import.meta.env.VITE_GOOGLE_ANALYTICS_TRACKING_ID}`] = true; // Disable GA
         }
 
