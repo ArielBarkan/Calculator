@@ -5,7 +5,7 @@ const CookieBannerWrapper = styled.div<{ $visible: boolean }>`
     position: fixed;
     bottom: ${(props) => (props.$visible ? "0" : "-100px")}; /* Show/Hide smoothly */
     left: 0;
-    width: 100%;
+    min-width: 100%;
     background-color: ${({ theme }) => theme.cookieBanner.bgColor};
     color: ${({ theme }) => theme.cookieBanner.fontColor};
     padding: 12px 20px;
