@@ -7,6 +7,13 @@ import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+        navigator.serviceWorker.register("/service-worker.js")
+            .then(() => console.log("Service Worker registered"))
+            .catch((error) => console.error("Service Worker registration failed:", error));
+    });
+}
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
         <BrowserRouter>

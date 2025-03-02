@@ -1,16 +1,15 @@
 // React and modules imports
 import { useTranslation } from "react-i18next";
 import { AnimatePresence } from "framer-motion";
+import React from "react";
 
 // Custom imports
-import { ProductRow, ProductRowsHeader, IconButton, PageHeader, CustomModal } from "../../../components";
+import { ProductRow, ProductRowsHeader, IconButton, PageHeader } from "../../../components";
 import { IconAdd, IconRestart } from "../../../styles";
 import { ButtonsLineContainer } from "./calculatorPage.wrappers";
 import { useProductHandlers } from "../../../hooks";
 import { generateId } from "../../../utils";
 
-import React from "react";
-import { FirstTimeVisitorModalContent } from "../../../components/firstTimeVisitorModalContent";
 
 const CalculatorPage = () => {
     const { t: translate } = useTranslation("common");
