@@ -6,11 +6,13 @@ import { Outlet } from "react-router-dom";
 import { LayoutWrapper, MainContent } from "./layout.wrappers";
 import { TopBarMenu } from "../topBarMenu";
 import { CookieBanner } from "../cookieBanner";
+import { HamburgerMenu } from "../hamburgerMenu";
 
 
 const MainLayout = () => {
     return (
         <LayoutWrapper>
+            <HamburgerMenu />
             <TopBarMenu />
             <MainContent>
                 <Outlet />
