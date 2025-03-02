@@ -1,17 +1,16 @@
 // hooks/useFirstTimeVisitor.ts
 import { useEffect, useState } from "react";
-
-const VISIT_KEY = "calcPrice_firstVisit"; // ✅ Unique key to track first-time visits
+import { localStorageGetIsFirstVisit, localStorageUpdateIsFirstVisit } from "../services/localStorage.service";
 
 const useFirstTimeVisitor = () => {
     const [isFirstVisit, setIsFirstVisit] = useState(false);
 
     useEffect(() => {
-        const hasVisited = localStorage.getItem(VISIT_KEY);
+        const hasVisited = localStorageGetIsFirstVisit();
 
         if (!hasVisited) {
             setIsFirstVisit(true); // ✅ First-time visitor detected
-            localStorage.setItem(VISIT_KEY, "true"); // ✅ Mark as visited in LocalStorage
+            localStorageUpdateIsFirstVisit(true);// ✅ Mark as visited in LocalStorage
         }
     }, []);
 

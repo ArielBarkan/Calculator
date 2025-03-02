@@ -35,6 +35,14 @@ const localStorageGetSelectedMeasurement = (): MEASUREMENT_ENUMS => {
     return (localStorage.getItem("measurement") || import.meta.env.VITE_DEFAULT_MEASUREMENT) as MEASUREMENT_ENUMS;
 };
 
+const localStorageUpdateIsFirstVisit = (isFirstVisit: boolean) => {
+    localStorage.setItem("firstVisit", String(isFirstVisit));
+};
+
+const localStorageGetIsFirstVisit = (): boolean => {
+    return (localStorage.getItem("firstVisit")) as unknown as boolean;
+};
+
 
 export {
     localStorageUpdateSelectedLanguage,
@@ -44,5 +52,7 @@ export {
     localStorageUpdateSelectedCurrency,
     localStorageGetSelectedCurrency,
     localStorageUpdateSelectedMeasurement,
-    localStorageGetSelectedMeasurement
+    localStorageGetSelectedMeasurement,
+    localStorageUpdateIsFirstVisit,
+    localStorageGetIsFirstVisit
 };
