@@ -18,8 +18,7 @@ const MenuContainer = styled.div<{ isOpen: boolean; $isRtl: boolean }>`
     gap: 20px;
     z-index: 1000;
 `;
-//    background-color: ${({ theme }) => theme.cookieBanner.bgColor};
-//     color: ${({ theme }) => theme.cookieBanner.fontColor};
+
 const Overlay = styled.div<{ isOpen: boolean }>`
     display: ${({ isOpen }) => (isOpen ? "block" : "none")};
     position: fixed;
