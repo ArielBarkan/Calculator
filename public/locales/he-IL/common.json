@@ -1,9 +1,15 @@
 {
   "components": {
     "toggleSwitch": {
-      "off": "לא פעיל",
       "on": "פעיל"
     }
+  },
+  "cookieBanner": {
+    "button": {
+      "accept": "אישור",
+      "reject": "דחייה"
+    },
+    "text": "אתר זה משתמש בעוגיות כדי לנתח תנועה ולשפר את חוויית המשתמש. בלחיצה על \"אישור\", אתה מסכים ש-Google Analytics יאסוף נתונים אנונימיים."
   },
   "firstTimeModal": {
     "closeButton": "הבנתי, קחו אותי לאפליקציה",

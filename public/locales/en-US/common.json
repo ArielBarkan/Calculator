@@ -1,9 +1,15 @@
 {
   "components": {
     "toggleSwitch": {
-      "off": "Inactive",
       "on": "Active"
     }
+  },
+  "cookieBanner": {
+    "button": {
+      "accept": "Accept",
+      "reject": "Reject"
+    },
+    "text": " This site uses cookies to analyze traffic and improve user experience. By clicking \"Accept\", you agree to allow Google Analytics to collect anonymous data."
   },
   "firstTimeModal": {
     "closeButton": "Got it, take me to the app",

@@ -5,6 +5,7 @@ import { Outlet } from "react-router-dom";
 // Custom imports
 import { LayoutWrapper, MainContent } from "./layout.wrappers";
 import { TopBarMenu } from "../topBarMenu";
+import { CookieBanner } from "../cookieBanner";
 
 
 const MainLayout = () => {
@@ -14,6 +15,7 @@ const MainLayout = () => {
             <MainContent>
                 <Outlet />
             </MainContent>
+            <CookieBanner />
         </LayoutWrapper>
     );
 };

@@ -1,9 +1,15 @@
 {
   "components": {
     "toggleSwitch": {
-      "off": "Desactivado",
       "on": "Activado"
     }
+  },
+  "cookieBanner": {
+    "button": {
+      "accept": "Aceptar",
+      "reject": "Rechazar"
+    },
+    "text": "Este sitio usa cookies para analizar el tráfico y mejorar la experiencia del usuario. Al hacer clic en \"Aceptar\", permites que Google Analytics recopile datos anónimos."
   },
   "firstTimeModal": {
     "closeButton": "Entendido, llévame a la aplicación",
