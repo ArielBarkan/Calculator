@@ -5,7 +5,7 @@ import styled, { useTheme } from "styled-components";
 // Styled Components
 const MenuContainer = styled.div<{ isOpen: boolean; $isRtl: boolean }>`
     position: fixed;
-    top: 0;
+    top: 50px;
     ${({ $isRtl }) => ($isRtl ? "right: 0;" : "left: 0;")}
     width: 250px;
     height: 100vh;
@@ -35,7 +35,7 @@ const Overlay = styled.div<{ isOpen: boolean }>`
 
 const MenuButton = styled.button`
     position: fixed;
-    top: 20px;
+    top: 10px;
     ${({ theme }) => (theme.direction === "rtl" ? "right: 20px;" : "left: 20px;")}
     background: none;
     border: none;
@@ -68,7 +68,7 @@ const HamburgerMenu = () => {
             <Overlay isOpen={isOpen} onClick={() => setIsOpen(false)} />
 
             {/* Menu Button */}
-            <MenuButton onClick={() => setIsOpen(!isOpen)}>☰</MenuButton>
+            <MenuButton onClick={() => setIsOpen(!isOpen)}>{isOpen ? "☰" : "|||"}</MenuButton>
 
             {/* Menu */}
             <MenuContainer isOpen={isOpen} $isRtl={direction === "rtl"}>
