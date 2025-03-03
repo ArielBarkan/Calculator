@@ -9,7 +9,7 @@ import { SwitchMeasurement } from "../switchMeasurement";
 import { MEASUREMENT_ENUMS } from "../../enums";
 import { localStorageGetSelectedMeasurement } from "../../services";
 import { ProductRowProps } from "../../types";
-import { IconServices } from "../../styles";
+import { IconServices, IconTrophy } from "../../styles";
 
 
 const ProductRowsHeader = (props: Partial<ProductRowProps>) => {
@@ -71,8 +71,7 @@ const ProductRowsHeader = (props: Partial<ProductRowProps>) => {
                     <p>{translate("common:pages.calculator.header.unifiedPrice")}</p>
                     <p>{measurementUnit}</p>
                 </ProductRowsTitle>
-                <ProductRowsTitle style={{ width: "30px" }}><Trans
-                    i18nKey={"common:pages.calculator.header.rank"} /></ProductRowsTitle>
+                <ProductRowsTitle style={{ width: "30px" }}><IconTrophy size={30} /></ProductRowsTitle>
                 {productCount! > 1 && (
                     <ProductRowsTitle style={{ width: "30px" }}> </ProductRowsTitle>
                 )}

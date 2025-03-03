@@ -15,6 +15,8 @@ import {
     MdMenu,
     MdOutlineClose
 } from "react-icons/md";
+import { LiaTrophySolid } from "react-icons/lia";
+
 import { IconProps } from "../types";
 import { ThemedIcon } from "../components";
 
@@ -59,6 +61,10 @@ const IconClose = (props: IconProps) => <ThemedIcon icon={MdOutlineClose} color=
                                                     rtlIgnore={props?.rtlIgnore}
                                                     size={props?.size} />;
 
+const IconTrophy = (props: IconProps) => <ThemedIcon icon={LiaTrophySolid} color={props?.color}
+                                                     rtlIgnore={props?.rtlIgnore}
+                                                     size={props?.size} />;
+
 
 export {
     IconNext,
@@ -73,5 +79,6 @@ export {
     IconQuantity,
     IconRestart,
     IconMenu,
-    IconClose
+    IconClose,
+    IconTrophy
 };
