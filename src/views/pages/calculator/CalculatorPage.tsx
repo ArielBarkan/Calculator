@@ -6,7 +6,7 @@ import React from "react";
 // Custom imports
 import { ProductRow, ProductRowsHeader, IconButton, PageHeader } from "../../../components";
 import { IconAdd, IconRestart } from "../../../styles";
-import { ButtonsLineContainer } from "./calculatorPage.wrappers";
+import { ButtonsLineContainer, CalculatorTableWrapper } from "./calculatorPage.wrappers";
 import { useProductHandlers } from "../../../hooks";
 import { generateId } from "../../../utils";
 
@@ -45,7 +45,7 @@ const CalculatorPage = () => {
             <PageHeader title={translate("common:pages.calculator.title")}
                         subTitle={translate("common:pages.calculator.subTitle")} />
 
-            <div style={{ width: "100%" }}>
+            <CalculatorTableWrapper>
                 <ProductRowsHeader productCount={productsList.length} updateCurrency={handleUpdateCurrency} />
                 <AnimatePresence>
                     {productsList.map((product) => (
@@ -55,7 +55,7 @@ const CalculatorPage = () => {
                                     productCount={productsList.length} />
                     ))}
                 </AnimatePresence>
-            </div>
+            </CalculatorTableWrapper>
 
             <ButtonsLineContainer>
                 <IconButton label={translate("common:pages.calculator.button.addProduct", { left: productsToAddLeft })}

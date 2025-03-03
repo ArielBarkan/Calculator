@@ -10,4 +10,7 @@ const ButtonsLineContainer = styled.span`
     padding-top: 3rem;
 `;
 
-export { ButtonsLineContainer };
+const CalculatorTableWrapper = styled.section`
+    width: 100%;
+`;
+export { ButtonsLineContainer, CalculatorTableWrapper };
