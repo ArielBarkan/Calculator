@@ -2,16 +2,18 @@
 import { useState } from "react";
 
 // Custom imports
-import { ProductRowContainer, ProductTd } from "./productRow.wrappers";
+import { ProductRowContainer, ProductRowsItem } from "./productRow.wrappers";
 import { NumericInput } from "../numberInput";
 import { IconDelete } from "../../styles";
 import { UnstyledButton } from "../buttonUnstyled";
+import { SlideOutMotion } from "../animations";
 import { RankDisplay } from "../rankDisplay";
 import { ProductRowProps } from "../../types";
 import { PricePerDisplay } from "../pricePerDisplay";
 
 
 const ProductRow = (props: ProductRowProps) => {
+
     const { returnFunction, productCount, id, deleteFunction, rank, price, quantity, unifiedPrice } = props;
     const [selected, setSelected] = useState<boolean>(false);
 
@@ -23,35 +25,43 @@ const ProductRow = (props: ProductRowProps) => {
     };
 
     const handlePriceUpdated = (price: number) => {
-
+        console.log("handlePriceUpdated", price);
         returnFunction({ id: id, keyToUpdate: "price", updatedValue: price });
     };
 
     const handleAmountUpdated = (quantity: number) => {
-
+        console.log("handleAmountUpdated", quantity);
         returnFunction({ id: id, keyToUpdate: "quantity", updatedValue: quantity });
     };
     return (
-        <ProductRowContainer {...{ selected }}>
-            <ProductTd style={{ width: "80px" }}><NumericInput maxLength={4} blurFunction={handleBlur}
-                                                               focusFunction={handleFocus}
-                                                               returnFunction={handlePriceUpdated}
-                                                               value={price} /></ProductTd>
-            <ProductTd style={{ width: "80px" }}> <NumericInput maxLength={4} blurFunction={handleBlur}
-                                                                focusFunction={handleFocus}
-                                                                returnFunction={handleAmountUpdated} value={quantity} /></ProductTd>
-            <ProductTd style={{ width: "80px" }}><PricePerDisplay priceUnified={unifiedPrice} /></ProductTd>
-            <ProductTd style={{ width: "30px" }}> <RankDisplay {...{ rank }}
-                                                               dimension={30}></RankDisplay></ProductTd>
+        <SlideOutMotion>
+            <ProductRowContainer {...{ selected }}>
+                <ProductRowsItem width={90}>
 
-            {productCount > 1 && (
-                <ProductTd style={{ maxWidth: "30px" }}>
-                    <UnstyledButton onClick={() => deleteFunction(id)}>
-                        <IconDelete size={30} />
-                    </UnstyledButton>
-                </ProductTd>
-            )}
-        </ProductRowContainer>
+                    <NumericInput maxLength={4} blurFunction={handleBlur} focusFunction={handleFocus}
+                                  returnFunction={handlePriceUpdated} value={price} />
+
+                </ProductRowsItem>
+                <ProductRowsItem width={90}>
+                    <NumericInput maxLength={4} blurFunction={handleBlur} focusFunction={handleFocus}
+                                  returnFunction={handleAmountUpdated} value={quantity} />
+                </ProductRowsItem>
+                <ProductRowsItem width={90}>
+                    <PricePerDisplay priceUnified={unifiedPrice} />
+                </ProductRowsItem>
+                <ProductRowsItem>
+                    <RankDisplay {...{ rank }} dimension={30}></RankDisplay>
+                </ProductRowsItem>
+                {productCount > 1 && (
+                    <ProductRowsItem>
+                        <UnstyledButton onClick={() => deleteFunction(id)}>
+                            <IconDelete size={30} />
+                        </UnstyledButton>
+                    </ProductRowsItem>
+                )}
+            </ProductRowContainer>
+
+        </SlideOutMotion>
     );
 };
 

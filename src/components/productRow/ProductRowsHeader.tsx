@@ -46,6 +46,7 @@ const ProductRowsHeader = (props: Partial<ProductRowProps>) => {
             case MEASUREMENT_ENUMS.quantity:
                 label = translate("common:pages.calculator.measurement.quantity.tableHeader");
                 labelPricePer = translate("common:pages.calculator.measurement.quantity.shortUnit");
+
                 break;
         }
         setMeasurementUnit(labelPricePer);
@@ -57,23 +58,22 @@ const ProductRowsHeader = (props: Partial<ProductRowProps>) => {
     return (
         <>
             <ProductRowContainer>
-                <ProductRowsTitle style={{ width: "80px" }}><Trans
+                <ProductRowsTitle width={90}><Trans
                     i18nKey={"common:pages.calculator.header.price"} /></ProductRowsTitle>
-                <ProductRowsTitle style={{ width: "80px" }}>
-                    {/*TODO: display this column header in a flexbox */}
+                <ProductRowsTitle width={90}>
                     <UnstyledButton
                         onClick={() => setModalOpen(true)}>
                         {<Trans i18nKey={measurementLabel} />}<IconServices size={25}
                                                                             color={theme.buttons.primary.backgroundColor} />
                     </UnstyledButton>
                 </ProductRowsTitle>
-                <ProductRowsTitle style={{ width: "80px" }}>
+                <ProductRowsTitle width={90}>
                     <p>{translate("common:pages.calculator.header.unifiedPrice")}</p>
                     <p>{measurementUnit}</p>
                 </ProductRowsTitle>
-                <ProductRowsTitle style={{ width: "30px" }}><IconTrophy size={30} /></ProductRowsTitle>
+                <ProductRowsTitle><IconTrophy size={30} /></ProductRowsTitle>
                 {productCount! > 1 && (
-                    <ProductRowsTitle style={{ width: "30px" }}> </ProductRowsTitle>
+                    <ProductRowsTitle width={30}></ProductRowsTitle>
                 )}
             </ProductRowContainer>
             <CustomModal isOpen={isModalOpen}

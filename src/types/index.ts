@@ -109,7 +109,6 @@ type UpdateProductRowProps = {
 
 
 type ProductRowProps = {
-    listOrder: number,
     productCount: number
     id: string;
     returnFunction: (props: UpdateProductRowProps) => void;
