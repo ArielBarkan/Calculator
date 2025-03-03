@@ -111,7 +111,7 @@
         "title": "Elige una unidad de comparación"
       },
       "subTitle": "Compara los precios de los productos por peso, volumen o cantidad y encuentra la mejor oferta",
-      "title": "Calculador"
+      "title": "CalcPrice"
     },
     "settings": {
       "currency": {
@@ -132,6 +132,7 @@
       "title": "Configuración"
     },
     "share": {
+      "linkLabel": "QR para compartir con amigos",
       "subTitle": "Muestra este código QR a un amigo para que también pueda comparar precios de comestibles fácilmente.",
       "title": "¡Comparte con tus amigos!"
     }

@@ -111,7 +111,7 @@
         "title": "Escolha uma unidade de comparação"
       },
       "subTitle": "Compare preços de produtos por peso, volume ou quantidade e encontre a melhor oferta",
-      "title": "Calculadora"
+      "title": "CalcPrice"
     },
     "settings": {
       "currency": {
@@ -132,6 +132,7 @@
       "title": "Configurações"
     },
     "share": {
+      "linkLabel": "QR para compartilhar com amigos",
       "subTitle": "Mostre este código QR a um amigo para que ele também possa comparar preços de supermercado facilmente!",
       "title": "Compartilhe com amigos!"
     }

@@ -12,7 +12,7 @@ const PricePerDisplay = (props: pricePerDisplayProps) => {
     const displayPrice = priceUnified ? `${priceUnified}${currencySymbol}` : "";
 
 
-    return (<p>{displayPrice}</p>);
+    return (<p>{displayPrice || "-"}</p>);
 
 };
 

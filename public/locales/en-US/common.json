@@ -111,7 +111,7 @@
         "title": "Choose a comparison unit"
       },
       "subTitle": "Compare product prices by weight, volume, or quantity and find the best deal",
-      "title": "Calculator"
+      "title": "CalcPrice"
     },
     "settings": {
       "currency": {
@@ -132,6 +132,7 @@
       "title": "Settings"
     },
     "share": {
+      "linkLabel": "QR to share with friends",
       "subTitle": "Show this QR code to a friend so they can compare grocery prices easily too!",
       "title": "Share with Friends!"
     }

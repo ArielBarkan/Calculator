@@ -38,7 +38,7 @@ const RankDisplay = (props: RankDisplayProps) => {
     return (
         <FadeInText isVisible={isVisible}>
             <RankWrapper {...{ color }} $dimension={dimension}>
-                <Rank>{rank}</Rank>
+                <Rank>{rank || "-"}</Rank>
             </RankWrapper>
         </FadeInText>
     );

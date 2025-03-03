@@ -13,7 +13,8 @@ import {
     MdFilter4,
     MdRestartAlt,
     MdMenu,
-    MdOutlineClose
+    MdOutlineClose,
+    MdQrCode2
 } from "react-icons/md";
 import { LiaTrophySolid } from "react-icons/lia";
 
@@ -65,6 +66,10 @@ const IconTrophy = (props: IconProps) => <ThemedIcon icon={LiaTrophySolid} color
                                                      rtlIgnore={props?.rtlIgnore}
                                                      size={props?.size} />;
 
+const IconQR = (props: IconProps) => <ThemedIcon icon={MdQrCode2} color={props?.color}
+                                                 rtlIgnore={props?.rtlIgnore}
+                                                 size={props?.size} />;
+
 
 export {
     IconNext,
@@ -80,5 +85,6 @@ export {
     IconRestart,
     IconMenu,
     IconClose,
-    IconTrophy
+    IconTrophy,
+    IconQR
 };

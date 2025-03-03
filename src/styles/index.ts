@@ -14,5 +14,6 @@ export {
     IconRestart,
     IconMenu,
     IconClose,
-    IconTrophy
+    IconTrophy,
+    IconQR
 } from "./icons";

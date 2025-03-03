@@ -50,11 +50,14 @@ const MenuItem = styled.a<{ disabled: boolean }>`
     padding: 10px;
     cursor: ${({ disabled }) => disabled ? "default" : "pointer"};
     background: ${({ disabled }) => disabled ? "rgba(182, 180, 180, 0.2)" : "inherit"};
-
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
 
     &:hover {
         background: rgba(255, 255, 255, 0.2);
     }
 `;
+
 
 export { MenuContainer, Overlay, MenuButton, MenuItem };
