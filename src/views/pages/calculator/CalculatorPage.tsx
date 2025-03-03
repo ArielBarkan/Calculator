@@ -4,7 +4,7 @@ import { AnimatePresence } from "framer-motion";
 import React from "react";
 
 // Custom imports
-import { ProductRow, ProductRowsHeader, IconButton, PageHeader } from "../../../components";
+import { ProductRow, ProductRowsHeader, IconButton, PageHeader, SlideOutMotion } from "../../../components";
 import { IconAdd, IconRestart } from "../../../styles";
 import { ButtonsLineContainer } from "./calculatorPage.wrappers";
 import { useProductHandlers } from "../../../hooks";
@@ -44,19 +44,20 @@ const CalculatorPage = () => {
         <>
             <PageHeader title={translate("common:pages.calculator.title")}
                         subTitle={translate("common:pages.calculator.subTitle")} />
+            <AnimatePresence>
+                <SlideOutMotion>
+                    <table style={{ width: "100%" }}>
+                        <ProductRowsHeader productCount={productsList.length} updateCurrency={handleUpdateCurrency} />
 
-            <div style={{ display: "grid", width: "100%" }}>
-                <ProductRowsHeader productCount={productsList.length} updateCurrency={handleUpdateCurrency} />
-                <AnimatePresence>
-                    {productsList.map((product, index) => (
-                        <ProductRow key={product.id} listOrder={index} {...product}
-                                    deleteFunction={handleRemoveProduct}
-                                    returnFunction={handleProductUpdate}
-                                    productCount={productsList.length} />
-                    ))}
-                </AnimatePresence>
-            </div>
-
+                        {productsList.map((product, index) => (
+                            <ProductRow key={product.id} listOrder={index} {...product}
+                                        deleteFunction={handleRemoveProduct}
+                                        returnFunction={handleProductUpdate}
+                                        productCount={productsList.length} />
+                        ))}
+                    </table>
+                </SlideOutMotion>
+            </AnimatePresence>
             <ButtonsLineContainer>
                 <IconButton label={translate("common:pages.calculator.button.addProduct", { left: productsToAddLeft })}
                             returnFunction={handleAddProduct} icon={<IconAdd size={30} color={"white"} />}

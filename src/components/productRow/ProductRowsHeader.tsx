@@ -73,7 +73,7 @@ const ProductRowsHeader = (props: Partial<ProductRowProps>) => {
                 </ProductRowsTitle>
                 <ProductRowsTitle><Trans i18nKey={"common:pages.calculator.header.rank"} /></ProductRowsTitle>
                 {productCount! > 1 && (
-                    <ProductRowsTitle />
+                    <ProductRowsTitle style={{ width: "30px" }}> </ProductRowsTitle>
                 )}
             </ProductRowContainer>
             <CustomModal isOpen={isModalOpen}

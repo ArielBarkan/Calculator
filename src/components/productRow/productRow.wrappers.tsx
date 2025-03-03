@@ -1,7 +1,7 @@
 // React and modules imports
 import styled from "styled-components";
 
-const ProductRowContainer = styled.span<{ selected?: boolean }>`
+const ProductRowContainer = styled.tr<{ selected?: boolean }>`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr auto; /* Same structure for header & rows */
     align-items: center;
@@ -13,17 +13,12 @@ const ProductRowContainer = styled.span<{ selected?: boolean }>`
                          }) => selected ? theme.SelectableElement.activeBackground : "inherit"};;
 `;
 
-const ProductRowsTitle = styled.span`
-    white-space: nowrap;
-    max-width: fit-content;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    text-align: justify-all;
-
+const ProductRowsTitle = styled.td`
     p {
         padding: 0;
         margin: 0;
     }
 `;
-export { ProductRowContainer, ProductRowsTitle };
+
+const ProductTd = styled.td``;
+export { ProductRowContainer, ProductRowsTitle, ProductTd };
