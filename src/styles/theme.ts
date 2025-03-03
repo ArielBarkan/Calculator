@@ -1,4 +1,5 @@
 const commonColors = {
+    logoColor: "#51dcd5",
     rank: {
         goldMedal: {
             bgColor: "#FFD700"

@@ -1,7 +1,8 @@
 // React and modules imports
+import React from "react";
 import { useTranslation } from "react-i18next";
 import { AnimatePresence } from "framer-motion";
-import React from "react";
+
 
 // Custom imports
 import { ProductRow, ProductRowsHeader, IconButton, PageHeader } from "../../../components";
@@ -13,7 +14,6 @@ import { generateId } from "../../../utils";
 
 const CalculatorPage = () => {
     const { t: translate } = useTranslation("common");
-
 
     const initialRows: number = Number(import.meta.env.VITE_INITIAL_ROWS);
     const maxRows: number = Number(import.meta.env.VITE_MAX_ROWS);

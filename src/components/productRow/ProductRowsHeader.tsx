@@ -64,7 +64,7 @@ const ProductRowsHeader = (props: Partial<ProductRowProps>) => {
                     <UnstyledButton
                         onClick={() => setModalOpen(true)}>
                         {<Trans i18nKey={measurementLabel} />}<IconServices size={25}
-                                                                            color={theme.buttons.primary.backgroundColor} />
+                                                                            color={theme.logoColor} />
                     </UnstyledButton>
                 </ProductRowsTitle>
                 <ProductRowsTitle width={90}>
