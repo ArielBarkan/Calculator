@@ -46,7 +46,6 @@ const ProductRowsHeader = (props: Partial<ProductRowProps>) => {
             case MEASUREMENT_ENUMS.quantity:
                 label = translate("common:pages.calculator.measurement.quantity.tableHeader");
                 labelPricePer = translate("common:pages.calculator.measurement.quantity.shortUnit");
-
                 break;
         }
         setMeasurementUnit(labelPricePer);
@@ -58,8 +57,9 @@ const ProductRowsHeader = (props: Partial<ProductRowProps>) => {
     return (
         <>
             <ProductRowContainer>
-                <ProductRowsTitle><Trans i18nKey={"common:pages.calculator.header.price"} /></ProductRowsTitle>
-                <ProductRowsTitle>
+                <ProductRowsTitle style={{ width: "80px" }}><Trans
+                    i18nKey={"common:pages.calculator.header.price"} /></ProductRowsTitle>
+                <ProductRowsTitle style={{ width: "80px" }}>
                     {/*TODO: display this column header in a flexbox */}
                     <UnstyledButton
                         onClick={() => setModalOpen(true)}>
@@ -67,11 +67,12 @@ const ProductRowsHeader = (props: Partial<ProductRowProps>) => {
                                                                             color={theme.buttons.primary.backgroundColor} />
                     </UnstyledButton>
                 </ProductRowsTitle>
-                <ProductRowsTitle>
+                <ProductRowsTitle style={{ width: "80px" }}>
                     <p>{translate("common:pages.calculator.header.unifiedPrice")}</p>
                     <p>{measurementUnit}</p>
                 </ProductRowsTitle>
-                <ProductRowsTitle><Trans i18nKey={"common:pages.calculator.header.rank"} /></ProductRowsTitle>
+                <ProductRowsTitle style={{ width: "30px" }}><Trans
+                    i18nKey={"common:pages.calculator.header.rank"} /></ProductRowsTitle>
                 {productCount! > 1 && (
                     <ProductRowsTitle style={{ width: "30px" }}> </ProductRowsTitle>
                 )}

@@ -65,10 +65,6 @@
       "subTitle": "Descubre más sobre esta aplicación y cómo te ayuda a comparar precios de manera efectiva",
       "title": "Acerca de"
     },
-    "share": {
-      "title": "¡Comparte con tus amigos!",
-      "subTitle": "Muestra este código QR a un amigo para que también pueda comparar precios de comestibles fácilmente."
-    },
     "calculator": {
       "button": {
         "addProduct": "Agregar fila ({{left}} mas)",
@@ -88,7 +84,7 @@
           },
           "name": "Líquidos",
           "shortUnit": "100ml",
-          "tableHeader": "Volumen<br/>mililitros",
+          "tableHeader": "Vol.<br/>mL",
           "unit": "Mililitros"
         },
         "quantity": {
@@ -97,7 +93,7 @@
           },
           "name": "Cantidad",
           "shortUnit": "1ud",
-          "tableHeader": "Cant.<br/>unidades",
+          "tableHeader": "Cant.<br/>unid.",
           "unit": "Unidades"
         },
         "weight": {
@@ -106,7 +102,7 @@
           },
           "name": "Peso",
           "shortUnit": "100g",
-          "tableHeader": "Peso<br/>en gramos",
+          "tableHeader": "Peso<br/>en g",
           "unit": "Gramos"
         }
       },
@@ -134,6 +130,10 @@
       "setThemeSuccess": "Tema actualizado",
       "subTitle": "Personaliza tu experiencia: Cambia el tema, la moneda y el idioma",
       "title": "Configuración"
+    },
+    "share": {
+      "subTitle": "Muestra este código QR a un amigo para que también pueda comparar precios de comestibles fácilmente.",
+      "title": "¡Comparte con tus amigos!"
     }
   },
   "share": {

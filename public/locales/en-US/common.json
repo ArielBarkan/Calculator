@@ -65,10 +65,6 @@
       "subTitle": "Learn more about this app and how it helps you compare prices effectively",
       "title": "About"
     },
-    "share": {
-      "title": "Share with Friends!",
-      "subTitle": "Show this QR code to a friend so they can compare grocery prices easily too!"
-    },
     "calculator": {
       "button": {
         "addProduct": "Add product row ({{left}} more)",
@@ -88,7 +84,7 @@
           },
           "name": "Liquids",
           "shortUnit": "100ml",
-          "tableHeader": "Volume<br/>milliliters",
+          "tableHeader": "Vol.<br/>in mL",
           "unit": "Milliliters"
         },
         "quantity": {
@@ -106,7 +102,7 @@
           },
           "name": "Weight",
           "shortUnit": "100g",
-          "tableHeader": "Weight<br/>in grams",
+          "tableHeader": "Weight<br/>in g",
           "unit": "Grams"
         }
       },
@@ -134,6 +130,10 @@
       "setThemeSuccess": "Theme updated",
       "subTitle": "Customize your experience: Change the theme, currency, and language",
       "title": "Settings"
+    },
+    "share": {
+      "subTitle": "Show this QR code to a friend so they can compare grocery prices easily too!",
+      "title": "Share with Friends!"
     }
   },
   "share": {

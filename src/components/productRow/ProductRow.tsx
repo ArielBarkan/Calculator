@@ -33,15 +33,19 @@ const ProductRow = (props: ProductRowProps) => {
     };
     return (
         <ProductRowContainer {...{ selected }}>
-            <ProductTd><NumericInput maxLength={4} blurFunction={handleBlur} focusFunction={handleFocus}
-                                     returnFunction={handlePriceUpdated} value={price} /></ProductTd>
-            <ProductTd> <NumericInput maxLength={4} blurFunction={handleBlur} focusFunction={handleFocus}
-                                      returnFunction={handleAmountUpdated} value={quantity} /></ProductTd>
-            <ProductTd><PricePerDisplay priceUnified={unifiedPrice} /></ProductTd>
-            <ProductTd> <RankDisplay {...{ rank }} dimension={30}></RankDisplay></ProductTd>
+            <ProductTd style={{ width: "80px" }}><NumericInput maxLength={4} blurFunction={handleBlur}
+                                                               focusFunction={handleFocus}
+                                                               returnFunction={handlePriceUpdated}
+                                                               value={price} /></ProductTd>
+            <ProductTd style={{ width: "80px" }}> <NumericInput maxLength={4} blurFunction={handleBlur}
+                                                                focusFunction={handleFocus}
+                                                                returnFunction={handleAmountUpdated} value={quantity} /></ProductTd>
+            <ProductTd style={{ width: "80px" }}><PricePerDisplay priceUnified={unifiedPrice} /></ProductTd>
+            <ProductTd style={{ width: "30px" }}> <RankDisplay {...{ rank }}
+                                                               dimension={30}></RankDisplay></ProductTd>
 
             {productCount > 1 && (
-                <ProductTd>
+                <ProductTd style={{ maxWidth: "30px" }}>
                     <UnstyledButton onClick={() => deleteFunction(id)}>
                         <IconDelete size={30} />
                     </UnstyledButton>
