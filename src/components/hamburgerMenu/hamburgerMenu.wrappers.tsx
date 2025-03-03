@@ -53,6 +53,7 @@ const MenuItem = styled.a<{ disabled: boolean }>`
     display: flex;
     flex-direction: row;
     gap: 20px;
+    align-items: center;
 
     &:hover {
         background: rgba(255, 255, 255, 0.2);
