@@ -22,7 +22,7 @@ const WhyWePage = () => {
 
                 {/* Real Sizes Section */}
                 <Subtitle>{translate("common:pages.whyWeCreatedCalcPrice.realSizes.title")}</Subtitle>
-                <Paragraph>{translate("whyWeCreatedCalcPrice.realSizes.description")}</Paragraph>
+                <Paragraph>{translate("common:pages.whyWeCreatedCalcPrice.realSizes.description")}</Paragraph>
                 <List>
                     <ListItem>{translate("common:pages.whyWeCreatedCalcPrice.realSizes.examples.cereal")}</ListItem>
                     <ListItem>{translate("common:pages.whyWeCreatedCalcPrice.realSizes.examples.shampoo")}</ListItem>
