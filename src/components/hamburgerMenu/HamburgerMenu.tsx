@@ -49,7 +49,7 @@ const HamburgerMenu = () => {
                 <MenuItem href="/why-we" disabled={location.pathname === "/why-we"}
                           onClick={() => setIsOpen(false)}>
                     <BeatingHeart> <IconHeart rtlIgnore={true} color={"red"} /></BeatingHeart>
-                    {translate("common:pages.whyWe.title")}</MenuItem>
+                    {translate("common:pages.whyWeCreatedCalcPrice.title")}</MenuItem>
             </MenuContainer>
         </>
     );
