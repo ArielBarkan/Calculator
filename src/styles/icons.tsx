@@ -14,10 +14,9 @@ import {
     MdRestartAlt,
     MdMenu,
     MdOutlineClose,
-    MdQrCode2,
-    MdOutlineQuestionMark
+    MdQrCode2
 } from "react-icons/md";
-import { LiaTrophySolid } from "react-icons/lia";
+import { LiaTrophySolid, LiaQuestionCircle, LiaHeartSolid } from "react-icons/lia";
 
 import { IconProps } from "../types";
 import { ThemedIcon } from "../components";
@@ -71,9 +70,13 @@ const IconQR = (props: IconProps) => <ThemedIcon icon={MdQrCode2} color={props?.
                                                  rtlIgnore={props?.rtlIgnore}
                                                  size={props?.size} />;
 
-const IconQuestionMark = (props: IconProps) => <ThemedIcon icon={MdOutlineQuestionMark} color={props?.color}
+const IconQuestionMark = (props: IconProps) => <ThemedIcon icon={LiaQuestionCircle} color={props?.color}
                                                            rtlIgnore={props?.rtlIgnore}
                                                            size={props?.size} />;
+
+const IconHeart = (props: IconProps) => <ThemedIcon icon={LiaHeartSolid} color={props?.color}
+                                                    rtlIgnore={props?.rtlIgnore}
+                                                    size={props?.size} />;
 
 
 export {
@@ -92,5 +95,6 @@ export {
     IconClose,
     IconTrophy,
     IconQR,
-    IconQuestionMark
+    IconQuestionMark,
+    IconHeart
 };

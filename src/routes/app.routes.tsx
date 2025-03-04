@@ -1,6 +1,6 @@
 // React and modules imports
 import React, { Suspense, lazy } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 
 // Custom imports
@@ -8,13 +8,12 @@ import { Routes, Route } from "react-router-dom";
 const MainLayout = lazy(() => import("../components/layouts/main.layout"));
 const LoadingPage = lazy(() => import("../views/pages/loading/LoadingScreen"));
 const CalculatorPage = lazy(() => import("../views/pages/calculator/CalculatorPage"));
-const AboutPage = lazy(() => import("../views/pages/about/AboutPage"));
 const SettingsPage = lazy(() => import("../views/pages/settings/SettingsPage"));
 const Language = lazy(() => import("../views/pages/settings/language/LanguagePage"));
 const Currency = lazy(() => import("../views/pages/settings/currency/CurrencyPage"));
 const QRShare = lazy(() => import("../views/pages/shareQR/ShareQRPage"));
 const WhyCalcPricePage = lazy(() => import("../views/pages/whyCalcPrice/WhyCalcPricePage"));
-
+const WhyWePage = lazy(() => import("../views/pages/whyMe/WhyWePage"));
 
 const AppRoutes: React.FC = () => {
     return (
@@ -25,11 +24,11 @@ const AppRoutes: React.FC = () => {
                     <Route path="/settings" element={<SettingsPage />} />
                     <Route path="/settings/language" element={<Language />} />
                     <Route path="/settings/currency" element={<Currency />} />
-                    <Route path="/about" element={<AboutPage />} />
+
                     <Route path="/share" element={<QRShare />} />
                     <Route path="/why" element={<WhyCalcPricePage />} />
-
-                    <Route path="*" element={<p>404</p>} />
+                    <Route path="/why-we" element={<WhyWePage />} />
+                    <Route path="*" element={<Navigate to="/" replace />} />
                 </Route>
             </Routes>
         </Suspense>

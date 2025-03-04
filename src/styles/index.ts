@@ -16,5 +16,6 @@ export {
     IconClose,
     IconTrophy,
     IconQR,
-    IconQuestionMark
+    IconQuestionMark,
+    IconHeart
 } from "./icons";

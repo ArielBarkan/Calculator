@@ -2,10 +2,11 @@ import { useState } from "react";
 import { MenuButton, MenuContainer, MenuItem, Overlay } from "./hamburgerMenu.wrappers";
 import { useTheme } from "styled-components";
 import { useTranslation } from "react-i18next";
-import { IconClose, IconMenu, IconSettings, IconQR, IconQuestionMark } from "../../styles";
+import { IconClose, IconMenu, IconSettings, IconQR, IconQuestionMark, IconHeart } from "../../styles";
 import { useLocation } from "react-router-dom";
 import { StyledImage } from "../imageComp";
 import { CalcPriceIcon } from "../../assets";
+import { BeatingHeart } from "../animations";
 
 
 // Hamburger Menu Component
@@ -44,6 +45,11 @@ const HamburgerMenu = () => {
                           onClick={() => setIsOpen(false)}>
                     <IconQuestionMark rtlIgnore={true} />
                     {translate("common:pages.whyCalcPrice.title")}</MenuItem>
+
+                <MenuItem href="/why-we" disabled={location.pathname === "/why-we"}
+                          onClick={() => setIsOpen(false)}>
+                    <BeatingHeart> <IconHeart rtlIgnore={true} color={"red"} /></BeatingHeart>
+                    {translate("common:pages.whyWe.title")}</MenuItem>
             </MenuContainer>
         </>
     );

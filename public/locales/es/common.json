@@ -61,35 +61,6 @@
     }
   },
   "pages": {
-    "about": {
-      "subTitle": "Descubre más sobre esta aplicación y cómo te ayuda a comparar precios de manera efectiva",
-      "title": "Acerca de"
-    },
-    "whyCalcPrice": {
-      "title": "¿Por qué CalcPrice?",
-      "subTitle": "",
-      "actionButton": "¡Empieza a ahorrar dinero hoy!",
-      "item1": {
-        "title": "Comparación de precios inteligente y sencilla",
-        "description": "No más dudas sobre qué tamaño de paquete es el mejor trato. CalcPrice calcula automáticamente el precio por 100g, 100ml o unidad, para que puedas ver al instante cuál es la opción más económica."
-      },
-      "item2": {
-        "title": "Ahorra dinero en cada compra",
-        "description": "¿Precios confusos? Con CalcPrice, puedes comparar fácilmente diferentes tamaños de paquetes y elegir la opción más barata, sin caer en trucos engañosos de empaque."
-      },
-      "item3": {
-        "title": "Funciona con todo tipo de productos",
-        "description": "Ya sea que compres cereales, queso, bebidas, productos de limpieza o champú, CalcPrice te ayuda a comparar cualquier artículo vendido por peso, volumen o unidad."
-      },
-      "item4": {
-        "title": "Rápido y fácil de usar",
-        "description": "Olvídate de las calculadoras y las matemáticas complicadas. Simplemente introduce el precio y la cantidad del producto, y obtén un resultado instantáneo para comprar de manera más inteligente sin esfuerzo adicional."
-      },
-      "item5": {
-        "title": "Sistema de clasificación inteligente",
-        "description": "No solo verás el precio por 100g, 100ml o unidad, sino que CalcPrice también clasifica los productos para que puedas encontrar rápidamente la mejor oferta."
-      }
-    },
     "calculator": {
       "button": {
         "addProduct": "Agregar fila ({{left}} mas)",
@@ -160,6 +131,59 @@
       "linkLabel": "QR para compartir con amigos",
       "subTitle": "Muestra este código QR a un amigo para que también pueda comparar precios de comestibles fácilmente.",
       "title": "¡Comparte con tus amigos!"
+    },
+    "whyCalcPrice": {
+      "actionButton": "¡Empieza a ahorrar dinero hoy!",
+      "item1": {
+        "description": "No más dudas sobre qué tamaño de paquete es el mejor trato. CalcPrice calcula automáticamente el precio por 100g, 100ml o unidad, para que puedas ver al instante cuál es la opción más económica.",
+        "title": "Comparación de precios inteligente y sencilla"
+      },
+      "item2": {
+        "description": "¿Precios confusos? Con CalcPrice, puedes comparar fácilmente diferentes tamaños de paquetes y elegir la opción más barata, sin caer en trucos engañosos de empaque.",
+        "title": "Ahorra dinero en cada compra"
+      },
+      "item3": {
+        "description": "Ya sea que compres cereales, queso, bebidas, productos de limpieza o champú, CalcPrice te ayuda a comparar cualquier artículo vendido por peso, volumen o unidad.",
+        "title": "Funciona con todo tipo de productos"
+      },
+      "item4": {
+        "description": "Olvídate de las calculadoras y las matemáticas complicadas. Simplemente introduce el precio y la cantidad del producto, y obtén un resultado instantáneo para comprar de manera más inteligente sin esfuerzo adicional.",
+        "title": "Rápido y fácil de usar"
+      },
+      "item5": {
+        "description": "No solo verás el precio por 100g, 100ml o unidad, sino que CalcPrice también clasifica los productos para que puedas encontrar rápidamente la mejor oferta.",
+        "title": "Sistema de clasificación inteligente"
+      },
+      "subTitle": "",
+      "title": "¿Por qué CalcPrice?"
+    },
+    "whyWeCreatedCalcPrice": {
+      "title": "¿Por qué creamos CalcPrice?",
+      "intro": "CalcPrice fue creada por una necesidad simple: comparar precios fácilmente, directamente desde la estantería, mientras compras, sin suposiciones ni cálculos complicados.",
+      "problem": {
+        "description": "Sí, hay aplicaciones que te permiten escanear códigos de barras y ver los precios de los productos en otros supermercados, lo cual es excelente para planificar tus compras en casa. Pero, ¿qué sucede cuando ya estás en la tienda, de pie frente a la estantería y necesitas tomar una decisión ahora?",
+        "example": "Por ejemplo, cuando estás frente a la sección de cereales, fiambres o productos enlatados y quieres saber el precio por 100 gramos, pero cada paquete contiene una cantidad diferente y la estantería no siempre muestra el precio por 100 gramos, es difícil determinar cuál es realmente la mejor opción."
+      },
+      "realSizes": {
+        "title": "La realidad en la estantería – Diferentes tamaños, diferentes precios",
+        "description": "El mismo producto, diferentes tamaños, diferentes precios – lo que hace que la comparación sea difícil. Aquí hay ejemplos reales de variaciones de peso y volumen para los mismos productos:",
+        "examples": {
+          "cereal": "Cornflakes (Peso en gramos): 686, 500, 375, 448, 858, 340, 410, 400, 311, 326, 450 y más...",
+          "shampoo": "Champú / Acondicionador (Volumen en mililitros): 625, 400, 350, 600, 750, 490, 200, 1000 y más...",
+          "dishSoap": "Detergente para platos (Volumen en mililitros): 1700, 750, 1600, 650, 1500, 500 y más..."
+        }
+      },
+      "solution": {
+        "title": "¿Cómo resuelve CalcPrice el problema?",
+        "description": "La aplicación te permite ingresar el precio del producto y la cantidad del paquete (gramos, mililitros, unidades) y, con un solo clic, obtienes el precio por 100 gramos/ml/unidad, para que puedas elegir fácilmente la opción más rentable, sin necesidad de adivinar ni usar una calculadora.",
+        "features": {
+          "free": "Totalmente gratuita – sin anuncios, sin pagos y sin suscripciones.",
+          "noSignup": "No se requiere registro – simplemente ingresa y comienza a usarla.",
+          "noTracking": "Sin seguimiento de usuarios – no se recopilan datos personales, solo Google Analytics para estadísticas generales.",
+          "realTime": "Optimizada para un uso rápido y conveniente – en tiempo real, en la tienda, cuando realmente necesitas la información."
+        },
+        "conclusion": "CalcPrice fue creada para los consumidores – para que todos puedan comprar de manera más inteligente y ahorrar dinero fácilmente."
+      }
     }
   },
   "share": {

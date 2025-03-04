@@ -3,7 +3,7 @@ export { IconButton } from "./IconButton";
 export { SegmentedControl } from "./segmentedControl";
 export { UnstyledButton } from "./buttonUnstyled";
 export { CustomModal } from "./modal";
-export { SlideOutMotion, FadeInText } from "./animations";
+export { SlideOutMotion, FadeInText, BeatingHeart } from "./animations";
 export { NumericInput } from "./numberInput";
 export { NumericKeyboard } from "./numericKeyboard";
 export { ProductRow, ProductRowsHeader } from "./productRow";
