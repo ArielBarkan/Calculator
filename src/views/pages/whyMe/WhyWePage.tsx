@@ -2,8 +2,9 @@
 import { useTranslation } from "react-i18next";
 
 // Custom imports
-import { PageHeader } from "../../../components";
+import { PageHeader, StyledImage } from "../../../components";
 import { Container, Subtitle, Paragraph, List, ListItem, FeaturesList, FeatureItem } from "./whyWePage.wrappers";
+import { WhyUsImage } from "../../../assets";
 
 
 const WhyWePage = () => {
@@ -14,6 +15,8 @@ const WhyWePage = () => {
         <>
             <PageHeader title={translate("common:pages.whyWeCreatedCalcPrice.title")}
                         subTitle={translate("common:pages.whyWeCreatedCalcPrice.intro")} linkTo={"/"} />
+            <StyledImage src={WhyUsImage} width="80%" />
+
             <Container>
 
                 {/* Problem Section */}

@@ -14,4 +14,4 @@ export { ThemedIcon } from "./themedIcon";
 export { PageHeader } from "./pageHeader";
 export { NotifySuccess, NotifyWarning, NotifyCustom } from "./toast";
 export { ToggleSwitch } from "./toggleSwitch";
-export { StyledImage } from "./imageComp";
+export { StyledImage } from "./styledImage";

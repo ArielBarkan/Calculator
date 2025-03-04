@@ -4,7 +4,7 @@ import { useTheme } from "styled-components";
 import { useTranslation } from "react-i18next";
 import { IconClose, IconMenu, IconSettings, IconQR, IconQuestionMark, IconHeart } from "../../styles";
 import { useLocation } from "react-router-dom";
-import { StyledImage } from "../imageComp";
+import { StyledImage } from "../styledImage";
 import { CalcPriceIcon } from "../../assets";
 import { BeatingHeart } from "../animations";
 

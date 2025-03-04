@@ -2,8 +2,9 @@
 import { useTranslation } from "react-i18next";
 
 // Custom imports
-import { PageHeader } from "../../../components";
+import { PageHeader, StyledImage } from "../../../components";
 import { WhyModalWrapper, WhyItem, WhyItemTitle, WhyItemTitleItemDescription } from "./whyCalcPricePage.wrappers";
+import { WhyImage } from "../../../assets";
 
 
 const WhyCalcPricePage = () => {
@@ -12,7 +13,7 @@ const WhyCalcPricePage = () => {
         <>
             <PageHeader title={translate("common:pages.whyCalcPrice.title")}
                         subTitle={translate("common:pages.whyCalcPrice.subTitle")} linkTo={"/"} />
-
+            <StyledImage src={WhyImage} width={"80%"} />
             <WhyModalWrapper>
                 <WhyItem>
                     <WhyItemTitle>
@@ -20,6 +21,7 @@ const WhyCalcPricePage = () => {
                     </WhyItemTitle>
                     <WhyItemTitleItemDescription>
                         {translate("common:pages.whyCalcPrice.item1.description")}
+
                     </WhyItemTitleItemDescription>
                 </WhyItem>
                 <WhyItem>
@@ -30,6 +32,7 @@ const WhyCalcPricePage = () => {
                         {translate("common:pages.whyCalcPrice.item2.description")}
                     </WhyItemTitleItemDescription>
                 </WhyItem>
+
                 <WhyItem>
                     <WhyItemTitle>
                         {translate("common:pages.whyCalcPrice.item3.title")}
