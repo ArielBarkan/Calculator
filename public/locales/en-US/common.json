@@ -65,6 +65,31 @@
       "subTitle": "Learn more about this app and how it helps you compare prices effectively",
       "title": "About"
     },
+    "whyCalcPrice": {
+      "title": "Why CalcPrice?",
+      "subTitle": "",
+      "actionButton": "Start Saving Money Today!",
+      "item1": {
+        "title": "Smart and Simple Price Comparison",
+        "description": "No more guessing which package size is the best deal. CalcPrice automatically calculates the price per 100g, 100ml, or unit, so you can instantly see which product is the most cost-effective."
+      },
+      "item2": {
+        "title": "Save Money on Every Purchase",
+        "description": "Confusing prices? With CalcPrice, you can easily compare different package sizes and choose the cheapest option—without falling for misleading packaging tricks."
+      },
+      "item3": {
+        "title": "Works for All Types of Products",
+        "description": "Whether you're buying cornflakes, cheese, drinks, cleaning products, or shampoo, CalcPrice helps you compare anything sold by weight, volume, or unit."
+      },
+      "item4": {
+        "title": "Fast and Easy to Use",
+        "description": "Forget manual calculators or complicated math. Just enter the product price and quantity, and get an instant result—so you can shop smarter without any extra effort."
+      },
+      "item5": {
+        "title": "Smart Ranking System",
+        "description": "Not only will you see the price per 100g/ml/unit, but CalcPrice also ranks products so you can quickly spot the best deal. No more guessing—just smart shopping."
+      }
+    },
     "calculator": {
       "button": {
         "addProduct": "Add product row ({{left}} more)",

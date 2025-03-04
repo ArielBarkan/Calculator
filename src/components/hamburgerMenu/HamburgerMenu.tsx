@@ -2,7 +2,7 @@ import { useState } from "react";
 import { MenuButton, MenuContainer, MenuItem, Overlay } from "./hamburgerMenu.wrappers";
 import { useTheme } from "styled-components";
 import { useTranslation } from "react-i18next";
-import { IconClose, IconMenu, IconSettings, IconQR } from "../../styles";
+import { IconClose, IconMenu, IconSettings, IconQR, IconQuestionMark } from "../../styles";
 import { useLocation } from "react-router-dom";
 import { StyledImage } from "../imageComp";
 import { CalcPriceIcon } from "../../assets";
@@ -39,6 +39,11 @@ const HamburgerMenu = () => {
                           onClick={() => setIsOpen(false)}>
                     <IconQR />
                     {translate("common:pages.share.linkLabel")}</MenuItem>
+
+                <MenuItem href="/why" disabled={location.pathname === "/why"}
+                          onClick={() => setIsOpen(false)}>
+                    <IconQuestionMark rtlIgnore={true} />
+                    {translate("common:pages.whyCalcPrice.title")}</MenuItem>
             </MenuContainer>
         </>
     );

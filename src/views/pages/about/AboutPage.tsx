@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 
 // Custom imports
 import { PageHeader } from "../../../components";
+import { FirstTimeVisitorModalContent } from "../../../components/firstTimeVisitorModalContent";
 
 
 const AboutPage = () => {
@@ -13,6 +14,8 @@ const AboutPage = () => {
         <>
             <PageHeader title={translate("common:pages.about.title")}
                         subTitle={translate("common:pages.about.subTitle")} linkTo={"/"} />
+
+            <FirstTimeVisitorModalContent />
         </>
     );
 };

@@ -71,7 +71,7 @@ const ProductRowsHeader = (props: Partial<ProductRowProps>) => {
                     <p>{translate("common:pages.calculator.header.unifiedPrice")}</p>
                     <p>{measurementUnit}</p>
                 </ProductRowsTitle>
-                <ProductRowsTitle><IconTrophy size={30} /></ProductRowsTitle>
+                <ProductRowsTitle style={{ textAlign: "center" }}><IconTrophy size={30} /></ProductRowsTitle>
                 {productCount! > 1 && (
                     <ProductRowsTitle width={30}></ProductRowsTitle>
                 )}
