@@ -35,29 +35,29 @@ const sortAndRankProducts = (products: ProductListType[], measurement: MEASUREME
             return priceA - priceB;
         });
 
-    // Assign ranks based on sorted order
+    // Assign ranks ensuring the same price gets the same rank
     let currentRank = 1;
     let previousFullPrecisionPrice: number | undefined;
 
-    return products.map((product) => {
-        const sortedIndex = sortedProducts.findIndex((p) => p.id === product.id);
+    sortedProducts.forEach((product, index) => {
+        const fullPrecisionPrice = (product.price! / product.quantity!) *
+            (measurement === MEASUREMENT_ENUMS.quantity ? 1 : 100);
 
-        if (sortedIndex !== -1) {
-            const sortedProduct = sortedProducts[sortedIndex];
-            const fullPrecisionPrice = (sortedProduct.price! / sortedProduct.quantity!) *
-                (measurement === MEASUREMENT_ENUMS.quantity ? 1 : 100);
-
-            if (previousFullPrecisionPrice !== fullPrecisionPrice) {
-                currentRank = sortedIndex + 1;
-                previousFullPrecisionPrice = fullPrecisionPrice;
-            }
-
-            return { ...product, rank: currentRank };
+        if (previousFullPrecisionPrice !== undefined && previousFullPrecisionPrice !== fullPrecisionPrice) {
+            currentRank = index + 1; // Only increase rank if price is different
         }
 
-        return product;
+        product.rank = currentRank;
+        previousFullPrecisionPrice = fullPrecisionPrice;
+    });
+
+    // Map ranks back to original products array
+    return products.map((product) => {
+        const rankedProduct = sortedProducts.find((p) => p.id === product.id);
+        return rankedProduct ? { ...product, rank: rankedProduct.rank } : product;
     });
 };
+
 const generateId = (): string => crypto.randomUUID();
 
 export { calculateUnifiedPrice, sortAndRankProducts, generateId };
