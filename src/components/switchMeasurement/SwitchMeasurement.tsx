@@ -59,7 +59,7 @@ const SwitchMeasurement = (props: SwitchMeasurementProps) => {
                                           selected={selectedMeasurement === MEASUREMENT_ENUMS.quantity}
                 >
                     <MeasurementTitle>{translate("common:pages.calculator.measurement.quantity.name")}</MeasurementTitle>
-                    <IconQuantity />
+                    <IconQuantity rtlIgnore={true} />
                     <MeasurementExplanation>{translate("common:pages.calculator.measurement.quantity.modal.explanation")}</MeasurementExplanation>
                 </MeasurementItemContainer>
             </MeasurementWrapper>

@@ -1,5 +1,5 @@
 // React and modules imports
-import React from "react";
+import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { AnimatePresence } from "framer-motion";
 
@@ -10,6 +10,7 @@ import { IconAdd, IconRestart } from "../../../styles";
 import { ButtonsLineContainer, CalculatorTableWrapper } from "./calculatorPage.wrappers";
 import { useProductHandlers } from "../../../hooks";
 import { generateId } from "../../../utils";
+import { DISPATCH_EVENTS } from "../../../consts";
 
 
 const CalculatorPage = () => {
@@ -37,9 +38,13 @@ const CalculatorPage = () => {
 
     const handleResetPage = () => {
         setProductsList(initialProductsList);
+        dispatchEvent(new CustomEvent(DISPATCH_EVENTS.TRIGGER_SPIN));
     };
     const productsToAddLeft: number = (maxRows - productsList.length);
 
+    useEffect(() => {
+        dispatchEvent(new CustomEvent(DISPATCH_EVENTS.TRIGGER_SPIN));
+    }, []);
     return (
         <>
             <PageHeader title={translate("common:pages.calculator.title")}

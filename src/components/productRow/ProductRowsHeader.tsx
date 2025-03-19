@@ -4,12 +4,13 @@ import { useTranslation, Trans } from "react-i18next";
 import { useTheme } from "styled-components";
 // Custom imports
 import { ProductRowContainer, ProductRowsTitle } from "./productRow.wrappers";
-import { BeatingHeart, CustomModal, UnstyledButton } from "../";
+import { CustomModal, UnstyledButton } from "../";
 import { SwitchMeasurement } from "../switchMeasurement";
 import { MEASUREMENT_ENUMS } from "../../enums";
 import { localStorageGetSelectedMeasurement } from "../../services";
 import { ProductRowProps } from "../../types";
 import { IconServices, IconTrophy } from "../../styles";
+import { SpinnerAnimation } from "../animations/spinner";
 
 
 const ProductRowsHeader = (props: Partial<ProductRowProps>) => {
@@ -54,7 +55,11 @@ const ProductRowsHeader = (props: Partial<ProductRowProps>) => {
 
     }, [translate, selectedMeasurement]);
 
-
+    const closeModal = () => {
+        setTimeout(() => {
+            setModalOpen(false);
+        }, 1000);
+    };
     return (
         <>
             <ProductRowContainer>
@@ -63,8 +68,9 @@ const ProductRowsHeader = (props: Partial<ProductRowProps>) => {
                 <ProductRowsTitle width={90}>
                     <UnstyledButton
                         onClick={() => setModalOpen(true)}>
-                        {<Trans i18nKey={measurementLabel} />}<BeatingHeart><IconServices size={25}
-                                                                                          color={theme.logoColor} /></BeatingHeart>
+                        {<Trans i18nKey={measurementLabel} />}<SpinnerAnimation><IconServices
+                        size={25}
+                        color={theme.logoColor} /></SpinnerAnimation>
                     </UnstyledButton>
                 </ProductRowsTitle>
                 <ProductRowsTitle width={90}>
@@ -85,7 +91,7 @@ const ProductRowsHeader = (props: Partial<ProductRowProps>) => {
                          closeButtonText={translate("common:pages.calculator.modal.closeButton")}
 
             >
-                <span onClick={() => setModalOpen(false)}>
+                <span onClick={() => closeModal()}>
                     <SwitchMeasurement returnFunction={handleChangeMeasurement} />
                 </span>
             </CustomModal>
