@@ -4,7 +4,7 @@ import { useTranslation, Trans } from "react-i18next";
 import { useTheme } from "styled-components";
 // Custom imports
 import { ProductRowContainer, ProductRowsTitle } from "./productRow.wrappers";
-import { CustomModal, UnstyledButton } from "../";
+import { BeatingHeart, CustomModal, UnstyledButton } from "../";
 import { SwitchMeasurement } from "../switchMeasurement";
 import { MEASUREMENT_ENUMS } from "../../enums";
 import { localStorageGetSelectedMeasurement } from "../../services";
@@ -63,8 +63,8 @@ const ProductRowsHeader = (props: Partial<ProductRowProps>) => {
                 <ProductRowsTitle width={90}>
                     <UnstyledButton
                         onClick={() => setModalOpen(true)}>
-                        {<Trans i18nKey={measurementLabel} />}<IconServices size={25}
-                                                                            color={theme.logoColor} />
+                        {<Trans i18nKey={measurementLabel} />}<BeatingHeart><IconServices size={25}
+                                                                                          color={theme.logoColor} /></BeatingHeart>
                     </UnstyledButton>
                 </ProductRowsTitle>
                 <ProductRowsTitle width={90}>
