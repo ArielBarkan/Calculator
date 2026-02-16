@@ -1,54 +1,88 @@
-# React + TypeScript + Vite
+# CalcPrice
 
-before Claude Code
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A multilingual PWA for comparing product prices per unit. Enter price and quantity for multiple products, and the app calculates and ranks them by best value.
 
-Currently, two official plugins are available:
+**Live:** [calcprice.com](https://calcprice.com)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md)
-  uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast
-  Refresh
+## Tech Stack
 
-## Expanding the ESLint configuration
+- React 19 + TypeScript + Vite
+- styled-components (theming with light/dark mode)
+- i18next (Hebrew RTL, English, Spanish, Portuguese)
+- Workbox via vite-plugin-pwa (offline support)
+- Deployed to Vercel
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Getting Started
 
-- Configure the top-level `parserOptions` property like this:
+### Prerequisites
 
-```js
-export default tseslint.config({
-    languageOptions: {
-        // other options...
-        parserOptions: {
-            project: ['./tsconfig.node.json', './tsconfig.calculator.json'],
-            tsconfigRootDir: import.meta.dirname,
-        },
-    },
-})
+- Node.js >= 20
+- pnpm
+
+### Installation
+
+```bash
+pnpm install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or
-  `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Development
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-    // Set the react version
-    settings: { react: { version: '18.3' } },
-    plugins: {
-        // Add the react plugin
-        react,
-    },
-    rules: {
-        // other rules...
-        // Enable its recommended rules
-        ...react.configs.recommended.rules,
-        ...react.configs['jsx-runtime'].rules,
-    },
-})
+```bash
+pnpm dev
 ```
+
+Runs on [http://localhost:5173](http://localhost:5173).
+
+### Build
+
+```bash
+pnpm build
+```
+
+Outputs to `dist/`.
+
+### Other Commands
+
+| Command | Description |
+|---------|-------------|
+| `pnpm lint` | Run ESLint |
+| `pnpm format:all` | Format code with Prettier |
+| `pnpm preview` | Preview production build locally |
+
+## Project Structure
+
+```
+src/
+├── components/     # Reusable UI components (barrel exports via index.ts)
+├── consts/         # Constants (languages, currencies)
+├── context/        # React contexts (theme)
+├── enums/          # Enums (theme, measurement, cookies)
+├── hooks/          # Custom hooks (product handlers)
+├── routes/         # Lazy-loaded route definitions
+├── services/       # i18n, localStorage, language services
+├── styles/         # Theme, global styles, icons
+├── types/          # Shared TypeScript types
+├── utils/          # Utility functions (calculations, analytics)
+└── views/pages/    # Page components
+public/
+├── locales/        # Translation JSON files (he-IL, en-US, es, pt-BR)
+├── icons/          # PWA icons
+└── manifest.json   # Web app manifest
+```
+
+## Environment Variables
+
+All prefixed with `VITE_`. Copy `.env` and adjust as needed.
+
+| Variable | Description |
+|----------|-------------|
+| `VITE_DEFAULT_LANGUAGE` | Default language locale (e.g., `he-IL`) |
+| `VITE_DEFAULT_CURRENCY_ISO` | Default currency (e.g., `ILS`) |
+| `VITE_DEFAULT_THEME` | `darkTheme` or `lightTheme` |
+| `VITE_DEFAULT_MEASUREMENT` | `weight`, `liquid`, or `quantity` |
+| `VITE_LOCALES_URL` | URL path for translation files |
+| `VITE_GOOGLE_ANALYTICS_TRACKING_ID` | GA4 tracking ID |
+| `VITE_I18N_DEBUG_MODE` | Enable i18n debug logging |
+| `VITE_URL_TO_SHARE` | URL used in the share/QR feature |
+| `VITE_INITIAL_ROWS` | Number of product rows on load |
+| `VITE_MAX_ROWS` | Maximum product rows allowed |
