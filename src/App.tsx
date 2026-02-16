@@ -12,7 +12,7 @@ import { GlobalStyles } from "./styles";
 import { localStorageGetSelectedLanguage } from "./services";
 
 import { GOOGLE_ANALYTICS } from "./utils/analytics.util";
-import { NotifyCustom } from "./components";
+import { NotifyCustom, ErrorBoundary, ErrorFallback } from "./components";
 
 const App: React.FC = () => {
     ChangeLanguage(localStorageGetSelectedLanguage());
@@ -29,12 +29,14 @@ const App: React.FC = () => {
     }, [location]);
 
     return (
-        <CustomThemeProvider>
-            <GlobalStyles />
-            <ToastContainer />
-            <NotifyCustom />
-            <AppRoutes />
-        </CustomThemeProvider>
+        <ErrorBoundary fallbackUI={<ErrorFallback />}>
+            <CustomThemeProvider>
+                <GlobalStyles />
+                <ToastContainer />
+                <NotifyCustom />
+                <AppRoutes />
+            </CustomThemeProvider>
+        </ErrorBoundary>
     );
 };
 

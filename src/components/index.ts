@@ -15,3 +15,4 @@ export { PageHeader } from "./pageHeader";
 export { NotifySuccess, NotifyWarning, NotifyCustom } from "./toast";
 export { ToggleSwitch } from "./toggleSwitch";
 export { StyledImage } from "./styledImage";
+export { ErrorBoundary, ErrorFallback, PageErrorFallback } from "./errorBoundary";

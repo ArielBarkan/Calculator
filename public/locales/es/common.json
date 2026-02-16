@@ -186,6 +186,12 @@
       }
     }
   },
+  "errorBoundary": {
+    "title": "Algo salió mal",
+    "message": "Ocurrió un error inesperado. Por favor, inténtalo de nuevo.",
+    "reload": "Recargar página",
+    "goHome": "Volver al inicio"
+  },
   "share": {
     "label": "Comp",
     "text": "Encontré esta increíble aplicación, échale un vistazo:",

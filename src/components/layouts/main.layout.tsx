@@ -7,6 +7,7 @@ import { LayoutWrapper, MainContent } from "./layout.wrappers";
 import { TopBarMenu } from "../topBarMenu";
 import { CookieBanner } from "../cookieBanner";
 import { HamburgerMenu } from "../hamburgerMenu";
+import { ErrorBoundary, PageErrorFallback } from "../errorBoundary";
 
 const MainLayout = () => {
     return (
@@ -14,7 +15,9 @@ const MainLayout = () => {
             <HamburgerMenu />
             <TopBarMenu />
             <MainContent>
-                <Outlet />
+                <ErrorBoundary fallbackUI={<PageErrorFallback />}>
+                    <Outlet />
+                </ErrorBoundary>
             </MainContent>
             <CookieBanner />
         </LayoutWrapper>

@@ -188,6 +188,12 @@
       }
     }
   },
+  "errorBoundary": {
+    "title": "Algo deu errado",
+    "message": "Ocorreu um erro inesperado. Por favor, tente novamente.",
+    "reload": "Recarregar página",
+    "goHome": "Voltar ao início"
+  },
   "share": {
     "label": "Compartilhar",
     "text": "Encontrei este aplicativo incrível, confira:",
