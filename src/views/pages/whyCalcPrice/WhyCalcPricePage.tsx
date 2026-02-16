@@ -6,60 +6,49 @@ import { PageHeader, StyledImage } from "../../../components";
 import { WhyModalWrapper, WhyItem, WhyItemTitle, WhyItemTitleItemDescription } from "./whyCalcPricePage.wrappers";
 import { WhyImage } from "../../../assets";
 
-
 const WhyCalcPricePage = () => {
     const { t: translate } = useTranslation("common");
     return (
         <>
-            <PageHeader title={translate("common:pages.whyCalcPrice.title")}
-                        subTitle={translate("common:pages.whyCalcPrice.subTitle")} linkTo={"/"} />
+            <PageHeader
+                title={translate("common:pages.whyCalcPrice.title")}
+                subTitle={translate("common:pages.whyCalcPrice.subTitle")}
+                linkTo={"/"}
+            />
             <StyledImage src={WhyImage} width={"80%"} />
             <WhyModalWrapper>
                 <WhyItem>
-                    <WhyItemTitle>
-                        {translate("common:pages.whyCalcPrice.item1.title")}
-                    </WhyItemTitle>
+                    <WhyItemTitle>{translate("common:pages.whyCalcPrice.item1.title")}</WhyItemTitle>
                     <WhyItemTitleItemDescription>
                         {translate("common:pages.whyCalcPrice.item1.description")}
-
                     </WhyItemTitleItemDescription>
                 </WhyItem>
                 <WhyItem>
-                    <WhyItemTitle>
-                        {translate("common:pages.whyCalcPrice.item2.title")}
-                    </WhyItemTitle>
+                    <WhyItemTitle>{translate("common:pages.whyCalcPrice.item2.title")}</WhyItemTitle>
                     <WhyItemTitleItemDescription>
                         {translate("common:pages.whyCalcPrice.item2.description")}
                     </WhyItemTitleItemDescription>
                 </WhyItem>
 
                 <WhyItem>
-                    <WhyItemTitle>
-                        {translate("common:pages.whyCalcPrice.item3.title")}
-                    </WhyItemTitle>
+                    <WhyItemTitle>{translate("common:pages.whyCalcPrice.item3.title")}</WhyItemTitle>
                     <WhyItemTitleItemDescription>
                         {translate("common:pages.whyCalcPrice.item3.description")}
                     </WhyItemTitleItemDescription>
                 </WhyItem>
                 <WhyItem>
-                    <WhyItemTitle>
-                        {translate("common:pages.whyCalcPrice.item4.title")}
-                    </WhyItemTitle>
+                    <WhyItemTitle>{translate("common:pages.whyCalcPrice.item4.title")}</WhyItemTitle>
                     <WhyItemTitleItemDescription>
                         {translate("common:pages.whyCalcPrice.item4.description")}
                     </WhyItemTitleItemDescription>
                 </WhyItem>
                 <WhyItem>
-                    <WhyItemTitle>
-                        {translate("common:pages.whyCalcPrice.item5.title")}
-                    </WhyItemTitle>
+                    <WhyItemTitle>{translate("common:pages.whyCalcPrice.item5.title")}</WhyItemTitle>
                     <WhyItemTitleItemDescription>
                         {translate("common:pages.whyCalcPrice.item5.description")}
                     </WhyItemTitleItemDescription>
                 </WhyItem>
             </WhyModalWrapper>
-
-
         </>
     );
 };

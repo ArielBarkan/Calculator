@@ -1,7 +1,6 @@
 // React and modules imports
 import styled from "styled-components";
 
-
 const NumericKeyboardWrapper = styled.div`
     direction: ltr;
     display: grid;

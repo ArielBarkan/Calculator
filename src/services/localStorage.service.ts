@@ -2,7 +2,6 @@
 import { COOKIES_CONSENT_ENUMS, MEASUREMENT_ENUMS, THEME_ENUMS } from "../enums";
 import { CurrencyISOType, LocaleType } from "../types";
 
-
 const localStorageUpdateSelectedLanguage = (language: LocaleType) => {
     localStorage.setItem("language", language);
 };
@@ -40,9 +39,8 @@ const localStorageUpdateCookiesConsent = (cookieConsent: COOKIES_CONSENT_ENUMS) 
 };
 
 const localStorageGetCookiesConsent = (): undefined | COOKIES_CONSENT_ENUMS => {
-    return (localStorage.getItem("cookieConsent")) as COOKIES_CONSENT_ENUMS;
+    return localStorage.getItem("cookieConsent") as COOKIES_CONSENT_ENUMS;
 };
-
 
 export {
     localStorageUpdateSelectedLanguage,

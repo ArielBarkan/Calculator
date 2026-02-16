@@ -1,7 +1,6 @@
 // React and modules imports
 import styled from "styled-components";
 
-
 const Navbar = styled.nav`
     position: fixed;
     top: 0;
@@ -19,4 +18,4 @@ const Navbar = styled.nav`
     }
 `;
 
-export { Navbar } ;
+export { Navbar };

@@ -7,7 +7,6 @@ import { lightTheme, darkTheme } from "../styles";
 import { localStorageUpdateSelectedTheme, localStorageGetSelectedTheme } from "../services";
 import { ThemeContextType } from "../types";
 
-
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const CustomThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {

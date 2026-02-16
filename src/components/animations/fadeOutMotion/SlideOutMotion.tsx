@@ -9,20 +9,14 @@ const pageVariants = {
     animate: { opacity: 1, y: 0 },
     exit: {
         opacity: 0,
-        x: (-Math.abs(window.screen.width))
+        x: -Math.abs(window.screen.width)
     },
     transition: { duration: 0.3 }
 };
 
-
 const SlideOutMotion = ({ children }: PageWrapperProps) => {
     return (
-        <motion.div
-            variants={pageVariants}
-            initial="initial"
-            animate="animate"
-            exit="exit"
-        >
+        <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit">
             {children}
         </motion.div>
     );

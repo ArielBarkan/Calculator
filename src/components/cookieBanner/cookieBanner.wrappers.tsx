@@ -37,16 +37,6 @@ const Button = styled.button`
     border-radius: 5px;
     transition: background 0.2s ease-in-out;
 
-    &.accept {
-        background: #4caf50;
-        color: white;
-    }
-
-    &.reject {
-        background: #e53935;
-        color: white;
-    }
-
     &:hover {
         opacity: 0.9;
     }

@@ -7,10 +7,8 @@ import { localStorageGetSelectedCurrency } from "../services";
 
 const GA_TRACKING_ID = import.meta.env.VITE_GOOGLE_ANALYTICS_TRACKING_ID;
 
-
 const GOOGLE_ANALYTICS = {
     isGAInitialized: false, // Ensures events are only sent after GA is ready
-
 
     initGA: () => {
         if (GA_TRACKING_ID) {
@@ -45,7 +43,7 @@ const GOOGLE_ANALYTICS = {
         priceDifference: number;
         percentageDifference: number;
         totalPrice: number;
-        productCount: number
+        productCount: number;
     }) => {
         if (GOOGLE_ANALYTICS.isGAInitialized) {
             ReactGA.gtag(GA_EVENTS.CATEGORIES.USER_ACTIONS, GA_EVENTS.ACTIONS.CALCULATOR_USAGE, {
@@ -59,7 +57,6 @@ const GOOGLE_ANALYTICS = {
             // console.log("[Google Analytics] event : calculated_product_stats");
         }
     }
-
 };
 
 export { GOOGLE_ANALYTICS };

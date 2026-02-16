@@ -6,7 +6,6 @@ import { languageType, LocaleType } from "../types";
 import { SUPPORTED_LANGUAGES } from "../consts";
 import { localStorageUpdateSelectedLanguage } from "./";
 
-
 const ChangeLanguage = async (locale: LocaleType): Promise<boolean> => {
     try {
         const selectedLanguage: languageType = getSelectedLanguageByLocale(locale);
@@ -27,6 +26,5 @@ const ChangeLanguage = async (locale: LocaleType): Promise<boolean> => {
 const getSelectedLanguageByLocale = (locale: string): languageType => {
     return SUPPORTED_LANGUAGES.find((lang: languageType) => lang.locale === locale) || SUPPORTED_LANGUAGES[0];
 };
-
 
 export { ChangeLanguage };

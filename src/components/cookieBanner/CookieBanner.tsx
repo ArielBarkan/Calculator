@@ -25,10 +25,17 @@ const CookieBanner = () => {
 
         if (!accepted) {
             window[`ga-disable-${import.meta.env.VITE_GOOGLE_ANALYTICS_TRACKING_ID}`] = true; // Disable GA
-            GOOGLE_ANALYTICS.trackEvent(GA_EVENTS.CATEGORIES.USER_ACTIONS, GA_EVENTS.ACTIONS.COOKIES_CONSENT_REJECT, "success");
+            GOOGLE_ANALYTICS.trackEvent(
+                GA_EVENTS.CATEGORIES.USER_ACTIONS,
+                GA_EVENTS.ACTIONS.COOKIES_CONSENT_REJECT,
+                "success"
+            );
         } else {
-            GOOGLE_ANALYTICS.trackEvent(GA_EVENTS.CATEGORIES.USER_ACTIONS, GA_EVENTS.ACTIONS.COOKIES_CONSENT_ACCEPT, "success");
-
+            GOOGLE_ANALYTICS.trackEvent(
+                GA_EVENTS.CATEGORIES.USER_ACTIONS,
+                GA_EVENTS.ACTIONS.COOKIES_CONSENT_ACCEPT,
+                "success"
+            );
         }
 
         setVisible(false); // Hide banner after choice is made
@@ -38,14 +45,15 @@ const CookieBanner = () => {
         <CookieBannerWrapper $visible={visible}>
             <CookieText>{translate("common:cookieBanner.text")}</CookieText>
             <ButtonGroup>
-                <Button className="accept"
-                        onClick={() => handleConsent(true)}>{translate("common:cookieBanner.button.accept")}</Button>
-                <Button className="reject"
-                        onClick={() => handleConsent(false)}>{translate("common:cookieBanner.button.reject")}</Button>
+                <Button className="accept" onClick={() => handleConsent(true)}>
+                    {translate("common:cookieBanner.button.accept")}
+                </Button>
+                <Button className="reject" onClick={() => handleConsent(false)}>
+                    {translate("common:cookieBanner.button.reject")}
+                </Button>
             </ButtonGroup>
         </CookieBannerWrapper>
     ) : null;
 };
-
 
 export { CookieBanner };

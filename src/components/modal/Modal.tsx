@@ -6,20 +6,18 @@ import Modal from "react-modal";
 import { StyledModal, Title, Content, CloseButton } from "./modal.wrappers";
 import { ModalProps } from "../../types";
 
-
 Modal.setAppElement("#root"); // Ensure accessibility
 
-
 const CustomModal: React.FC<ModalProps> = ({
-                                               isOpen,
-                                               onClose,
-                                               title,
-                                               children,
-                                               closeButtonText = "Close",
-                                               width,
-                                               height,
-                                               position = "center" // Default position
-                                           }) => {
+    isOpen,
+    onClose,
+    title,
+    children,
+    closeButtonText = "Close",
+    width,
+    height,
+    position = "center" // Default position
+}) => {
     return (
         <StyledModal
             isOpen={isOpen}
@@ -36,7 +34,6 @@ const CustomModal: React.FC<ModalProps> = ({
                 }
             }}
         >
-
             {title && <Title>{title}</Title>}
             <Content>{children}</Content>
             <CloseButton onClick={onClose}>{closeButtonText}</CloseButton>
@@ -45,4 +42,3 @@ const CustomModal: React.FC<ModalProps> = ({
 };
 
 export { CustomModal };
-

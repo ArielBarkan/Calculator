@@ -17,7 +17,7 @@ const TitleRow = styled.div`
 
 const Back = styled.div`
     display: flex;
-    padding: 0 0 0 .5rem;
+    padding: 0 0 0 0.5rem;
     //background-color: yellow;
 `;
 
@@ -29,9 +29,8 @@ const Title = styled.h1`
 
 const SubTitle = styled.p<{ $alignStart: boolean }>`
     margin: 0;
-    margin-inline-start: ${({ $alignStart }) => ($alignStart) ? "0" : "2rem"};
+    margin-inline-start: ${({ $alignStart }) => ($alignStart ? "0" : "2rem")};
     width: 100%; /* Ensures it takes full width */
-
 `;
 
 export { PageHeaderWrapper, TitleRow, Title, SubTitle, Back };

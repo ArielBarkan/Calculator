@@ -1,7 +1,6 @@
 // React and modules imports
 import { useState } from "react";
 
-
 const SegmentedControl = () => {
     const [selected, setSelected] = useState("weight");
 

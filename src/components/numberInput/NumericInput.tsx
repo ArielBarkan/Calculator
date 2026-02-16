@@ -28,7 +28,7 @@ const NumericInput = (props: NumericInputProps) => {
     return (
         <NumberInputStyled
             {...{ maxLength }}
-            value={(inputValue !== "0" ? inputValue : "")}
+            value={inputValue !== "0" ? inputValue : ""}
             onChange={handleChange}
             onFocus={focusFunction}
             onBlur={blurFunction}

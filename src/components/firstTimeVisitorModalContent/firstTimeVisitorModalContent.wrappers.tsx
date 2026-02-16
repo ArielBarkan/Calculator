@@ -9,12 +9,10 @@ const FirstTimeModalWrapper = styled.div`
 
 const FirstTimeModalItem = styled.span`
     padding-top: 20px;
- 
 
     p {
         //  background-color: green;
         display: inline; /* ✅ Ensures text flows in a single line */
-
     }
 `;
 
@@ -25,7 +23,3 @@ const FirstTimeModalItemTitle = styled.p`
 const FirstTimeModalItemDescription = styled.p``;
 
 export { FirstTimeModalWrapper, FirstTimeModalItem, FirstTimeModalItemTitle, FirstTimeModalItemDescription };
-
-
-
-

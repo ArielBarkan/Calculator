@@ -14,12 +14,10 @@ import { localStorageGetSelectedLanguage } from "./services";
 import { GOOGLE_ANALYTICS } from "./utils/analytics.util";
 import { NotifyCustom } from "./components";
 
-
 const App: React.FC = () => {
     ChangeLanguage(localStorageGetSelectedLanguage());
 
     const location = useLocation();
-
 
     useEffect(() => {
         GOOGLE_ANALYTICS.initGA();

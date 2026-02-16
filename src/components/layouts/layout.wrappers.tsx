@@ -1,7 +1,6 @@
 // React and modules imports
 import styled from "styled-components";
 
-
 const LayoutWrapper = styled.div`
     margin: auto;
     display: flex;

@@ -28,6 +28,4 @@ const SUPPORTED_LANGUAGES: languageType[] = [
     }
 ];
 
-export {
-    SUPPORTED_LANGUAGES
-};
+export { SUPPORTED_LANGUAGES };

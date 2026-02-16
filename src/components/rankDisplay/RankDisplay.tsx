@@ -7,7 +7,6 @@ import { RankWrapper, Rank } from "./rankDisplay.wrappers";
 import { FadeInText } from "../animations";
 import { RankDisplayProps } from "../../types";
 
-
 const RankDisplay = (props: RankDisplayProps) => {
     const { rank, dimension } = props;
     const [isVisible, setIsVisible] = useState(false);
@@ -32,7 +31,6 @@ const RankDisplay = (props: RankDisplayProps) => {
         setTimeout(() => {
             setIsVisible(true);
         }, 500);
-
     }, [rank]);
 
     return (

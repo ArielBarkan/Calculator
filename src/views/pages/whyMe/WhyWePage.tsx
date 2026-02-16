@@ -6,19 +6,19 @@ import { PageHeader, StyledImage } from "../../../components";
 import { Container, Subtitle, Paragraph, List, ListItem, FeaturesList, FeatureItem } from "./whyWePage.wrappers";
 import { WhyUsImage } from "../../../assets";
 
-
 const WhyWePage = () => {
     const { t: translate } = useTranslation("common");
 
-
     return (
         <>
-            <PageHeader title={translate("common:pages.whyWeCreatedCalcPrice.title")}
-                        subTitle={translate("common:pages.whyWeCreatedCalcPrice.intro")} linkTo={"/"} />
+            <PageHeader
+                title={translate("common:pages.whyWeCreatedCalcPrice.title")}
+                subTitle={translate("common:pages.whyWeCreatedCalcPrice.intro")}
+                linkTo={"/"}
+            />
             <StyledImage src={WhyUsImage} width="80%" />
 
             <Container>
-
                 {/* Problem Section */}
                 <Subtitle>{translate("common:pages.whyWeCreatedCalcPrice.problem.description")}</Subtitle>
                 <Paragraph>{translate("common:pages.whyWeCreatedCalcPrice.problem.example")}</Paragraph>
@@ -39,13 +39,21 @@ const WhyWePage = () => {
                 {/* Features List */}
                 <FeaturesList>
                     <FeatureItem>{translate("common:pages.whyWeCreatedCalcPrice.solution.features.free")}</FeatureItem>
-                    <FeatureItem>{translate("common:pages.whyWeCreatedCalcPrice.solution.features.noSignup")}</FeatureItem>
-                    <FeatureItem>{translate("common:pages.whyWeCreatedCalcPrice.solution.features.noTracking")}</FeatureItem>
-                    <FeatureItem>{translate("common:pages.whyWeCreatedCalcPrice.solution.features.realTime")}</FeatureItem>
+                    <FeatureItem>
+                        {translate("common:pages.whyWeCreatedCalcPrice.solution.features.noSignup")}
+                    </FeatureItem>
+                    <FeatureItem>
+                        {translate("common:pages.whyWeCreatedCalcPrice.solution.features.noTracking")}
+                    </FeatureItem>
+                    <FeatureItem>
+                        {translate("common:pages.whyWeCreatedCalcPrice.solution.features.realTime")}
+                    </FeatureItem>
                 </FeaturesList>
 
                 {/* Conclusion */}
-                <Paragraph><strong>{translate("common:pages.whyWeCreatedCalcPrice.solution.conclusion")}</strong></Paragraph>
+                <Paragraph>
+                    <strong>{translate("common:pages.whyWeCreatedCalcPrice.solution.conclusion")}</strong>
+                </Paragraph>
             </Container>
         </>
     );

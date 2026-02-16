@@ -12,13 +12,12 @@ import { ProductRowProps } from "../../types";
 import { IconServices, IconTrophy } from "../../styles";
 import { SpinnerAnimation } from "../animations/spinner";
 
-
 const ProductRowsHeader = (props: Partial<ProductRowProps>) => {
-
-
     const { productCount, updateCurrency } = props;
     const { t: translate } = useTranslation("common");
-    const [selectedMeasurement, setSelectedMeasurement] = useState<MEASUREMENT_ENUMS>(localStorageGetSelectedMeasurement());
+    const [selectedMeasurement, setSelectedMeasurement] = useState<MEASUREMENT_ENUMS>(
+        localStorageGetSelectedMeasurement()
+    );
     const [measurementUnit, setMeasurementUnit] = useState<string>("גרם");
     const [isModalOpen, setModalOpen] = useState(false);
     const [measurementLabel, setMeasurementLabel] = useState<string>("Measurement");
@@ -29,7 +28,6 @@ const ProductRowsHeader = (props: Partial<ProductRowProps>) => {
             updateCurrency();
         }
     };
-
 
     useEffect(() => {
         let label: string;
@@ -52,7 +50,6 @@ const ProductRowsHeader = (props: Partial<ProductRowProps>) => {
         }
         setMeasurementUnit(labelPricePer);
         setMeasurementLabel(label);
-
     }, [translate, selectedMeasurement]);
 
     const closeModal = () => {
@@ -63,33 +60,34 @@ const ProductRowsHeader = (props: Partial<ProductRowProps>) => {
     return (
         <>
             <ProductRowContainer>
-                <ProductRowsTitle width={90}><Trans
-                    i18nKey={"common:pages.calculator.header.price"} /></ProductRowsTitle>
                 <ProductRowsTitle width={90}>
-                    <UnstyledButton
-                        onClick={() => setModalOpen(true)}>
-                        {<Trans i18nKey={measurementLabel} />}<SpinnerAnimation><IconServices
-                        size={25}
-                        color={theme.logoColor} /></SpinnerAnimation>
+                    <Trans i18nKey={"common:pages.calculator.header.price"} />
+                </ProductRowsTitle>
+                <ProductRowsTitle width={90}>
+                    <UnstyledButton onClick={() => setModalOpen(true)}>
+                        {<Trans i18nKey={measurementLabel} />}
+                        <SpinnerAnimation>
+                            <IconServices size={25} color={theme.logoColor} />
+                        </SpinnerAnimation>
                     </UnstyledButton>
                 </ProductRowsTitle>
                 <ProductRowsTitle width={90}>
                     <p>{translate("common:pages.calculator.header.unifiedPrice")}</p>
                     <p>{measurementUnit}</p>
                 </ProductRowsTitle>
-                <ProductRowsTitle style={{ textAlign: "center" }}><IconTrophy size={30} /></ProductRowsTitle>
-                {productCount! > 1 && (
-                    <ProductRowsTitle width={30}></ProductRowsTitle>
-                )}
+                <ProductRowsTitle style={{ textAlign: "center" }}>
+                    <IconTrophy size={30} />
+                </ProductRowsTitle>
+                {productCount! > 1 && <ProductRowsTitle width={30}></ProductRowsTitle>}
             </ProductRowContainer>
-            <CustomModal isOpen={isModalOpen}
-                         onClose={() => setModalOpen(false)}
-                         title={translate("common:pages.calculator.modal.title")}
-                         width="85%" // Set custom width
-                         height="200px" // Set custom height
-                         position="top" // Position modal on the right
-                         closeButtonText={translate("common:pages.calculator.modal.closeButton")}
-
+            <CustomModal
+                isOpen={isModalOpen}
+                onClose={() => setModalOpen(false)}
+                title={translate("common:pages.calculator.modal.title")}
+                width="85%" // Set custom width
+                height="200px" // Set custom height
+                position="top" // Position modal on the right
+                closeButtonText={translate("common:pages.calculator.modal.closeButton")}
             >
                 <span onClick={() => closeModal()}>
                     <SwitchMeasurement returnFunction={handleChangeMeasurement} />

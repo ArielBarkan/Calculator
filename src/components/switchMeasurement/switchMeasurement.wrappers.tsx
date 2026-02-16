@@ -9,7 +9,6 @@ const MeasurementWrapper = styled.span`
     flex-direction: row;
     justify-content: center;
     gap: 1rem;
-
 `;
 const MeasurementItemContainer = styled(UnstyledButton)`
     display: flex;
@@ -27,10 +26,8 @@ const MeasurementTitle = styled.p`
     margin: 0;
 `;
 const MeasurementExplanation = styled.p`
-    font-size: .7rem;
+    font-size: 0.7rem;
     margin: 0;
 `;
 
-
 export { MeasurementWrapper, MeasurementItemContainer, MeasurementTitle, MeasurementExplanation };
-

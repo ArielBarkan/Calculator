@@ -9,8 +9,8 @@ const MenuContainer = styled.div<{ isOpen: boolean; $isRtl: boolean }>`
     background-color: ${({ theme }) => theme.cookieBanner.bgColor};
     color: ${({ theme }) => theme.cookieBanner.fontColor};
     transform: ${({ isOpen, $isRtl }) =>
-            isOpen ? "translateX(0)" : $isRtl ? "translateX(100%)" : "translateX(-100%)"};
-        // visibility: ${({ isOpen }) => isOpen ? "visible" : "hidden"};
+        isOpen ? "translateX(0)" : $isRtl ? "translateX(100%)" : "translateX(-100%)"};
+    // visibility: ${({ isOpen }) => (isOpen ? "visible" : "hidden")};
     transition: transform 0.3s linear;
     padding: 20px;
     display: flex;
@@ -48,8 +48,8 @@ const MenuItem = styled.a<{ disabled: boolean }>`
     width: 100%;
     font-size: 18px;
     padding: 10px;
-    cursor: ${({ disabled }) => disabled ? "default" : "pointer"};
-    background: ${({ disabled }) => disabled ? "rgba(182, 180, 180, 0.2)" : "inherit"};
+    cursor: ${({ disabled }) => (disabled ? "default" : "pointer")};
+    background: ${({ disabled }) => (disabled ? "rgba(182, 180, 180, 0.2)" : "inherit")};
     display: flex;
     flex-direction: row;
     gap: 20px;
@@ -59,6 +59,5 @@ const MenuItem = styled.a<{ disabled: boolean }>`
         background: rgba(255, 255, 255, 0.2);
     }
 `;
-
 
 export { MenuContainer, Overlay, MenuButton, MenuItem };

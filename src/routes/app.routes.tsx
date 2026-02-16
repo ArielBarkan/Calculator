@@ -2,7 +2,6 @@
 import React, { Suspense, lazy } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 
-
 // Custom imports
 // Lazy loading the app pages
 const MainLayout = lazy(() => import("../components/layouts/main.layout"));

@@ -1,8 +1,7 @@
 // React and modules imports
 import styled from "styled-components";
 
-
-const UnstyledButton = styled.button<{ selected?: boolean, disabled?: boolean }>`
+const UnstyledButton = styled.button<{ selected?: boolean; disabled?: boolean }>`
     all: unset; // Removes default button styles
     display: inline-flex;
     cursor: pointer;
@@ -10,13 +9,9 @@ const UnstyledButton = styled.button<{ selected?: boolean, disabled?: boolean }>
     height: auto;
     align-items: center;
     border-radius: 5px; // Helps with focus visibility
-    outline: 1px solid ${({ selected, theme }) => selected ? theme.SelectableElement.selectedBorder : "transparent"};
-    background-color: ${({
-                             selected,
-                             disabled,
-                             theme
-                         }) => (selected && !disabled) && theme.SelectableElement.activeBackground};
-
+    outline: 1px solid ${({ selected, theme }) => (selected ? theme.SelectableElement.selectedBorder : "transparent")};
+    background-color: ${({ selected, disabled, theme }) =>
+        selected && !disabled && theme.SelectableElement.activeBackground};
 
     &:focus {
         outline: 2px solid #000; // Makes it visible when navigating via Tab
@@ -24,13 +19,9 @@ const UnstyledButton = styled.button<{ selected?: boolean, disabled?: boolean }>
     }
 
     &:active {
-        background-color: ${({
-                                 selected,
-                                 disabled,
-                                 theme
-                             }) => (selected && !disabled) && theme.SelectableElement.activeBackground};
+        background-color: ${({ selected, disabled, theme }) =>
+            selected && !disabled && theme.SelectableElement.activeBackground};
     }
 `;
-
 
 export { UnstyledButton };

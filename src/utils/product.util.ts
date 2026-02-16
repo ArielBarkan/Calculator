@@ -40,8 +40,8 @@ const sortAndRankProducts = (products: ProductListType[], measurement: MEASUREME
     let previousFullPrecisionPrice: number | undefined;
 
     sortedProducts.forEach((product, index) => {
-        const fullPrecisionPrice = (product.price! / product.quantity!) *
-            (measurement === MEASUREMENT_ENUMS.quantity ? 1 : 100);
+        const fullPrecisionPrice =
+            (product.price! / product.quantity!) * (measurement === MEASUREMENT_ENUMS.quantity ? 1 : 100);
 
         if (previousFullPrecisionPrice !== undefined && previousFullPrecisionPrice !== fullPrecisionPrice) {
             currentRank = index + 1; // Only increase rank if price is different

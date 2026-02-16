@@ -14,14 +14,12 @@ import { localStorageGetSelectedCurrency } from "../../../services";
 import { GOOGLE_ANALYTICS } from "../../../utils/analytics.util";
 import { GA_EVENTS } from "../../../consts";
 
-
 const SettingsPage = () => {
     const { t: translate } = useTranslation("common");
     const { theme, toggleTheme } = useTheme();
     const navigate = useNavigate();
 
     const [selectedTheme, setSelectedTheme] = useState<THEME_ENUMS>(theme);
-
 
     const handleChangeTheme = () => {
         const newTheme = toggleTheme();
@@ -33,7 +31,6 @@ const SettingsPage = () => {
             NotifyWarning(translate("common:pages.settings.setThemeFailed"));
             GOOGLE_ANALYTICS.trackError(GA_EVENTS.CATEGORIES.USER_ACTIONS, GA_EVENTS.ACTIONS.TOGGLE_THEME, newTheme);
         }
-
     };
 
     const isDarkMode = (): boolean => {
@@ -42,20 +39,26 @@ const SettingsPage = () => {
 
     return (
         <>
-            <PageHeader title={translate("common:pages.settings.title")}
-                        subTitle={translate("common:pages.settings.subTitle")} linkTo={"/"} />
+            <PageHeader
+                title={translate("common:pages.settings.title")}
+                subTitle={translate("common:pages.settings.subTitle")}
+                linkTo={"/"}
+            />
 
             <Row disabled={true}>
                 <DoubleLineWrapper>
                     <TopLine>{translate("common:pages.settings.setDarkMode")}</TopLine>
-                    <BottomLine>{isDarkMode() ? translate("common:components.toggleSwitch.on") : translate("common:components.toggleSwitch.off")}</BottomLine>
+                    <BottomLine>
+                        {isDarkMode()
+                            ? translate("common:components.toggleSwitch.on")
+                            : translate("common:components.toggleSwitch.off")}
+                    </BottomLine>
                 </DoubleLineWrapper>
-                <ToggleSwitch checked={isDarkMode()} returnFunction={handleChangeTheme}
-                              id={"themeSwitch"} />
+                <ToggleSwitch checked={isDarkMode()} returnFunction={handleChangeTheme} id={"themeSwitch"} />
             </Row>
             <Row onClick={() => navigate("/settings/language")}>
                 <DoubleLineWrapper>
-                    <TopLine>   {translate("common:pages.settings.setLanguage")}</TopLine>
+                    <TopLine> {translate("common:pages.settings.setLanguage")}</TopLine>
                     <BottomLine>{getSelectedLanguageByLocale().name}</BottomLine>
                 </DoubleLineWrapper>
                 <IconNext />
@@ -67,7 +70,6 @@ const SettingsPage = () => {
                 </DoubleLineWrapper>
                 <IconNext />
             </Row>
-
         </>
     );
 };

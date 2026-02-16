@@ -11,7 +11,6 @@ const commonColors = {
             bgColor: "#CD7F32"
         }
     }
-
 };
 
 const lightTheme = {
@@ -47,7 +46,6 @@ const lightTheme = {
         shadowColor: "#B0B0B0"
     }
 } as const;
-
 
 const darkTheme = {
     ...commonColors,

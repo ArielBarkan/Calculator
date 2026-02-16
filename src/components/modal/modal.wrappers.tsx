@@ -58,5 +58,4 @@ const CloseButton = styled.button`
 
 `;
 
-
 export { StyledModal, Title, Content, CloseButton };

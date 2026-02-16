@@ -8,12 +8,10 @@ const Container = styled.div`
     font-family: Arial, sans-serif;
 `;
 
-
 const Subtitle = styled.h3`
     font-size: 1.5rem;
     font-weight: bold;
     margin-top: 20px;
-
 `;
 
 const Paragraph = styled.p`

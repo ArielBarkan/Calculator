@@ -42,7 +42,11 @@ const useProductHandlers = (initialProductsList: ProductListType[]) => {
                     const updatedProduct = { ...product, [keyToUpdate]: updatedValue };
 
                     if (updatedProduct.price && updatedProduct.quantity) {
-                        updatedProduct.unifiedPrice = calculateUnifiedPrice(updatedProduct.price, updatedProduct.quantity, selectedMeasurement);
+                        updatedProduct.unifiedPrice = calculateUnifiedPrice(
+                            updatedProduct.price,
+                            updatedProduct.quantity,
+                            selectedMeasurement
+                        );
                     } else {
                         delete updatedProduct.unifiedPrice;
                         delete updatedProduct.rank;

@@ -6,12 +6,12 @@ enum THEME_ENUMS {
 enum MEASUREMENT_ENUMS {
     weight = "weight",
     liquid = "liquid",
-    quantity = "quantity",
+    quantity = "quantity"
 }
 
 enum COOKIES_CONSENT_ENUMS {
     accepted = "accepted",
-    rejected = "rejected",
+    rejected = "rejected"
 }
 
 export { THEME_ENUMS, MEASUREMENT_ENUMS, COOKIES_CONSENT_ENUMS };

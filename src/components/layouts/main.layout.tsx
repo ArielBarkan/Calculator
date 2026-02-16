@@ -8,7 +8,6 @@ import { TopBarMenu } from "../topBarMenu";
 import { CookieBanner } from "../cookieBanner";
 import { HamburgerMenu } from "../hamburgerMenu";
 
-
 const MainLayout = () => {
     return (
         <LayoutWrapper>

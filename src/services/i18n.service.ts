@@ -6,7 +6,6 @@ import HttpBackend, { HttpBackendOptions } from "i18next-http-backend";
 // Custom imports
 import { SUPPORTED_LANGUAGES } from "../consts";
 
-
 declare module "i18next" {
     interface CustomTypeOptions {
         returnNull: false;

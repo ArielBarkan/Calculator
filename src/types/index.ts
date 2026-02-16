@@ -14,22 +14,22 @@ type languageType = {
 };
 
 type currencyType = {
-    englishName: string,
-    localName: string,
-    symbol: string,
-    enabled: boolean,
-    ISO: string,
-    flag: string,
+    englishName: string;
+    localName: string;
+    symbol: string;
+    enabled: boolean;
+    ISO: string;
+    flag: string;
 };
 
 type selectType = {
-    value: string,
-    label: string
-}
+    value: string;
+    label: string;
+};
 type ToggleSwitchProps = {
     checked: boolean;
     returnFunction: () => void;
-    id?: string
+    id?: string;
 };
 
 type IconProps = {
@@ -43,13 +43,13 @@ type ThemedIconProps = {
     color?: string;
     size?: number;
     rtlIgnore?: boolean;
-}
+};
 
 type PageHeaderProps = {
     title: string;
     subTitle: string;
     linkTo?: string;
-}
+};
 
 // Extracts the "locale" property from each object in the `supportedLanguages` array
 // This ensures `LocaleType` is always updated when `supportedLanguages` changes
@@ -57,7 +57,6 @@ type PageHeaderProps = {
 type LocaleType = (typeof SUPPORTED_LANGUAGES)[number]["locale"];
 type CurrencyISOType = (typeof SUPPORTED_CURRENCIES)[number]["ISO"];
 type CurrencySymbolType = (typeof SUPPORTED_CURRENCIES)[number]["symbol"];
-
 
 type FadeInTextProps = {
     children: React.ReactNode;
@@ -68,7 +67,7 @@ type ThemeContextType = {
     theme: THEME_ENUMS;
     direction: "ltr" | "rtl";
     toggleTheme: () => THEME_ENUMS;
-}
+};
 
 type PageWrapperProps = {
     children: ReactNode;
@@ -99,17 +98,16 @@ type ProductListType = {
     price?: number;
     unifiedPrice?: number;
     rank?: number;
-}
+};
 
 type UpdateProductRowProps = {
-    id: string,
-    keyToUpdate: keyof ProductListType
-    updatedValue: number
-}
-
+    id: string;
+    keyToUpdate: keyof ProductListType;
+    updatedValue: number;
+};
 
 type ProductRowProps = {
-    productCount: number
+    productCount: number;
     id: string;
     returnFunction: (props: UpdateProductRowProps) => void;
     deleteFunction: (rowId: string) => void;
@@ -120,22 +118,21 @@ type ProductRowProps = {
     rank?: number;
 };
 
-
 type RankDisplayProps = {
     rank?: number;
-    dimension: number
-}
+    dimension: number;
+};
 
 type SwitchMeasurementProps = {
     returnFunction: (measurement: MEASUREMENT_ENUMS) => void;
-}
+};
 
 type SelectComponentProps = {
-    options: selectType[]
+    options: selectType[];
     returnFunction?: (selectedValue: string) => void;
     currentValue?: string;
     isSearchable?: boolean;
-}
+};
 
 type IconButtonProps = {
     label: string;
@@ -143,7 +140,6 @@ type IconButtonProps = {
     disabled?: boolean;
     returnFunction: () => void;
 };
-
 
 export {
     languageType,

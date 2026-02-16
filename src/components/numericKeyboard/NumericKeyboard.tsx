@@ -4,7 +4,6 @@ import { useState } from "react";
 // Custom imports
 import { NumericKeyboardWrapper, NumericKeyButton, TemporaryInputDisplay } from "./numericKeyboard.wrappers";
 
-
 const NumericKeyboard = () => {
     const [value, setValue] = useState<string>("");
 
@@ -20,7 +19,6 @@ const NumericKeyboard = () => {
         });
     };
 
-
     const handleBackspace = () => {
         setValue((prev) => prev.slice(0, -1));
     };
@@ -34,7 +32,9 @@ const NumericKeyboard = () => {
             <TemporaryInputDisplay type="text" value={value} readOnly />
             <NumericKeyboardWrapper>
                 {["1", "2", "3", "4", "5", "6", "7", "8", "9"].map((num) => (
-                    <NumericKeyButton key={num} onClick={() => handleClick(num)}>{num}</NumericKeyButton>
+                    <NumericKeyButton key={num} onClick={() => handleClick(num)}>
+                        {num}
+                    </NumericKeyButton>
                 ))}
                 <NumericKeyButton onClick={handleClear}>C</NumericKeyButton>
                 <NumericKeyButton onClick={() => handleClick("0")}>0</NumericKeyButton>

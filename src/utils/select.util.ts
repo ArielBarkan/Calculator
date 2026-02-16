@@ -19,5 +19,4 @@ const convertLanguagesToSelect = (languages: languageType[]): selectType[] => {
     });
 };
 
-
 export { convertCurrenciesToSelect, convertLanguagesToSelect };

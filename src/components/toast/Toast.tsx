@@ -22,7 +22,6 @@ const NotifyWarning = (message: string) => {
 };
 
 const NotifyCustom = () => {
-
     return (
         <ToastContainer
             closeButton={false}
@@ -38,7 +37,6 @@ const NotifyCustom = () => {
             transition={Bounce}
         />
     );
-
 };
 
 export { NotifySuccess, NotifyWarning, NotifyCustom };

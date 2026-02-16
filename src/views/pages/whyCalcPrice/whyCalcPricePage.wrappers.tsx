@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 const WhyModalWrapper = styled.div`
     display: flex;
     flex-direction: column;
@@ -21,10 +20,7 @@ const WhyItem = styled.span`
 
 const WhyItemTitle = styled.p`
     font-weight: bold;
-
 `;
-const WhyItemTitleItemDescription = styled.p`
-
-`;
+const WhyItemTitleItemDescription = styled.p``;
 
 export { WhyModalWrapper, WhyItem, WhyItemTitle, WhyItemTitleItemDescription };

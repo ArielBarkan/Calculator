@@ -1,7 +1,6 @@
 // React and modules imports
 import styled from "styled-components";
 
-
 const SwitchWrapper = styled.label`
     position: relative;
     display: inline-block;

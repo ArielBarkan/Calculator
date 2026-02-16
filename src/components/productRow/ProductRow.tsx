@@ -11,9 +11,7 @@ import { RankDisplay } from "../rankDisplay";
 import { ProductRowProps } from "../../types";
 import { PricePerDisplay } from "../pricePerDisplay";
 
-
 const ProductRow = (props: ProductRowProps) => {
-
     const { returnFunction, productCount, id, deleteFunction, rank, price, quantity, unifiedPrice } = props;
     const [selected, setSelected] = useState<boolean>(false);
 
@@ -37,14 +35,22 @@ const ProductRow = (props: ProductRowProps) => {
         <SlideOutMotion>
             <ProductRowContainer {...{ selected }}>
                 <ProductRowsItem width={90}>
-
-                    <NumericInput maxLength={4} blurFunction={handleBlur} focusFunction={handleFocus}
-                                  returnFunction={handlePriceUpdated} value={price} />
-
+                    <NumericInput
+                        maxLength={4}
+                        blurFunction={handleBlur}
+                        focusFunction={handleFocus}
+                        returnFunction={handlePriceUpdated}
+                        value={price}
+                    />
                 </ProductRowsItem>
                 <ProductRowsItem width={90}>
-                    <NumericInput maxLength={4} blurFunction={handleBlur} focusFunction={handleFocus}
-                                  returnFunction={handleAmountUpdated} value={quantity} />
+                    <NumericInput
+                        maxLength={4}
+                        blurFunction={handleBlur}
+                        focusFunction={handleFocus}
+                        returnFunction={handleAmountUpdated}
+                        value={quantity}
+                    />
                 </ProductRowsItem>
                 <ProductRowsItem width={90}>
                     <PricePerDisplay priceUnified={unifiedPrice} />
@@ -60,7 +66,6 @@ const ProductRow = (props: ProductRowProps) => {
                     </ProductRowsItem>
                 )}
             </ProductRowContainer>
-
         </SlideOutMotion>
     );
 };

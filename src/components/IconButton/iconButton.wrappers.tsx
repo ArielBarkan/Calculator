@@ -1,7 +1,6 @@
 // React and modules imports
 import styled from "styled-components";
 
-
 const ButtonContainer = styled.button`
     display: flex;
     align-items: center;
@@ -23,6 +22,5 @@ const ButtonContainer = styled.button`
         background-color: #0056b3;
     }
 `;
-
 
 export { ButtonContainer };

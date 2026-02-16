@@ -11,13 +11,22 @@ import { GA_EVENTS } from "./consts";
 
 if ("serviceWorker" in navigator) {
     window.addEventListener("load", () => {
-        navigator.serviceWorker.register("/service-worker.js")
+        navigator.serviceWorker
+            .register("/service-worker.js")
             .then(() => {
-                GOOGLE_ANALYTICS.trackEvent(GA_EVENTS.CATEGORIES.USER_ACTIONS, GA_EVENTS.ACTIONS.PWA_INSTALLED, "success");
+                GOOGLE_ANALYTICS.trackEvent(
+                    GA_EVENTS.CATEGORIES.USER_ACTIONS,
+                    GA_EVENTS.ACTIONS.PWA_INSTALLED,
+                    "success"
+                );
                 console.log("Service Worker registered");
             })
             .catch((error) => {
-                GOOGLE_ANALYTICS.trackEvent(GA_EVENTS.CATEGORIES.USER_ACTIONS, GA_EVENTS.ACTIONS.PWA_NOT_INSTALLED, "success");
+                GOOGLE_ANALYTICS.trackEvent(
+                    GA_EVENTS.CATEGORIES.USER_ACTIONS,
+                    GA_EVENTS.ACTIONS.PWA_NOT_INSTALLED,
+                    "success"
+                );
                 console.error("Service Worker registration failed:", error);
             });
     });

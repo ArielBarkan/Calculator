@@ -8,14 +8,11 @@ const ProductRowContainer = styled.span<{ selected?: boolean }>`
     align-items: center;
     gap: 10px;
     padding: 10px;
-    background-color: ${({
-                             selected,
-                             theme
-                         }) => selected ? theme.SelectableElement.activeBackground : "inherit"};;
+    background-color: ${({ selected, theme }) => (selected ? theme.SelectableElement.activeBackground : "inherit")};
 `;
 
 const ProductRowsTitle = styled.span<{ width?: number }>`
-    width: ${({ width }) => width ? `${width}px` : "30px"};
+    width: ${({ width }) => (width ? `${width}px` : "30px")};
     white-space: nowrap;
 
     display: flex;
@@ -29,7 +26,7 @@ const ProductRowsTitle = styled.span<{ width?: number }>`
     }
 `;
 const ProductRowsItem = styled.span<{ width?: number }>`
-    width: ${({ width }) => width ? `${width}px` : "30px"};
+    width: ${({ width }) => (width ? `${width}px` : "30px")};
 `;
 
 export { ProductRowContainer, ProductRowsTitle, ProductRowsItem };

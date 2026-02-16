@@ -14,7 +14,9 @@ const PageHeader = (props: PageHeaderProps) => {
             <TitleRow>
                 {linkTo && (
                     <Back>
-                        <Link to={linkTo}><IconBack /></Link>
+                        <Link to={linkTo}>
+                            <IconBack />
+                        </Link>
                     </Back>
                 )}
                 <Title>{title}</Title>
