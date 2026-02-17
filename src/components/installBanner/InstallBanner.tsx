@@ -3,7 +3,17 @@ import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 
 // Custom imports
-import { InstallBannerWrapper, InstallText, ButtonGroup, Button } from "./installBanner.wrappers";
+import {
+    InstallBannerWrapper,
+    ContentRow,
+    AppIcon,
+    TextBlock,
+    AppName,
+    InstallText,
+    ButtonGroup,
+    InstallButton,
+    DismissButton,
+} from "./installBanner.wrappers";
 import {
     localStorageGetInstallBannerDismissed,
     localStorageUpdateInstallBannerDismissed,
@@ -95,14 +105,20 @@ const InstallBanner = () => {
 
     return visible ? (
         <InstallBannerWrapper $visible={visible}>
-            <InstallText>{translate("common:installBanner.text")}</InstallText>
+            <ContentRow>
+                <AppIcon src="/icons/icon-192x192.png" alt="CalcPrice" />
+                <TextBlock>
+                    <AppName>CalcPrice</AppName>
+                    <InstallText>{translate("common:installBanner.text")}</InstallText>
+                </TextBlock>
+            </ContentRow>
             <ButtonGroup>
-                <Button className="accept" onClick={handleInstall}>
+                <InstallButton onClick={handleInstall}>
                     {translate("common:installBanner.button.install")}
-                </Button>
-                <Button className="reject" onClick={handleDismiss}>
+                </InstallButton>
+                <DismissButton onClick={handleDismiss}>
                     {translate("common:installBanner.button.dismiss")}
-                </Button>
+                </DismissButton>
             </ButtonGroup>
         </InstallBannerWrapper>
     ) : null;

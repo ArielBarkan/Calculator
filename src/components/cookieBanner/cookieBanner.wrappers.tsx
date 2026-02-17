@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const CookieBannerWrapper = styled.div<{ $visible: boolean }>`
     position: fixed;
-    bottom: ${(props) => (props.$visible ? "0" : "-100px")}; /* Show/Hide smoothly */
+    bottom: 0;
     left: 0;
     min-width: 100%;
     background-color: ${({ theme }) => theme.cookieBanner.bgColor};
@@ -15,7 +15,8 @@ const CookieBannerWrapper = styled.div<{ $visible: boolean }>`
     justify-content: space-around;
     align-items: center;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-    transition: bottom 0.3s ease-in-out;
+    transform: ${(props) => (props.$visible ? "translateY(0)" : "translateY(100%)")};
+    transition: transform 0.3s ease-in-out;
     z-index: 9999;
 `;
 
