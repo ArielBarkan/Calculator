@@ -6,6 +6,7 @@ import { Outlet } from "react-router-dom";
 import { LayoutWrapper, MainContent } from "./layout.wrappers";
 import { TopBarMenu } from "../topBarMenu";
 import { CookieBanner } from "../cookieBanner";
+import { InstallBanner } from "../installBanner";
 import { HamburgerMenu } from "../hamburgerMenu";
 import { ErrorBoundary, PageErrorFallback } from "../errorBoundary";
 
@@ -20,6 +21,7 @@ const MainLayout = () => {
                 </ErrorBoundary>
             </MainContent>
             <CookieBanner />
+            <InstallBanner />
         </LayoutWrapper>
     );
 };

@@ -17,7 +17,9 @@ const GA_EVENTS = {
         COOKIES_CONSENT_ACCEPT: `${Custom_Prefix}Cookies Accepted`,
         COOKIES_CONSENT_REJECT: `${Custom_Prefix}Cookies Rejected`,
         PWA_INSTALLED: `${Custom_Prefix}PWA Installed`,
-        PWA_NOT_INSTALLED: `${Custom_Prefix}PWA Not Installed`
+        PWA_NOT_INSTALLED: `${Custom_Prefix}PWA Not Installed`,
+        PWA_INSTALL_BANNER_ACCEPTED: `${Custom_Prefix}PWA Install Banner Accepted`,
+        PWA_INSTALL_BANNER_DISMISSED: `${Custom_Prefix}PWA Install Banner Dismissed`
     } as const,
 
     LABELS: {

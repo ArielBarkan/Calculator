@@ -192,6 +192,13 @@
     "reload": "Recargar página",
     "goHome": "Volver al inicio"
   },
+  "installBanner": {
+    "text": "¡Agrega CalcPrice a tu pantalla de inicio para acceso rápido!",
+    "button": {
+      "install": "Instalar",
+      "dismiss": "Ahora no"
+    }
+  },
   "share": {
     "label": "Comp",
     "text": "Encontré esta increíble aplicación, échale un vistazo:",

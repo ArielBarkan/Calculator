@@ -8,5 +8,7 @@ export {
     localStorageUpdateSelectedCurrency,
     localStorageGetSelectedCurrency,
     localStorageUpdateSelectedMeasurement,
-    localStorageGetSelectedMeasurement
+    localStorageGetSelectedMeasurement,
+    localStorageUpdateInstallBannerDismissed,
+    localStorageGetInstallBannerDismissed
 } from "./localStorage.service";

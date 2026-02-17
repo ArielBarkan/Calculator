@@ -192,6 +192,13 @@
     "reload": "טען מחדש",
     "goHome": "חזרה לדף הבית"
   },
+  "installBanner": {
+    "text": "הוסיפו את CalcPrice למסך הבית לגישה מהירה!",
+    "button": {
+      "install": "התקנה",
+      "dismiss": "לא עכשיו"
+    }
+  },
   "share": {
     "label": "שיתוף",
     "text": "ממליץ בחום",

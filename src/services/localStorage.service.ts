@@ -42,6 +42,14 @@ const localStorageGetCookiesConsent = (): undefined | COOKIES_CONSENT_ENUMS => {
     return localStorage.getItem("cookieConsent") as COOKIES_CONSENT_ENUMS;
 };
 
+const localStorageUpdateInstallBannerDismissed = () => {
+    localStorage.setItem("installBannerDismissed", "true");
+};
+
+const localStorageGetInstallBannerDismissed = (): boolean => {
+    return localStorage.getItem("installBannerDismissed") === "true";
+};
+
 export {
     localStorageUpdateSelectedLanguage,
     localStorageGetSelectedLanguage,
@@ -52,5 +60,7 @@ export {
     localStorageUpdateSelectedMeasurement,
     localStorageGetSelectedMeasurement,
     localStorageUpdateCookiesConsent,
-    localStorageGetCookiesConsent
+    localStorageGetCookiesConsent,
+    localStorageUpdateInstallBannerDismissed,
+    localStorageGetInstallBannerDismissed
 };

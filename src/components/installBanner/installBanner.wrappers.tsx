@@ -1,0 +1,45 @@
+// Styled Components for the install banner
+import styled from "styled-components";
+
+const InstallBannerWrapper = styled.div<{ $visible: boolean }>`
+    position: fixed;
+    bottom: ${(props) => (props.$visible ? "0" : "-100px")}; /* Show/Hide smoothly */
+    left: 0;
+    min-width: 100%;
+    background-color: ${({ theme }) => theme.cookieBanner.bgColor};
+    color: ${({ theme }) => theme.cookieBanner.fontColor};
+    padding: 12px 20px;
+    max-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    transition: bottom 0.3s ease-in-out;
+    z-index: 9999;
+`;
+
+const InstallText = styled.p`
+    padding: 0 2rem;
+`;
+
+const ButtonGroup = styled.div`
+    display: flex;
+    align-self: flex-end;
+    gap: 10px;
+`;
+
+const Button = styled.button`
+    padding: 8px 14px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.2s ease-in-out;
+
+    &:hover {
+        opacity: 0.9;
+    }
+`;
+
+export { InstallBannerWrapper, InstallText, ButtonGroup, Button };

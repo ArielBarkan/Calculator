@@ -192,6 +192,13 @@
     "reload": "Reload page",
     "goHome": "Go back home"
   },
+  "installBanner": {
+    "text": "Add CalcPrice to your home screen for quick access!",
+    "button": {
+      "install": "Install",
+      "dismiss": "Not now"
+    }
+  },
   "share": {
     "label": "Share",
     "text": "I found this cool app, check it out:",
