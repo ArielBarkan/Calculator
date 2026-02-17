@@ -25,3 +25,5 @@ dist-ssr
 /Design/
 
 .vercel
+tsconfig.tsbuildinfo
+.claude/settings.local.json
