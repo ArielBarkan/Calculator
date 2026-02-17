@@ -5,7 +5,6 @@ const Container = styled.div`
     margin: 0 auto;
     padding: 20px;
     line-height: 1.6;
-    font-family: Arial, sans-serif;
 `;
 
 const Subtitle = styled.h3`

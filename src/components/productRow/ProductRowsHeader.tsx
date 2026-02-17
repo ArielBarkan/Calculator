@@ -18,7 +18,9 @@ const ProductRowsHeader = (props: Partial<ProductRowProps>) => {
     const [selectedMeasurement, setSelectedMeasurement] = useState<MEASUREMENT_ENUMS>(
         localStorageGetSelectedMeasurement()
     );
-    const [measurementUnit, setMeasurementUnit] = useState<string>("גרם");
+    const [measurementUnit, setMeasurementUnit] = useState<string>(
+        translate("common:pages.calculator.measurement.weight.shortUnit")
+    );
     const [isModalOpen, setModalOpen] = useState(false);
     const [measurementLabel, setMeasurementLabel] = useState<string>("Measurement");
     const theme = useTheme();

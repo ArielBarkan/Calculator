@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const MenuContainer = styled.div<{ isOpen: boolean; $isRtl: boolean }>`
     position: fixed;
@@ -6,11 +7,10 @@ const MenuContainer = styled.div<{ isOpen: boolean; $isRtl: boolean }>`
     ${({ $isRtl }) => ($isRtl ? "right: 0;" : "left: 0;")}
     width: 250px;
     height: 100vh;
-    background-color: ${({ theme }) => theme.cookieBanner.bgColor};
-    color: ${({ theme }) => theme.cookieBanner.fontColor};
+    background-color: ${({ theme }) => theme.surface.overlay};
+    color: ${({ theme }) => theme.body.fontColor};
     transform: ${({ isOpen, $isRtl }) =>
         isOpen ? "translateX(0)" : $isRtl ? "translateX(100%)" : "translateX(-100%)"};
-    // visibility: ${({ isOpen }) => (isOpen ? "visible" : "hidden")};
     transition: transform 0.3s linear;
     padding: 20px;
     display: flex;
@@ -36,14 +36,14 @@ const MenuButton = styled.button`
     ${({ theme }) => (theme.direction === "rtl" ? "right: 20px;" : "left: 20px;")}
     background: none;
     border: none;
-    color: ${({ theme }) => theme.cookieBanner.fontColor};
+    color: ${({ theme }) => theme.body.fontColor};
     font-size: 24px;
     cursor: pointer;
     z-index: 1001;
 `;
 
-const MenuItem = styled.a<{ disabled: boolean }>`
-    color: ${({ theme }) => theme.cookieBanner.fontColor};
+const MenuItem = styled(Link)<{ disabled: boolean }>`
+    color: ${({ theme }) => theme.body.fontColor};
     text-decoration: none;
     width: 100%;
     font-size: 18px;

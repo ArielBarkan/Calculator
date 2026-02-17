@@ -1,7 +1,7 @@
 // React and modules imports
 import styled from "styled-components";
 
-const ProductRowContainer = styled.span<{ selected?: boolean }>`
+const ProductRowContainer = styled.div<{ selected?: boolean }>`
     display: flex;
     flex-direction: row;
     justify-content: space-around;

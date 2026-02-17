@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 // Custom imports
 
-const ButtonsLineContainer = styled.span`
+const ButtonsLineContainer = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;

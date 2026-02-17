@@ -11,8 +11,7 @@ const FirstTimeModalItem = styled.span`
     padding-top: 20px;
 
     p {
-        //  background-color: green;
-        display: inline; /* ✅ Ensures text flows in a single line */
+        display: inline;
     }
 `;
 

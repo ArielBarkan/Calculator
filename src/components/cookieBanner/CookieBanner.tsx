@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 // Custom imports
-import { CookieBannerWrapper, CookieText, ButtonGroup, Button } from "./cookieBanner.wrappers";
+import { CookieBannerWrapper, CookieText, ButtonGroup, AcceptButton, RejectButton } from "./cookieBanner.wrappers";
 import { localStorageGetCookiesConsent, localStorageUpdateCookiesConsent } from "../../services/localStorage.service";
 import { COOKIES_CONSENT_ENUMS } from "../../enums";
 import { GOOGLE_ANALYTICS } from "../../utils/analytics.util";
@@ -45,12 +45,12 @@ const CookieBanner = () => {
         <CookieBannerWrapper $visible={visible}>
             <CookieText>{translate("common:cookieBanner.text")}</CookieText>
             <ButtonGroup>
-                <Button className="accept" onClick={() => handleConsent(true)}>
+                <AcceptButton onClick={() => handleConsent(true)}>
                     {translate("common:cookieBanner.button.accept")}
-                </Button>
-                <Button className="reject" onClick={() => handleConsent(false)}>
+                </AcceptButton>
+                <RejectButton onClick={() => handleConsent(false)}>
                     {translate("common:cookieBanner.button.reject")}
-                </Button>
+                </RejectButton>
             </ButtonGroup>
         </CookieBannerWrapper>
     ) : null;

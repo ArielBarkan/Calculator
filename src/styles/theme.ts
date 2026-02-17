@@ -27,6 +27,20 @@ const lightTheme = {
         bgColor: "#d2d0d0",
         fontColor: "#000000"
     },
+    surface: {
+        overlay: "#d2d0d0"
+    },
+    input: {
+        backgroundColor: "#d2d0d0",
+        focusBackgroundColor: "#fff",
+        borderColor: "#ccc"
+    },
+    toggle: {
+        activeColor: "#2196f3"
+    },
+    spinner: {
+        trackColor: "rgba(0, 0, 0, 0.1)"
+    },
     buttons: {
         primary: {
             backgroundColor: "#384cae",
@@ -61,10 +75,25 @@ const darkTheme = {
         bgColor: "#424141",
         fontColor: "#ffffff"
     },
+    surface: {
+        overlay: "#424141"
+    },
+    input: {
+        backgroundColor: "#6b6767",
+        focusBackgroundColor: "#7a7676",
+        borderColor: "#888888"
+    },
+    toggle: {
+        activeColor: "#2196f3"
+    },
+    spinner: {
+        trackColor: "rgba(255, 255, 255, 0.1)"
+    },
     buttons: {
         primary: {
             backgroundColor: "#384cae",
-            color: "#FFFFFF"
+            color: "#FFFFFF",
+            activeBackgroundColor: "#5363b6"
         }
     },
     icons: {

@@ -26,30 +26,30 @@ const HamburgerMenu = () => {
 
             {/* Menu */}
             <MenuContainer isOpen={isOpen} $isRtl={direction === "rtl"}>
-                <MenuItem href="/" disabled={location.pathname === "/"} onClick={() => setIsOpen(false)}>
+                <MenuItem to="/" disabled={location.pathname === "/"} onClick={() => setIsOpen(false)}>
                     <StyledImage src={CalcPriceIcon} width={"30px"} height={"30px"} />
 
                     {translate("common:pages.calculator.title")}
                 </MenuItem>
                 <MenuItem
-                    href="/settings"
+                    to="/settings"
                     disabled={location.pathname === "/settings"}
                     onClick={() => setIsOpen(false)}
                 >
                     <IconSettings />
                     {translate("common:pages.settings.title")}
                 </MenuItem>
-                <MenuItem href="/share" disabled={location.pathname === "/share"} onClick={() => setIsOpen(false)}>
+                <MenuItem to="/share" disabled={location.pathname === "/share"} onClick={() => setIsOpen(false)}>
                     <IconQR />
                     {translate("common:pages.share.linkLabel")}
                 </MenuItem>
 
-                <MenuItem href="/why" disabled={location.pathname === "/why"} onClick={() => setIsOpen(false)}>
+                <MenuItem to="/why" disabled={location.pathname === "/why"} onClick={() => setIsOpen(false)}>
                     <IconQuestionMark rtlIgnore={true} />
                     {translate("common:pages.whyCalcPrice.title")}
                 </MenuItem>
 
-                <MenuItem href="/why-we" disabled={location.pathname === "/why-we"} onClick={() => setIsOpen(false)}>
+                <MenuItem to="/why-we" disabled={location.pathname === "/why-we"} onClick={() => setIsOpen(false)}>
                     <BeatingHeart>
                         {" "}
                         <IconHeart rtlIgnore={true} color={"red"} />

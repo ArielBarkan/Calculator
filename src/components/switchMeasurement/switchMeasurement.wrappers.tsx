@@ -17,7 +17,7 @@ const MeasurementItemContainer = styled(UnstyledButton)`
     width: 100px;
     height: 100px;
     padding: 0 5px;
-    background-color: rgba(122, 117, 117, 0.74);
+    background-color: ${({ theme }) => theme.surface.overlay};
 `;
 
 const MeasurementTitle = styled.p`

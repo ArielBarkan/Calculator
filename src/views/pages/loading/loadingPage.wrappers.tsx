@@ -19,7 +19,7 @@ const LoadingWrapper = styled.div`
 `;
 
 const Spinner = styled.div`
-    border: 6px solid rgba(0, 0, 0, 0.1);
+    border: 6px solid ${({ theme }) => theme.spinner.trackColor};
     border-top: 6px solid ${({ theme }) => theme.generic.foreground};
     border-radius: 50%;
     width: 50px;

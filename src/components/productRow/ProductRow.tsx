@@ -23,12 +23,10 @@ const ProductRow = (props: ProductRowProps) => {
     };
 
     const handlePriceUpdated = (price: number) => {
-        console.log("handlePriceUpdated", price);
         returnFunction({ id: id, keyToUpdate: "price", updatedValue: price });
     };
 
     const handleAmountUpdated = (quantity: number) => {
-        console.log("handleAmountUpdated", quantity);
         returnFunction({ id: id, keyToUpdate: "quantity", updatedValue: quantity });
     };
     return (

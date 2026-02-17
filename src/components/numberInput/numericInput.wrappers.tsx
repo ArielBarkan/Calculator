@@ -12,12 +12,13 @@ const NumberInputStyled = styled.input.attrs(({ maxLength = 7 }) => ({
 }))<{ maxLength: number }>`
     width: ${({ maxLength }) => `${maxLength * MAX_CHAR_WIDTH + PADDING}px`};
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid ${({ theme }) => theme.input.borderColor};
     border-radius: 5px;
-    background: #d2d0d0;
+    background: ${({ theme }) => theme.input.backgroundColor};
+    color: ${({ theme }) => theme.body.fontColor};
 
     &:focus {
-        background: #fff;
+        background: ${({ theme }) => theme.input.focusBackgroundColor};
     }
 `;
 

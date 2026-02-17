@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Modal from "react-modal";
 
 const StyledModal = styled(Modal)<{ width?: string; height?: string; position?: string }>`
-    background-color: ${({ theme }) => theme.body.bgColor};
+    background-color: ${({ theme }) => theme.surface.overlay};
     padding: 20px;
     border-radius: 10px;
     outline: none;
@@ -53,9 +53,6 @@ const CloseButton = styled.button`
     &:hover {
         background-color: ${({ theme }) => theme.buttons.primary.activeBackgroundColor};
     }
-}
-
-
 `;
 
 export { StyledModal, Title, Content, CloseButton };

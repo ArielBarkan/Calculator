@@ -4,6 +4,7 @@ import styled from "styled-components";
 const Row = styled.div<{ selected?: boolean; disabled?: boolean }>`
     padding: 1rem 2rem;
     margin: 0;
+    border-bottom: 1px solid ${({ theme }) => theme.BoxElement.shadowColor};
     display: flex;
     flex-direction: row;
     justify-content: space-between;

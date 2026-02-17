@@ -30,17 +30,40 @@ const ButtonGroup = styled.div`
     gap: 10px;
 `;
 
-const Button = styled.button`
-    padding: 8px 14px;
+const AcceptButton = styled.button`
+    flex: 1;
+    padding: 10px 16px;
     font-size: 14px;
+    font-weight: 600;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.2s ease-in-out;
+    border-radius: 10px;
+    background-color: ${({ theme }) => theme.buttons.primary.backgroundColor};
+    color: ${({ theme }) => theme.buttons.primary.color};
+    white-space: nowrap;
+    transition: opacity 0.2s ease-in-out;
 
     &:hover {
         opacity: 0.9;
     }
 `;
 
-export { CookieBannerWrapper, CookieText, ButtonGroup, Button };
+const RejectButton = styled.button`
+    flex: 1;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    background: transparent;
+    border: 1px solid ${({ theme }) => theme.cookieBanner.fontColor}33;
+    color: ${({ theme }) => theme.cookieBanner.fontColor};
+    cursor: pointer;
+    border-radius: 10px;
+    white-space: nowrap;
+    transition: opacity 0.2s ease-in-out;
+
+    &:hover {
+        opacity: 0.7;
+    }
+`;
+
+export { CookieBannerWrapper, CookieText, ButtonGroup, AcceptButton, RejectButton };

@@ -14,8 +14,6 @@ const NumericInput = (props: NumericInputProps) => {
 
         // Allow numbers with one optional decimal point & allow deletion
         if (/^\d*\.?\d*$/.test(newValue)) {
-            console.log("handlePriceUpdated pass", newValue);
-
             setInputValue(newValue); // Keep input state as string, allowing full deletion
 
             // Convert to number only when valid and meaningful

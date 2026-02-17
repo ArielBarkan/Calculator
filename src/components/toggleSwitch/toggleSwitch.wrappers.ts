@@ -17,11 +17,11 @@ const HiddenCheckbox = styled.input.attrs((props) => ({
     height: 0;
 
     &:checked + span {
-        background-color: #2196f3;
+        background-color: ${({ theme }) => theme.toggle.activeColor};
     }
 
     &:focus + span {
-        box-shadow: 0 0 1px #2196f3;
+        box-shadow: 0 0 1px ${({ theme }) => theme.toggle.activeColor};
     }
 
     &:checked + span:before {

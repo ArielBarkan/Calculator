@@ -18,13 +18,11 @@ const TitleRow = styled.div`
 const Back = styled.div`
     display: flex;
     padding: 0 0 0 0.5rem;
-    //background-color: yellow;
 `;
 
 const Title = styled.h1`
     margin: 0;
     flex-grow: 1;
-    //background-color: green;
 `;
 
 const SubTitle = styled.p<{ $alignStart: boolean }>`

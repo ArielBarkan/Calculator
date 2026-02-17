@@ -3,8 +3,7 @@ import { SwitchWrapper, HiddenCheckbox, Slider } from "./toggleSwitch.wrappers";
 import { ToggleSwitchProps } from "../../types";
 
 const ToggleSwitch = (props: ToggleSwitchProps) => {
-    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        console.log(e.target.checked);
+    const handleInputChange = () => {
         props.returnFunction();
     };
     return (
