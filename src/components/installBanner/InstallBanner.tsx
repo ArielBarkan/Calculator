@@ -16,6 +16,12 @@ interface BeforeInstallPromptEvent extends Event {
     userChoice: Promise<{ outcome: "accepted" | "dismissed" }>;
 }
 
+declare global {
+    interface Window {
+        __pwaInstallPrompt?: BeforeInstallPromptEvent;
+    }
+}
+
 const InstallBanner = () => {
     const { t: translate } = useTranslation("common");
     const [visible, setVisible] = useState(false);
@@ -30,6 +36,13 @@ const InstallBanner = () => {
         // Don't show if previously dismissed
         if (localStorageGetInstallBannerDismissed()) {
             return;
+        }
+
+        // Check for early-captured prompt (fired before React mounted)
+        if (window.__pwaInstallPrompt) {
+            deferredPromptRef.current = window.__pwaInstallPrompt;
+            delete window.__pwaInstallPrompt;
+            setVisible(true);
         }
 
         const handleBeforeInstallPrompt = (e: Event) => {
